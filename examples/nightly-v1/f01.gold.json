@@ -1,0 +1,35 @@
+{
+  "id": "f01",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "f1",
+      "meaning": "Месяц ранних пробуждений в 5 вместо 7 утра.",
+      "required_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "f2",
+      "meaning": "Неизвестный препарат по половине таблетки вечером, дозировка неизвестна.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s4"
+      ]
+    }
+  ]
+}

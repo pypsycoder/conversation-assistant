@@ -1,0 +1,61 @@
+{
+  "id": "d02",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "f1",
+      "meaning": "В 2024 сертралин 50 мг утром шесть недель без заметного улучшения.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "f2",
+      "meaning": "С января 2025 эсциталопрам 10 мг утром три месяца, тревога уменьшилась.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s4"
+      ]
+    },
+    {
+      "id": "f3",
+      "meaning": "Сейчас препаратов не принимает, не означает отсутствие прошлой терапии.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s6"
+      ]
+    },
+    {
+      "id": "f4",
+      "meaning": "Тревога каждый вечер, повтор в реплике не второй факт.",
+      "required_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s8"
+      ]
+    }
+  ]
+}

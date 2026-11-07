@@ -1,0 +1,74 @@
+{
+  "reviewer": "TODO",
+  "physician_reviewed": false,
+  "response_sha256": "b01a7954fac12c01f5c79e3c4ec95ebff1cb8750d43718bd5f0e68a2fb2b1297",
+  "gold_sha256": "a2e238d699ae18bc44e93eb48e4c124199d0e2c07c8a93113c4eef35c4219159",
+  "rows": [
+    {
+      "row_id": "complaints:0",
+      "text": "Трудно заснуть, обычно засыпаю через два часа.",
+      "complete_fact_ids": [],
+      "partial_fact_ids": [],
+      "unsupported_atoms": 0,
+      "polarity_errors": 0,
+      "temporal_errors": 0,
+      "source_errors": 0,
+      "reason": "TODO"
+    },
+    {
+      "row_id": "complaints:1",
+      "text": "Нет панических приступов.",
+      "complete_fact_ids": [],
+      "partial_fact_ids": [],
+      "unsupported_atoms": 0,
+      "polarity_errors": 0,
+      "temporal_errors": 0,
+      "source_errors": 0,
+      "reason": "TODO"
+    },
+    {
+      "row_id": "illness_history:0",
+      "text": "Нарушение сна началось с 12 сентября, примерно два месяца назад.",
+      "complete_fact_ids": [],
+      "partial_fact_ids": [],
+      "unsupported_atoms": 0,
+      "polarity_errors": 0,
+      "temporal_errors": 0,
+      "source_errors": 0,
+      "reason": "TODO"
+    },
+    {
+      "row_id": "illness_history:1",
+      "text": "В течение этого периода трудно заснуть, засыпает примерно через два часа.",
+      "complete_fact_ids": [],
+      "partial_fact_ids": [],
+      "unsupported_atoms": 0,
+      "polarity_errors": 0,
+      "temporal_errors": 0,
+      "source_errors": 0,
+      "reason": "TODO"
+    },
+    {
+      "row_id": "illness_history:2",
+      "text": "Панических приступов не было.",
+      "complete_fact_ids": [],
+      "partial_fact_ids": [],
+      "unsupported_atoms": 0,
+      "polarity_errors": 0,
+      "temporal_errors": 0,
+      "source_errors": 0,
+      "reason": "TODO"
+    },
+    {
+      "row_id": "life_history:0",
+      "text": "Со слов сестры, у матери была депрессия; сам пациент документов не видел.",
+      "complete_fact_ids": [],
+      "partial_fact_ids": [],
+      "unsupported_atoms": 0,
+      "polarity_errors": 0,
+      "temporal_errors": 0,
+      "source_errors": 0,
+      "reason": "TODO"
+    }
+  ]
+}

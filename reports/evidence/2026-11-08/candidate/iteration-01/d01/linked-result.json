@@ -1,0 +1,96 @@
+{
+  "source_id": "d01",
+  "timing_origin": "synthetic_order_not_audio",
+  "result": {
+    "sections": {
+      "complaints": [
+        {
+          "text": "Трудно заснуть, обычно засыпаю через два часа.",
+          "evidence": [
+            {
+              "segment_id": "s2",
+              "quote": "Три недели трудно заснуть, обычно засыпаю через два часа.",
+              "text_revision": 1,
+              "role": "patient",
+              "start": 1,
+              "end": 2
+            }
+          ]
+        }
+      ],
+      "illness_history": [
+        {
+          "text": "Нарушение сна началось с 12 сентября, примерно два месяца назад.",
+          "evidence": [
+            {
+              "segment_id": "s6",
+              "quote": "Сначала сказал три недели, но поправлю: с 12 сентября, примерно два месяца.",
+              "text_revision": 1,
+              "role": "patient",
+              "start": 5,
+              "end": 6
+            }
+          ]
+        },
+        {
+          "text": "Панических приступов не было.",
+          "evidence": [
+            {
+              "segment_id": "s4",
+              "quote": "Нет, приступов паники не было.",
+              "text_revision": 1,
+              "role": "patient",
+              "start": 3,
+              "end": 4
+            }
+          ]
+        }
+      ],
+      "life_history": [
+        {
+          "text": "Со слов сестры, у матери была депрессия; сам документов не видел.",
+          "evidence": [
+            {
+              "segment_id": "s8",
+              "quote": "Сестра говорит, что у мамы была депрессия, сам документов не видел.",
+              "text_revision": 1,
+              "role": "patient",
+              "start": 7,
+              "end": 8
+            }
+          ]
+        }
+      ]
+    },
+    "gaps": [
+      {
+        "topic": "Панические приступы",
+        "status": "patient_does_not_know",
+        "evidence": [
+          {
+            "segment_id": "s4",
+            "quote": "Нет, приступов паники не было.",
+            "text_revision": 1,
+            "role": "patient",
+            "start": 3,
+            "end": 4
+          }
+        ]
+      },
+      {
+        "topic": "Здоровье матери",
+        "status": "patient_does_not_know",
+        "evidence": [
+          {
+            "segment_id": "s8",
+            "quote": "Сестра говорит, что у мамы была депрессия, сам документов не видел.",
+            "text_revision": 1,
+            "role": "patient",
+            "start": 7,
+            "end": 8
+          }
+        ]
+      }
+    ]
+  }
+}
