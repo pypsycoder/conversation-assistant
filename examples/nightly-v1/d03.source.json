@@ -1,0 +1,64 @@
+{
+  "id": "d03",
+  "synthetic": true,
+  "text_revision": 1,
+  "timing_origin": "synthetic_order_not_audio",
+  "segments": [
+    {
+      "id": "s1",
+      "role": "doctor",
+      "text": "Что беспокоит?",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "s2",
+      "role": "patient",
+      "text": "Последнюю неделю трудно сосредоточиться на работе.",
+      "start": 1,
+      "end": 2
+    },
+    {
+      "id": "s3",
+      "role": "doctor",
+      "text": "Было ли такое раньше?",
+      "start": 2,
+      "end": 3
+    },
+    {
+      "id": "s4",
+      "role": "patient",
+      "text": "Не помню, было ли раньше.",
+      "start": 3,
+      "end": 4
+    },
+    {
+      "id": "s5",
+      "role": "doctor",
+      "text": "Как давно работаете водителем?",
+      "start": 4,
+      "end": 5
+    },
+    {
+      "id": "s6",
+      "role": "patient",
+      "text": "Идёт двадцатый год, полных девятнадцать лет.",
+      "start": 5,
+      "end": 6
+    },
+    {
+      "id": "s7",
+      "role": "doctor",
+      "text": "Что жена замечает в вашем состоянии?",
+      "start": 6,
+      "end": 7
+    },
+    {
+      "id": "s8",
+      "role": "patient",
+      "text": "Жена говорит, что стал раздражительным, сам не уверен.",
+      "start": 7,
+      "end": 8
+    }
+  ]
+}

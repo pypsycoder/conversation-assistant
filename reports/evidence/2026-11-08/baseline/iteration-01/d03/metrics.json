@@ -1,0 +1,21 @@
+{
+  "gold_facts": 4,
+  "output_rows": 6,
+  "tp": 4,
+  "fp": 1,
+  "fn": 0,
+  "precision": 0.8,
+  "recall": 1.0,
+  "f1": 0.8888888888888888,
+  "required_placements": 5,
+  "covered_placements": 5,
+  "correct_placements": 5,
+  "predicted_placements": 5,
+  "unsupported_atoms": 1,
+  "duplicate_placements": 0,
+  "polarity_errors": 0,
+  "temporal_errors": 0,
+  "source_errors": 0,
+  "reviewer": "Codex; agent author of rubric; not blind; not a physician",
+  "physician_reviewed": false
+}

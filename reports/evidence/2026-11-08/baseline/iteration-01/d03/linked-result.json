@@ -1,0 +1,132 @@
+{
+  "source_id": "d03",
+  "timing_origin": "synthetic_order_not_audio",
+  "result": {
+    "sections": {
+      "complaints": [
+        {
+          "text": "Последнюю неделю трудно сосредоточиться на работе.",
+          "evidence": [
+            {
+              "segment_id": "s2",
+              "quote": "Последнюю неделю трудно сосредоточиться на работе.",
+              "text_revision": 1,
+              "role": "patient",
+              "start": 1,
+              "end": 2
+            }
+          ]
+        }
+      ],
+      "illness_history": [
+        {
+          "text": "Трудности с концентрацией на работе появились в последнюю неделю.",
+          "evidence": [
+            {
+              "segment_id": "s2",
+              "quote": "Последнюю неделю трудно сосредоточиться на работе.",
+              "text_revision": 1,
+              "role": "patient",
+              "start": 1,
+              "end": 2
+            }
+          ]
+        },
+        {
+          "text": "Не помнит, были ли подобные эпизоды раньше.",
+          "evidence": [
+            {
+              "segment_id": "s4",
+              "quote": "Не помню, было ли раньше.",
+              "text_revision": 1,
+              "role": "patient",
+              "start": 3,
+              "end": 4
+            }
+          ]
+        },
+        {
+          "text": "Жена отмечает, что стал раздражительным; сам пациент в этом не уверен.",
+          "evidence": [
+            {
+              "segment_id": "s8",
+              "quote": "Жена говорит, что стал раздражительным, сам не уверен.",
+              "text_revision": 1,
+              "role": "patient",
+              "start": 7,
+              "end": 8
+            }
+          ]
+        }
+      ],
+      "life_history": [
+        {
+          "text": "Работает водителем, стаж полных девятнадцать лет, идёт двадцатый год.",
+          "evidence": [
+            {
+              "segment_id": "s6",
+              "quote": "Идёт двадцатый год, полных девятнадцать лет.",
+              "text_revision": 1,
+              "role": "patient",
+              "start": 5,
+              "end": 6
+            }
+          ]
+        },
+        {
+          "text": "Женат.",
+          "evidence": [
+            {
+              "segment_id": "s7",
+              "quote": "Что жена замечает в вашем состоянии?",
+              "text_revision": 1,
+              "role": "doctor",
+              "start": 6,
+              "end": 7
+            },
+            {
+              "segment_id": "s8",
+              "quote": "Жена говорит, что стал раздражительным, сам не уверен.",
+              "text_revision": 1,
+              "role": "patient",
+              "start": 7,
+              "end": 8
+            }
+          ]
+        }
+      ]
+    },
+    "gaps": [
+      {
+        "topic": "Начало и динамика трудностей с концентрацией",
+        "status": "not_discussed",
+        "evidence": []
+      },
+      {
+        "topic": "Влияние трудностей с концентрацией на вождение и безопасность",
+        "status": "not_discussed",
+        "evidence": []
+      },
+      {
+        "topic": "Сон, аппетит, энергия, настроение, тревога, боль, соматические симптомы",
+        "status": "not_discussed",
+        "evidence": []
+      },
+      {
+        "topic": "Алкоголь, никотин, кофеин, другие вещества",
+        "status": "not_discussed",
+        "evidence": []
+      },
+      {
+        "topic": "Соматический анамнез, операции, травмы",
+        "status": "not_discussed",
+        "evidence": []
+      },
+      {
+        "topic": "Семейный психиатрический и соматический анамнез",
+        "status": "not_discussed",
+        "evidence": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "id": "d01",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "f1",
+      "meaning": "Сейчас трудно заснуть, засыпание обычно через два часа.",
+      "required_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "f2",
+      "meaning": "Панические приступы отрицает; не положительная жалоба.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s4"
+      ]
+    },
+    {
+      "id": "f3",
+      "meaning": "Исправленное начало бессонницы — 12 сентября, примерно два месяца; три недели не актуальная длительность.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history",
+        "complaints"
+      ],
+      "source_segment_ids": [
+        "s2",
+        "s6"
+      ]
+    },
+    {
+      "id": "f4",
+      "meaning": "О депрессии матери знает со слов сестры, документов не видел; это не диагноз пациента.",
+      "required_sections": [
+        "life_history"
+      ],
+      "allowed_sections": [
+        "life_history"
+      ],
+      "source_segment_ids": [
+        "s8"
+      ]
+    }
+  ]
+}

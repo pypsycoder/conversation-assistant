@@ -1,0 +1,84 @@
+{
+  "reviewer": "Codex; agent author of rubric; not blind; not a physician",
+  "physician_reviewed": false,
+  "response_sha256": "dbd0347c2d8e085997d4611c89544d49d75996382a6d0ac097cb42473755c42e",
+  "gold_sha256": "e10658164da577b54e165af06cd4bf07e5cb783121128dce8386770e43588503",
+  "rows": [
+    {
+      "row_id": "complaints:0",
+      "text": "Последнюю неделю трудно сосредоточиться на работе.",
+      "complete_fact_ids": [
+        "f1"
+      ],
+      "partial_fact_ids": [],
+      "unsupported_atoms": 0,
+      "polarity_errors": 0,
+      "temporal_errors": 0,
+      "source_errors": 0,
+      "reason": "Сопоставлено с исходной репликой и полным критерием gold; смысл и атрибуты сохранены."
+    },
+    {
+      "row_id": "illness_history:0",
+      "text": "Трудности с концентрацией на работе появились в последнюю неделю.",
+      "complete_fact_ids": [
+        "f1"
+      ],
+      "partial_fact_ids": [],
+      "unsupported_atoms": 0,
+      "polarity_errors": 0,
+      "temporal_errors": 0,
+      "source_errors": 0,
+      "reason": "Сопоставлено с исходной репликой и полным критерием gold; смысл и атрибуты сохранены."
+    },
+    {
+      "row_id": "illness_history:1",
+      "text": "Не помнит, были ли подобные эпизоды раньше.",
+      "complete_fact_ids": [
+        "f2"
+      ],
+      "partial_fact_ids": [],
+      "unsupported_atoms": 0,
+      "polarity_errors": 0,
+      "temporal_errors": 0,
+      "source_errors": 0,
+      "reason": "Сопоставлено с исходной репликой и полным критерием gold; смысл и атрибуты сохранены."
+    },
+    {
+      "row_id": "illness_history:2",
+      "text": "Жена отмечает, что стал раздражительным; сам пациент в этом не уверен.",
+      "complete_fact_ids": [
+        "f4"
+      ],
+      "partial_fact_ids": [],
+      "unsupported_atoms": 0,
+      "polarity_errors": 0,
+      "temporal_errors": 0,
+      "source_errors": 0,
+      "reason": "Сопоставлено с исходной репликой и полным критерием gold; смысл и атрибуты сохранены."
+    },
+    {
+      "row_id": "life_history:0",
+      "text": "Работает водителем, стаж полных девятнадцать лет, идёт двадцатый год.",
+      "complete_fact_ids": [
+        "f3"
+      ],
+      "partial_fact_ids": [],
+      "unsupported_atoms": 0,
+      "polarity_errors": 0,
+      "temporal_errors": 0,
+      "source_errors": 0,
+      "reason": "Сопоставлено с исходной репликой и полным критерием gold; смысл и атрибуты сохранены."
+    },
+    {
+      "row_id": "life_history:1",
+      "text": "Женат.",
+      "complete_fact_ids": [],
+      "partial_fact_ids": [],
+      "unsupported_atoms": 1,
+      "polarity_errors": 0,
+      "temporal_errors": 0,
+      "source_errors": 0,
+      "reason": "Из упоминания жены модель вывела юридическое семейное положение; отдельного прямого утверждения о браке нет. Строгая рубрика запрещает такой вывод."
+    }
+  ]
+}

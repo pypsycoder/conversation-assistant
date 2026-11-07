@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "synthetic": true,
+  "gold_status": "agent_authored_requires_physician_review",
+  "final_status": "reserved_not_independently_blinded",
+  "cases": [
+    {
+      "id": "d01",
+      "split": "diagnostic",
+      "source": "d01.source.json",
+      "gold": "d01.gold.json"
+    },
+    {
+      "id": "d02",
+      "split": "diagnostic",
+      "source": "d02.source.json",
+      "gold": "d02.gold.json"
+    },
+    {
+      "id": "d03",
+      "split": "diagnostic",
+      "source": "d03.source.json",
+      "gold": "d03.gold.json"
+    },
+    {
+      "id": "v01",
+      "split": "validation",
+      "source": "v01.source.json",
+      "gold": "v01.gold.json"
+    },
+    {
+      "id": "v02",
+      "split": "validation",
+      "source": "v02.source.json",
+      "gold": "v02.gold.json"
+    },
+    {
+      "id": "f01",
+      "split": "final",
+      "source": "f01.source.json",
+      "gold": "f01.gold.json"
+    }
+  ]
+}

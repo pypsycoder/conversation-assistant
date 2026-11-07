@@ -1,0 +1,62 @@
+{
+  "id": "d03",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "f1",
+      "meaning": "Последнюю неделю трудно сосредоточиться на работе.",
+      "required_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "f2",
+      "meaning": "Не помнит, было ли подобное раньше; не отрицание прошлых эпизодов.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s4"
+      ]
+    },
+    {
+      "id": "f3",
+      "meaning": "Водитель, полных 19 лет стажа, идёт двадцатый год; не 20 полных лет.",
+      "required_sections": [
+        "life_history"
+      ],
+      "allowed_sections": [
+        "life_history"
+      ],
+      "source_segment_ids": [
+        "s6"
+      ]
+    },
+    {
+      "id": "f4",
+      "meaning": "Раздражительность отмечает жена, пациент не уверен; источник и неопределённость обязательны.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history",
+        "complaints"
+      ],
+      "source_segment_ids": [
+        "s8"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "f01",
+  "synthetic": true,
+  "text_revision": 1,
+  "timing_origin": "synthetic_order_not_audio",
+  "segments": [
+    {
+      "id": "s1",
+      "role": "doctor",
+      "text": "Что мешает сейчас?",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "s2",
+      "role": "patient",
+      "text": "Уже месяц просыпаюсь в пять утра вместо семи.",
+      "start": 1,
+      "end": 2
+    },
+    {
+      "id": "s3",
+      "role": "doctor",
+      "text": "Что принимаете от этого?",
+      "start": 2,
+      "end": 3
+    },
+    {
+      "id": "s4",
+      "role": "patient",
+      "text": "Не помню название, половину таблетки вечером; дозировку не знаю.",
+      "start": 3,
+      "end": 4
+    }
+  ]
+}

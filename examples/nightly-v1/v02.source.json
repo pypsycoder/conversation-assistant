@@ -1,0 +1,50 @@
+{
+  "id": "v02",
+  "synthetic": true,
+  "text_revision": 1,
+  "timing_origin": "synthetic_order_not_audio",
+  "segments": [
+    {
+      "id": "s1",
+      "role": "doctor",
+      "text": "Как изменялось самочувствие?",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "s2",
+      "role": "patient",
+      "text": "В феврале было хуже, в марте стало легче, а сейчас опять хуже.",
+      "start": 1,
+      "end": 2
+    },
+    {
+      "id": "s3",
+      "role": "doctor",
+      "text": "Сколько детей?",
+      "start": 2,
+      "end": 3
+    },
+    {
+      "id": "s4",
+      "role": "patient",
+      "text": "Двое.",
+      "start": 3,
+      "end": 4
+    },
+    {
+      "id": "s5",
+      "role": "doctor",
+      "text": "Есть ли известные психиатрические заболевания у отца?",
+      "start": 4,
+      "end": 5
+    },
+    {
+      "id": "s6",
+      "role": "patient",
+      "text": "Не знаю, мы не общаемся.",
+      "start": 5,
+      "end": 6
+    }
+  ]
+}

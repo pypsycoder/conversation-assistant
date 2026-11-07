@@ -1,0 +1,74 @@
+{
+  "reviewer": "TODO",
+  "physician_reviewed": false,
+  "response_sha256": "274e2ef6a2d9f13e723a19fa0b6a140f58c6621640cb3e07976d2e4c54b38b57",
+  "gold_sha256": "3fd31042cb8801514c792f86adda75e76d9d4dbfecc2ef7041b25f5aa15f12bc",
+  "rows": [
+    {
+      "row_id": "complaints:0",
+      "text": "Тревожно каждый вечер.",
+      "complete_fact_ids": [],
+      "partial_fact_ids": [],
+      "unsupported_atoms": 0,
+      "polarity_errors": 0,
+      "temporal_errors": 0,
+      "source_errors": 0,
+      "reason": "TODO"
+    },
+    {
+      "row_id": "illness_history:0",
+      "text": "Первое лечение в 2024 году: сертралин 50 мг утром шесть недель, без заметного улучшения.",
+      "complete_fact_ids": [],
+      "partial_fact_ids": [],
+      "unsupported_atoms": 0,
+      "polarity_errors": 0,
+      "temporal_errors": 0,
+      "source_errors": 0,
+      "reason": "TODO"
+    },
+    {
+      "row_id": "illness_history:1",
+      "text": "С января 2025 года эсциталопрам 10 мг утром три месяца, тревога уменьшилась.",
+      "complete_fact_ids": [],
+      "partial_fact_ids": [],
+      "unsupported_atoms": 0,
+      "polarity_errors": 0,
+      "temporal_errors": 0,
+      "source_errors": 0,
+      "reason": "TODO"
+    },
+    {
+      "row_id": "illness_history:2",
+      "text": "Сейчас ничего не принимаю.",
+      "complete_fact_ids": [],
+      "partial_fact_ids": [],
+      "unsupported_atoms": 0,
+      "polarity_errors": 0,
+      "temporal_errors": 0,
+      "source_errors": 0,
+      "reason": "TODO"
+    },
+    {
+      "row_id": "illness_history:3",
+      "text": "Тревога каждый вечер — это то же самое проявление, не второй симптом.",
+      "complete_fact_ids": [],
+      "partial_fact_ids": [],
+      "unsupported_atoms": 0,
+      "polarity_errors": 0,
+      "temporal_errors": 0,
+      "source_errors": 0,
+      "reason": "TODO"
+    },
+    {
+      "row_id": "life_history:0",
+      "text": "Возраст, семейное положение, дети, жилищные условия, семейный психиатрический анамнез, соматический анамнез/операции/травмы, алкоголь/никотин/другие вещества/кофеин не обсуждались.",
+      "complete_fact_ids": [],
+      "partial_fact_ids": [],
+      "unsupported_atoms": 0,
+      "polarity_errors": 0,
+      "temporal_errors": 0,
+      "source_errors": 0,
+      "reason": "TODO"
+    }
+  ]
+}

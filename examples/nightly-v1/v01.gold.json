@@ -1,0 +1,35 @@
+{
+  "id": "v01",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "f1",
+      "meaning": "Операция по поводу аппендицита в 2018.",
+      "required_sections": [
+        "life_history"
+      ],
+      "allowed_sections": [
+        "life_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "f2",
+      "meaning": "Утренняя тошнота последние 10 дней, причина неизвестна.",
+      "required_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s4"
+      ]
+    }
+  ]
+}

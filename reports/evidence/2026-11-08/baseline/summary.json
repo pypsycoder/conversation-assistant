@@ -1,0 +1,67 @@
+{
+  "status": "awaiting_independent_review",
+  "calls": 3,
+  "tokens": 8540,
+  "semantic_metrics": null,
+  "cost_rub": null,
+  "cost_note": "Tariff not configured",
+  "experiment": "direct-v2 reference; not the accepted incremental S baseline",
+  "cases": [
+    {
+      "id": "d01",
+      "iteration": 1,
+      "seconds": 5.8062353000059375,
+      "usage": {
+        "prompt_tokens": 1702,
+        "completion_tokens": 842,
+        "total_tokens": 2544,
+        "precached_prompt_tokens": 0
+      },
+      "model": "GigaChat-3-Ultra:32.9.16.9"
+    },
+    {
+      "id": "d02",
+      "iteration": 1,
+      "seconds": 11.057404200000747,
+      "usage": {
+        "prompt_tokens": 1719,
+        "completion_tokens": 1572,
+        "total_tokens": 3291,
+        "precached_prompt_tokens": 0
+      },
+      "model": "GigaChat-3-Ultra:32.9.16.9"
+    },
+    {
+      "id": "d03",
+      "iteration": 1,
+      "seconds": 6.219361600000411,
+      "usage": {
+        "prompt_tokens": 1685,
+        "completion_tokens": 1020,
+        "total_tokens": 2705,
+        "precached_prompt_tokens": 0
+      },
+      "model": "GigaChat-3-Ultra:32.9.16.9"
+    }
+  ],
+  "provider": {
+    "base_url": "https://api.giga.chat/v1",
+    "scope": "GIGACHAT_API_PERS",
+    "available_models": [
+      "GigaChat-2",
+      "GigaChat-2-Max",
+      "GigaChat-2-Pro",
+      "GigaChat-3-Lightning",
+      "GigaChat-3-Pro",
+      "GigaChat-3-Ultra",
+      "Embeddings",
+      "Embeddings-2",
+      "EmbeddingsGigaR",
+      "GigaEmbeddings-3B-2025-09"
+    ],
+    "selected_model": "GigaChat-3-Ultra",
+    "tls_verification": true,
+    "credentials_logged": false
+  },
+  "seconds": 29.92199999999866
+}

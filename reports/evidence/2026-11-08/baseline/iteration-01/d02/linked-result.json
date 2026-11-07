@@ -1,0 +1,220 @@
+{
+  "source_id": "d02",
+  "timing_origin": "synthetic_order_not_audio",
+  "result": {
+    "sections": {
+      "complaints": [
+        {
+          "text": "Тревожно каждый вечер.",
+          "evidence": [
+            {
+              "segment_id": "s8",
+              "quote": "Тревожно каждый вечер.",
+              "text_revision": 1,
+              "role": "patient",
+              "start": 7,
+              "end": 8
+            }
+          ]
+        }
+      ],
+      "illness_history": [
+        {
+          "text": "Первое лечение в 2024 году: сертралин 50 мг утром шесть недель, без заметного улучшения.",
+          "evidence": [
+            {
+              "segment_id": "s2",
+              "quote": "В 2024 году сертралин 50 мг утром шесть недель, без заметного улучшения.",
+              "text_revision": 1,
+              "role": "patient",
+              "start": 1,
+              "end": 2
+            }
+          ]
+        },
+        {
+          "text": "С января 2025 года эсциталопрам 10 мг утром три месяца, тревога уменьшилась.",
+          "evidence": [
+            {
+              "segment_id": "s4",
+              "quote": "С января 2025 года эсциталопрам 10 мг утром три месяца, тревога уменьшилась.",
+              "text_revision": 1,
+              "role": "patient",
+              "start": 3,
+              "end": 4
+            }
+          ]
+        },
+        {
+          "text": "Сейчас ничего не принимаю.",
+          "evidence": [
+            {
+              "segment_id": "s6",
+              "quote": "Сейчас ничего не принимаю.",
+              "text_revision": 1,
+              "role": "patient",
+              "start": 5,
+              "end": 6
+            }
+          ]
+        },
+        {
+          "text": "Тревога каждый вечер — это то же самое проявление, не второй симптом.",
+          "evidence": [
+            {
+              "segment_id": "s8",
+              "quote": "Каждый вечер тревожусь — это то же самое, не второй симптом.",
+              "text_revision": 1,
+              "role": "patient",
+              "start": 7,
+              "end": 8
+            }
+          ]
+        }
+      ],
+      "life_history": [
+        {
+          "text": "Возраст, семейное положение, дети, жилищные условия, семейный психиатрический анамнез, соматический анамнез/операции/травмы, алкоголь/никотин/другие вещества/кофеин не обсуждались.",
+          "evidence": [
+            {
+              "segment_id": "s1",
+              "quote": "Какое лечение было первым?",
+              "text_revision": 1,
+              "role": "doctor",
+              "start": 0,
+              "end": 1
+            },
+            {
+              "segment_id": "s2",
+              "quote": "В 2024 году сертралин 50 мг утром шесть недель, без заметного улучшения.",
+              "text_revision": 1,
+              "role": "patient",
+              "start": 1,
+              "end": 2
+            },
+            {
+              "segment_id": "s3",
+              "quote": "Что принимали позднее?",
+              "text_revision": 1,
+              "role": "doctor",
+              "start": 2,
+              "end": 3
+            },
+            {
+              "segment_id": "s4",
+              "quote": "С января 2025 года эсциталопрам 10 мг утром три месяца, тревога уменьшилась.",
+              "text_revision": 1,
+              "role": "patient",
+              "start": 3,
+              "end": 4
+            },
+            {
+              "segment_id": "s5",
+              "quote": "Принимаете ли сейчас препараты?",
+              "text_revision": 1,
+              "role": "doctor",
+              "start": 4,
+              "end": 5
+            },
+            {
+              "segment_id": "s6",
+              "quote": "Сейчас ничего не принимаю.",
+              "text_revision": 1,
+              "role": "patient",
+              "start": 5,
+              "end": 6
+            },
+            {
+              "segment_id": "s7",
+              "quote": "Как сейчас чувствуете себя?",
+              "text_revision": 1,
+              "role": "doctor",
+              "start": 6,
+              "end": 7
+            },
+            {
+              "segment_id": "s8",
+              "quote": "Тревожно каждый вечер. Каждый вечер тревожусь — это то же самое, не второй симптом.",
+              "text_revision": 1,
+              "role": "patient",
+              "start": 7,
+              "end": 8
+            }
+          ]
+        }
+      ]
+    },
+    "gaps": [
+      {
+        "topic": "Возраст, семейное положение, дети, жилищные условия, семейный психиатрический анамнез, соматический анамнез/операции/травмы, алкоголь/никотин/другие вещества/кофеин",
+        "status": "not_discussed",
+        "evidence": [
+          {
+            "segment_id": "s1",
+            "quote": "Какое лечение было первым?",
+            "text_revision": 1,
+            "role": "doctor",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "segment_id": "s2",
+            "quote": "В 2024 году сертралин 50 мг утром шесть недель, без заметного улучшения.",
+            "text_revision": 1,
+            "role": "patient",
+            "start": 1,
+            "end": 2
+          },
+          {
+            "segment_id": "s3",
+            "quote": "Что принимали позднее?",
+            "text_revision": 1,
+            "role": "doctor",
+            "start": 2,
+            "end": 3
+          },
+          {
+            "segment_id": "s4",
+            "quote": "С января 2025 года эсциталопрам 10 мг утром три месяца, тревога уменьшилась.",
+            "text_revision": 1,
+            "role": "patient",
+            "start": 3,
+            "end": 4
+          },
+          {
+            "segment_id": "s5",
+            "quote": "Принимаете ли сейчас препараты?",
+            "text_revision": 1,
+            "role": "doctor",
+            "start": 4,
+            "end": 5
+          },
+          {
+            "segment_id": "s6",
+            "quote": "Сейчас ничего не принимаю.",
+            "text_revision": 1,
+            "role": "patient",
+            "start": 5,
+            "end": 6
+          },
+          {
+            "segment_id": "s7",
+            "quote": "Как сейчас чувствуете себя?",
+            "text_revision": 1,
+            "role": "doctor",
+            "start": 6,
+            "end": 7
+          },
+          {
+            "segment_id": "s8",
+            "quote": "Тревожно каждый вечер. Каждый вечер тревожусь — это то же самое, не второй симптом.",
+            "text_revision": 1,
+            "role": "patient",
+            "start": 7,
+            "end": 8
+          }
+        ]
+      }
+    ]
+  }
+}
