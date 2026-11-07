@@ -1,0 +1,7 @@
+{
+  "decision": "accepted_for_source_marker_printing_only",
+  "reviewer": "Codex; rubric and candidate author; not blind",
+  "physician_reviewed": false,
+  "reason": "All six boundary defects corrected; all ten validation cases preserved; zero changed text rows across nine saved registries and 1002 placements. No input mutations or non-text changes found.",
+  "limits": ["No measured improvement on the historical 1002 rows", "Not extraction F1", "Prefix and within-sentence subject ambiguities remain", "Historical runners and main are unchanged"]
+}

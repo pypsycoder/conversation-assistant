@@ -1,0 +1,71 @@
+{
+  "splits": {
+    "diagnostic": {
+      "n": 6,
+      "control_correct": 0,
+      "candidate_correct": 6
+    },
+    "validation": {
+      "n": 10,
+      "control_correct": 10,
+      "candidate_correct": 10
+    }
+  },
+  "api_calls": 0,
+  "tokens": 0,
+  "model_cost": 0,
+  "replay_units": 9,
+  "replay_rows": 1002,
+  "changed_replay_rows": 0,
+  "inputs_unchanged": true,
+  "non_text_fields_unchanged": true,
+  "replays": [
+    {
+      "run": "r1",
+      "case": "case-11",
+      "rows": 106
+    },
+    {
+      "run": "r1",
+      "case": "case-12",
+      "rows": 97
+    },
+    {
+      "run": "r1",
+      "case": "case-13",
+      "rows": 109
+    },
+    {
+      "run": "r2",
+      "case": "case-11",
+      "rows": 95
+    },
+    {
+      "run": "r2",
+      "case": "case-12",
+      "rows": 125
+    },
+    {
+      "run": "r2",
+      "case": "case-13",
+      "rows": 146
+    },
+    {
+      "run": "r3",
+      "case": "case-11",
+      "rows": 78
+    },
+    {
+      "run": "r3",
+      "case": "case-12",
+      "rows": 120
+    },
+    {
+      "run": "r3",
+      "case": "case-13",
+      "rows": 126
+    }
+  ],
+  "decision": "pending_manual_review_of_changes",
+  "physician_reviewed": false
+}
