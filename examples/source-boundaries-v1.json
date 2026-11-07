@@ -1,0 +1,23 @@
+{
+  "synthetic": true,
+  "physician_reviewed": false,
+  "scope": "attribution-marker printing only, not clinical extraction",
+  "cases": [
+    {"id":"d01","split":"diagnostic","text":"Раздражается на мужа. Пациентка говорит, что плохо спит.","reported_by":"муж","expected_added":true,"reason":"Муж упомянут как объект; говорит пациентка в другом предложении."},
+    {"id":"d02","split":"diagnostic","text":"Думает о матери? Врач считает тревогу значимой.","reported_by":"мать","expected_added":true,"reason":"Матери не принадлежит сообщение врача после вопросительного знака."},
+    {"id":"d03","split":"diagnostic","text":"Боится отца! Пациент сообщает о недосыпании.","reported_by":"отец","expected_added":true,"reason":"Упоминание отца не устанавливает его источником следующего предложения."},
+    {"id":"d04","split":"diagnostic","text":"Ссорится с сестрой; врач отмечает усталость.","reported_by":"сестра","expected_added":true,"reason":"Глагол отмечает относится к врачу, не к сестре."},
+    {"id":"d05","split":"diagnostic","text":"Не доверяет жене.\nПациент рассказал об этом.","reported_by":"жена","expected_added":true,"reason":"Рассказ пациента отделён от упоминания жены."},
+    {"id":"d06","split":"diagnostic","text":"Не помнит точных слов. Мать была спокойна.","reported_by":"мать","expected_added":true,"reason":"Слово слов в предыдущем предложении не является оборотом со слов матери."},
+    {"id":"v01","split":"validation","text":"По словам жены, плохо спит.","reported_by":"wife","expected_added":false,"reason":"Источник назван явным оборотом сообщения."},
+    {"id":"v02","split":"validation","text":"Мать считает, что стал забывчивым.","reported_by":"мама","expected_added":false,"reason":"Синоним источника и глагол находятся в одном предложении."},
+    {"id":"v03","split":"validation","text":"Гинеколог на осмотре после родов сказал, что всё в порядке.","reported_by":"гинеколог","expected_added":false,"reason":"Допустимые слова между источником и глаголом не теряются."},
+    {"id":"v04","split":"validation","text":"Плохо спит.","reported_by":"patient","expected_added":false,"reason":"Слова самого пациента не требуют чужого источника."},
+    {"id":"v05","split":"validation","text":"Мастер: вентиляция в порядке.","reported_by":"мастер","expected_added":false,"reason":"Двоеточие непосредственно связывает источник с сообщением."},
+    {"id":"v06","split":"validation","text":"Раздражается на мужа из-за ерунды.","reported_by":"husband","expected_added":true,"reason":"Упоминание мужа не равно атрибуции."},
+    {"id":"v07","split":"validation","text":"Со слов кардиолога, сердце здорово. Дату не помнит.","reported_by":"cardiologist","expected_added":false,"reason":"Явный источник в первом предложении не теряется из-за второго."},
+    {"id":"v08","split":"validation","text":"Плохо спит. Жена говорит, что это началось недавно.","reported_by":"жена","expected_added":false,"reason":"Во втором предложении источник действительно назван."},
+    {"id":"v09","split":"validation","text":"Потеря веса по наблюдению матери.","reported_by":"мама","expected_added":false,"reason":"Сохраняется обратный порядок сообщения и его источника."},
+    {"id":"v10","split":"validation","text":"Плохо спит по словам жены.","reported_by":"wife","expected_added":false,"reason":"Наличие точки в конце не нарушает явную атрибуцию."}
+  ]
+}

@@ -1,0 +1,290 @@
+[
+  {
+    "id": "d01",
+    "split": "diagnostic",
+    "text": "Раздражается на мужа. Пациентка говорит, что плохо спит.",
+    "reported_by": "муж",
+    "expected_added": true,
+    "reason": "Муж упомянут как объект; говорит пациентка в другом предложении.",
+    "control": {
+      "text": "Раздражается на мужа. Пациентка говорит, что плохо спит.",
+      "added": false
+    },
+    "candidate": {
+      "text": "Раздражается на мужа. Пациентка говорит, что плохо спит. (со слов: муж)",
+      "added": true
+    },
+    "control_correct": false,
+    "candidate_correct": true
+  },
+  {
+    "id": "d02",
+    "split": "diagnostic",
+    "text": "Думает о матери? Врач считает тревогу значимой.",
+    "reported_by": "мать",
+    "expected_added": true,
+    "reason": "Матери не принадлежит сообщение врача после вопросительного знака.",
+    "control": {
+      "text": "Думает о матери? Врач считает тревогу значимой.",
+      "added": false
+    },
+    "candidate": {
+      "text": "Думает о матери? Врач считает тревогу значимой. (со слов: мать)",
+      "added": true
+    },
+    "control_correct": false,
+    "candidate_correct": true
+  },
+  {
+    "id": "d03",
+    "split": "diagnostic",
+    "text": "Боится отца! Пациент сообщает о недосыпании.",
+    "reported_by": "отец",
+    "expected_added": true,
+    "reason": "Упоминание отца не устанавливает его источником следующего предложения.",
+    "control": {
+      "text": "Боится отца! Пациент сообщает о недосыпании.",
+      "added": false
+    },
+    "candidate": {
+      "text": "Боится отца! Пациент сообщает о недосыпании. (со слов: отец)",
+      "added": true
+    },
+    "control_correct": false,
+    "candidate_correct": true
+  },
+  {
+    "id": "d04",
+    "split": "diagnostic",
+    "text": "Ссорится с сестрой; врач отмечает усталость.",
+    "reported_by": "сестра",
+    "expected_added": true,
+    "reason": "Глагол отмечает относится к врачу, не к сестре.",
+    "control": {
+      "text": "Ссорится с сестрой; врач отмечает усталость.",
+      "added": false
+    },
+    "candidate": {
+      "text": "Ссорится с сестрой; врач отмечает усталость. (со слов: сестра)",
+      "added": true
+    },
+    "control_correct": false,
+    "candidate_correct": true
+  },
+  {
+    "id": "d05",
+    "split": "diagnostic",
+    "text": "Не доверяет жене.\nПациент рассказал об этом.",
+    "reported_by": "жена",
+    "expected_added": true,
+    "reason": "Рассказ пациента отделён от упоминания жены.",
+    "control": {
+      "text": "Не доверяет жене.\nПациент рассказал об этом.",
+      "added": false
+    },
+    "candidate": {
+      "text": "Не доверяет жене.\nПациент рассказал об этом. (со слов: жена)",
+      "added": true
+    },
+    "control_correct": false,
+    "candidate_correct": true
+  },
+  {
+    "id": "d06",
+    "split": "diagnostic",
+    "text": "Не помнит точных слов. Мать была спокойна.",
+    "reported_by": "мать",
+    "expected_added": true,
+    "reason": "Слово слов в предыдущем предложении не является оборотом со слов матери.",
+    "control": {
+      "text": "Не помнит точных слов. Мать была спокойна.",
+      "added": false
+    },
+    "candidate": {
+      "text": "Не помнит точных слов. Мать была спокойна. (со слов: мать)",
+      "added": true
+    },
+    "control_correct": false,
+    "candidate_correct": true
+  },
+  {
+    "id": "v01",
+    "split": "validation",
+    "text": "По словам жены, плохо спит.",
+    "reported_by": "wife",
+    "expected_added": false,
+    "reason": "Источник назван явным оборотом сообщения.",
+    "control": {
+      "text": "По словам жены, плохо спит.",
+      "added": false
+    },
+    "candidate": {
+      "text": "По словам жены, плохо спит.",
+      "added": false
+    },
+    "control_correct": true,
+    "candidate_correct": true
+  },
+  {
+    "id": "v02",
+    "split": "validation",
+    "text": "Мать считает, что стал забывчивым.",
+    "reported_by": "мама",
+    "expected_added": false,
+    "reason": "Синоним источника и глагол находятся в одном предложении.",
+    "control": {
+      "text": "Мать считает, что стал забывчивым.",
+      "added": false
+    },
+    "candidate": {
+      "text": "Мать считает, что стал забывчивым.",
+      "added": false
+    },
+    "control_correct": true,
+    "candidate_correct": true
+  },
+  {
+    "id": "v03",
+    "split": "validation",
+    "text": "Гинеколог на осмотре после родов сказал, что всё в порядке.",
+    "reported_by": "гинеколог",
+    "expected_added": false,
+    "reason": "Допустимые слова между источником и глаголом не теряются.",
+    "control": {
+      "text": "Гинеколог на осмотре после родов сказал, что всё в порядке.",
+      "added": false
+    },
+    "candidate": {
+      "text": "Гинеколог на осмотре после родов сказал, что всё в порядке.",
+      "added": false
+    },
+    "control_correct": true,
+    "candidate_correct": true
+  },
+  {
+    "id": "v04",
+    "split": "validation",
+    "text": "Плохо спит.",
+    "reported_by": "patient",
+    "expected_added": false,
+    "reason": "Слова самого пациента не требуют чужого источника.",
+    "control": {
+      "text": "Плохо спит.",
+      "added": false
+    },
+    "candidate": {
+      "text": "Плохо спит.",
+      "added": false
+    },
+    "control_correct": true,
+    "candidate_correct": true
+  },
+  {
+    "id": "v05",
+    "split": "validation",
+    "text": "Мастер: вентиляция в порядке.",
+    "reported_by": "мастер",
+    "expected_added": false,
+    "reason": "Двоеточие непосредственно связывает источник с сообщением.",
+    "control": {
+      "text": "Мастер: вентиляция в порядке.",
+      "added": false
+    },
+    "candidate": {
+      "text": "Мастер: вентиляция в порядке.",
+      "added": false
+    },
+    "control_correct": true,
+    "candidate_correct": true
+  },
+  {
+    "id": "v06",
+    "split": "validation",
+    "text": "Раздражается на мужа из-за ерунды.",
+    "reported_by": "husband",
+    "expected_added": true,
+    "reason": "Упоминание мужа не равно атрибуции.",
+    "control": {
+      "text": "Раздражается на мужа из-за ерунды. (со слов: муж)",
+      "added": true
+    },
+    "candidate": {
+      "text": "Раздражается на мужа из-за ерунды. (со слов: муж)",
+      "added": true
+    },
+    "control_correct": true,
+    "candidate_correct": true
+  },
+  {
+    "id": "v07",
+    "split": "validation",
+    "text": "Со слов кардиолога, сердце здорово. Дату не помнит.",
+    "reported_by": "cardiologist",
+    "expected_added": false,
+    "reason": "Явный источник в первом предложении не теряется из-за второго.",
+    "control": {
+      "text": "Со слов кардиолога, сердце здорово. Дату не помнит.",
+      "added": false
+    },
+    "candidate": {
+      "text": "Со слов кардиолога, сердце здорово. Дату не помнит.",
+      "added": false
+    },
+    "control_correct": true,
+    "candidate_correct": true
+  },
+  {
+    "id": "v08",
+    "split": "validation",
+    "text": "Плохо спит. Жена говорит, что это началось недавно.",
+    "reported_by": "жена",
+    "expected_added": false,
+    "reason": "Во втором предложении источник действительно назван.",
+    "control": {
+      "text": "Плохо спит. Жена говорит, что это началось недавно.",
+      "added": false
+    },
+    "candidate": {
+      "text": "Плохо спит. Жена говорит, что это началось недавно.",
+      "added": false
+    },
+    "control_correct": true,
+    "candidate_correct": true
+  },
+  {
+    "id": "v09",
+    "split": "validation",
+    "text": "Потеря веса по наблюдению матери.",
+    "reported_by": "мама",
+    "expected_added": false,
+    "reason": "Сохраняется обратный порядок сообщения и его источника.",
+    "control": {
+      "text": "Потеря веса по наблюдению матери.",
+      "added": false
+    },
+    "candidate": {
+      "text": "Потеря веса по наблюдению матери.",
+      "added": false
+    },
+    "control_correct": true,
+    "candidate_correct": true
+  },
+  {
+    "id": "v10",
+    "split": "validation",
+    "text": "Плохо спит по словам жены.",
+    "reported_by": "wife",
+    "expected_added": false,
+    "reason": "Наличие точки в конце не нарушает явную атрибуцию.",
+    "control": {
+      "text": "Плохо спит по словам жены.",
+      "added": false
+    },
+    "candidate": {
+      "text": "Плохо спит по словам жены.",
+      "added": false
+    },
+    "control_correct": true,
+    "candidate_correct": true
+  }
+]

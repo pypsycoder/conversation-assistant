@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["events", "properties", "revisions", "unresolved"],
+  "properties": {
+    "events": {"type": "array", "items": {"$ref": "#/$defs/event"}},
+    "properties": {"type": "array", "items": {"$ref": "#/$defs/property"}},
+    "revisions": {"type": "array", "items": {"$ref": "#/$defs/revision"}},
+    "unresolved": {"type": "array", "items": {"$ref": "#/$defs/unresolved"}}
+  },
+  "$defs": {
+    "evidence": {
+      "type": "array", "minItems": 1, "uniqueItems": true,
+      "items": {"type": "object", "additionalProperties": false,
+        "required": ["turn_id", "quote"],
+        "properties": {"turn_id": {"type": "string", "minLength": 1}, "quote": {"type": "string", "minLength": 1}}}
+    },
+    "event": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "kind", "holder", "label", "episode", "parent_state_id", "evidence"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "kind": {"type": "string", "enum": ["state", "episode", "background"]},
+        "holder": {"type": "string", "minLength": 1},
+        "label": {"type": "string", "minLength": 1},
+        "episode": {"type": "string", "minLength": 1},
+        "parent_state_id": {"type": ["string", "null"]},
+        "evidence": {"$ref": "#/$defs/evidence"}
+      }
+    },
+    "property": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "event_id", "kind", "condition", "value", "text", "sections", "certainty", "approximate", "polarity", "evidence"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "event_id": {"type": "string", "minLength": 1},
+        "kind": {"type": "string", "enum": ["presence", "onset", "presence_by", "first_noticed", "worsening_onset", "occurrence_time", "duration", "frequency", "quantity", "severity", "within_day", "context", "place", "course", "functioning", "capability", "background", "belief", "knowledge", "result", "first_event", "other"]},
+        "condition": {"type": "string", "minLength": 1},
+        "value": {
+          "type": "object", "additionalProperties": false,
+          "required": ["type", "text", "ref_event_id"],
+          "properties": {
+            "type": {"type": "string", "enum": ["literal", "event_ref"]},
+            "text": {"type": "string"},
+            "ref_event_id": {"type": ["string", "null"]}
+          }
+        },
+        "text": {"type": "string", "minLength": 1},
+        "sections": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "enum": ["C", "AV", "AM"]}},
+        "certainty": {"type": "string", "enum": ["asserted", "uncertain", "unknown"]},
+        "approximate": {"type": "boolean"},
+        "polarity": {"type": "string", "enum": ["affirmed", "negated", "not_applicable"]},
+        "evidence": {"$ref": "#/$defs/evidence"}
+      }
+    },
+    "revision": {
+      "type": "object", "additionalProperties": false,
+      "required": ["old_property_id", "new_property_id", "evidence"],
+      "properties": {
+        "old_property_id": {"type": "string", "minLength": 1},
+        "new_property_id": {"type": "string", "minLength": 1},
+        "evidence": {"$ref": "#/$defs/evidence"}
+      }
+    },
+    "unresolved": {
+      "type": "object", "additionalProperties": false,
+      "required": ["text", "reason", "evidence"],
+      "properties": {
+        "text": {"type": "string", "minLength": 1},
+        "reason": {"type": "string", "minLength": 1},
+        "evidence": {"$ref": "#/$defs/evidence"}
+      }
+    }
+  }
+}
