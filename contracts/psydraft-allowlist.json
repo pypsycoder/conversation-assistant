@@ -1,0 +1,56 @@
+{
+  "mapping_version": "0.2",
+  "scope": "partial: complaints, disease history, sleep; not a complete PsyDraft registry",
+  "source_root": "D:\\PROJECT\\psydraft",
+  "files": {
+    "frontend/psychstatus/src/sections/general.html": "c51e3f6c94bd5f6bb8ccf6318e4b63d770ada7d3bbde016bdff8edbc4b13d2e6",
+    "frontend/psychstatus/src/sections/status/sleep_appetite.html": "c0d8266f9d33e49fd7b2dd27a390b8c28076b9a7b93042af1185f5bce9fc81fd",
+    "frontend/psychstatus/src/js/report/builder.js": "f9ec4acc633c65e6273c5bc376fe4043169c5a31048af5f18877471b42aa0b29"
+  },
+  "fields": {
+    "complaints": {
+      "type": "string",
+      "section": "complaints"
+    },
+    "anamnesis": {
+      "type": "string",
+      "section": "anamnesis"
+    },
+    "dispensary_treatment": {
+      "type": "string",
+      "section": "anamnesis"
+    },
+    "dynamics": {
+      "type": "string",
+      "section": "anamnesis"
+    },
+    "sleep_hours": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 24.0,
+      "step": 0.5,
+      "section": "mental_status"
+    },
+    "sleep_days": {
+      "type": "number",
+      "minimum": 1.0,
+      "maximum": 365.0,
+      "step": 1.0,
+      "section": "mental_status"
+    },
+    "sleep": {
+      "type": "array",
+      "options": [
+        "удовлетворительный",
+        "поверхностный",
+        "проблемы с засыпанием (>30 минут)",
+        "частые пробуждения ночью (> 3 за ночь)",
+        "раннее пробуждение",
+        "отсутсвие чувства отдыха после сна",
+        "отсутствует",
+        "снижение потребности во сне"
+      ],
+      "section": "mental_status"
+    }
+  }
+}

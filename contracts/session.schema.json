@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Conversation Assistant session 0.2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "synthetic", "session_id", "language", "mode", "status", "storage_policy", "component_versions", "speakers", "segments", "segment_history", "facts", "proposals", "report", "review_events", "capture_gaps"],
+  "properties": {
+    "schema_version": {"const": "0.2"},
+    "synthetic": {"type": "boolean"},
+    "session_id": {"$ref": "#/$defs/id"},
+    "language": {"const": "ru"},
+    "mode": {"enum": ["live", "offline"]},
+    "status": {"enum": ["created", "recording", "paused", "stopped", "error"]},
+    "storage_policy": {"enum": ["memory_only", "local_explicit"]},
+    "component_versions": {
+      "type": "object", "additionalProperties": false,
+      "required": ["asr", "extraction", "psydraft_mapping"],
+      "properties": {"asr": {"$ref": "#/$defs/text"}, "extraction": {"$ref": "#/$defs/text"}, "psydraft_mapping": {"const": "0.2"}}
+    },
+    "speakers": {"type": "array", "items": {"$ref": "#/$defs/speaker"}},
+    "segments": {"type": "array", "items": {"$ref": "#/$defs/segment"}},
+    "segment_history": {"type": "array", "items": {"$ref": "#/$defs/segment"}},
+    "facts": {"type": "array", "items": {"$ref": "#/$defs/fact"}},
+    "proposals": {"type": "array", "items": {"$ref": "#/$defs/proposal"}},
+    "report": {"$ref": "#/$defs/report"},
+    "review_events": {"type": "array", "items": {"$ref": "#/$defs/review_event"}},
+    "capture_gaps": {"type": "array", "items": {"$ref": "#/$defs/gap"}}
+  },
+  "$defs": {
+    "id": {"type": "string", "minLength": 1, "maxLength": 100, "pattern": "^[a-zA-Z0-9_.:-]+$"},
+    "text": {"type": "string", "minLength": 1},
+    "revision": {"type": "integer", "minimum": 1},
+    "role": {"enum": ["doctor", "patient", "relative", "other", "unknown"]},
+    "ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/id"}},
+    "review_status": {"enum": ["proposed", "accepted", "edited", "rejected", "stale"]},
+    "value": {"oneOf": [{"type": "string"}, {"type": "number"}, {"type": "array", "uniqueItems": true, "items": {"type": "string"}}]},
+    "speaker": {
+      "type": "object", "additionalProperties": false, "required": ["id", "role", "role_confirmed"],
+      "properties": {"id": {"$ref": "#/$defs/id"}, "role": {"$ref": "#/$defs/role"}, "role_confirmed": {"type": "boolean"}}
+    },
+    "segment": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "revision", "start", "end", "speaker_id", "text", "status", "overlap", "noise"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"}, "revision": {"$ref": "#/$defs/revision"},
+        "start": {"type": "number", "minimum": 0}, "end": {"type": "number", "exclusiveMinimum": 0},
+        "speaker_id": {"$ref": "#/$defs/id"}, "text": {"type": "string"},
+        "status": {"enum": ["partial", "stable"]}, "overlap": {"type": "boolean"}, "noise": {"type": "boolean"}
+      }
+    },
+    "evidence": {
+      "type": "object", "additionalProperties": false,
+      "required": ["segment_id", "revision", "quote", "start", "end", "kind"],
+      "properties": {
+        "segment_id": {"$ref": "#/$defs/id"}, "revision": {"$ref": "#/$defs/revision"},
+        "quote": {"$ref": "#/$defs/text"}, "start": {"type": "number", "minimum": 0},
+        "end": {"type": "number", "exclusiveMinimum": 0}, "kind": {"enum": ["support", "context"]}
+      }
+    },
+    "duration": {
+      "type": "object", "additionalProperties": false, "required": ["source_text", "value", "unit"],
+      "properties": {"source_text": {"$ref": "#/$defs/text"}, "value": {"type": ["number", "null"], "minimum": 0}, "unit": {"enum": ["minute", "hour", "day", "week", "month", "year", "unknown"]}}
+    },
+    "fact": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "revision", "type", "description", "experiencer", "source_role", "assertion", "temporality", "evidence", "review_status"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"}, "revision": {"$ref": "#/$defs/revision"},
+        "type": {"enum": ["complaint", "symptom", "history", "doctor_observation", "doctor_statement"]},
+        "description": {"$ref": "#/$defs/text"}, "experiencer": {"enum": ["patient", "relative", "doctor", "other", "unknown"]},
+        "source_role": {"$ref": "#/$defs/role"}, "assertion": {"enum": ["present", "denied", "uncertain"]},
+        "temporality": {"enum": ["current", "past", "conditional", "unknown"]},
+        "duration": {"$ref": "#/$defs/duration"}, "sleep_latency_minutes": {"type": ["number", "null"], "minimum": 0},
+        "sleep_hours": {"type": ["number", "null"], "minimum": 0, "maximum": 24},
+        "conflict_group_id": {"$ref": "#/$defs/id"}, "supersedes_fact_ids": {"$ref": "#/$defs/ids"},
+        "evidence": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/evidence"}},
+        "review_status": {"$ref": "#/$defs/review_status"}
+      }
+    },
+    "proposal": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "revision", "target", "value", "fact_ids", "review_status"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"}, "revision": {"$ref": "#/$defs/revision"}, "target": {"$ref": "#/$defs/text"},
+        "value": {"$ref": "#/$defs/value"}, "fact_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/id"}},
+        "review_status": {"$ref": "#/$defs/review_status"}, "clinician_value": {"$ref": "#/$defs/value"}
+      }
+    },
+    "section_key": {"enum": ["complaints", "anamnesis", "life_history", "mental_status", "diagnosis", "recommendations", "prescriptions"]},
+    "report": {
+      "type": "object", "additionalProperties": false,
+      "required": ["status", "sections", "unreviewed_proposal_ids", "missing_sections"],
+      "properties": {
+        "status": {"enum": ["draft", "reviewed"]},
+        "sections": {"type": "array", "items": {
+          "type": "object", "additionalProperties": false, "required": ["key", "title", "text", "fact_ids", "proposal_ids"],
+          "properties": {"key": {"$ref": "#/$defs/section_key"}, "title": {"$ref": "#/$defs/text"}, "text": {"$ref": "#/$defs/text"}, "fact_ids": {"$ref": "#/$defs/ids"}, "proposal_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/id"}}}
+        }},
+        "unreviewed_proposal_ids": {"$ref": "#/$defs/ids"},
+        "missing_sections": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/section_key"}}
+      }
+    },
+    "review_event": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "timestamp", "doctor_id", "object_type", "object_id", "revision", "action"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"}, "timestamp": {"type": "string", "pattern": "^.+(Z|[+-][0-9]{2}:[0-9]{2})$"},
+        "doctor_id": {"$ref": "#/$defs/id"}, "object_type": {"enum": ["fact", "proposal"]}, "object_id": {"$ref": "#/$defs/id"},
+        "revision": {"$ref": "#/$defs/revision"}, "action": {"enum": ["accept", "edit", "reject"]}, "value": {"$ref": "#/$defs/value"}
+      }
+    },
+    "gap": {
+      "type": "object", "additionalProperties": false, "required": ["id", "start", "end", "reason"],
+      "properties": {"id": {"$ref": "#/$defs/id"}, "start": {"type": "number", "minimum": 0}, "end": {"type": "number", "exclusiveMinimum": 0}, "reason": {"$ref": "#/$defs/text"}}
+    }
+  }
+}

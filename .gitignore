@@ -1,0 +1,33 @@
+# Local runtimes and build artifacts
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+node_modules/
+frontend/psychstatus/dist/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+# Models, sessions, recordings and exports
+models/
+sessions/
+recordings/
+exports/
+data/*
+!data/README.md
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.ogg
+*.webm
+*.mp4
+*.sqlite*
+*.db
+*.log
+# Secrets and workstation settings
+.env
+.env.*
+!.env.example
+config.local.*

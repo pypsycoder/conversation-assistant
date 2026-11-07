@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Experimental fact extraction 0.1 (not a Session snapshot)",
+  "type": "object", "additionalProperties": false, "required": ["facts"],
+  "properties": {"facts": {"type": "array", "maxItems": 20, "items": {
+    "type": "object", "additionalProperties": false,
+    "required": ["concept", "assertion", "temporality", "experiencer", "section", "number", "unit", "evidence"],
+    "properties": {
+      "concept": {"enum": ["sleep_latency", "sleep_duration", "fatigue", "reduced_sleep_need", "low_mood", "appetite_change", "concentration", "anxiety", "palpitations", "panic", "voices", "suspiciousness", "suicidal_thoughts", "suicidal_plan", "suicide_attempt", "medication_use", "depression"]},
+      "assertion": {"enum": ["present", "denied", "uncertain"]},
+      "temporality": {"enum": ["current", "past", "conditional", "unknown"]},
+      "experiencer": {"enum": ["patient", "relative", "other", "unknown"]},
+      "section": {"enum": ["complaints", "anamnesis", "life_history", "mental_status"]},
+      "number": {"type": ["number", "null"]},
+      "unit": {"enum": ["minute", "hour", "day", "milligram", null]},
+      "evidence": {"type": "array", "minItems": 1, "items": {
+        "type": "object", "additionalProperties": false, "required": ["segment_id", "quote"],
+        "properties": {"segment_id": {"type": "string"}, "quote": {"type": "string", "minLength": 1}}
+      }}
+    }
+  }}}
+}
