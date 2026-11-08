@@ -1,0 +1,27 @@
+{
+  "gold_criteria": 4,
+  "statuses": {
+    "full": 4,
+    "partial": 0,
+    "missing": 0,
+    "distorted": 0
+  },
+  "tp": 4,
+  "fp": 1,
+  "fn": 0,
+  "strict_precision": 0.8,
+  "recall": 1.0,
+  "strict_f1": 0.8888888888888888,
+  "unsupported_unique": 1,
+  "unsupported_rows": 1,
+  "required_placements": 5,
+  "complete_required_placements": 5,
+  "allowed_present_placements": 6,
+  "present_placements": 6,
+  "wrong_placements": [],
+  "output_rows": 7,
+  "duplicate_groups": 0,
+  "duplicate_extra_rows": 0,
+  "reviewer": "Codex; rubric and adapter author; not blind; not a physician",
+  "physician_reviewed": false
+}

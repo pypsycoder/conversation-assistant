@@ -1,0 +1,134 @@
+{
+  "reviewer": "Codex; rubric and adapter author; not blind; not a physician",
+  "result_sha256": "4d8773ce55289154ad1aa05dcbbbea15da09f4f7f69a2e470b370dc320112bf0",
+  "gold_sha256": "e10658164da577b54e165af06cd4bf07e5cb783121128dce8386770e43588503",
+  "criteria": [
+    {
+      "id": "f1",
+      "status": "full",
+      "rows": [
+        "complaints:0",
+        "illness_history:0"
+      ],
+      "complete_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "present_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты переданы совокупностью указанных строк."
+    },
+    {
+      "id": "f2",
+      "status": "full",
+      "rows": [
+        "illness_history:1"
+      ],
+      "complete_sections": [
+        "illness_history"
+      ],
+      "present_sections": [
+        "illness_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты переданы совокупностью указанных строк."
+    },
+    {
+      "id": "f3",
+      "status": "full",
+      "rows": [
+        "life_history:0"
+      ],
+      "complete_sections": [
+        "life_history"
+      ],
+      "present_sections": [
+        "life_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты переданы совокупностью указанных строк."
+    },
+    {
+      "id": "f4",
+      "status": "full",
+      "rows": [
+        "complaints:1",
+        "illness_history:2"
+      ],
+      "complete_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "present_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты переданы совокупностью указанных строк."
+    }
+  ],
+  "rows": [
+    {
+      "id": "complaints:0",
+      "text": "Последнюю неделю трудно сосредоточиться на работе.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "complaints:1",
+      "text": "Жена говорит, что стал раздражительным, сам не уверен.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:0",
+      "text": "Трудности с концентрацией на работе появились в последнюю неделю.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:1",
+      "text": "Не помнит, были ли раньше подобные эпизоды.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:2",
+      "text": "Жена отмечает раздражительность; пациент не уверен в этом.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "life_history:0",
+      "text": "Работает водителем, стаж полных девятнадцать лет, идёт двадцатый год.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "life_history:1",
+      "text": "Женат.",
+      "support": "unsupported",
+      "inventions": [
+        "marital_status"
+      ],
+      "reason": "Упоминание жены не является прямым сообщением юридического семейного положения; строгая общая рубрика запрещает такой вывод."
+    }
+  ],
+  "inventions": [
+    {
+      "id": "marital_status",
+      "text": "Женат.",
+      "reason": "Упоминание жены не является прямым сообщением юридического семейного положения; строгая общая рубрика запрещает такой вывод."
+    }
+  ],
+  "duplicates": [],
+  "source_errors": [],
+  "temporal_errors": [],
+  "polarity_errors": [],
+  "limits": "Only three sections; gaps/unresolved are not independently gold-scored."
+}

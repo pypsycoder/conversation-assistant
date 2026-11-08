@@ -1,0 +1,66 @@
+{
+  "files_sha256": {
+    "backend/s_direct_comparison.py": "2cc4ec6588b7d7728f3afcffb95d274c41fa4ca396c6feebeee2e5d509d4713c",
+    "backend/gigachat.py": "e6888ffc7c8da3370fc551dbc6ca82b0a9965d059ae3313cef0b684eb17316f4",
+    "backend/three_sections.py": "7dbe5860c702d18c9644b815f3a9248e63444a5a980deecc9c22be049a96098b",
+    "backend/nightly_research.py": "1b406f7ba2504b37fad23689d357e0a9e83b5754fd8cce1bc3be0f664e7b2a14",
+    "backend/prompts/clinical-event-properties-reported-by-v1.txt": "83613c78aabc9467afeb1ee5b983fc7a413f4c06b973ba2bb31737c3075e62a9",
+    "contracts/clinical-event-properties-evidence-ids-reported-by-v1.schema.json": "65a9359c7a3ba20435fa863525abf1a09cfbddb6ea4905c536cb79b3fee744a5",
+    "contracts/clinical-event-properties-evidence-ids-v1.schema.json": "d77c5626a6159c5c0f34d489b69af350623524cc12636631bfeb7699d2688300",
+    "contracts/clinical-event-properties-v1.schema.json": "e32740c6343c56fc0470796a58f3e25ba882cc2783e12ab08e72b24eded36b99",
+    "docs/research/cycle-02-s-vs-direct-plan.md": "4ab225b0f1f77c178fb55ee5bb20069a767a3087a535c6535761f81fe6657f17",
+    "backend/clinical_event_properties_v1.py": "94897b36a21182a8f5d1af0d0b5b5de5c6635748919e5fae905ac5c72f65ccb2",
+    "backend/clinical_event_properties_source_v1.py": "8e72056d15eb769d1e5e62adfd017ee3fdaa20fb3ee07aba48f095af3ca2919e",
+    "backend/clinical_event_properties_source_print_v2.py": "8393ebe2c2f3e3967c0063403714be6a43e72d0236cc82440227fa52e3734272",
+    "backend/clinical_event_properties_source_print_v3.py": "72a936d0e3bf8f123126ce0214dad7020892f04c0aa652f0b236b317864126f6",
+    "backend/clinical_event_properties_e1_events.py": "a261a8591cc0968def0622485743cd05ef13c880d91b4aaf8c8156ae5078d334",
+    "backend/clinical_event_properties_e1_fixed.py": "8617491fc6acb7c6ebc9fb8157af78d3226e8654a29bad890cb40b4bb5f822fa",
+    "backend/clinical_event_properties_e1_repair.py": "c5ad433b38768ca45ddd534d524839badd7e4721ce4705a9f2642acb7030909a",
+    "backend/clinical_event_evidence_ids_v1.py": "769e6f7bd448082e49b7fe5122d15176f0ee0f33b26925350525585b6a8bb166",
+    "examples/nightly-v1/d01.source.json": "a0d9f8dbdf432c7f2cc688c293d842f08d661081bd7b51858e94ad91adda54d4",
+    "examples/nightly-v1/d01.gold.json": "a2e238d699ae18bc44e93eb48e4c124199d0e2c07c8a93113c4eef35c4219159",
+    "examples/nightly-v1/d02.source.json": "3ea21609ce13d3eb0550e037063257e0a065df36a75d169976d7ffa6ce8e14bd",
+    "examples/nightly-v1/d02.gold.json": "3fd31042cb8801514c792f86adda75e76d9d4dbfecc2ef7041b25f5aa15f12bc",
+    "examples/nightly-v1/d03.source.json": "4abecafd807c94f3329544f0f5c66412dff08c5de7a65fcf3cb474e288a08374",
+    "examples/nightly-v1/d03.gold.json": "e10658164da577b54e165af06cd4bf07e5cb783121128dce8386770e43588503"
+  },
+  "cases": [
+    "d01",
+    "d02",
+    "d03"
+  ],
+  "jobs": [
+    [
+      "d01",
+      "direct"
+    ],
+    [
+      "d01",
+      "s"
+    ],
+    [
+      "d02",
+      "s"
+    ],
+    [
+      "d02",
+      "direct"
+    ],
+    [
+      "d03",
+      "direct"
+    ],
+    [
+      "d03",
+      "s"
+    ]
+  ],
+  "model": "GigaChat-3-Ultra",
+  "temperature": 0.001,
+  "max_tokens": 5000,
+  "max_calls": 15,
+  "max_total_tokens": 300000,
+  "max_seconds": 1200,
+  "gold_sent": false,
+  "mode": "live"
+}

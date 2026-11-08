@@ -1,0 +1,114 @@
+{
+  "mode": "live",
+  "cases": [
+    {
+      "case": "d01",
+      "arm": "direct",
+      "calls": 1,
+      "tokens": 3076,
+      "api_seconds": 7.852971000000025,
+      "seconds": 9.889999999999986,
+      "technical_errors": 0,
+      "rows": {
+        "complaints": 1,
+        "illness_history": 2,
+        "life_history": 1
+      }
+    },
+    {
+      "case": "d01",
+      "arm": "s",
+      "calls": 4,
+      "tokens": 14923,
+      "api_seconds": 25.97948150000002,
+      "seconds": 34.218999999999994,
+      "technical_errors": 0,
+      "rows": {
+        "complaints": 5,
+        "illness_history": 5,
+        "life_history": 2
+      }
+    },
+    {
+      "case": "d02",
+      "arm": "s",
+      "calls": 4,
+      "tokens": 17955,
+      "api_seconds": 30.260222400000032,
+      "seconds": 38.56200000000001,
+      "technical_errors": 0,
+      "rows": {
+        "complaints": 5,
+        "illness_history": 17,
+        "life_history": 0
+      }
+    },
+    {
+      "case": "d02",
+      "arm": "direct",
+      "calls": 1,
+      "tokens": 2721,
+      "api_seconds": 6.298546499999986,
+      "seconds": 8.343999999999994,
+      "technical_errors": 0,
+      "rows": {
+        "complaints": 2,
+        "illness_history": 3,
+        "life_history": 1
+      }
+    },
+    {
+      "case": "d03",
+      "arm": "direct",
+      "calls": 1,
+      "tokens": 2932,
+      "api_seconds": 7.561710400000038,
+      "seconds": 9.593999999999994,
+      "technical_errors": 0,
+      "rows": {
+        "complaints": 2,
+        "illness_history": 3,
+        "life_history": 2
+      }
+    },
+    {
+      "case": "d03",
+      "arm": "s",
+      "calls": 4,
+      "tokens": 12498,
+      "api_seconds": 17.530530999999996,
+      "seconds": 25.797000000000025,
+      "technical_errors": 0,
+      "rows": {
+        "complaints": 4,
+        "illness_history": 5,
+        "life_history": 2
+      }
+    }
+  ],
+  "cost_rub": null,
+  "provider": {
+    "base_url": "https://api.giga.chat/v1",
+    "scope": "GIGACHAT_API_PERS",
+    "available_models": [
+      "GigaChat-2",
+      "GigaChat-2-Max",
+      "GigaChat-2-Pro",
+      "GigaChat-3-Lightning",
+      "GigaChat-3-Pro",
+      "GigaChat-3-Ultra",
+      "Embeddings",
+      "Embeddings-2",
+      "EmbeddingsGigaR",
+      "GigaEmbeddings-3B-2025-09"
+    ],
+    "selected_model": "GigaChat-3-Ultra",
+    "tls_verification": true,
+    "credentials_logged": false
+  },
+  "status": "awaiting_review",
+  "calls": 15,
+  "tokens": 54105,
+  "seconds": 127.10900000000004,
+  "returned_model": "GigaChat-3-Ultra:32.9.16.9"
+}

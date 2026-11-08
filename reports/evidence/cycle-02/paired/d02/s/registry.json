@@ -1,0 +1,494 @@
+{
+  "events": [
+    {
+      "id": "t02_e1",
+      "kind": "background",
+      "holder": "patient",
+      "label": "Первое лечение",
+      "episode": "лечение",
+      "parent_state_id": null,
+      "evidence": [
+        {
+          "turn_id": "s2",
+          "quote": "В 2024 году сертралин 50 мг утром шесть недель, без заметного улучшения."
+        }
+      ]
+    },
+    {
+      "id": "t04_e1",
+      "kind": "background",
+      "holder": "patient",
+      "label": "Последующее лечение",
+      "episode": "лечение",
+      "parent_state_id": null,
+      "evidence": [
+        {
+          "turn_id": "s4",
+          "quote": "С января 2025 года эсциталопрам 10 мг утром три месяца, тревога уменьшилась."
+        }
+      ]
+    },
+    {
+      "id": "t06_e1",
+      "kind": "background",
+      "holder": "patient",
+      "label": "Текущее лечение",
+      "episode": "лечение",
+      "parent_state_id": null,
+      "evidence": [
+        {
+          "turn_id": "s6",
+          "quote": "Сейчас ничего не принимаю."
+        }
+      ]
+    },
+    {
+      "id": "t08_e1",
+      "kind": "state",
+      "holder": "patient",
+      "label": "Вечерняя тревога",
+      "episode": "тревога",
+      "parent_state_id": null,
+      "evidence": [
+        {
+          "turn_id": "s8",
+          "quote": "Тревожно каждый вечер. Каждый вечер тревожусь — это то же самое, не второй симптом."
+        }
+      ]
+    },
+    {
+      "id": "t08_e2",
+      "kind": "episode",
+      "holder": "patient",
+      "label": "Вечерний эпизод тревоги",
+      "episode": "тревога",
+      "parent_state_id": "t08_e1",
+      "evidence": [
+        {
+          "turn_id": "s8",
+          "quote": "Тревожно каждый вечер. Каждый вечер тревожусь — это то же самое, не второй симптом."
+        }
+      ]
+    }
+  ],
+  "properties": [
+    {
+      "id": "t02_p1",
+      "event_id": "t02_e1",
+      "kind": "within_day",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "утром",
+        "ref_event_id": null
+      },
+      "text": "Сертралин принимался утром",
+      "sections": [
+        "AM"
+      ],
+      "certainty": "uncertain",
+      "approximate": false,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s2",
+          "quote": "В 2024 году сертралин 50 мг утром шесть недель, без заметного улучшения."
+        }
+      ]
+    },
+    {
+      "id": "t02_p2",
+      "event_id": "t02_e1",
+      "kind": "quantity",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "50 мг",
+        "ref_event_id": null
+      },
+      "text": "Доза сертралина 50 мг",
+      "sections": [
+        "AM"
+      ],
+      "certainty": "uncertain",
+      "approximate": false,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s2",
+          "quote": "В 2024 году сертралин 50 мг утром шесть недель, без заметного улучшения."
+        }
+      ]
+    },
+    {
+      "id": "t02_p3",
+      "event_id": "t02_e1",
+      "kind": "duration",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "шесть недель",
+        "ref_event_id": null
+      },
+      "text": "Курс сертралина шесть недель",
+      "sections": [
+        "AM"
+      ],
+      "certainty": "uncertain",
+      "approximate": false,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s2",
+          "quote": "В 2024 году сертралин 50 мг утром шесть недель, без заметного улучшения."
+        }
+      ]
+    },
+    {
+      "id": "t02_p4",
+      "event_id": "t02_e1",
+      "kind": "result",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "без заметного улучшения",
+        "ref_event_id": null
+      },
+      "text": "Без заметного улучшения",
+      "sections": [
+        "AM"
+      ],
+      "certainty": "uncertain",
+      "approximate": false,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s2",
+          "quote": "В 2024 году сертралин 50 мг утром шесть недель, без заметного улучшения."
+        }
+      ]
+    },
+    {
+      "id": "t02_p5",
+      "event_id": "t02_e1",
+      "kind": "occurrence_time",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "2024 год",
+        "ref_event_id": null
+      },
+      "text": "В 2024 году",
+      "sections": [
+        "AM"
+      ],
+      "certainty": "uncertain",
+      "approximate": false,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s2",
+          "quote": "В 2024 году сертралин 50 мг утром шесть недель, без заметного улучшения."
+        }
+      ]
+    },
+    {
+      "id": "t04_p1",
+      "event_id": "t04_e1",
+      "kind": "occurrence_time",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "с января 2025 года",
+        "ref_event_id": null
+      },
+      "text": "Эсциталопрам начат с января 2025 года",
+      "sections": [
+        "AM"
+      ],
+      "certainty": "uncertain",
+      "approximate": false,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s4",
+          "quote": "С января 2025 года эсциталопрам 10 мг утром три месяца, тревога уменьшилась."
+        }
+      ]
+    },
+    {
+      "id": "t04_p2",
+      "event_id": "t04_e1",
+      "kind": "quantity",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "10 мг",
+        "ref_event_id": null
+      },
+      "text": "Доза эсциталопрама 10 мг",
+      "sections": [
+        "AM"
+      ],
+      "certainty": "uncertain",
+      "approximate": false,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s4",
+          "quote": "С января 2025 года эсциталопрам 10 мг утром три месяца, тревога уменьшилась."
+        }
+      ]
+    },
+    {
+      "id": "t04_p3",
+      "event_id": "t04_e1",
+      "kind": "within_day",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "утром",
+        "ref_event_id": null
+      },
+      "text": "Эсциталопрам принимался утром",
+      "sections": [
+        "AM"
+      ],
+      "certainty": "uncertain",
+      "approximate": false,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s4",
+          "quote": "С января 2025 года эсциталопрам 10 мг утром три месяца, тревога уменьшилась."
+        }
+      ]
+    },
+    {
+      "id": "t04_p4",
+      "event_id": "t04_e1",
+      "kind": "duration",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "три месяца",
+        "ref_event_id": null
+      },
+      "text": "Курс эсциталопрама три месяца",
+      "sections": [
+        "AM"
+      ],
+      "certainty": "uncertain",
+      "approximate": false,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s4",
+          "quote": "С января 2025 года эсциталопрам 10 мг утром три месяца, тревога уменьшилась."
+        }
+      ]
+    },
+    {
+      "id": "t04_p5",
+      "event_id": "t04_e1",
+      "kind": "result",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "тревога уменьшилась",
+        "ref_event_id": null
+      },
+      "text": "Тревога уменьшилась",
+      "sections": [
+        "AM"
+      ],
+      "certainty": "uncertain",
+      "approximate": false,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s4",
+          "quote": "С января 2025 года эсциталопрам 10 мг утром три месяца, тревога уменьшилась."
+        }
+      ]
+    },
+    {
+      "id": "t04_p6",
+      "event_id": "t04_e1",
+      "kind": "background",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "эсциталопрам",
+        "ref_event_id": null
+      },
+      "text": "Препарат эсциталопрам",
+      "sections": [
+        "AM"
+      ],
+      "certainty": "uncertain",
+      "approximate": false,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s4",
+          "quote": "С января 2025 года эсциталопрам 10 мг утром три месяца, тревога уменьшилась."
+        }
+      ]
+    },
+    {
+      "id": "t06_p1",
+      "event_id": "t06_e1",
+      "kind": "background",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "ничего",
+        "ref_event_id": null
+      },
+      "text": "В настоящее время препараты не принимаются",
+      "sections": [
+        "AM"
+      ],
+      "certainty": "uncertain",
+      "approximate": false,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s6",
+          "quote": "Сейчас ничего не принимаю."
+        }
+      ]
+    },
+    {
+      "id": "t08_p1",
+      "event_id": "t08_e1",
+      "kind": "presence",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "есть",
+        "ref_event_id": null
+      },
+      "text": "Тревога присутствует",
+      "sections": [
+        "C"
+      ],
+      "certainty": "uncertain",
+      "approximate": false,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s8",
+          "quote": "Тревожно каждый вечер. Каждый вечер тревожусь — это то же самое, не второй симптом."
+        }
+      ]
+    },
+    {
+      "id": "t08_p2",
+      "event_id": "t08_e1",
+      "kind": "within_day",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "каждый вечер",
+        "ref_event_id": null
+      },
+      "text": "Тревога возникает каждый вечер",
+      "sections": [
+        "C"
+      ],
+      "certainty": "uncertain",
+      "approximate": false,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s8",
+          "quote": "Тревожно каждый вечер. Каждый вечер тревожусь — это то же самое, не второй симптом."
+        }
+      ]
+    },
+    {
+      "id": "t08_p3",
+      "event_id": "t08_e1",
+      "kind": "frequency",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "каждый вечер",
+        "ref_event_id": null
+      },
+      "text": "Частота — каждый вечер",
+      "sections": [
+        "C"
+      ],
+      "certainty": "uncertain",
+      "approximate": false,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s8",
+          "quote": "Тревожно каждый вечер. Каждый вечер тревожусь — это то же самое, не второй симптом."
+        }
+      ]
+    },
+    {
+      "id": "t08_p4",
+      "event_id": "t08_e2",
+      "kind": "occurrence_time",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "вечером",
+        "ref_event_id": null
+      },
+      "text": "Эпизод тревоги возникает вечером",
+      "sections": [
+        "C"
+      ],
+      "certainty": "uncertain",
+      "approximate": false,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s8",
+          "quote": "Тревожно каждый вечер. Каждый вечер тревожусь — это то же самое, не второй симптом."
+        }
+      ]
+    },
+    {
+      "id": "t08_p5",
+      "event_id": "t08_e1",
+      "kind": "belief",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "это то же самое, не второй симптом",
+        "ref_event_id": null
+      },
+      "text": "Пациент считает вечернюю тревогу тем же симптомом, а не вторым",
+      "sections": [
+        "C"
+      ],
+      "certainty": "uncertain",
+      "approximate": false,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s8",
+          "quote": "Тревожно каждый вечер. Каждый вечер тревожусь — это то же самое, не второй симптом."
+        }
+      ]
+    }
+  ],
+  "revisions": [],
+  "unresolved": [],
+  "applied_turn_ids": [
+    "s2",
+    "s4",
+    "s6",
+    "s8"
+  ],
+  "source_id": "d02",
+  "source_sha256": "9b9b8026f7ef301568f2d9530dc35af8aab9543e8528f8af184622b42c275f44"
+}

@@ -1,0 +1,62 @@
+{
+  "api_calls": 0,
+  "suppressed_rows": [
+    {
+      "case": "d02",
+      "section": "complaints",
+      "kept_property_id": "t08_p2",
+      "suppressed_row": {
+        "text": "Частота — каждый вечер",
+        "property_id": "t08_p3",
+        "event_id": "t08_e1",
+        "kind": "frequency",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s8"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s8",
+            "quote": "Тревожно каждый вечер. Каждый вечер тревожусь — это то же самое, не второй симптом."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      },
+      "rule": "same_grounding_and_label_only"
+    },
+    {
+      "case": "d02",
+      "section": "illness_history",
+      "kept_property_id": "t08_p2",
+      "suppressed_row": {
+        "text": "Частота — каждый вечер",
+        "property_id": "t08_p3",
+        "event_id": "t08_e1",
+        "kind": "frequency",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s8"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s8",
+            "quote": "Тревожно каждый вечер. Каждый вечер тревожусь — это то же самое, не второй симптом."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      },
+      "rule": "same_grounding_and_label_only"
+    }
+  ],
+  "suppressed_count": 2,
+  "tp": 12,
+  "fp": 0,
+  "complete_required_placements": 15,
+  "duplicate_groups": 0,
+  "output_rows": 43,
+  "inputs_unchanged": true,
+  "kept_rows_unchanged": true,
+  "decision": "candidate_only_not_default"
+}

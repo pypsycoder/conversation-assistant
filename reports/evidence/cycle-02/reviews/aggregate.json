@@ -1,0 +1,50 @@
+{
+  "direct": {
+    "gold_criteria": 12,
+    "tp": 12,
+    "fp": 1,
+    "fn": 0,
+    "unsupported_unique": 1,
+    "unsupported_rows": 1,
+    "required_placements": 15,
+    "complete_required_placements": 13,
+    "allowed_present_placements": 14,
+    "present_placements": 14,
+    "output_rows": 17,
+    "duplicate_groups": 1,
+    "duplicate_extra_rows": 1,
+    "strict_precision": 0.9230769230769231,
+    "recall": 1.0,
+    "strict_f1": 0.96,
+    "wrong_placements": []
+  },
+  "s": {
+    "gold_criteria": 12,
+    "tp": 12,
+    "fp": 0,
+    "fn": 0,
+    "unsupported_unique": 0,
+    "unsupported_rows": 0,
+    "required_placements": 15,
+    "complete_required_placements": 15,
+    "allowed_present_placements": 17,
+    "present_placements": 18,
+    "output_rows": 45,
+    "duplicate_groups": 2,
+    "duplicate_extra_rows": 2,
+    "strict_precision": 1.0,
+    "recall": 1.0,
+    "strict_f1": 1.0,
+    "wrong_placements": [
+      {
+        "case": "d01",
+        "pairs": [
+          [
+            "f2",
+            "complaints"
+          ]
+        ]
+      }
+    ]
+  }
+}
