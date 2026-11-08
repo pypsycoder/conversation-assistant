@@ -15,9 +15,13 @@ def main():
     parser = argparse.ArgumentParser(__doc__)
     for name in ("run", "reviews", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
+    parser.add_argument("--plan", type=Path, default=ROOT / "docs/research/cycle-02-followup-time-duplicates-plan.md")
     args = parser.parse_args()
-    files = [Path(__file__), Path(candidate.__file__), ROOT / "docs/research/cycle-02-followup-time-duplicates-plan.md"]
-    for case in ("d01", "d02", "d03"):
+    cases = read(args.run / "freeze.json")["cases"]
+    if not cases or not set(cases) <= {"d01", "d02", "d03", "v01", "v02"}:
+        raise ValueError("Only the declared synthetic development/validation cases are supported")
+    files = [Path(__file__), Path(candidate.__file__), args.plan, args.run / "freeze.json"]
+    for case in cases:
         files += [args.run / case / "s" / n for n in ("registry.json", "sidecar.json", "result.json")]
         files += [args.reviews / case / "s/review.json", ROOT / f"examples/nightly-v1/{case}.gold.json"]
     hashes = {str(p): digest(p) for p in files}
@@ -25,7 +29,7 @@ def main():
         args.output.mkdir(parents=True, exist_ok=False)
         save(args.output / "freeze.json", {"files_sha256": hashes, "api_calls": 0})
         metrics, suppressed = [], []
-        for case in ("d01", "d02", "d03"):
+        for case in cases:
             registry, sidecar = (read(args.run / case / "s" / n) for n in ("registry.json", "sidecar.json"))
             before = copy.deepcopy((registry, sidecar))
             previous = read(args.run / case / "s/result.json")

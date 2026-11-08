@@ -1,0 +1,76 @@
+{
+  "sections": {
+    "complaints": [
+      {
+        "text": "Сейчас хуже самочувствие.",
+        "evidence": [
+          {
+            "segment_id": "s2",
+            "quote": "сейчас опять хуже."
+          }
+        ]
+      }
+    ],
+    "illness_history": [
+      {
+        "text": "В феврале было хуже.",
+        "evidence": [
+          {
+            "segment_id": "s2",
+            "quote": "В феврале было хуже"
+          }
+        ]
+      },
+      {
+        "text": "В марте стало легче.",
+        "evidence": [
+          {
+            "segment_id": "s2",
+            "quote": "в марте стало легче"
+          }
+        ]
+      },
+      {
+        "text": "Сейчас опять хуже.",
+        "evidence": [
+          {
+            "segment_id": "s2",
+            "quote": "а сейчас опять хуже."
+          }
+        ]
+      }
+    ],
+    "life_history": [
+      {
+        "text": "Двое детей.",
+        "evidence": [
+          {
+            "segment_id": "s4",
+            "quote": "Двое."
+          }
+        ]
+      },
+      {
+        "text": "С отцом не общается.",
+        "evidence": [
+          {
+            "segment_id": "s6",
+            "quote": "мы не общаемся."
+          }
+        ]
+      }
+    ]
+  },
+  "gaps": [
+    {
+      "topic": "psychiatric_family_history_father",
+      "status": "patient_does_not_know",
+      "evidence": [
+        {
+          "segment_id": "s6",
+          "quote": "Не знаю"
+        }
+      ]
+    }
+  ]
+}

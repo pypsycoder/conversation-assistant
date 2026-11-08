@@ -1,0 +1,68 @@
+{
+  "reviewer": "Codex; rubric and adapter author; not blind; not a physician",
+  "result_sha256": "e1d44ff71df9ddeecb739a4dd705fe1efe3478d440f1fbbb12f916aa3964fb23",
+  "gold_sha256": "ec1d9291fdf81d729a66c0a74dd3811fa6470fac4ea19f033d45eae190de16a8",
+  "criteria": [
+    {
+      "id": "f1",
+      "status": "full",
+      "rows": [
+        "life_history:0"
+      ],
+      "complete_sections": [
+        "life_history"
+      ],
+      "present_sections": [
+        "life_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты сохранены в совокупности указанных строк."
+    },
+    {
+      "id": "f2",
+      "status": "full",
+      "rows": [
+        "complaints:0",
+        "illness_history:0"
+      ],
+      "complete_sections": [
+        "illness_history"
+      ],
+      "present_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "reason": "Тошнота, утро и 10 дней отражены в обоих разделах; неизвестная причина только в AM. По строгому составному gold C не полон; это не глобальная потеря причины."
+    }
+  ],
+  "rows": [
+    {
+      "id": "complaints:0",
+      "text": "Утром последние десять дней тошнит.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "illness_history:0",
+      "text": "Утренняя тошнота появилась последние десять дней, причина неизвестна.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "life_history:0",
+      "text": "В 2018 году перенесена операция по поводу аппендицита.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    }
+  ],
+  "inventions": [],
+  "duplicates": [],
+  "placement_notes": [],
+  "source_errors": [],
+  "temporal_errors": [],
+  "polarity_errors": [],
+  "outside_sections": [],
+  "limits": "Gold is unchanged. Per-section completeness is strict for whole compound criteria; placement notes separate rubric ambiguity from established historical-phase errors."
+}

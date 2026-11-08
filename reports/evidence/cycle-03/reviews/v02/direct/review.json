@@ -1,0 +1,117 @@
+{
+  "reviewer": "Codex; rubric and adapter author; not blind; not a physician",
+  "result_sha256": "92f5094438656b4423978b88968fde5bf56440f3624fe2211fcebe16e1921e68",
+  "gold_sha256": "02a28c813f78515b6d581c78b43b19cee1146f95d3b11168963d51d085ddb452",
+  "criteria": [
+    {
+      "id": "f1",
+      "status": "full",
+      "rows": [
+        "complaints:0",
+        "illness_history:0",
+        "illness_history:1",
+        "illness_history:2"
+      ],
+      "complete_sections": [
+        "illness_history"
+      ],
+      "present_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "reason": "Хронология полна в AM, год не выдуман. В C только текущее ухудшение: запрещено составным gold, но клинически может быть уместно; требует врачебного решения о рубрике."
+    },
+    {
+      "id": "f2",
+      "status": "full",
+      "rows": [
+        "life_history:0"
+      ],
+      "complete_sections": [
+        "life_history"
+      ],
+      "present_sections": [
+        "life_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты сохранены в совокупности указанных строк."
+    },
+    {
+      "id": "f3",
+      "status": "partial",
+      "rows": [
+        "life_history:1"
+      ],
+      "complete_sections": [],
+      "present_sections": [
+        "life_history"
+      ],
+      "reason": "В AV есть отсутствие общения с отцом. Неизвестность его болезней сохранена в gaps[0], но не напечатана в трёх разделах; по действующей рубрике критерий частичный, не полностью утраченный во всём JSON."
+    }
+  ],
+  "rows": [
+    {
+      "id": "complaints:0",
+      "text": "Сейчас хуже самочувствие.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "illness_history:0",
+      "text": "В феврале было хуже.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "illness_history:1",
+      "text": "В марте стало легче.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "illness_history:2",
+      "text": "Сейчас опять хуже.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "life_history:0",
+      "text": "Двое детей.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "life_history:1",
+      "text": "С отцом не общается.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    }
+  ],
+  "inventions": [],
+  "duplicates": [],
+  "placement_notes": [
+    {
+      "rows": [
+        "complaints:0"
+      ],
+      "classification": "rubric_ambiguity",
+      "reason": "Текущее ухудшение в жалобах запрещено gold для составной хронологии, но клиническая ошибочность не установлена."
+    }
+  ],
+  "source_errors": [],
+  "temporal_errors": [],
+  "polarity_errors": [],
+  "outside_sections": [
+    {
+      "criterion": "f3",
+      "location": "gaps:0",
+      "meaning": "Болезни отца неизвестны"
+    }
+  ],
+  "limits": "Gold is unchanged. Per-section completeness is strict for whole compound criteria; placement notes separate rubric ambiguity from established historical-phase errors."
+}

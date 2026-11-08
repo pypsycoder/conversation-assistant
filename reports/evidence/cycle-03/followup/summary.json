@@ -1,0 +1,13 @@
+{
+  "api_calls": 0,
+  "suppressed_rows": [],
+  "suppressed_count": 0,
+  "tp": 5,
+  "fp": 0,
+  "complete_required_placements": 6,
+  "duplicate_groups": 0,
+  "output_rows": 16,
+  "inputs_unchanged": true,
+  "kept_rows_unchanged": true,
+  "decision": "candidate_only_not_default"
+}
