@@ -1,0 +1,169 @@
+{
+  "events": [
+    {
+      "id": "t02_e1",
+      "kind": "background",
+      "holder": "patient",
+      "label": "Операция по поводу аппендицита",
+      "episode": "аппендицит",
+      "parent_state_id": null,
+      "evidence": [
+        {
+          "turn_id": "s2",
+          "quote": "Аппендицит оперировали в 2018 году."
+        }
+      ]
+    },
+    {
+      "id": "t03_e1",
+      "kind": "state",
+      "holder": "patient",
+      "label": "Тошнота",
+      "episode": "тошнота",
+      "parent_state_id": null,
+      "evidence": [
+        {
+          "turn_id": "s4",
+          "quote": "Утром последние десять дней тошнит, причины не знаю."
+        }
+      ]
+    },
+    {
+      "id": "t03_e2",
+      "kind": "episode",
+      "holder": "patient",
+      "label": "Текущий эпизод тошноты",
+      "episode": "тошнота",
+      "parent_state_id": "t03_e1",
+      "evidence": [
+        {
+          "turn_id": "s4",
+          "quote": "Утром последние десять дней тошнит, причины не знаю."
+        }
+      ]
+    },
+    {
+      "id": "t03_e3",
+      "kind": "background",
+      "holder": "patient",
+      "label": "Неизвестная причина тошноты",
+      "episode": "тошнота",
+      "parent_state_id": null,
+      "evidence": [
+        {
+          "turn_id": "s4",
+          "quote": "Утром последние десять дней тошнит, причины не знаю."
+        }
+      ]
+    }
+  ],
+  "properties": [
+    {
+      "id": "t02_p1",
+      "event_id": "t02_e1",
+      "kind": "occurrence_time",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "2018",
+        "ref_event_id": null
+      },
+      "text": "Операция по поводу аппендицита в 2018 году",
+      "sections": [
+        "AV"
+      ],
+      "certainty": "uncertain",
+      "approximate": false,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s2",
+          "quote": "Аппендицит оперировали в 2018 году."
+        }
+      ]
+    },
+    {
+      "id": "t03_p1",
+      "event_id": "t03_e2",
+      "kind": "onset",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "10 дней назад",
+        "ref_event_id": null
+      },
+      "text": "Тошнота началась 10 дней назад",
+      "sections": [
+        "C",
+        "AM"
+      ],
+      "certainty": "uncertain",
+      "approximate": false,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s4",
+          "quote": "Утром последние десять дней тошнит, причины не знаю."
+        }
+      ]
+    },
+    {
+      "id": "t03_p2",
+      "event_id": "t03_e2",
+      "kind": "within_day",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "утром",
+        "ref_event_id": null
+      },
+      "text": "Тошнота возникает утром",
+      "sections": [
+        "C",
+        "AM"
+      ],
+      "certainty": "uncertain",
+      "approximate": false,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s4",
+          "quote": "Утром последние десять дней тошнит, причины не знаю."
+        }
+      ]
+    },
+    {
+      "id": "t03_p3",
+      "event_id": "t03_e3",
+      "kind": "knowledge",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "причина не известна",
+        "ref_event_id": null
+      },
+      "text": "Причина тошноты не известна",
+      "sections": [
+        "C",
+        "AM"
+      ],
+      "certainty": "uncertain",
+      "approximate": false,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s4",
+          "quote": "Утром последние десять дней тошнит, причины не знаю."
+        }
+      ]
+    }
+  ],
+  "revisions": [],
+  "unresolved": [],
+  "applied_turn_ids": [
+    "s2",
+    "s4"
+  ],
+  "source_id": "v01",
+  "source_sha256": "852f45e2bfd2b9a333a3b6fd4d5b25e030e2f543ded7d6a729f99137983407a9"
+}

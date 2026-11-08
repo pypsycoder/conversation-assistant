@@ -1,0 +1,72 @@
+{
+  "direct": {
+    "gold_criteria": 5,
+    "tp": 4,
+    "fp": 1,
+    "fn": 1,
+    "unsupported_unique": 0,
+    "unsupported_rows": 0,
+    "required_placements": 6,
+    "complete_required_placements": 4,
+    "allowed_present_placements": 6,
+    "present_placements": 7,
+    "output_rows": 9,
+    "duplicate_groups": 0,
+    "duplicate_extra_rows": 0,
+    "statuses": {
+      "full": 4,
+      "partial": 1,
+      "missing": 0,
+      "distorted": 0
+    },
+    "strict_precision": 0.8,
+    "recall": 0.8,
+    "strict_f1": 0.8,
+    "wrong_placements": [
+      {
+        "case": "v02",
+        "pairs": [
+          [
+            "f1",
+            "complaints"
+          ]
+        ]
+      }
+    ]
+  },
+  "s": {
+    "gold_criteria": 5,
+    "tp": 5,
+    "fp": 0,
+    "fn": 0,
+    "unsupported_unique": 0,
+    "unsupported_rows": 0,
+    "required_placements": 6,
+    "complete_required_placements": 6,
+    "allowed_present_placements": 6,
+    "present_placements": 7,
+    "output_rows": 16,
+    "duplicate_groups": 0,
+    "duplicate_extra_rows": 0,
+    "statuses": {
+      "full": 5,
+      "partial": 0,
+      "missing": 0,
+      "distorted": 0
+    },
+    "strict_precision": 1.0,
+    "recall": 1.0,
+    "strict_f1": 1.0,
+    "wrong_placements": [
+      {
+        "case": "v02",
+        "pairs": [
+          [
+            "f1",
+            "complaints"
+          ]
+        ]
+      }
+    ]
+  }
+}

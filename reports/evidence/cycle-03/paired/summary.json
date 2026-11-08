@@ -1,0 +1,86 @@
+{
+  "mode": "live",
+  "cases": [
+    {
+      "case": "v01",
+      "arm": "direct",
+      "calls": 1,
+      "tokens": 1981,
+      "api_seconds": 3.7758162999998603,
+      "seconds": 5.82799999999952,
+      "technical_errors": 0,
+      "rows": {
+        "complaints": 1,
+        "illness_history": 1,
+        "life_history": 1
+      }
+    },
+    {
+      "case": "v01",
+      "arm": "s",
+      "calls": 2,
+      "tokens": 5988,
+      "api_seconds": 11.723000100000718,
+      "seconds": 15.859000000000378,
+      "technical_errors": 0,
+      "rows": {
+        "complaints": 3,
+        "illness_history": 3,
+        "life_history": 1
+      }
+    },
+    {
+      "case": "v02",
+      "arm": "s",
+      "calls": 3,
+      "tokens": 9975,
+      "api_seconds": 16.71529240000018,
+      "seconds": 22.890000000001237,
+      "technical_errors": 0,
+      "rows": {
+        "complaints": 3,
+        "illness_history": 3,
+        "life_history": 3
+      }
+    },
+    {
+      "case": "v02",
+      "arm": "direct",
+      "calls": 1,
+      "tokens": 2328,
+      "api_seconds": 5.713664700000663,
+      "seconds": 7.75,
+      "technical_errors": 0,
+      "rows": {
+        "complaints": 1,
+        "illness_history": 3,
+        "life_history": 2
+      }
+    }
+  ],
+  "cost_rub": null,
+  "provider": {
+    "base_url": "https://api.giga.chat/v1",
+    "scope": "GIGACHAT_API_PERS",
+    "available_models": [
+      "GigaChat-2",
+      "GigaChat-2-Max",
+      "GigaChat-2-Pro",
+      "GigaChat-3-Lightning",
+      "GigaChat-3-Pro",
+      "GigaChat-3-Ultra",
+      "Embeddings",
+      "Embeddings-2",
+      "EmbeddingsGigaR",
+      "GigaEmbeddings-3B-2025-09"
+    ],
+    "selected_model": "GigaChat-3-Ultra",
+    "tls_verification": true,
+    "credentials_logged": false
+  },
+  "status": "awaiting_review",
+  "calls": 7,
+  "tokens": 20272,
+  "seconds": 53.10900000000038,
+  "returned_model": "GigaChat-3-Ultra:32.9.16.9"
+}

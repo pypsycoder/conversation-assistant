@@ -1,0 +1,102 @@
+{
+  "reviewer": "Codex; rubric and adapter author; not blind; not a physician",
+  "result_sha256": "f0ac666be476de9cf5943415669b72078df97e1048eaff75f8561682ecaa0753",
+  "gold_sha256": "ec1d9291fdf81d729a66c0a74dd3811fa6470fac4ea19f033d45eae190de16a8",
+  "criteria": [
+    {
+      "id": "f1",
+      "status": "full",
+      "rows": [
+        "life_history:0"
+      ],
+      "complete_sections": [
+        "life_history"
+      ],
+      "present_sections": [
+        "life_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты сохранены в совокупности указанных строк."
+    },
+    {
+      "id": "f2",
+      "status": "full",
+      "rows": [
+        "complaints:0",
+        "complaints:1",
+        "complaints:2",
+        "illness_history:0",
+        "illness_history:1",
+        "illness_history:2"
+      ],
+      "complete_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "present_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты сохранены в совокупности указанных строк."
+    }
+  ],
+  "rows": [
+    {
+      "id": "complaints:0",
+      "text": "Тошнота началась 10 дней назад",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "complaints:1",
+      "text": "Тошнота возникает утром",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "complaints:2",
+      "text": "Причина тошноты не известна",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "illness_history:0",
+      "text": "Тошнота началась 10 дней назад",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "illness_history:1",
+      "text": "Тошнота возникает утром",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "illness_history:2",
+      "text": "Причина тошноты не известна",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "life_history:0",
+      "text": "Операция по поводу аппендицита в 2018 году",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    }
+  ],
+  "inventions": [],
+  "duplicates": [],
+  "placement_notes": [],
+  "source_errors": [],
+  "temporal_errors": [],
+  "polarity_errors": [],
+  "outside_sections": [],
+  "limits": "Gold is unchanged. Per-section completeness is strict for whole compound criteria; placement notes separate rubric ambiguity from established historical-phase errors.",
+  "offline_note": "Judgments transferred only after kept-row equality and exact-grounding checks; suppression log reviewed by Codex."
+}

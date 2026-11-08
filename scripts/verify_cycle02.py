@@ -17,7 +17,10 @@ def main():
     parser.add_argument("--evidence", type=Path, default=ROOT / "reports/evidence/cycle-02")
     args = parser.parse_args()
     count = 0
-    for case in ("d01", "d02", "d03"):
+    cases = read(args.evidence / "paired/freeze.json")["cases"]
+    if not cases or not set(cases) <= {"d01", "d02", "d03", "v01", "v02"}:
+        raise ValueError("Only the declared synthetic cases are supported")
+    for case in cases:
         gold_path = ROOT / f"examples/nightly-v1/{case}.gold.json"
         source = as_s_source(read(ROOT / f"examples/nightly-v1/{case}.source.json"))
         for arm in ("direct", "s"):
@@ -47,7 +50,7 @@ def main():
             raise ValueError("Final S output differs from physical receipt replay")
         if registry != read(args.evidence / "paired" / case / "s/registry.json"):
             raise ValueError("Final registry differs")
-    print(json.dumps({"criterion_reviews_verified": 6, "s_requests_replayed": count, "api_calls": 0}))
+    print(json.dumps({"criterion_reviews_verified": 2*len(cases), "s_requests_replayed": count, "api_calls": 0}))
 
 
 if __name__ == "__main__":

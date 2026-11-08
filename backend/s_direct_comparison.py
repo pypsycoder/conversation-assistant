@@ -62,14 +62,27 @@ def section_rows(projection):
             "gaps": copy.deepcopy(projection["unresolved"])}
 
 
-def run(output, live=False):
+def selected_cases(split):
+    if split not in ("diagnostic", "validation"):
+        raise ValueError("Only diagnostic or validation splits may be run")
+    manifest = read(ROOT / "examples/nightly-v1/manifest.json")
+    if manifest.get("synthetic") is not True:
+        raise ValueError("Explicit synthetic manifest required")
+    return tuple(c["id"] for c in manifest["cases"] if c["split"] == split)
+
+
+def run(output, live=False, split="diagnostic"):
     corpus = ROOT / "examples/nightly-v1"
-    cases = ("d01", "d02", "d03")
+    cases = selected_cases(split)
+    plan = "cycle-03-validation-plan.md" if split == "validation" else "cycle-02-s-vs-direct-plan.md"
+    token_limit, seconds_limit = (150000, 600) if split == "validation" else (300000, 1200)
+    expected_revision = "GigaChat-3-Ultra:32.9.16.9" if split == "validation" else None
     files = [Path(__file__), ROOT / "backend/gigachat.py", ROOT / "backend/three_sections.py",
              ROOT / "backend/nightly_research.py", S.PROMPT, S.SCHEMA,
              ROOT / "contracts/clinical-event-properties-evidence-ids-v1.schema.json",
              ROOT / "contracts/clinical-event-properties-v1.schema.json",
-             ROOT / "docs/research/cycle-02-s-vs-direct-plan.md"]
+             ROOT / "docs/research" / plan, corpus / "manifest.json",
+             ROOT / "backend/source_time_label_dedup.py", ROOT / "backend/paired_clinical_review.py"]
     files += [ROOT / "backend" / (n + ".py") for n in (
         "clinical_event_properties_v1", "clinical_event_properties_source_v1",
         "clinical_event_properties_source_print_v2", "clinical_event_properties_source_print_v3",
@@ -79,13 +92,15 @@ def run(output, live=False):
     hashes = {p.relative_to(ROOT).as_posix(): digest(p) for p in files}
     sources = {case: read(corpus / (case + ".source.json")) for case in cases}
     converted = {case: as_s_source(source) for case, source in sources.items()}
+    call_limit = len(cases) + sum(len(windows(source)) for source in converted.values())
     jobs = [(case, arm) for i, case in enumerate(cases)
             for arm in (("direct", "s") if i % 2 == 0 else ("s", "direct"))]
     with exclusive_lock(ROOT / "data/nightly/research.lock"):
         output.mkdir(parents=True, exist_ok=False)
         save(output / "freeze.json", {"files_sha256": hashes, "cases": list(cases), "jobs": jobs,
              "model": "GigaChat-3-Ultra", "temperature": 0.001, "max_tokens": 5000,
-             "max_calls": 15, "max_total_tokens": 300000, "max_seconds": 1200,
+             "max_calls": call_limit, "max_total_tokens": token_limit, "max_seconds": seconds_limit,
+             "split": split, "expected_revision": expected_revision,
              "gold_sent": False, "mode": "live" if live else "offline_smoke"})
         began = time.monotonic()
         calls = tokens = 0
@@ -103,7 +118,7 @@ def run(output, live=False):
             if len(json.dumps(request, ensure_ascii=False).encode("utf-8")) > 200000:
                 raise RuntimeError("Oversized request, no truncation")
             reserve = len(json.dumps(request, ensure_ascii=False).encode("utf-8")) + 5000
-            if calls >= 15 or tokens + reserve > 300000 or time.monotonic() - began > 1200:
+            if calls >= call_limit or tokens + reserve > token_limit or time.monotonic() - began > seconds_limit:
                 raise RuntimeError("Session budget reached")
             save(folder / "attempt.json", {"ordinal": calls+1, "receipt": "pending", "token_reserve": reserve})
             save(folder / "request.json", request)
@@ -122,6 +137,8 @@ def run(output, live=False):
             tokens += usage["total_tokens"]
             if not raw.get("model") or (revision and revision != raw["model"]):
                 raise RuntimeError("Missing or changed model revision")
+            if expected_revision and raw["model"] != expected_revision:
+                raise RuntimeError("Model revision differs from diagnostic baseline")
             revision = raw["model"]
             time.sleep(2)
             return answer
@@ -207,5 +224,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(__doc__)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--live", action="store_true")
+    parser.add_argument("--split", choices=("diagnostic", "validation"), default="diagnostic")
     args = parser.parse_args()
-    raise SystemExit(run(args.output, args.live))
+    raise SystemExit(run(args.output, args.live, args.split))

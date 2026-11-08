@@ -1,0 +1,60 @@
+{
+  "files_sha256": {
+    "backend/s_direct_comparison.py": "119e080a5e3c27a6f9483cd6c19ff7265c1bb57d51b846630e34cc47b7d7e881",
+    "backend/gigachat.py": "e6888ffc7c8da3370fc551dbc6ca82b0a9965d059ae3313cef0b684eb17316f4",
+    "backend/three_sections.py": "7dbe5860c702d18c9644b815f3a9248e63444a5a980deecc9c22be049a96098b",
+    "backend/nightly_research.py": "1b406f7ba2504b37fad23689d357e0a9e83b5754fd8cce1bc3be0f664e7b2a14",
+    "backend/prompts/clinical-event-properties-reported-by-v1.txt": "83613c78aabc9467afeb1ee5b983fc7a413f4c06b973ba2bb31737c3075e62a9",
+    "contracts/clinical-event-properties-evidence-ids-reported-by-v1.schema.json": "65a9359c7a3ba20435fa863525abf1a09cfbddb6ea4905c536cb79b3fee744a5",
+    "contracts/clinical-event-properties-evidence-ids-v1.schema.json": "d77c5626a6159c5c0f34d489b69af350623524cc12636631bfeb7699d2688300",
+    "contracts/clinical-event-properties-v1.schema.json": "e32740c6343c56fc0470796a58f3e25ba882cc2783e12ab08e72b24eded36b99",
+    "docs/research/cycle-03-validation-plan.md": "30f56258a4b4e9954c7a2c46b2a5894fd76447ca1cf41881717b6871c7d8ff71",
+    "examples/nightly-v1/manifest.json": "0f5a921c8996e6afaed999a4d6f410b08be41b886ec2d83c1e3173febb45b335",
+    "backend/source_time_label_dedup.py": "8d6b645accebda65ec1ccf77f9af9c15e55627b72f484f63b40907d4b377c805",
+    "backend/paired_clinical_review.py": "2476bb998c8c63b568947f9367c073c54729595e2f70669e640c5ab7725d6e9e",
+    "backend/clinical_event_properties_v1.py": "94897b36a21182a8f5d1af0d0b5b5de5c6635748919e5fae905ac5c72f65ccb2",
+    "backend/clinical_event_properties_source_v1.py": "8e72056d15eb769d1e5e62adfd017ee3fdaa20fb3ee07aba48f095af3ca2919e",
+    "backend/clinical_event_properties_source_print_v2.py": "8393ebe2c2f3e3967c0063403714be6a43e72d0236cc82440227fa52e3734272",
+    "backend/clinical_event_properties_source_print_v3.py": "72a936d0e3bf8f123126ce0214dad7020892f04c0aa652f0b236b317864126f6",
+    "backend/clinical_event_properties_e1_events.py": "a261a8591cc0968def0622485743cd05ef13c880d91b4aaf8c8156ae5078d334",
+    "backend/clinical_event_properties_e1_fixed.py": "8617491fc6acb7c6ebc9fb8157af78d3226e8654a29bad890cb40b4bb5f822fa",
+    "backend/clinical_event_properties_e1_repair.py": "c5ad433b38768ca45ddd534d524839badd7e4721ce4705a9f2642acb7030909a",
+    "backend/clinical_event_evidence_ids_v1.py": "769e6f7bd448082e49b7fe5122d15176f0ee0f33b26925350525585b6a8bb166",
+    "examples/nightly-v1/v01.source.json": "8605d082e300000a2c24bd882f3d2c2036c9ec69208e121cf5a73cfa49bd3c5b",
+    "examples/nightly-v1/v01.gold.json": "ec1d9291fdf81d729a66c0a74dd3811fa6470fac4ea19f033d45eae190de16a8",
+    "examples/nightly-v1/v02.source.json": "a54b542c0e1d613bb6e6f7974243002a2950349fc97e89a7d2140843b4999699",
+    "examples/nightly-v1/v02.gold.json": "02a28c813f78515b6d581c78b43b19cee1146f95d3b11168963d51d085ddb452"
+  },
+  "cases": [
+    "v01",
+    "v02"
+  ],
+  "jobs": [
+    [
+      "v01",
+      "direct"
+    ],
+    [
+      "v01",
+      "s"
+    ],
+    [
+      "v02",
+      "s"
+    ],
+    [
+      "v02",
+      "direct"
+    ]
+  ],
+  "model": "GigaChat-3-Ultra",
+  "temperature": 0.001,
+  "max_tokens": 5000,
+  "max_calls": 7,
+  "max_total_tokens": 150000,
+  "max_seconds": 600,
+  "split": "validation",
+  "expected_revision": "GigaChat-3-Ultra:32.9.16.9",
+  "gold_sent": false,
+  "mode": "live"
+}

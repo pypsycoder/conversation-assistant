@@ -1,13 +1,22 @@
 import copy
 import json
 import unittest
-from backend.s_direct_comparison import as_s_source, windows, s_request, apply_s_output
+from backend.s_direct_comparison import as_s_source, windows, s_request, apply_s_output, selected_cases
 from backend.nightly_research import ROOT, read
 from backend import clinical_event_properties_v1 as core
 from tests.test_clinical_event_properties_source_v1 import SOURCE, first, wire
 
 
 class AdapterTests(unittest.TestCase):
+    def test_validation_is_separate_and_reserved_final_is_blocked(self):
+        self.assertEqual(selected_cases("validation"), ("v01", "v02"))
+        self.assertEqual(selected_cases("diagnostic"), ("d01", "d02", "d03"))
+        count = 2 + sum(len(windows(as_s_source(read(ROOT / f"examples/nightly-v1/{c}.source.json"))))
+                        for c in selected_cases("validation"))
+        self.assertEqual(count, 7)
+        with self.assertRaises(ValueError):
+            selected_cases("final")
+
     def test_same_text_ids_roles_and_no_future_exposure(self):
         source = read(ROOT / "examples/nightly-v1/d01.source.json")
         converted = as_s_source(source)
