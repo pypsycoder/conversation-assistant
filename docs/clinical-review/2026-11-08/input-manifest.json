@@ -1,0 +1,14 @@
+{
+  "synthetic": true,
+  "gold_modified": false,
+  "files_sha256": {
+    "examples/nightly-v1/v01.source.json": "8605d082e300000a2c24bd882f3d2c2036c9ec69208e121cf5a73cfa49bd3c5b",
+    "examples/nightly-v1/v01.gold.json": "ec1d9291fdf81d729a66c0a74dd3811fa6470fac4ea19f033d45eae190de16a8",
+    "examples/nightly-v1/v02.source.json": "a54b542c0e1d613bb6e6f7974243002a2950349fc97e89a7d2140843b4999699",
+    "examples/nightly-v1/v02.gold.json": "02a28c813f78515b6d581c78b43b19cee1146f95d3b11168963d51d085ddb452",
+    "reports/evidence/cycle-03/paired/v01/direct/result.json": "e1d44ff71df9ddeecb739a4dd705fe1efe3478d440f1fbbb12f916aa3964fb23",
+    "reports/evidence/cycle-03/paired/v01/s/result.json": "f0ac666be476de9cf5943415669b72078df97e1048eaff75f8561682ecaa0753",
+    "reports/evidence/cycle-03/paired/v02/direct/result.json": "92f5094438656b4423978b88968fde5bf56440f3624fe2211fcebe16e1921e68",
+    "reports/evidence/cycle-03/paired/v02/s/result.json": "9fda85461e4b52c504ea4f3d87e918065ce0a844e6641c7f07b15f9d18051feb"
+  }
+}

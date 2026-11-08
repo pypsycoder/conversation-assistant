@@ -1,0 +1,59 @@
+{
+  "status": "awaiting_physician_review",
+  "physician_reviewed": false,
+  "reviewer_role": null,
+  "questions": [
+    {
+      "id": "R1",
+      "case": "v01",
+      "source_segment_ids": [
+        "s3",
+        "s4"
+      ],
+      "question": "Обязательно ли явно повторять неизвестную причину тошноты в жалобах, если она уже указана в анамнезе заболевания?",
+      "choices": [
+        "required_in_complaints",
+        "allowed_but_not_required",
+        "exclude_from_complaints",
+        "other_explain"
+      ],
+      "decision": null,
+      "clinical_reason": null
+    },
+    {
+      "id": "R2",
+      "case": "v02",
+      "source_segment_ids": [
+        "s1",
+        "s2"
+      ],
+      "question": "Как оценивать текущее «сейчас хуже самочувствие» в жалобах при полной хронологии в анамнезе заболевания?",
+      "choices": [
+        "required_in_complaints",
+        "allowed_but_not_required",
+        "exclude_from_complaints",
+        "needs_clarification"
+      ],
+      "decision": null,
+      "clinical_reason": null
+    },
+    {
+      "id": "R3",
+      "case": "v02",
+      "source_segment_ids": [
+        "s5",
+        "s6"
+      ],
+      "question": "Должна ли неизвестность психиатрических болезней отца явно находиться в анамнезе жизни или достаточно отдельного gaps?",
+      "choices": [
+        "life_history_required",
+        "gaps_sufficient",
+        "life_history_or_gaps",
+        "other_explain"
+      ],
+      "decision": null,
+      "clinical_reason": null
+    }
+  ],
+  "input_manifest_sha256": "fa97b1b267265ebdf5620d17e7612f4d811e1d2bf3fd9cd9e5856a2477e98f91"
+}
