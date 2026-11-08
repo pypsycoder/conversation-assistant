@@ -2,13 +2,15 @@
   "synthetic": true,
   "gold_modified": false,
   "files_sha256": {
-    "examples/nightly-v1/v01.source.json": "8605d082e300000a2c24bd882f3d2c2036c9ec69208e121cf5a73cfa49bd3c5b",
-    "examples/nightly-v1/v01.gold.json": "ec1d9291fdf81d729a66c0a74dd3811fa6470fac4ea19f033d45eae190de16a8",
-    "examples/nightly-v1/v02.source.json": "a54b542c0e1d613bb6e6f7974243002a2950349fc97e89a7d2140843b4999699",
-    "examples/nightly-v1/v02.gold.json": "02a28c813f78515b6d581c78b43b19cee1146f95d3b11168963d51d085ddb452",
-    "reports/evidence/cycle-03/paired/v01/direct/result.json": "e1d44ff71df9ddeecb739a4dd705fe1efe3478d440f1fbbb12f916aa3964fb23",
-    "reports/evidence/cycle-03/paired/v01/s/result.json": "f0ac666be476de9cf5943415669b72078df97e1048eaff75f8561682ecaa0753",
-    "reports/evidence/cycle-03/paired/v02/direct/result.json": "92f5094438656b4423978b88968fde5bf56440f3624fe2211fcebe16e1921e68",
-    "reports/evidence/cycle-03/paired/v02/s/result.json": "9fda85461e4b52c504ea4f3d87e918065ce0a844e6641c7f07b15f9d18051feb"
-  }
+    "examples/nightly-v1/v01.source.json": "bac1799738fbae30d1c6883e9843d245e3261f7d02ff325f2ce86990b659ba52",
+    "examples/nightly-v1/v01.gold.json": "c0f6abdfdaa0aaeea1686d0c4536dd5720f7a025f2670956e2c4a9d6ab063dc3",
+    "examples/nightly-v1/v02.source.json": "ea0d000945c14fd02668f4562b3f07b18eb36b538710f886aa05c8bf4b9989c4",
+    "examples/nightly-v1/v02.gold.json": "de1c201b1c238e669a16a9876961007fce798c5797058eb106bb4ddb63643c5e",
+    "reports/evidence/cycle-03/paired/v01/direct/result.json": "d0e0be95caf9d2b41af2dfb9ac4e1aacef5912ae2af107a15fd18ace134d07b8",
+    "reports/evidence/cycle-03/paired/v01/s/result.json": "b08c419a290580bcfe0e32a52054ce56e36b2b71d99ea58f99944a68f265944d",
+    "reports/evidence/cycle-03/paired/v02/direct/result.json": "411e8d6182bd0b4b9b61892b2dc594043f7e04bd506f5aa5412f9278c5845775",
+    "reports/evidence/cycle-03/paired/v02/s/result.json": "fbc586da83184ae3581977768aab159873843a60c0a915dcfa70e9b98ab3b22e"
+  },
+  "source_commit": "ac20b7b35fd48be87bbce93bdbd949b76cd28c6b",
+  "source_digest_method": "sha256 of original source Git blob bytes at source_commit"
 }

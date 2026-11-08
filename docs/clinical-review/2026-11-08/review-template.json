@@ -55,5 +55,6 @@
       "clinical_reason": null
     }
   ],
-  "input_manifest_sha256": "fa97b1b267265ebdf5620d17e7612f4d811e1d2bf3fd9cd9e5856a2477e98f91"
+  "input_manifest_sha256": "dbfecd863ce4279ead34300933175b3d9931481edcd11bf9fe292b9fc599739a",
+  "input_manifest_digest_method": "sha256 of canonical UTF-8 JSON: sort_keys=True, separators=(comma,colon), ensure_ascii=False"
 }
