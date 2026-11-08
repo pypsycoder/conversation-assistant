@@ -1,0 +1,16 @@
+{
+  "synthetic": true,
+  "gold_modified": false,
+  "files_sha256": {
+    "examples/nightly-v1/v01.source.json": "bac1799738fbae30d1c6883e9843d245e3261f7d02ff325f2ce86990b659ba52",
+    "examples/nightly-v1/v01.gold.json": "c0f6abdfdaa0aaeea1686d0c4536dd5720f7a025f2670956e2c4a9d6ab063dc3",
+    "examples/nightly-v1/v02.source.json": "ea0d000945c14fd02668f4562b3f07b18eb36b538710f886aa05c8bf4b9989c4",
+    "examples/nightly-v1/v02.gold.json": "de1c201b1c238e669a16a9876961007fce798c5797058eb106bb4ddb63643c5e",
+    "reports/evidence/cycle-03/paired/v01/direct/result.json": "d0e0be95caf9d2b41af2dfb9ac4e1aacef5912ae2af107a15fd18ace134d07b8",
+    "reports/evidence/cycle-03/paired/v01/s/result.json": "b08c419a290580bcfe0e32a52054ce56e36b2b71d99ea58f99944a68f265944d",
+    "reports/evidence/cycle-03/paired/v02/direct/result.json": "411e8d6182bd0b4b9b61892b2dc594043f7e04bd506f5aa5412f9278c5845775",
+    "reports/evidence/cycle-03/paired/v02/s/result.json": "fbc586da83184ae3581977768aab159873843a60c0a915dcfa70e9b98ab3b22e"
+  },
+  "source_commit": "ac20b7b35fd48be87bbce93bdbd949b76cd28c6b",
+  "source_digest_method": "sha256 of original source Git blob bytes at source_commit"
+}
