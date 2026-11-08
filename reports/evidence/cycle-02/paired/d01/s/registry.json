@@ -1,0 +1,313 @@
+{
+  "events": [
+    {
+      "id": "t02_e1",
+      "kind": "state",
+      "holder": "patient",
+      "label": "трудности с засыпанием",
+      "episode": "current",
+      "parent_state_id": null,
+      "evidence": [
+        {
+          "turn_id": "s2",
+          "quote": "Три недели трудно заснуть, обычно засыпаю через два часа."
+        }
+      ]
+    },
+    {
+      "id": "t02_e2",
+      "kind": "episode",
+      "holder": "patient",
+      "label": "период трудностей с засыпанием",
+      "episode": "current",
+      "parent_state_id": "t02_e1",
+      "evidence": [
+        {
+          "turn_id": "s2",
+          "quote": "Три недели трудно заснуть, обычно засыпаю через два часа."
+        }
+      ]
+    },
+    {
+      "id": "t04_e1",
+      "kind": "state",
+      "holder": "patient",
+      "label": "панические приступы",
+      "episode": "current",
+      "parent_state_id": null,
+      "evidence": [
+        {
+          "turn_id": "s4",
+          "quote": "Нет, приступов паники не было."
+        }
+      ]
+    },
+    {
+      "id": "t08_e1",
+      "kind": "background",
+      "holder": "mother",
+      "label": "депрессия",
+      "episode": "past",
+      "parent_state_id": null,
+      "evidence": [
+        {
+          "turn_id": "s8",
+          "quote": "Сестра говорит, что у мамы была депрессия, сам документов не видел."
+        }
+      ]
+    }
+  ],
+  "properties": [
+    {
+      "id": "t02_p1",
+      "event_id": "t02_e1",
+      "kind": "presence",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "присутствует",
+        "ref_event_id": null
+      },
+      "text": "Трудности с засыпанием присутствуют",
+      "sections": [
+        "C"
+      ],
+      "certainty": "uncertain",
+      "approximate": false,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s2",
+          "quote": "Три недели трудно заснуть, обычно засыпаю через два часа."
+        }
+      ]
+    },
+    {
+      "id": "t02_p2",
+      "event_id": "t02_e2",
+      "kind": "duration",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "3 недели",
+        "ref_event_id": null
+      },
+      "text": "Трудности с засыпанием длятся 3 недели",
+      "sections": [
+        "C",
+        "AM"
+      ],
+      "certainty": "uncertain",
+      "approximate": false,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s2",
+          "quote": "Три недели трудно заснуть, обычно засыпаю через два часа."
+        }
+      ]
+    },
+    {
+      "id": "t02_p3",
+      "event_id": "t02_e1",
+      "kind": "onset",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "3 недели назад",
+        "ref_event_id": null
+      },
+      "text": "Трудности с засыпанием начались 3 недели назад",
+      "sections": [
+        "C",
+        "AM"
+      ],
+      "certainty": "uncertain",
+      "approximate": false,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s2",
+          "quote": "Три недели трудно заснуть, обычно засыпаю через два часа."
+        }
+      ]
+    },
+    {
+      "id": "t02_p4",
+      "event_id": "t02_e1",
+      "kind": "quantity",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "2 часа",
+        "ref_event_id": null
+      },
+      "text": "Время засыпания составляет около 2 часов",
+      "sections": [
+        "C"
+      ],
+      "certainty": "uncertain",
+      "approximate": true,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s2",
+          "quote": "Три недели трудно заснуть, обычно засыпаю через два часа."
+        }
+      ]
+    },
+    {
+      "id": "t04_p1",
+      "event_id": "t04_e1",
+      "kind": "presence",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "отсутствуют",
+        "ref_event_id": null
+      },
+      "text": "Панические приступы отсутствуют",
+      "sections": [
+        "C"
+      ],
+      "certainty": "uncertain",
+      "approximate": false,
+      "polarity": "negated",
+      "evidence": [
+        {
+          "turn_id": "s4",
+          "quote": "Нет, приступов паники не было."
+        }
+      ]
+    },
+    {
+      "id": "t06_p1",
+      "event_id": "t02_e2",
+      "kind": "duration",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "примерно 2 месяца",
+        "ref_event_id": null
+      },
+      "text": "Трудности с засыпанием длятся примерно 2 месяца",
+      "sections": [
+        "C",
+        "AM"
+      ],
+      "certainty": "uncertain",
+      "approximate": true,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s6",
+          "quote": "Сначала сказал три недели, но поправлю: с 12 сентября, примерно два месяца."
+        }
+      ]
+    },
+    {
+      "id": "t06_p2",
+      "event_id": "t02_e1",
+      "kind": "onset",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "12 сентября",
+        "ref_event_id": null
+      },
+      "text": "Трудности с засыпанием начались 12 сентября",
+      "sections": [
+        "C",
+        "AM"
+      ],
+      "certainty": "uncertain",
+      "approximate": true,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s6",
+          "quote": "Сначала сказал три недели, но поправлю: с 12 сентября, примерно два месяца."
+        }
+      ]
+    },
+    {
+      "id": "t08_p1",
+      "event_id": "t08_e1",
+      "kind": "presence",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "сообщается",
+        "ref_event_id": null
+      },
+      "text": "По словам сестры, у матери была депрессия",
+      "sections": [
+        "AV"
+      ],
+      "certainty": "uncertain",
+      "approximate": false,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s8",
+          "quote": "Сестра говорит, что у мамы была депрессия, сам документов не видел."
+        }
+      ]
+    },
+    {
+      "id": "t08_p2",
+      "event_id": "t08_e1",
+      "kind": "knowledge",
+      "condition": "unmarked",
+      "value": {
+        "type": "literal",
+        "text": "документов не видел",
+        "ref_event_id": null
+      },
+      "text": "Документов о депрессии матери не видел",
+      "sections": [
+        "AV"
+      ],
+      "certainty": "uncertain",
+      "approximate": false,
+      "polarity": "affirmed",
+      "evidence": [
+        {
+          "turn_id": "s8",
+          "quote": "Сестра говорит, что у мамы была депрессия, сам документов не видел."
+        }
+      ]
+    }
+  ],
+  "revisions": [
+    {
+      "old_property_id": "t02_p2",
+      "new_property_id": "t06_p1",
+      "evidence": [
+        {
+          "turn_id": "s6",
+          "quote": "Сначала сказал три недели, но поправлю: с 12 сентября, примерно два месяца."
+        }
+      ]
+    },
+    {
+      "old_property_id": "t02_p3",
+      "new_property_id": "t06_p2",
+      "evidence": [
+        {
+          "turn_id": "s6",
+          "quote": "Сначала сказал три недели, но поправлю: с 12 сентября, примерно два месяца."
+        }
+      ]
+    }
+  ],
+  "unresolved": [],
+  "applied_turn_ids": [
+    "s2",
+    "s4",
+    "s6",
+    "s8"
+  ],
+  "source_id": "d01",
+  "source_sha256": "189ea2a40364ce650c973bfabcbaeae41b9ff6e930afe269b30e1e863ac5005f"
+}

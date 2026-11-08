@@ -1,0 +1,159 @@
+{
+  "reviewer": "Codex; rubric and adapter author; not blind; not a physician",
+  "result_sha256": "02f7305e42dcc97f430d7acccf9b3f02b69276ea423c6e447dba6dc9bde050b8",
+  "gold_sha256": "e10658164da577b54e165af06cd4bf07e5cb783121128dce8386770e43588503",
+  "criteria": [
+    {
+      "id": "f1",
+      "status": "full",
+      "rows": [
+        "complaints:0",
+        "complaints:1",
+        "illness_history:0",
+        "illness_history:1"
+      ],
+      "complete_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "present_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты переданы совокупностью указанных строк."
+    },
+    {
+      "id": "f2",
+      "status": "full",
+      "rows": [
+        "illness_history:2"
+      ],
+      "complete_sections": [
+        "illness_history"
+      ],
+      "present_sections": [
+        "illness_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты переданы совокупностью указанных строк."
+    },
+    {
+      "id": "f3",
+      "status": "full",
+      "rows": [
+        "life_history:0",
+        "life_history:1"
+      ],
+      "complete_sections": [
+        "life_history"
+      ],
+      "present_sections": [
+        "life_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты переданы совокупностью указанных строк."
+    },
+    {
+      "id": "f4",
+      "status": "full",
+      "rows": [
+        "complaints:2",
+        "complaints:3",
+        "illness_history:3",
+        "illness_history:4"
+      ],
+      "complete_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "present_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "reason": "Наблюдение жены и собственная неуверенность пациента сохранены отдельными связанными свойствами."
+    }
+  ],
+  "rows": [
+    {
+      "id": "complaints:0",
+      "text": "начало трудностей с концентрацией внимания на работе: последнюю неделю",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "complaints:1",
+      "text": "трудности с концентрацией внимания возникают на работе",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "complaints:2",
+      "text": "по наблюдению жены: стал раздражительным",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "complaints:3",
+      "text": "сам не уверен в раздражительности",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:0",
+      "text": "начало трудностей с концентрацией внимания на работе: последнюю неделю",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:1",
+      "text": "трудности с концентрацией внимания возникают на работе",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:2",
+      "text": "пациент не помнит, были ли ранее трудности с концентрацией внимания",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:3",
+      "text": "по наблюдению жены: стал раздражительным",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:4",
+      "text": "сам не уверен в раздражительности",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "life_history:0",
+      "text": "стаж работы водителем: полных девятнадцать лет",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "life_history:1",
+      "text": "продолжается двадцатый год работы водителем",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    }
+  ],
+  "inventions": [],
+  "duplicates": [],
+  "source_errors": [],
+  "temporal_errors": [],
+  "polarity_errors": [],
+  "limits": "Only three sections; gaps/unresolved are not independently gold-scored."
+}

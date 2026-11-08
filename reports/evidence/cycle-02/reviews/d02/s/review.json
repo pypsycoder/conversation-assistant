@@ -1,0 +1,260 @@
+{
+  "reviewer": "Codex; rubric and adapter author; not blind; not a physician",
+  "result_sha256": "177335310e2128ee60bffb4be4b88e3d0ae8ec43c0af64b363d8836c50282b03",
+  "gold_sha256": "3fd31042cb8801514c792f86adda75e76d9d4dbfecc2ef7041b25f5aa15f12bc",
+  "criteria": [
+    {
+      "id": "f1",
+      "status": "full",
+      "rows": [
+        "illness_history:0",
+        "illness_history:1",
+        "illness_history:2",
+        "illness_history:3",
+        "illness_history:4"
+      ],
+      "complete_sections": [
+        "illness_history"
+      ],
+      "present_sections": [
+        "illness_history"
+      ],
+      "reason": "Курс, доза, режим, год и отсутствие эффекта распределены по свойствам одного события; учитываются вместе."
+    },
+    {
+      "id": "f2",
+      "status": "full",
+      "rows": [
+        "illness_history:5",
+        "illness_history:6",
+        "illness_history:7",
+        "illness_history:8",
+        "illness_history:9",
+        "illness_history:10"
+      ],
+      "complete_sections": [
+        "illness_history"
+      ],
+      "present_sections": [
+        "illness_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты переданы совокупностью указанных строк."
+    },
+    {
+      "id": "f3",
+      "status": "full",
+      "rows": [
+        "illness_history:11"
+      ],
+      "complete_sections": [
+        "illness_history"
+      ],
+      "present_sections": [
+        "illness_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты переданы совокупностью указанных строк."
+    },
+    {
+      "id": "f4",
+      "status": "full",
+      "rows": [
+        "complaints:0",
+        "complaints:1",
+        "complaints:2",
+        "complaints:3",
+        "complaints:4",
+        "illness_history:12",
+        "illness_history:13",
+        "illness_history:14",
+        "illness_history:15",
+        "illness_history:16"
+      ],
+      "complete_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "present_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты переданы совокупностью указанных строк."
+    }
+  ],
+  "rows": [
+    {
+      "id": "complaints:0",
+      "text": "Тревога присутствует",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "complaints:1",
+      "text": "Тревога возникает каждый вечер",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "complaints:2",
+      "text": "Частота — каждый вечер",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "complaints:3",
+      "text": "Эпизод тревоги возникает вечером",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "complaints:4",
+      "text": "Пациент считает вечернюю тревогу тем же симптомом, а не вторым",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:0",
+      "text": "Сертралин принимался утром",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:1",
+      "text": "Доза сертралина 50 мг",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:2",
+      "text": "Курс сертралина шесть недель",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:3",
+      "text": "Без заметного улучшения",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:4",
+      "text": "В 2024 году",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:5",
+      "text": "Эсциталопрам начат с января 2025 года",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:6",
+      "text": "Доза эсциталопрама 10 мг",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:7",
+      "text": "Эсциталопрам принимался утром",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:8",
+      "text": "Курс эсциталопрама три месяца",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:9",
+      "text": "Тревога уменьшилась",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:10",
+      "text": "Препарат эсциталопрам",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:11",
+      "text": "В настоящее время препараты не принимаются",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:12",
+      "text": "Тревога присутствует",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:13",
+      "text": "Тревога возникает каждый вечер",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:14",
+      "text": "Частота — каждый вечер",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:15",
+      "text": "Эпизод тревоги возникает вечером",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:16",
+      "text": "Пациент считает вечернюю тревогу тем же симптомом, а не вторым",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    }
+  ],
+  "inventions": [],
+  "duplicates": [
+    {
+      "rows": [
+        "complaints:1",
+        "complaints:2"
+      ],
+      "reason": "Две отдельные строки одинаково сообщают частоту каждый вечер."
+    },
+    {
+      "rows": [
+        "illness_history:13",
+        "illness_history:14"
+      ],
+      "reason": "Та же частота дважды в анамнезе болезни."
+    }
+  ],
+  "source_errors": [],
+  "temporal_errors": [],
+  "polarity_errors": [],
+  "limits": "Only three sections; gaps/unresolved are not independently gold-scored."
+}

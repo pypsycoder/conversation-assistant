@@ -1,0 +1,122 @@
+{
+  "reviewer": "Codex; rubric and adapter author; not blind; not a physician",
+  "result_sha256": "e559b8726c9a3e4cab8eea2cb78fec4fb2275dfa57aa207170b3261ecf2dcd3b",
+  "gold_sha256": "3fd31042cb8801514c792f86adda75e76d9d4dbfecc2ef7041b25f5aa15f12bc",
+  "criteria": [
+    {
+      "id": "f1",
+      "status": "full",
+      "rows": [
+        "illness_history:0"
+      ],
+      "complete_sections": [
+        "illness_history"
+      ],
+      "present_sections": [
+        "illness_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты переданы совокупностью указанных строк."
+    },
+    {
+      "id": "f2",
+      "status": "full",
+      "rows": [
+        "illness_history:1"
+      ],
+      "complete_sections": [
+        "illness_history"
+      ],
+      "present_sections": [
+        "illness_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты переданы совокупностью указанных строк."
+    },
+    {
+      "id": "f3",
+      "status": "full",
+      "rows": [
+        "illness_history:2"
+      ],
+      "complete_sections": [
+        "illness_history"
+      ],
+      "present_sections": [
+        "illness_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты переданы совокупностью указанных строк."
+    },
+    {
+      "id": "f4",
+      "status": "full",
+      "rows": [
+        "complaints:0",
+        "complaints:1"
+      ],
+      "complete_sections": [
+        "complaints"
+      ],
+      "present_sections": [
+        "complaints"
+      ],
+      "reason": "Тревога каждый вечер передана в жалобах, но отсутствует в анамнезе болезни."
+    }
+  ],
+  "rows": [
+    {
+      "id": "complaints:0",
+      "text": "Тревожно каждый вечер.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "complaints:1",
+      "text": "Каждый вечер тревожусь — это то же самое, не второй симптом.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:0",
+      "text": "В 2024 году сертралин 50 мг утром шесть недель, без заметного улучшения.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:1",
+      "text": "С января 2025 года эсциталопрам 10 мг утром три месяца, тревога уменьшилась.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:2",
+      "text": "Сейчас ничего не принимаю.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "life_history:0",
+      "text": "Возраст не указан.",
+      "support": "metadata",
+      "inventions": [],
+      "reason": "Возраст действительно не указан; это метаинформация, не придуманное значение возраста."
+    }
+  ],
+  "inventions": [],
+  "duplicates": [
+    {
+      "rows": [
+        "complaints:0",
+        "complaints:1"
+      ],
+      "reason": "Вечерняя тревога повторена в одном разделе; вторая строка добавляет метаоговорку, но не второй симптом."
+    }
+  ],
+  "source_errors": [],
+  "temporal_errors": [],
+  "polarity_errors": [],
+  "limits": "Only three sections; gaps/unresolved are not independently gold-scored."
+}

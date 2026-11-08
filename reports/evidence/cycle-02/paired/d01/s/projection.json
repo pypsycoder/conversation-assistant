@@ -1,0 +1,252 @@
+{
+  "sections": {
+    "complaints": "Трудности с засыпанием присутствуют Время засыпания составляет около 2 часов Панические приступы отсутствуют Трудности с засыпанием длятся примерно 2 месяца Трудности с засыпанием начались 12 сентября",
+    "life_history": "По словам сестры, у матери была депрессия Документов о депрессии матери не видел",
+    "illness_history": "Трудности с засыпанием присутствуют Время засыпания составляет около 2 часов Панические приступы отсутствуют Трудности с засыпанием длятся примерно 2 месяца Трудности с засыпанием начались 12 сентября"
+  },
+  "evidence": {
+    "complaints": [
+      {
+        "text": "Трудности с засыпанием присутствуют",
+        "property_id": "t02_p1",
+        "event_id": "t02_e1",
+        "kind": "presence",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s2"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s2",
+            "quote": "Три недели трудно заснуть, обычно засыпаю через два часа."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      },
+      {
+        "text": "Время засыпания составляет около 2 часов",
+        "property_id": "t02_p4",
+        "event_id": "t02_e1",
+        "kind": "quantity",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s2"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s2",
+            "quote": "Три недели трудно заснуть, обычно засыпаю через два часа."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      },
+      {
+        "text": "Панические приступы отсутствуют",
+        "property_id": "t04_p1",
+        "event_id": "t04_e1",
+        "kind": "presence",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s4"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s4",
+            "quote": "Нет, приступов паники не было."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      },
+      {
+        "text": "Трудности с засыпанием длятся примерно 2 месяца",
+        "property_id": "t06_p1",
+        "event_id": "t02_e2",
+        "kind": "duration",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s6"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s6",
+            "quote": "Сначала сказал три недели, но поправлю: с 12 сентября, примерно два месяца."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      },
+      {
+        "text": "Трудности с засыпанием начались 12 сентября",
+        "property_id": "t06_p2",
+        "event_id": "t02_e1",
+        "kind": "onset",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s6"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s6",
+            "quote": "Сначала сказал три недели, но поправлю: с 12 сентября, примерно два месяца."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      }
+    ],
+    "life_history": [
+      {
+        "text": "По словам сестры, у матери была депрессия",
+        "property_id": "t08_p1",
+        "event_id": "t08_e1",
+        "kind": "presence",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s8"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s8",
+            "quote": "Сестра говорит, что у мамы была депрессия, сам документов не видел."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "сестра"
+      },
+      {
+        "text": "Документов о депрессии матери не видел",
+        "property_id": "t08_p2",
+        "event_id": "t08_e1",
+        "kind": "knowledge",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s8"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s8",
+            "quote": "Сестра говорит, что у мамы была депрессия, сам документов не видел."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      }
+    ],
+    "illness_history": [
+      {
+        "text": "Трудности с засыпанием присутствуют",
+        "property_id": "t02_p1",
+        "event_id": "t02_e1",
+        "kind": "presence",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s2"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s2",
+            "quote": "Три недели трудно заснуть, обычно засыпаю через два часа."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      },
+      {
+        "text": "Время засыпания составляет около 2 часов",
+        "property_id": "t02_p4",
+        "event_id": "t02_e1",
+        "kind": "quantity",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s2"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s2",
+            "quote": "Три недели трудно заснуть, обычно засыпаю через два часа."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      },
+      {
+        "text": "Панические приступы отсутствуют",
+        "property_id": "t04_p1",
+        "event_id": "t04_e1",
+        "kind": "presence",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s4"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s4",
+            "quote": "Нет, приступов паники не было."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      },
+      {
+        "text": "Трудности с засыпанием длятся примерно 2 месяца",
+        "property_id": "t06_p1",
+        "event_id": "t02_e2",
+        "kind": "duration",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s6"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s6",
+            "quote": "Сначала сказал три недели, но поправлю: с 12 сентября, примерно два месяца."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      },
+      {
+        "text": "Трудности с засыпанием начались 12 сентября",
+        "property_id": "t06_p2",
+        "event_id": "t02_e1",
+        "kind": "onset",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s6"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s6",
+            "quote": "Сначала сказал три недели, но поправлю: с 12 сентября, примерно два месяца."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      }
+    ]
+  },
+  "active_property_ids": [
+    "t02_p1",
+    "t02_p4",
+    "t04_p1",
+    "t06_p1",
+    "t06_p2",
+    "t08_p1",
+    "t08_p2"
+  ],
+  "retired_property_ids": [
+    "t02_p2",
+    "t02_p3"
+  ],
+  "unresolved": [],
+  "issues": [],
+  "one_property_version_for_all_sections": true,
+  "semantic_support_certified": false,
+  "no_semantic_deduplication_or_implicit_revision": true,
+  "routing": "code: C implies AM at projection; stored sections are model-owned",
+  "version": "clinical-event-properties-source-print-v3",
+  "source_marks_added": []
+}

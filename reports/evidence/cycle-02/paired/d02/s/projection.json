@@ -1,0 +1,438 @@
+{
+  "sections": {
+    "complaints": "Тревога присутствует Тревога возникает каждый вечер Частота — каждый вечер Эпизод тревоги возникает вечером Пациент считает вечернюю тревогу тем же симптомом, а не вторым",
+    "life_history": "",
+    "illness_history": "Сертралин принимался утром Доза сертралина 50 мг Курс сертралина шесть недель Без заметного улучшения В 2024 году Эсциталопрам начат с января 2025 года Доза эсциталопрама 10 мг Эсциталопрам принимался утром Курс эсциталопрама три месяца Тревога уменьшилась Препарат эсциталопрам В настоящее время препараты не принимаются Тревога присутствует Тревога возникает каждый вечер Частота — каждый вечер Эпизод тревоги возникает вечером Пациент считает вечернюю тревогу тем же симптомом, а не вторым"
+  },
+  "evidence": {
+    "complaints": [
+      {
+        "text": "Тревога присутствует",
+        "property_id": "t08_p1",
+        "event_id": "t08_e1",
+        "kind": "presence",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s8"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s8",
+            "quote": "Тревожно каждый вечер. Каждый вечер тревожусь — это то же самое, не второй симптом."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      },
+      {
+        "text": "Тревога возникает каждый вечер",
+        "property_id": "t08_p2",
+        "event_id": "t08_e1",
+        "kind": "within_day",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s8"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s8",
+            "quote": "Тревожно каждый вечер. Каждый вечер тревожусь — это то же самое, не второй симптом."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      },
+      {
+        "text": "Частота — каждый вечер",
+        "property_id": "t08_p3",
+        "event_id": "t08_e1",
+        "kind": "frequency",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s8"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s8",
+            "quote": "Тревожно каждый вечер. Каждый вечер тревожусь — это то же самое, не второй симптом."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      },
+      {
+        "text": "Эпизод тревоги возникает вечером",
+        "property_id": "t08_p4",
+        "event_id": "t08_e2",
+        "kind": "occurrence_time",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s8"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s8",
+            "quote": "Тревожно каждый вечер. Каждый вечер тревожусь — это то же самое, не второй симптом."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      },
+      {
+        "text": "Пациент считает вечернюю тревогу тем же симптомом, а не вторым",
+        "property_id": "t08_p5",
+        "event_id": "t08_e1",
+        "kind": "belief",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s8"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s8",
+            "quote": "Тревожно каждый вечер. Каждый вечер тревожусь — это то же самое, не второй симптом."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      }
+    ],
+    "life_history": [],
+    "illness_history": [
+      {
+        "text": "Сертралин принимался утром",
+        "property_id": "t02_p1",
+        "event_id": "t02_e1",
+        "kind": "within_day",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s2"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s2",
+            "quote": "В 2024 году сертралин 50 мг утром шесть недель, без заметного улучшения."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "patient"
+      },
+      {
+        "text": "Доза сертралина 50 мг",
+        "property_id": "t02_p2",
+        "event_id": "t02_e1",
+        "kind": "quantity",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s2"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s2",
+            "quote": "В 2024 году сертралин 50 мг утром шесть недель, без заметного улучшения."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "patient"
+      },
+      {
+        "text": "Курс сертралина шесть недель",
+        "property_id": "t02_p3",
+        "event_id": "t02_e1",
+        "kind": "duration",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s2"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s2",
+            "quote": "В 2024 году сертралин 50 мг утром шесть недель, без заметного улучшения."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "patient"
+      },
+      {
+        "text": "Без заметного улучшения",
+        "property_id": "t02_p4",
+        "event_id": "t02_e1",
+        "kind": "result",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s2"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s2",
+            "quote": "В 2024 году сертралин 50 мг утром шесть недель, без заметного улучшения."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "patient"
+      },
+      {
+        "text": "В 2024 году",
+        "property_id": "t02_p5",
+        "event_id": "t02_e1",
+        "kind": "occurrence_time",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s2"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s2",
+            "quote": "В 2024 году сертралин 50 мг утром шесть недель, без заметного улучшения."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "patient"
+      },
+      {
+        "text": "Эсциталопрам начат с января 2025 года",
+        "property_id": "t04_p1",
+        "event_id": "t04_e1",
+        "kind": "occurrence_time",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s4"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s4",
+            "quote": "С января 2025 года эсциталопрам 10 мг утром три месяца, тревога уменьшилась."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      },
+      {
+        "text": "Доза эсциталопрама 10 мг",
+        "property_id": "t04_p2",
+        "event_id": "t04_e1",
+        "kind": "quantity",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s4"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s4",
+            "quote": "С января 2025 года эсциталопрам 10 мг утром три месяца, тревога уменьшилась."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      },
+      {
+        "text": "Эсциталопрам принимался утром",
+        "property_id": "t04_p3",
+        "event_id": "t04_e1",
+        "kind": "within_day",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s4"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s4",
+            "quote": "С января 2025 года эсциталопрам 10 мг утром три месяца, тревога уменьшилась."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      },
+      {
+        "text": "Курс эсциталопрама три месяца",
+        "property_id": "t04_p4",
+        "event_id": "t04_e1",
+        "kind": "duration",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s4"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s4",
+            "quote": "С января 2025 года эсциталопрам 10 мг утром три месяца, тревога уменьшилась."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      },
+      {
+        "text": "Тревога уменьшилась",
+        "property_id": "t04_p5",
+        "event_id": "t04_e1",
+        "kind": "result",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s4"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s4",
+            "quote": "С января 2025 года эсциталопрам 10 мг утром три месяца, тревога уменьшилась."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      },
+      {
+        "text": "Препарат эсциталопрам",
+        "property_id": "t04_p6",
+        "event_id": "t04_e1",
+        "kind": "background",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s4"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s4",
+            "quote": "С января 2025 года эсциталопрам 10 мг утром три месяца, тревога уменьшилась."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      },
+      {
+        "text": "В настоящее время препараты не принимаются",
+        "property_id": "t06_p1",
+        "event_id": "t06_e1",
+        "kind": "background",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s6"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s6",
+            "quote": "Сейчас ничего не принимаю."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      },
+      {
+        "text": "Тревога присутствует",
+        "property_id": "t08_p1",
+        "event_id": "t08_e1",
+        "kind": "presence",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s8"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s8",
+            "quote": "Тревожно каждый вечер. Каждый вечер тревожусь — это то же самое, не второй симптом."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      },
+      {
+        "text": "Тревога возникает каждый вечер",
+        "property_id": "t08_p2",
+        "event_id": "t08_e1",
+        "kind": "within_day",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s8"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s8",
+            "quote": "Тревожно каждый вечер. Каждый вечер тревожусь — это то же самое, не второй симптом."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      },
+      {
+        "text": "Частота — каждый вечер",
+        "property_id": "t08_p3",
+        "event_id": "t08_e1",
+        "kind": "frequency",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s8"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s8",
+            "quote": "Тревожно каждый вечер. Каждый вечер тревожусь — это то же самое, не второй симптом."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      },
+      {
+        "text": "Эпизод тревоги возникает вечером",
+        "property_id": "t08_p4",
+        "event_id": "t08_e2",
+        "kind": "occurrence_time",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s8"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s8",
+            "quote": "Тревожно каждый вечер. Каждый вечер тревожусь — это то же самое, не второй симптом."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      },
+      {
+        "text": "Пациент считает вечернюю тревогу тем же симптомом, а не вторым",
+        "property_id": "t08_p5",
+        "event_id": "t08_e1",
+        "kind": "belief",
+        "condition": "unmarked",
+        "source_turn_ids": [
+          "s8"
+        ],
+        "evidence_quotes": [
+          {
+            "turn_id": "s8",
+            "quote": "Тревожно каждый вечер. Каждый вечер тревожусь — это то же самое, не второй симптом."
+          }
+        ],
+        "semantic_support_certified": false,
+        "reported_by": "пациент"
+      }
+    ]
+  },
+  "active_property_ids": [
+    "t02_p1",
+    "t02_p2",
+    "t02_p3",
+    "t02_p4",
+    "t02_p5",
+    "t04_p1",
+    "t04_p2",
+    "t04_p3",
+    "t04_p4",
+    "t04_p5",
+    "t04_p6",
+    "t06_p1",
+    "t08_p1",
+    "t08_p2",
+    "t08_p3",
+    "t08_p4",
+    "t08_p5"
+  ],
+  "retired_property_ids": [],
+  "unresolved": [],
+  "issues": [],
+  "one_property_version_for_all_sections": true,
+  "semantic_support_certified": false,
+  "no_semantic_deduplication_or_implicit_revision": true,
+  "routing": "code: C implies AM at projection; stored sections are model-owned",
+  "version": "clinical-event-properties-source-print-v3",
+  "source_marks_added": []
+}

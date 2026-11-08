@@ -10,8 +10,9 @@
 
 В этой первой публикации отобраны существующий GigaChat-клиент и минимальные
 зависимости прямого пути, новая система измерения, синтетический набор и тесты.
-Остальная большая локальная исследовательская база не импортирована целиком;
-упомянутая в аудите инкрементальная S пока доступна только в локальной папке.
+Остальная большая локальная исследовательская база не импортирована целиком.
+Основа S, её зависимости и парный адаптер теперь импортированы выборочно.
+Свежий замер и его ограничения: reports/2026-11-08-cycle-02.md.
 
 Python 3.11+, `pip install -r requirements-research.txt`. Ключ хранится только
 в локальном `.env` под одним из имён, поддержанных backend/gigachat.py.
@@ -22,6 +23,8 @@ Python 3.11+, `pip install -r requirements-research.txt`. Ключ хранит�
 python -m unittest tests.test_nightly_research tests.test_gigachat tests.test_three_sections -q
 python -m backend.nightly_research run --output data/nightly/unique-smoke
 python -m backend.nightly_research run --output data/nightly/unique-live --live --direct --max-calls 3 --max-tokens 60000 --max-seconds 300
+python -m backend.s_direct_comparison --output data/nightly/unique-paired-smoke
+python scripts/verify_cycle02.py
 ```
 
 Синтетика: examples/nightly-v1. Новый runner по умолчанию НЕ вызывает API.

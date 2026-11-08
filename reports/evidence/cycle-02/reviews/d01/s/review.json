@@ -1,0 +1,169 @@
+{
+  "reviewer": "Codex; rubric and adapter author; not blind; not a physician",
+  "result_sha256": "e98636328dfa3ac724d90917cbbeffbb8e90803901928709978b6f8726f3884c",
+  "gold_sha256": "a2e238d699ae18bc44e93eb48e4c124199d0e2c07c8a93113c4eef35c4219159",
+  "criteria": [
+    {
+      "id": "f1",
+      "status": "full",
+      "rows": [
+        "complaints:0",
+        "complaints:1",
+        "illness_history:0",
+        "illness_history:1"
+      ],
+      "complete_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "present_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты переданы совокупностью указанных строк."
+    },
+    {
+      "id": "f2",
+      "status": "full",
+      "rows": [
+        "complaints:2",
+        "illness_history:2"
+      ],
+      "complete_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "present_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "reason": "Отрицание верно, но в complaints размещено вопреки рубрике."
+    },
+    {
+      "id": "f3",
+      "status": "full",
+      "rows": [
+        "complaints:3",
+        "complaints:4",
+        "illness_history:3",
+        "illness_history:4"
+      ],
+      "complete_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "present_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "reason": "Уточнённые дата и длительность сохранены, старые три недели сняты."
+    },
+    {
+      "id": "f4",
+      "status": "full",
+      "rows": [
+        "life_history:0",
+        "life_history:1"
+      ],
+      "complete_sections": [
+        "life_history"
+      ],
+      "present_sections": [
+        "life_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты переданы совокупностью указанных строк."
+    }
+  ],
+  "rows": [
+    {
+      "id": "complaints:0",
+      "text": "Трудности с засыпанием присутствуют",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "complaints:1",
+      "text": "Время засыпания составляет около 2 часов",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "complaints:2",
+      "text": "Панические приступы отсутствуют",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "complaints:3",
+      "text": "Трудности с засыпанием длятся примерно 2 месяца",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "complaints:4",
+      "text": "Трудности с засыпанием начались 12 сентября",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:0",
+      "text": "Трудности с засыпанием присутствуют",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:1",
+      "text": "Время засыпания составляет около 2 часов",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:2",
+      "text": "Панические приступы отсутствуют",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:3",
+      "text": "Трудности с засыпанием длятся примерно 2 месяца",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "illness_history:4",
+      "text": "Трудности с засыпанием начались 12 сентября",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "life_history:0",
+      "text": "По словам сестры, у матери была депрессия",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    },
+    {
+      "id": "life_history:1",
+      "text": "Документов о депрессии матери не видел",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Явно подтверждено исходной репликой; для свойств S учитывается связь с событием и соседними свойствами."
+    }
+  ],
+  "inventions": [],
+  "duplicates": [],
+  "source_errors": [],
+  "temporal_errors": [],
+  "polarity_errors": [],
+  "limits": "Only three sections; gaps/unresolved are not independently gold-scored."
+}
