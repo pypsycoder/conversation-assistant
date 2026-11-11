@@ -1,0 +1,35 @@
+{
+  "id": "r03",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "hand_tremor",
+      "meaning": "Сейчас дрожат руки.",
+      "required_sections": [
+        "complaints"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "tremor_course",
+      "meaning": "С утра дрожь рук сильнее, чем вчера.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    }
+  ]
+}

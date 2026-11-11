@@ -134,16 +134,18 @@ def run(args):
     for case in cases:
         tracked += [corpus / case["source"], corpus / case["gold"]]
     hashes = {str(p.resolve()): digest(p) for p in tracked}
+    expected_revision = getattr(args, "expected_model_revision", None)
     with exclusive_lock(ROOT / "data/nightly/research.lock"):
         args.output.mkdir(parents=True, exist_ok=False)
         save(args.output / "freeze.json", {"files": hashes, "system_prompt": prompt,
              "split": args.split, "case_ids": [c["id"] for c in cases],
              "iterations": args.iterations, "max_calls": args.max_calls,
              "max_tokens": args.max_tokens, "max_seconds": args.max_seconds,
+             "expected_model_revision": expected_revision,
              "created_at": datetime.now(timezone.utc).isoformat()})
         began = time.monotonic()
         calls = tokens = 0
-        model_revision = None
+        model_revision = expected_revision
         summary = {"status": "running", "calls": 0, "tokens": 0,
                    "semantic_metrics": None, "cost_rub": None, "cost_note": "Tariff not configured",
                    "experiment": "direct-v2 reference; not the accepted incremental S baseline", "cases": []}
@@ -229,6 +231,8 @@ def main():
     runner.add_argument("--max-tokens", type=int, default=100000)
     runner.add_argument("--max-seconds", type=int, default=900)
     runner.add_argument("--prompt", type=Path)
+    runner.add_argument("--expected-model-revision",
+                        help="Stop if the provider returns a different model revision")
     runner.add_argument("--live", action="store_true")
     runner.add_argument("--direct", action="store_true")
     evaluate = sub.add_parser("score")
