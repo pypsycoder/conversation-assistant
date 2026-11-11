@@ -1,0 +1,153 @@
+{
+  "reviewer": "Codex. Section decisions R1–R3 provided by the user.",
+  "result_sha256": "b08c419a290580bcfe0e32a52054ce56e36b2b71d99ea58f99944a68f265944d",
+  "gold_sha256": "5d7ed61d71d3d9b474cd023c568beff61e02b66992fb825fb7acddedb44959c6",
+  "criteria": [
+    {
+      "id": "f1",
+      "status": "full",
+      "rows": [
+        "life_history:0"
+      ],
+      "complete_sections": [
+        "life_history"
+      ],
+      "present_sections": [
+        "life_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты сохранены в совокупности указанных строк."
+    },
+    {
+      "id": "f2_nausea",
+      "status": "full",
+      "rows": [
+        "complaints:0",
+        "illness_history:0",
+        "complaints:1",
+        "illness_history:1"
+      ],
+      "complete_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "present_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты сохранены в совокупности указанных строк."
+    },
+    {
+      "id": "f2_morning",
+      "status": "full",
+      "rows": [
+        "complaints:1",
+        "illness_history:1"
+      ],
+      "complete_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "present_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты сохранены в совокупности указанных строк."
+    },
+    {
+      "id": "f2_duration",
+      "status": "full",
+      "rows": [
+        "complaints:0",
+        "illness_history:0"
+      ],
+      "complete_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "present_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты сохранены в совокупности указанных строк."
+    },
+    {
+      "id": "f2_cause_unknown",
+      "status": "full",
+      "rows": [
+        "complaints:2",
+        "illness_history:2"
+      ],
+      "complete_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "present_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "reason": "По R1 причина обязательна в анамнезе заболевания и допустима в жалобах."
+    }
+  ],
+  "rows": [
+    {
+      "id": "complaints:0",
+      "text": "Тошнота началась 10 дней назад",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "complaints:1",
+      "text": "Тошнота возникает утром",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "complaints:2",
+      "text": "Причина тошноты не известна",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "illness_history:0",
+      "text": "Тошнота началась 10 дней назад",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "illness_history:1",
+      "text": "Тошнота возникает утром",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "illness_history:2",
+      "text": "Причина тошноты не известна",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "life_history:0",
+      "text": "Операция по поводу аппендицита в 2018 году",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    }
+  ],
+  "inventions": [],
+  "duplicates": [],
+  "placement_notes": [],
+  "source_errors": [],
+  "temporal_errors": [],
+  "polarity_errors": [],
+  "outside_sections": [],
+  "limits": "Retrospective scoring of saved outputs. The user decided R1–R3. Codex assessed model outputs.",
+  "rubric_version": 2,
+  "source_review_sha256": "595d2489b94272f9af1ccc25268cb0e2ba00126a04f7b7306827f2b86984ebdd",
+  "digest_method": "sha256 of UTF-8 file bytes with CRLF normalized to LF"
+}

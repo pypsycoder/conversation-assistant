@@ -1,0 +1,192 @@
+{
+  "reviewer": "Codex. Section decisions R1–R3 provided by the user.",
+  "result_sha256": "fbc586da83184ae3581977768aab159873843a60c0a915dcfa70e9b98ab3b22e",
+  "gold_sha256": "9d416ba067259aaec2a0f45d373031c4d0cbfc13a03fa03c6dd71d034eb5f31e",
+  "criteria": [
+    {
+      "id": "f1_february",
+      "status": "full",
+      "rows": [
+        "illness_history:0",
+        "complaints:0"
+      ],
+      "complete_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "present_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "reason": "Фаза сохранена в анамнезе заболевания. R2 исключает текущее общее ухудшение из жалоб. Прошлые фазы относятся к анамнезу заболевания."
+    },
+    {
+      "id": "f1_march",
+      "status": "full",
+      "rows": [
+        "illness_history:1",
+        "complaints:1"
+      ],
+      "complete_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "present_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "reason": "Фаза сохранена в анамнезе заболевания. R2 исключает текущее общее ухудшение из жалоб. Прошлые фазы относятся к анамнезу заболевания."
+    },
+    {
+      "id": "f1_current",
+      "status": "full",
+      "rows": [
+        "illness_history:2",
+        "complaints:2"
+      ],
+      "complete_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "present_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "reason": "Фаза сохранена в анамнезе заболевания. R2 исключает текущее общее ухудшение из жалоб. Прошлые фазы относятся к анамнезу заболевания."
+    },
+    {
+      "id": "f2",
+      "status": "full",
+      "rows": [
+        "life_history:0"
+      ],
+      "complete_sections": [
+        "life_history"
+      ],
+      "present_sections": [
+        "life_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты сохранены в совокупности указанных строк."
+    },
+    {
+      "id": "f3_father_unknown",
+      "status": "full",
+      "rows": [
+        "life_history:1"
+      ],
+      "complete_sections": [
+        "life_history"
+      ],
+      "present_sections": [
+        "life_history"
+      ],
+      "reason": "Неизвестность явно записана в анамнезе жизни."
+    },
+    {
+      "id": "f3_no_contact",
+      "status": "full",
+      "rows": [
+        "life_history:2"
+      ],
+      "complete_sections": [
+        "life_history"
+      ],
+      "present_sections": [
+        "life_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты сохранены в совокупности указанных строк."
+    }
+  ],
+  "rows": [
+    {
+      "id": "complaints:0",
+      "text": "В феврале самочувствие было хуже",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "complaints:1",
+      "text": "В марте самочувствие стало легче",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "complaints:2",
+      "text": "Сейчас самочувствие опять хуже",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "illness_history:0",
+      "text": "В феврале самочувствие было хуже",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "illness_history:1",
+      "text": "В марте самочувствие стало легче",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "illness_history:2",
+      "text": "Сейчас самочувствие опять хуже",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "life_history:0",
+      "text": "Двое детей",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "life_history:1",
+      "text": "Неизвестно, есть ли у отца известные психиатрические заболевания",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "life_history:2",
+      "text": "С отцом не общаемся",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    }
+  ],
+  "inventions": [],
+  "duplicates": [],
+  "placement_notes": [
+    {
+      "rows": [
+        "complaints:2"
+      ],
+      "classification": "R2_excluded_from_complaints",
+      "reason": "По R2 текущее общее ухудшение в жалобы не включается."
+    },
+    {
+      "rows": [
+        "complaints:0",
+        "complaints:1"
+      ],
+      "classification": "historical_phases_in_current_complaints",
+      "reason": "Февральская и мартовская фазы относятся к анамнезу заболевания."
+    }
+  ],
+  "source_errors": [],
+  "temporal_errors": [],
+  "polarity_errors": [],
+  "outside_sections": [],
+  "limits": "Retrospective scoring of saved outputs. The user decided R1–R3. Codex assessed model outputs.",
+  "rubric_version": 2,
+  "source_review_sha256": "4471453c1ad079161909feac30b5cf3a88e1c1f0ca3181d82637f2f54ebb3ee1",
+  "digest_method": "sha256 of UTF-8 file bytes with CRLF normalized to LF"
+}

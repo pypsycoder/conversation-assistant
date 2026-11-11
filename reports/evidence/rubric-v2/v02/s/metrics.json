@@ -1,0 +1,40 @@
+{
+  "gold_criteria": 6,
+  "statuses": {
+    "full": 6,
+    "partial": 0,
+    "missing": 0,
+    "distorted": 0
+  },
+  "tp": 6,
+  "fp": 0,
+  "fn": 0,
+  "strict_precision": 1.0,
+  "recall": 1.0,
+  "strict_f1": 1.0,
+  "unsupported_unique": 0,
+  "unsupported_rows": 0,
+  "required_placements": 6,
+  "complete_required_placements": 6,
+  "allowed_present_placements": 6,
+  "present_placements": 9,
+  "wrong_placements": [
+    [
+      "f1_current",
+      "complaints"
+    ],
+    [
+      "f1_february",
+      "complaints"
+    ],
+    [
+      "f1_march",
+      "complaints"
+    ]
+  ],
+  "output_rows": 9,
+  "duplicate_groups": 0,
+  "duplicate_extra_rows": 0,
+  "reviewer": "Codex. Section decisions R1–R3 provided by the user.",
+  "physician_reviewed": false
+}
