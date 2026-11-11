@@ -1,0 +1,97 @@
+{
+  "id": "v02",
+  "synthetic": true,
+  "rubric_version": 2,
+  "physician_approved": false,
+  "source": "examples/nightly-v1/v02.source.json",
+  "derived_from": "examples/nightly-v1/v02.gold.json",
+  "section_decisions": "docs/clinical-review/2026-11-08/review-template.json",
+  "facts": [
+    {
+      "id": "f1_february",
+      "meaning": "В феврале самочувствие было хуже.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ],
+      "decision": "R2"
+    },
+    {
+      "id": "f1_march",
+      "meaning": "В марте самочувствие стало легче.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ],
+      "decision": "R2"
+    },
+    {
+      "id": "f1_current",
+      "meaning": "Сейчас самочувствие снова ухудшилось.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ],
+      "decision": "R2"
+    },
+    {
+      "id": "f2",
+      "meaning": "Двое детей.",
+      "required_sections": [
+        "life_history"
+      ],
+      "allowed_sections": [
+        "life_history"
+      ],
+      "source_segment_ids": [
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "id": "f3_father_unknown",
+      "meaning": "Пациент не знает, есть ли у отца психиатрические заболевания.",
+      "required_sections": [
+        "life_history"
+      ],
+      "allowed_sections": [
+        "life_history"
+      ],
+      "source_segment_ids": [
+        "s5",
+        "s6"
+      ],
+      "decision": "R3"
+    },
+    {
+      "id": "f3_no_contact",
+      "meaning": "Пациент не общается с отцом.",
+      "required_sections": [
+        "life_history"
+      ],
+      "allowed_sections": [
+        "life_history"
+      ],
+      "source_segment_ids": [
+        "s5",
+        "s6"
+      ],
+      "decision": "R3"
+    }
+  ]
+}

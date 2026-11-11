@@ -1,0 +1,32 @@
+{
+  "gold_criteria": 6,
+  "statuses": {
+    "full": 5,
+    "partial": 0,
+    "missing": 1,
+    "distorted": 0
+  },
+  "tp": 5,
+  "fp": 0,
+  "fn": 1,
+  "strict_precision": 1.0,
+  "recall": 0.8333333333333334,
+  "strict_f1": 0.9090909090909091,
+  "unsupported_unique": 0,
+  "unsupported_rows": 0,
+  "required_placements": 6,
+  "complete_required_placements": 5,
+  "allowed_present_placements": 5,
+  "present_placements": 6,
+  "wrong_placements": [
+    [
+      "f1_current",
+      "complaints"
+    ]
+  ],
+  "output_rows": 6,
+  "duplicate_groups": 0,
+  "duplicate_extra_rows": 0,
+  "reviewer": "Codex. Section decisions R1–R3 provided by the user.",
+  "physician_reviewed": false
+}

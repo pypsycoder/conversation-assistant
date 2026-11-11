@@ -1,0 +1,87 @@
+{
+  "id": "v01",
+  "synthetic": true,
+  "rubric_version": 2,
+  "physician_approved": false,
+  "source": "examples/nightly-v1/v01.source.json",
+  "derived_from": "examples/nightly-v1/v01.gold.json",
+  "section_decisions": "docs/clinical-review/2026-11-08/review-template.json",
+  "facts": [
+    {
+      "id": "f1",
+      "meaning": "Операция по поводу аппендицита в 2018.",
+      "required_sections": [
+        "life_history"
+      ],
+      "allowed_sections": [
+        "life_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "f2_nausea",
+      "meaning": "Пациента тошнит.",
+      "required_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s4"
+      ],
+      "decision": "R1"
+    },
+    {
+      "id": "f2_morning",
+      "meaning": "Тошнота возникает утром.",
+      "required_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s4"
+      ],
+      "decision": "R1"
+    },
+    {
+      "id": "f2_duration",
+      "meaning": "Тошнота длится десять дней.",
+      "required_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s4"
+      ],
+      "decision": "R1"
+    },
+    {
+      "id": "f2_cause_unknown",
+      "meaning": "Пациент не знает причины тошноты.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s4"
+      ],
+      "decision": "R1"
+    }
+  ]
+}

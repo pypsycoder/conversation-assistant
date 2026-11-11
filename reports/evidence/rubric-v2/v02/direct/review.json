@@ -1,0 +1,156 @@
+{
+  "reviewer": "Codex. Section decisions R1–R3 provided by the user.",
+  "result_sha256": "411e8d6182bd0b4b9b61892b2dc594043f7e04bd506f5aa5412f9278c5845775",
+  "gold_sha256": "9d416ba067259aaec2a0f45d373031c4d0cbfc13a03fa03c6dd71d034eb5f31e",
+  "criteria": [
+    {
+      "id": "f1_february",
+      "status": "full",
+      "rows": [
+        "illness_history:0"
+      ],
+      "complete_sections": [
+        "illness_history"
+      ],
+      "present_sections": [
+        "illness_history"
+      ],
+      "reason": "Фаза сохранена в анамнезе заболевания. R2 исключает текущее общее ухудшение из жалоб. Прошлые фазы относятся к анамнезу заболевания."
+    },
+    {
+      "id": "f1_march",
+      "status": "full",
+      "rows": [
+        "illness_history:1"
+      ],
+      "complete_sections": [
+        "illness_history"
+      ],
+      "present_sections": [
+        "illness_history"
+      ],
+      "reason": "Фаза сохранена в анамнезе заболевания. R2 исключает текущее общее ухудшение из жалоб. Прошлые фазы относятся к анамнезу заболевания."
+    },
+    {
+      "id": "f1_current",
+      "status": "full",
+      "rows": [
+        "illness_history:2",
+        "complaints:0"
+      ],
+      "complete_sections": [
+        "illness_history"
+      ],
+      "present_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "reason": "Фаза сохранена в анамнезе заболевания. R2 исключает текущее общее ухудшение из жалоб. Прошлые фазы относятся к анамнезу заболевания."
+    },
+    {
+      "id": "f2",
+      "status": "full",
+      "rows": [
+        "life_history:0"
+      ],
+      "complete_sections": [
+        "life_history"
+      ],
+      "present_sections": [
+        "life_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты сохранены в совокупности указанных строк."
+    },
+    {
+      "id": "f3_father_unknown",
+      "status": "missing",
+      "rows": [],
+      "complete_sections": [],
+      "present_sections": [],
+      "reason": "Неизвестность сохранена в gaps:0. R3 требует явно указать её в анамнезе жизни."
+    },
+    {
+      "id": "f3_no_contact",
+      "status": "full",
+      "rows": [
+        "life_history:1"
+      ],
+      "complete_sections": [
+        "life_history"
+      ],
+      "present_sections": [
+        "life_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты сохранены в совокупности указанных строк."
+    }
+  ],
+  "rows": [
+    {
+      "id": "complaints:0",
+      "text": "Сейчас хуже самочувствие.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "illness_history:0",
+      "text": "В феврале было хуже.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "illness_history:1",
+      "text": "В марте стало легче.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "illness_history:2",
+      "text": "Сейчас опять хуже.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "life_history:0",
+      "text": "Двое детей.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "life_history:1",
+      "text": "С отцом не общается.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    }
+  ],
+  "inventions": [],
+  "duplicates": [],
+  "placement_notes": [
+    {
+      "rows": [
+        "complaints:0"
+      ],
+      "classification": "R2_excluded_from_complaints",
+      "reason": "По R2 текущее общее ухудшение в жалобы не включается."
+    }
+  ],
+  "source_errors": [],
+  "temporal_errors": [],
+  "polarity_errors": [],
+  "outside_sections": [
+    {
+      "criterion": "f3_father_unknown",
+      "location": "gaps:0",
+      "meaning": "Болезни отца неизвестны."
+    }
+  ],
+  "limits": "Retrospective scoring of saved outputs. The user decided R1–R3. Codex assessed model outputs.",
+  "rubric_version": 2,
+  "source_review_sha256": "3b8fa13d2e38fbb2a67a4377ff5f2f06c9b3f1b417bbc9823b505d3dcd4b91a7",
+  "digest_method": "sha256 of UTF-8 file bytes with CRLF normalized to LF"
+}

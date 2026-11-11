@@ -1,7 +1,7 @@
 {
-  "status": "awaiting_physician_review",
+  "status": "decisions_received",
   "physician_reviewed": false,
-  "reviewer_role": null,
+  "reviewer_role": "user",
   "questions": [
     {
       "id": "R1",
@@ -17,8 +17,9 @@
         "exclude_from_complaints",
         "other_explain"
       ],
-      "decision": null,
-      "clinical_reason": null
+      "decision": "allowed_but_not_required",
+      "clinical_reason": null,
+      "decision_text": "Допустимо, но не обязательно повторять в жалобах"
     },
     {
       "id": "R2",
@@ -34,8 +35,9 @@
         "exclude_from_complaints",
         "needs_clarification"
       ],
-      "decision": null,
-      "clinical_reason": null
+      "decision": "exclude_from_complaints",
+      "clinical_reason": null,
+      "decision_text": "В жалобы не включать"
     },
     {
       "id": "R3",
@@ -51,10 +53,13 @@
         "life_history_or_gaps",
         "other_explain"
       ],
-      "decision": null,
-      "clinical_reason": null
+      "decision": "life_history_required",
+      "clinical_reason": null,
+      "decision_text": "Обязательно указать в анамнезе жизни"
     }
   ],
   "input_manifest_sha256": "dbfecd863ce4279ead34300933175b3d9931481edcd11bf9fe292b9fc599739a",
-  "input_manifest_digest_method": "sha256 of canonical UTF-8 JSON: sort_keys=True, separators=(comma,colon), ensure_ascii=False"
+  "input_manifest_digest_method": "sha256 of canonical UTF-8 JSON: sort_keys=True, separators=(comma,colon), ensure_ascii=False",
+  "decision_date": "2026-11-11",
+  "review_scope": "User decisions on R1–R3. Codex judges the saved model outputs."
 }

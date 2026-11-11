@@ -1,0 +1,120 @@
+{
+  "reviewer": "Codex. Section decisions R1–R3 provided by the user.",
+  "result_sha256": "d0e0be95caf9d2b41af2dfb9ac4e1aacef5912ae2af107a15fd18ace134d07b8",
+  "gold_sha256": "5d7ed61d71d3d9b474cd023c568beff61e02b66992fb825fb7acddedb44959c6",
+  "criteria": [
+    {
+      "id": "f1",
+      "status": "full",
+      "rows": [
+        "life_history:0"
+      ],
+      "complete_sections": [
+        "life_history"
+      ],
+      "present_sections": [
+        "life_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты сохранены в совокупности указанных строк."
+    },
+    {
+      "id": "f2_nausea",
+      "status": "full",
+      "rows": [
+        "complaints:0",
+        "illness_history:0"
+      ],
+      "complete_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "present_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты сохранены в совокупности указанных строк."
+    },
+    {
+      "id": "f2_morning",
+      "status": "full",
+      "rows": [
+        "complaints:0",
+        "illness_history:0"
+      ],
+      "complete_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "present_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты сохранены в совокупности указанных строк."
+    },
+    {
+      "id": "f2_duration",
+      "status": "full",
+      "rows": [
+        "complaints:0",
+        "illness_history:0"
+      ],
+      "complete_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "present_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "reason": "Смысл и обязательные атрибуты сохранены в совокупности указанных строк."
+    },
+    {
+      "id": "f2_cause_unknown",
+      "status": "full",
+      "rows": [
+        "illness_history:0"
+      ],
+      "complete_sections": [
+        "illness_history"
+      ],
+      "present_sections": [
+        "illness_history"
+      ],
+      "reason": "По R1 причина обязательна в анамнезе заболевания и допустима в жалобах."
+    }
+  ],
+  "rows": [
+    {
+      "id": "complaints:0",
+      "text": "Утром последние десять дней тошнит.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "illness_history:0",
+      "text": "Утренняя тошнота появилась последние десять дней, причина неизвестна.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    },
+    {
+      "id": "life_history:0",
+      "text": "В 2018 году перенесена операция по поводу аппендицита.",
+      "support": "supported",
+      "inventions": [],
+      "reason": "Прямо поддержано соответствующей исходной репликой; предмет и атрибуты S читаются в связке свойств события."
+    }
+  ],
+  "inventions": [],
+  "duplicates": [],
+  "placement_notes": [],
+  "source_errors": [],
+  "temporal_errors": [],
+  "polarity_errors": [],
+  "outside_sections": [],
+  "limits": "Retrospective scoring of saved outputs. The user decided R1–R3. Codex assessed model outputs.",
+  "rubric_version": 2,
+  "source_review_sha256": "8112f7c813a0a15f62368ca66c58157de62785ce6e25b3db02aaaa19080616f7",
+  "digest_method": "sha256 of UTF-8 file bytes with CRLF normalized to LF"
+}
