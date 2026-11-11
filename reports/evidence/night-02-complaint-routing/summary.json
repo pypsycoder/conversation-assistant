@@ -1,0 +1,176 @@
+{
+  "frozen_protocol_commit": "9f9ed25",
+  "split": "diagnostic",
+  "pairs": 3,
+  "gold_facts_per_arm": 6,
+  "model_revision": "GigaChat-3-Ultra:32.9.16.9",
+  "calls": 6,
+  "tokens": 14889,
+  "api_seconds": 47.283720400000675,
+  "runner_seconds": 60.60999999999876,
+  "decision": "reject_candidate",
+  "arms": {
+    "control": {
+      "calls": 3,
+      "tokens": 7898,
+      "api_seconds": 26.214584900000773,
+      "runner_seconds": 33.0,
+      "max_calls": 6,
+      "max_tokens": 100000,
+      "max_seconds": 1230,
+      "cases": [
+        {
+          "id": "r01",
+          "model": "GigaChat-3-Ultra:32.9.16.9",
+          "seconds": 4.677065100000618,
+          "usage": {
+            "prompt_tokens": 1462,
+            "completion_tokens": 515,
+            "total_tokens": 1977,
+            "precached_prompt_tokens": 0
+          }
+        },
+        {
+          "id": "r02",
+          "model": "GigaChat-3-Ultra:32.9.16.9",
+          "seconds": 5.158340699999826,
+          "usage": {
+            "prompt_tokens": 1465,
+            "completion_tokens": 566,
+            "total_tokens": 2031,
+            "precached_prompt_tokens": 0
+          }
+        },
+        {
+          "id": "r03",
+          "model": "GigaChat-3-Ultra:32.9.16.9",
+          "seconds": 16.37917910000033,
+          "usage": {
+            "prompt_tokens": 1461,
+            "completion_tokens": 2429,
+            "total_tokens": 3890,
+            "precached_prompt_tokens": 0
+          }
+        }
+      ],
+      "metrics": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0,
+        "output_rows": 9,
+        "metadata_rows": 3,
+        "gap_rows": 11,
+        "gap_errors": 0,
+        "sections": {
+          "complaints": {
+            "required": 2,
+            "covered": 2,
+            "allowed": 3,
+            "extra": 1,
+            "rows": 3
+          },
+          "illness_history": {
+            "required": 4,
+            "covered": 3,
+            "allowed": 4,
+            "extra": 0,
+            "rows": 3
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "allowed": 0,
+            "extra": 0,
+            "rows": 3
+          }
+        }
+      }
+    },
+    "candidate": {
+      "calls": 3,
+      "tokens": 6991,
+      "api_seconds": 21.069135499999902,
+      "runner_seconds": 27.609999999998763,
+      "max_calls": 3,
+      "max_tokens": 92102,
+      "max_seconds": 1175,
+      "cases": [
+        {
+          "id": "r01",
+          "model": "GigaChat-3-Ultra:32.9.16.9",
+          "seconds": 6.729721100000461,
+          "usage": {
+            "prompt_tokens": 1556,
+            "completion_tokens": 789,
+            "total_tokens": 2345,
+            "precached_prompt_tokens": 0
+          }
+        },
+        {
+          "id": "r02",
+          "model": "GigaChat-3-Ultra:32.9.16.9",
+          "seconds": 9.427700500000356,
+          "usage": {
+            "prompt_tokens": 1559,
+            "completion_tokens": 947,
+            "total_tokens": 2506,
+            "precached_prompt_tokens": 0
+          }
+        },
+        {
+          "id": "r03",
+          "model": "GigaChat-3-Ultra:32.9.16.9",
+          "seconds": 4.911713899999086,
+          "usage": {
+            "prompt_tokens": 1555,
+            "completion_tokens": 585,
+            "total_tokens": 2140,
+            "precached_prompt_tokens": 0
+          }
+        }
+      ],
+      "metrics": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0,
+        "output_rows": 11,
+        "metadata_rows": 3,
+        "gap_rows": 6,
+        "gap_errors": 0,
+        "sections": {
+          "complaints": {
+            "required": 2,
+            "covered": 2,
+            "allowed": 3,
+            "extra": 2,
+            "rows": 4
+          },
+          "illness_history": {
+            "required": 4,
+            "covered": 3,
+            "allowed": 5,
+            "extra": 0,
+            "rows": 4
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "allowed": 0,
+            "extra": 0,
+            "rows": 3
+          }
+        }
+      }
+    }
+  }
+}

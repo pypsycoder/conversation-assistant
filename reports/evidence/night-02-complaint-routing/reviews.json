@@ -1,0 +1,590 @@
+{
+  "control": {
+    "r01": {
+      "review": {
+        "reviewer": "Codex",
+        "physician_reviewed": false,
+        "blinded": false,
+        "source_canonical_sha256": "d8c9dacc1565bc3eaae9571755977facb0033442cf1073d563a39c30dcae1a3a",
+        "gold_canonical_sha256": "3b61bd6733ec1f53a272b23164d2fb675c3f633c53f221e8f0ef48922ce9caf1",
+        "parsed_canonical_sha256": "467b1085c8d1b87e44c5b8ce8d3610ea6f9f9bd6637e78d61627fe64bd92c81a",
+        "rows": [
+          {
+            "row_id": "complaints:0",
+            "text": "Сегодня снова хуже.",
+            "complete_fact_ids": [
+              "current_worsening"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Сегодня снова хуже. Общее изменение подтверждено источником. Рубрика R2 требует оставить общее ухудшение в анамнезе заболевания.",
+            "nonclinical_metadata": false
+          },
+          {
+            "row_id": "illness_history:0",
+            "text": "Позавчера было лучше.",
+            "complete_fact_ids": [
+              "past_improvement"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Позавчера было лучше, время сохранено.",
+            "nonclinical_metadata": false
+          },
+          {
+            "row_id": "life_history:0",
+            "text": "Возраст не указан.",
+            "complete_fact_ids": [],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Служебная пометка об отсутствии обсуждения, клинического утверждения нет. Относится к gaps.",
+            "nonclinical_metadata": true
+          }
+        ],
+        "gaps": [
+          {
+            "index": 0,
+            "topic": "Возраст",
+            "status_correct": true,
+            "reason": "Тема в беседе не обсуждалась."
+          }
+        ]
+      },
+      "metrics": {
+        "gold_facts": 2,
+        "output_rows": 3,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "required_placements": 2,
+        "covered_placements": 1,
+        "correct_placements": 1,
+        "predicted_placements": 2,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0,
+        "reviewer": "Codex",
+        "physician_reviewed": false
+      }
+    },
+    "r02": {
+      "review": {
+        "reviewer": "Codex",
+        "physician_reviewed": false,
+        "blinded": false,
+        "source_canonical_sha256": "d372feb78a8deffb2d9b42448c5ff3ce229ddb2dbc56ca59e9f2901916fc9379",
+        "gold_canonical_sha256": "cdb3277e77594410809df07678e55fd50f0ff9e76d01b5ee9ab1460369e80b3a",
+        "parsed_canonical_sha256": "49c85f87cf3d79dca09b3b628b263f06394407cc6d379b6aa95ae43ae130b0ec",
+        "rows": [
+          {
+            "row_id": "complaints:0",
+            "text": "Сейчас звенит в ушах.",
+            "complete_fact_ids": [
+              "ringing"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Текущий звон в ушах, время начала не добавлено.",
+            "nonclinical_metadata": false
+          },
+          {
+            "row_id": "illness_history:0",
+            "text": "С вечера в целом хуже.",
+            "complete_fact_ids": [
+              "general_worsening"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Общее ухудшение с вечера, время сохранено.",
+            "nonclinical_metadata": false
+          },
+          {
+            "row_id": "life_history:0",
+            "text": "Возраст не указан.",
+            "complete_fact_ids": [],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Служебная пометка об отсутствии обсуждения, клинического утверждения нет. Относится к gaps.",
+            "nonclinical_metadata": true
+          }
+        ],
+        "gaps": [
+          {
+            "index": 0,
+            "topic": "Возраст",
+            "status_correct": true,
+            "reason": "Тема в беседе не обсуждалась."
+          },
+          {
+            "index": 1,
+            "topic": "Пол",
+            "status_correct": true,
+            "reason": "Тема в беседе не обсуждалась."
+          }
+        ]
+      },
+      "metrics": {
+        "gold_facts": 2,
+        "output_rows": 3,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "required_placements": 2,
+        "covered_placements": 2,
+        "correct_placements": 2,
+        "predicted_placements": 2,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0,
+        "reviewer": "Codex",
+        "physician_reviewed": false
+      }
+    },
+    "r03": {
+      "review": {
+        "reviewer": "Codex",
+        "physician_reviewed": false,
+        "blinded": false,
+        "source_canonical_sha256": "f9866c45780bc89a3b72f445a7d22d4c86f3ff6fe295fe4904ee06685be8b31e",
+        "gold_canonical_sha256": "47e9ffc04ca19955428243f0988d379f907430e5ce6c344af797b5ff0c6b85f6",
+        "parsed_canonical_sha256": "356dd7a194d8ccdb9cc2213946146f5091780f66b94cb1fc57ef89ba0f1976b4",
+        "rows": [
+          {
+            "row_id": "complaints:0",
+            "text": "С утра руки дрожат сильнее, чем вчера.",
+            "complete_fact_ids": [
+              "hand_tremor",
+              "tremor_course"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Текущая дрожь рук. Утреннее усиление по сравнению со вчерашним днём.",
+            "nonclinical_metadata": false
+          },
+          {
+            "row_id": "illness_history:0",
+            "text": "Дрожь в руках усилилась сегодня утром по сравнению со вчерашним днём.",
+            "complete_fact_ids": [
+              "hand_tremor",
+              "tremor_course"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Текущая дрожь рук. Утреннее усиление по сравнению со вчерашним днём. Сравнение читается как утренняя выраженность дрожи относительно вчерашней. Отдельный момент начала дрожи не указан.",
+            "nonclinical_metadata": false
+          },
+          {
+            "row_id": "life_history:0",
+            "text": "Возраст, семейное положение, дети, профессия, стаж, жилищные условия, семейный психиатрический анамнез, соматический анамнез/операции/травмы, алкоголь/никотин/другие вещества/кофеин не обсуждались.",
+            "complete_fact_ids": [],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Служебная пометка об отсутствии обсуждения, клинического утверждения нет. Относится к gaps.",
+            "nonclinical_metadata": true
+          }
+        ],
+        "gaps": [
+          {
+            "index": 0,
+            "topic": "Возраст",
+            "status_correct": true,
+            "reason": "Тема в беседе не обсуждалась."
+          },
+          {
+            "index": 1,
+            "topic": "Семейное положение",
+            "status_correct": true,
+            "reason": "Тема в беседе не обсуждалась."
+          },
+          {
+            "index": 2,
+            "topic": "Дети",
+            "status_correct": true,
+            "reason": "Тема в беседе не обсуждалась."
+          },
+          {
+            "index": 3,
+            "topic": "Профессия и стаж",
+            "status_correct": true,
+            "reason": "Тема в беседе не обсуждалась."
+          },
+          {
+            "index": 4,
+            "topic": "Жильё и поддержка",
+            "status_correct": true,
+            "reason": "Тема в беседе не обсуждалась."
+          },
+          {
+            "index": 5,
+            "topic": "Семейный психиатрический анамнез",
+            "status_correct": true,
+            "reason": "Тема в беседе не обсуждалась."
+          },
+          {
+            "index": 6,
+            "topic": "Соматический анамнез/операции/травмы",
+            "status_correct": true,
+            "reason": "Тема в беседе не обсуждалась."
+          },
+          {
+            "index": 7,
+            "topic": "Алкоголь/никотин/другие вещества/кофеин",
+            "status_correct": true,
+            "reason": "Тема в беседе не обсуждалась."
+          }
+        ]
+      },
+      "metrics": {
+        "gold_facts": 2,
+        "output_rows": 3,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "required_placements": 2,
+        "covered_placements": 2,
+        "correct_placements": 4,
+        "predicted_placements": 4,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0,
+        "reviewer": "Codex",
+        "physician_reviewed": false
+      }
+    }
+  },
+  "candidate": {
+    "r01": {
+      "review": {
+        "reviewer": "Codex",
+        "physician_reviewed": false,
+        "blinded": false,
+        "source_canonical_sha256": "d8c9dacc1565bc3eaae9571755977facb0033442cf1073d563a39c30dcae1a3a",
+        "gold_canonical_sha256": "3b61bd6733ec1f53a272b23164d2fb675c3f633c53f221e8f0ef48922ce9caf1",
+        "parsed_canonical_sha256": "c9a40cfc766f0c447064b8ad65ad7cdd376c4909fefe347ce96efccfc540b377",
+        "rows": [
+          {
+            "row_id": "complaints:0",
+            "text": "Сегодня снова хуже.",
+            "complete_fact_ids": [
+              "current_worsening"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Сегодня снова хуже. Общее изменение подтверждено источником. Рубрика R2 требует оставить общее ухудшение в анамнезе заболевания.",
+            "nonclinical_metadata": false
+          },
+          {
+            "row_id": "illness_history:0",
+            "text": "Позавчера было лучше.",
+            "complete_fact_ids": [
+              "past_improvement"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Позавчера было лучше, время сохранено.",
+            "nonclinical_metadata": false
+          },
+          {
+            "row_id": "life_history:0",
+            "text": "Сведения о жизни не обсуждались.",
+            "complete_fact_ids": [],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Служебная пометка об отсутствии обсуждения, клинического утверждения нет. Относится к gaps.",
+            "nonclinical_metadata": true
+          }
+        ],
+        "gaps": [
+          {
+            "index": 0,
+            "topic": "life_history",
+            "status_correct": true,
+            "reason": "Тема в беседе не обсуждалась."
+          }
+        ]
+      },
+      "metrics": {
+        "gold_facts": 2,
+        "output_rows": 3,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "required_placements": 2,
+        "covered_placements": 1,
+        "correct_placements": 1,
+        "predicted_placements": 2,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0,
+        "reviewer": "Codex",
+        "physician_reviewed": false
+      }
+    },
+    "r02": {
+      "review": {
+        "reviewer": "Codex",
+        "physician_reviewed": false,
+        "blinded": false,
+        "source_canonical_sha256": "d372feb78a8deffb2d9b42448c5ff3ce229ddb2dbc56ca59e9f2901916fc9379",
+        "gold_canonical_sha256": "cdb3277e77594410809df07678e55fd50f0ff9e76d01b5ee9ab1460369e80b3a",
+        "parsed_canonical_sha256": "f51a3b67102a5f29763ed7fdb6f2181125460562c11632c90599f7350e9b74ed",
+        "rows": [
+          {
+            "row_id": "complaints:0",
+            "text": "Сейчас звенит в ушах.",
+            "complete_fact_ids": [
+              "ringing"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Текущий звон в ушах, время начала не добавлено.",
+            "nonclinical_metadata": false
+          },
+          {
+            "row_id": "complaints:1",
+            "text": "В целом мне хуже с вечера.",
+            "complete_fact_ids": [
+              "general_worsening"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Общее ухудшение с вечера, время сохранено. Рубрика R2 требует оставить общее ухудшение в анамнезе заболевания.",
+            "nonclinical_metadata": false
+          },
+          {
+            "row_id": "illness_history:0",
+            "text": "Ухудшение состояния отмечается с вечера.",
+            "complete_fact_ids": [
+              "general_worsening"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Общее ухудшение с вечера, время сохранено.",
+            "nonclinical_metadata": false
+          },
+          {
+            "row_id": "illness_history:1",
+            "text": "В настоящее время беспокоит звон в ушах.",
+            "complete_fact_ids": [
+              "ringing"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Текущий звон в ушах, время начала не добавлено.",
+            "nonclinical_metadata": false
+          },
+          {
+            "row_id": "life_history:0",
+            "text": "Сведений о биографии, семейном положении, работе, зависимостях и семейном анамнезе не предоставлено.",
+            "complete_fact_ids": [],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Служебная пометка об отсутствии обсуждения, клинического утверждения нет. Относится к gaps.",
+            "nonclinical_metadata": true
+          }
+        ],
+        "gaps": [
+          {
+            "index": 0,
+            "topic": "Начало и динамика звона в ушах",
+            "status_correct": true,
+            "reason": "Текущий звон указан в разделах. Начало и изменение звона во времени в диалоге отсутствуют."
+          },
+          {
+            "index": 1,
+            "topic": "Сопутствующие симптомы (головокружение, снижение слуха, головная боль и др.)",
+            "status_correct": true,
+            "reason": "Тема в беседе не обсуждалась."
+          },
+          {
+            "index": 2,
+            "topic": "Провоцирующие и облегчающие факторы, приём препаратов",
+            "status_correct": true,
+            "reason": "Тема в беседе не обсуждалась."
+          },
+          {
+            "index": 3,
+            "topic": "Биографические сведения, соматический и семейный анамнез",
+            "status_correct": true,
+            "reason": "Тема в беседе не обсуждалась."
+          }
+        ]
+      },
+      "metrics": {
+        "gold_facts": 2,
+        "output_rows": 5,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "required_placements": 2,
+        "covered_placements": 2,
+        "correct_placements": 3,
+        "predicted_placements": 4,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0,
+        "reviewer": "Codex",
+        "physician_reviewed": false
+      }
+    },
+    "r03": {
+      "review": {
+        "reviewer": "Codex",
+        "physician_reviewed": false,
+        "blinded": false,
+        "source_canonical_sha256": "f9866c45780bc89a3b72f445a7d22d4c86f3ff6fe295fe4904ee06685be8b31e",
+        "gold_canonical_sha256": "47e9ffc04ca19955428243f0988d379f907430e5ce6c344af797b5ff0c6b85f6",
+        "parsed_canonical_sha256": "01bde5cf37c351933d3feaf6a6980ab3bd9dfb8505f76cd89ee70ddcd9a2dace",
+        "rows": [
+          {
+            "row_id": "complaints:0",
+            "text": "С утра руки дрожат сильнее, чем вчера.",
+            "complete_fact_ids": [
+              "hand_tremor",
+              "tremor_course"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Текущая дрожь рук. Утреннее усиление по сравнению со вчерашним днём.",
+            "nonclinical_metadata": false
+          },
+          {
+            "row_id": "illness_history:0",
+            "text": "Утреннее усиление дрожи в руках по сравнению со вчерашним днём.",
+            "complete_fact_ids": [
+              "hand_tremor",
+              "tremor_course"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Текущая дрожь рук. Утреннее усиление по сравнению со вчерашним днём. Сравнение читается как утренняя выраженность дрожи относительно вчерашней. Отдельный момент начала дрожи не указан.",
+            "nonclinical_metadata": false
+          },
+          {
+            "row_id": "life_history:0",
+            "text": "Возраст, семейное положение, дети, профессия и стаж, жилищные условия, семейный психиатрический анамнез, соматический анамнез/операции/травмы, алкоголь/никотин/другие вещества/кофеин не обсуждались.",
+            "complete_fact_ids": [],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Служебная пометка об отсутствии обсуждения, клинического утверждения нет. Относится к gaps.",
+            "nonclinical_metadata": true
+          }
+        ],
+        "gaps": [
+          {
+            "index": 0,
+            "topic": "life_history",
+            "status_correct": true,
+            "reason": "Тема в беседе не обсуждалась."
+          }
+        ]
+      },
+      "metrics": {
+        "gold_facts": 2,
+        "output_rows": 3,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "required_placements": 2,
+        "covered_placements": 2,
+        "correct_placements": 4,
+        "predicted_placements": 4,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0,
+        "reviewer": "Codex",
+        "physician_reviewed": false
+      }
+    }
+  }
+}
