@@ -1,0 +1,33 @@
+{
+  "id": "r01",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "past_improvement",
+      "meaning": "Позавчера самочувствие было лучше.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "current_worsening",
+      "meaning": "Сегодня самочувствие снова ухудшилось.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    }
+  ]
+}
