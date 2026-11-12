@@ -1,0 +1,73 @@
+{
+  "id": "t03",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "current_headache",
+      "meaning": "Сейчас сохраняется головная боль.",
+      "required_sections": [
+        "complaints"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "morning_headache_course",
+      "meaning": "Сегодня утром голова болела сильнее, чем вчера.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "past_weakness",
+      "meaning": "На прошлой неделе была слабость.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "no_current_weakness",
+      "meaning": "Сейчас слабости нет.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "librarian",
+      "meaning": "Работает библиотекарем.",
+      "required_sections": [
+        "life_history"
+      ],
+      "allowed_sections": [
+        "life_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    }
+  ]
+}

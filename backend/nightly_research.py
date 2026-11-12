@@ -114,6 +114,13 @@ def score(gold, result, review):
             "reviewer": review["reviewer"], "physician_reviewed": review.get("physician_reviewed", False)}
 
 
+def section_result(answer):
+    if answer.get("source_first"):
+        from backend.source_first_routing import route_assertions
+        return route_assertions(answer["parsed"])
+    return answer["parsed"]
+
+
 def run(args):
     from backend.gigachat import GigaChatClient
     from backend.three_sections import SCHEMA, SYSTEM_V2, provenance_errors, link_sources
@@ -129,6 +136,14 @@ def run(args):
     prompt = args.prompt.read_text(encoding="utf-8") if args.prompt else SYSTEM_V2
     tracked = [Path(__file__), ROOT / "backend/gigachat.py", ROOT / "backend/three_sections.py",
                corpus / "manifest.json"]
+    source_first = getattr(args, "source_first", False)
+    schema = SCHEMA
+    if source_first:
+        from backend.source_first_routing import SOURCE_FIRST_SCHEMA
+        if not args.prompt:
+            raise ValueError("--source-first requires an inventory prompt")
+        schema = SOURCE_FIRST_SCHEMA
+        tracked.append(ROOT / "backend/source_first_routing.py")
     if args.prompt:
         tracked.append(args.prompt)
     for case in cases:
@@ -141,14 +156,14 @@ def run(args):
              "split": args.split, "case_ids": [c["id"] for c in cases],
              "iterations": args.iterations, "max_calls": args.max_calls,
              "max_tokens": args.max_tokens, "max_seconds": args.max_seconds,
-             "expected_model_revision": expected_revision,
+             "expected_model_revision": expected_revision, "source_first": source_first,
              "created_at": datetime.now(timezone.utc).isoformat()})
         began = time.monotonic()
         calls = tokens = 0
         model_revision = expected_revision
         summary = {"status": "running", "calls": 0, "tokens": 0,
                    "semantic_metrics": None, "cost_rub": None, "cost_note": "Tariff not configured",
-                   "experiment": "direct-v2 reference; not the accepted incremental S baseline", "cases": []}
+                   "experiment": "source-first routing" if source_first else "direct-v2 reference", "cases": []}
         def verify():
             if any(digest(Path(p)) != h for p, h in hashes.items()):
                 raise RuntimeError("Frozen input changed")
@@ -176,7 +191,9 @@ def run(args):
                         summary["cases"].append({"id": case["id"], "offline": True})
                         continue
                     calls += 1
-                    answer = client.generate_structured(prompt, data, SCHEMA, max_tokens=3000)
+                    answer = client.generate_structured(prompt, data, schema, max_tokens=3000)
+                    if source_first:
+                        answer["source_first"] = True
                     save(folder / "response.json", answer)
                     usage = answer["response"].get("usage", {})
                     if type(usage.get("total_tokens")) is not int:
@@ -188,16 +205,17 @@ def run(args):
                     model_revision = revision
                     if answer["validation_errors"] or answer["parsed"] is None:
                         raise RuntimeError("Invalid completion; no automatic retry")
-                    errors = provenance_errors(answer["parsed"], source)
+                    result = section_result(answer)
+                    errors = provenance_errors(result, source)
                     save(folder / "provenance-errors.json", errors)
                     if errors:
                         raise RuntimeError("Invalid evidence; no automatic repair")
-                    save(folder / "linked-result.json", link_sources(answer["parsed"], source))
+                    save(folder / "linked-result.json", link_sources(result, source))
                     template = {"reviewer": "TODO", "physician_reviewed": False,
                                 "response_sha256": digest(folder / "response.json"),
                                 "gold_sha256": digest(corpus / case["gold"]), "rows": []}
                     for section in SECTIONS:
-                        for i, row in enumerate(answer["parsed"]["sections"][section]):
+                        for i, row in enumerate(result["sections"][section]):
                             template["rows"].append({"row_id": f"{section}:{i}", "text": row["text"],
                                 "complete_fact_ids": [], "partial_fact_ids": [], "unsupported_atoms": 0,
                                 "polarity_errors": 0, "temporal_errors": 0, "source_errors": 0, "reason": "TODO"})
@@ -231,6 +249,8 @@ def main():
     runner.add_argument("--max-tokens", type=int, default=100000)
     runner.add_argument("--max-seconds", type=int, default=900)
     runner.add_argument("--prompt", type=Path)
+    runner.add_argument("--source-first", action="store_true",
+                        help="Extract cited assertions before routing them to sections")
     runner.add_argument("--expected-model-revision",
                         help="Stop if the provider returns a different model revision")
     runner.add_argument("--live", action="store_true")
@@ -246,7 +266,7 @@ def main():
         raise ValueError("Review is incomplete")
     if review["response_sha256"] != digest(args.response) or review["gold_sha256"] != digest(args.gold):
         raise ValueError("Review does not match frozen response/gold")
-    metrics = score(read(args.gold), read(args.response)["parsed"], review)
+    metrics = score(read(args.gold), section_result(read(args.response)), review)
     save(args.output, metrics)
     print(json.dumps(metrics, ensure_ascii=False))
     return 0

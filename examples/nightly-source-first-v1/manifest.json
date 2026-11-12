@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "synthetic": true,
+  "gold_status": "agent_authored_requires_physician_review",
+  "cases": [
+    {
+      "id": "t01",
+      "split": "diagnostic",
+      "source": "t01.source.json",
+      "gold": "t01.gold.json"
+    },
+    {
+      "id": "t02",
+      "split": "diagnostic",
+      "source": "t02.source.json",
+      "gold": "t02.gold.json"
+    },
+    {
+      "id": "t03",
+      "split": "diagnostic",
+      "source": "t03.source.json",
+      "gold": "t03.gold.json"
+    }
+  ]
+}
