@@ -1,0 +1,47 @@
+{
+  "id": "t02",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "overall_worse_since_evening",
+      "meaning": "Общее самочувствие хуже со вчерашнего вечера.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "strong_throat_burning",
+      "meaning": "Сейчас сильно жжёт в горле.",
+      "required_sections": [
+        "complaints"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "no_cough",
+      "meaning": "Пациент отрицает кашель.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    }
+  ]
+}
