@@ -1,0 +1,209 @@
+{
+  "frozen_protocol_commit": "412509f",
+  "planned_pairs": 3,
+  "completed_pairs": 0,
+  "status": "stopped_at_control_provenance",
+  "candidate_live_calls": 0,
+  "control": {
+    "id": "t01",
+    "calls": 1,
+    "usage": {
+      "prompt_tokens": 1464,
+      "completion_tokens": 466,
+      "total_tokens": 1930,
+      "precached_prompt_tokens": 0
+    },
+    "model_revision": "GigaChat-3-Ultra:32.9.16.9",
+    "api_seconds": 7.555666000000201,
+    "runner_seconds": 8.219000000011874,
+    "accepted_cases": 0,
+    "cost_rub": null,
+    "schema_errors": [],
+    "provenance_errors": [
+      {
+        "path": "sections.life_history.0",
+        "message": "no patient support"
+      }
+    ],
+    "result": {
+      "sections": {
+        "complaints": [
+          {
+            "text": "Сегодня мне в целом хуже.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "сегодня мне в целом хуже."
+              }
+            ]
+          }
+        ],
+        "illness_history": [
+          {
+            "text": "В понедельник было легче.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "В понедельник было легче"
+              }
+            ]
+          }
+        ],
+        "life_history": [
+          {
+            "text": "Возраст не указан.",
+            "evidence": [
+              {
+                "segment_id": "s1",
+                "quote": "Как менялось самочувствие?"
+              }
+            ]
+          }
+        ]
+      },
+      "gaps": [
+        {
+          "topic": "Возраст",
+          "status": "not_discussed",
+          "evidence": [
+            {
+              "segment_id": "s1",
+              "quote": "Как менялось самочувствие?"
+            }
+          ]
+        }
+      ]
+    },
+    "review": {
+      "reviewer": "Codex",
+      "physician_reviewed": false,
+      "blinded": false,
+      "audit_of_rejected_response": true,
+      "source_canonical_sha256": "09e9a3d5f03f88c1dd602d874256d1f4d49427213d4cc46650534695ed3da81b",
+      "gold_canonical_sha256": "ba80027a4eaa02514bcedafc069141c98546bd24ac2d46e0226812d8cb19f142",
+      "result_canonical_sha256": "c9301bb67458fdad61cd170dfef4e6a09c2a176e67ae02410a71d0dc3b6426f9",
+      "rows": [
+        {
+          "row_id": "complaints:0",
+          "text": "Сегодня мне в целом хуже.",
+          "complete_fact_ids": [
+            "today_worse"
+          ],
+          "partial_fact_ids": [],
+          "nonclinical_metadata": false,
+          "unsupported_atoms": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reason": "Сегодняшнее общее ухудшение сохранено по смыслу. По R2 требуется анамнез заболевания."
+        },
+        {
+          "row_id": "illness_history:0",
+          "text": "В понедельник было легче.",
+          "complete_fact_ids": [
+            "monday_relief"
+          ],
+          "partial_fact_ids": [],
+          "nonclinical_metadata": false,
+          "unsupported_atoms": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reason": "Сохранены улучшение и понедельник."
+        },
+        {
+          "row_id": "life_history:0",
+          "text": "Возраст не указан.",
+          "complete_fact_ids": [],
+          "partial_fact_ids": [],
+          "nonclinical_metadata": true,
+          "unsupported_atoms": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 1,
+          "reason": "Служебная пометка о пропуске. Она не описывает пациента. Цитата вопроса врача не даёт опоры для строки анамнеза жизни."
+        }
+      ],
+      "gaps": [
+        {
+          "index": 0,
+          "status_correct": true,
+          "reason": "Возраст не обсуждался. Вопрос о самочувствии не является свидетельством о возрасте."
+        }
+      ]
+    },
+    "metrics": {
+      "gold_facts": 2,
+      "output_rows": 3,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "required_placements": 2,
+      "covered_placements": 1,
+      "correct_placements": 1,
+      "predicted_placements": 2,
+      "unsupported_atoms": 0,
+      "duplicate_placements": 0,
+      "polarity_errors": 0,
+      "temporal_errors": 0,
+      "source_errors": 1,
+      "reviewer": "Codex",
+      "physician_reviewed": false
+    }
+  },
+  "offline_diagnosis": {
+    "prior_validated_responses_with_life_placeholders": [
+      {
+        "arm": "control",
+        "id": "r01",
+        "rows": [
+          "life_history:0"
+        ]
+      },
+      {
+        "arm": "control",
+        "id": "r02",
+        "rows": [
+          "life_history:0"
+        ]
+      },
+      {
+        "arm": "control",
+        "id": "r03",
+        "rows": [
+          "life_history:0"
+        ]
+      },
+      {
+        "arm": "candidate",
+        "id": "r01",
+        "rows": [
+          "life_history:0"
+        ]
+      },
+      {
+        "arm": "candidate",
+        "id": "r02",
+        "rows": [
+          "life_history:0"
+        ]
+      },
+      {
+        "arm": "candidate",
+        "id": "r03",
+        "rows": [
+          "life_history:0"
+        ]
+      }
+    ],
+    "fixture_purpose": "Routing and provenance guard smoke, not model evidence",
+    "fixture_check": {
+      "all_cited_rows_preserved": true,
+      "no_patient_support_still_rejected": true,
+      "frozen_response_score_cli": true
+    }
+  }
+}
