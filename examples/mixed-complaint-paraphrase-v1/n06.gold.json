@@ -1,0 +1,47 @@
+{
+  "id": "n06",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "course",
+      "meaning": "Сегодня после ужина общее самочувствие опять ухудшилось.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "tremor",
+      "meaning": "Сейчас сильно дрожат руки.",
+      "required_sections": [
+        "complaints"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "work",
+      "meaning": "Работает редактором.",
+      "required_sections": [
+        "life_history"
+      ],
+      "allowed_sections": [
+        "life_history"
+      ],
+      "source_segment_ids": [
+        "s4"
+      ]
+    }
+  ]
+}

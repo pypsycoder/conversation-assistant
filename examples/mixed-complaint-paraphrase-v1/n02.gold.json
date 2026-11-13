@@ -1,0 +1,34 @@
+{
+  "id": "n02",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "course",
+      "meaning": "С вечера общее самочувствие снова хуже.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "ringing",
+      "meaning": "Сейчас сильный звон в ушах.",
+      "required_sections": [
+        "complaints"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,899 @@
+[
+  {
+    "id": "m01",
+    "focus": "Пересказ динамики с сохранением начала периода и силы боли",
+    "source": {
+      "id": "m01",
+      "synthetic": true,
+      "text_revision": 1,
+      "timing_origin": "synthetic_order_not_audio",
+      "segments": [
+        {
+          "id": "s1",
+          "role": "doctor",
+          "text": "Что вас беспокоит?",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": "s2",
+          "role": "patient",
+          "text": "Со вчерашнего утра мне в целом хуже, и сейчас очень болит правое ухо.",
+          "start": 1,
+          "end": 2
+        }
+      ]
+    },
+    "gold": {
+      "facts": [
+        {
+          "id": "course",
+          "meaning": "Со вчерашнего утра мне в целом хуже",
+          "required_sections": [
+            "illness_history"
+          ],
+          "allowed_sections": [
+            "illness_history"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        },
+        {
+          "id": "symptom",
+          "meaning": "сейчас очень болит правое ухо",
+          "required_sections": [
+            "complaints"
+          ],
+          "allowed_sections": [
+            "complaints"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        }
+      ]
+    },
+    "baseline": {
+      "sections": {
+        "complaints": [
+          {
+            "text": "Со вчерашнего утра мне в целом хуже, и сейчас очень болит правое ухо.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Со вчерашнего утра мне в целом хуже, и сейчас очень болит правое ухо."
+              }
+            ],
+            "complete": [
+              "course",
+              "symptom"
+            ],
+            "partial": []
+          }
+        ],
+        "illness_history": [
+          {
+            "text": "Со вчерашнего утра общее самочувствие хуже.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Со вчерашнего утра мне в целом хуже"
+              }
+            ],
+            "complete": [
+              "course"
+            ],
+            "partial": []
+          }
+        ],
+        "life_history": []
+      },
+      "gaps": []
+    },
+    "expected_complaints": [
+      {
+        "text": "Сейчас очень болит правое ухо.",
+        "evidence": [
+          {
+            "segment_id": "s2",
+            "quote": "сейчас очень болит правое ухо."
+          }
+        ],
+        "complete": [
+          "symptom"
+        ],
+        "partial": []
+      }
+    ]
+  },
+  {
+    "id": "m02",
+    "focus": "Пересказ динамики со словом «снова» и выраженным симптомом",
+    "source": {
+      "id": "m02",
+      "synthetic": true,
+      "text_revision": 1,
+      "timing_origin": "synthetic_order_not_audio",
+      "segments": [
+        {
+          "id": "s1",
+          "role": "doctor",
+          "text": "Что вас беспокоит?",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": "s2",
+          "role": "patient",
+          "text": "Сегодня в целом снова хуже, и сейчас сильно тошнит.",
+          "start": 1,
+          "end": 2
+        }
+      ]
+    },
+    "gold": {
+      "facts": [
+        {
+          "id": "course",
+          "meaning": "Сегодня в целом снова хуже",
+          "required_sections": [
+            "illness_history"
+          ],
+          "allowed_sections": [
+            "illness_history"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        },
+        {
+          "id": "symptom",
+          "meaning": "сейчас сильно тошнит",
+          "required_sections": [
+            "complaints"
+          ],
+          "allowed_sections": [
+            "complaints"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        }
+      ]
+    },
+    "baseline": {
+      "sections": {
+        "complaints": [
+          {
+            "text": "Сегодня в целом снова хуже, и сейчас сильно тошнит.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сегодня в целом снова хуже, и сейчас сильно тошнит."
+              }
+            ],
+            "complete": [
+              "course",
+              "symptom"
+            ],
+            "partial": []
+          }
+        ],
+        "illness_history": [
+          {
+            "text": "Сегодня общее самочувствие снова хуже.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сегодня в целом снова хуже"
+              }
+            ],
+            "complete": [
+              "course"
+            ],
+            "partial": []
+          }
+        ],
+        "life_history": []
+      },
+      "gaps": []
+    },
+    "expected_complaints": [
+      {
+        "text": "Сейчас сильно тошнит.",
+        "evidence": [
+          {
+            "segment_id": "s2",
+            "quote": "сейчас сильно тошнит."
+          }
+        ],
+        "complete": [
+          "symptom"
+        ],
+        "partial": []
+      }
+    ]
+  },
+  {
+    "id": "m03",
+    "focus": "Цитата та же, время в тексте анамнеза обобщено",
+    "source": {
+      "id": "m03",
+      "synthetic": true,
+      "text_revision": 1,
+      "timing_origin": "synthetic_order_not_audio",
+      "segments": [
+        {
+          "id": "s1",
+          "role": "doctor",
+          "text": "Что вас беспокоит?",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": "s2",
+          "role": "patient",
+          "text": "Со вчерашнего утра мне в целом хуже, и сейчас очень болит правое ухо.",
+          "start": 1,
+          "end": 2
+        }
+      ]
+    },
+    "gold": {
+      "facts": [
+        {
+          "id": "course",
+          "meaning": "Со вчерашнего утра мне в целом хуже",
+          "required_sections": [
+            "illness_history"
+          ],
+          "allowed_sections": [
+            "illness_history"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        },
+        {
+          "id": "symptom",
+          "meaning": "сейчас очень болит правое ухо",
+          "required_sections": [
+            "complaints"
+          ],
+          "allowed_sections": [
+            "complaints"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        }
+      ]
+    },
+    "baseline": {
+      "sections": {
+        "complaints": [
+          {
+            "text": "Со вчерашнего утра мне в целом хуже, и сейчас очень болит правое ухо.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Со вчерашнего утра мне в целом хуже, и сейчас очень болит правое ухо."
+              }
+            ],
+            "complete": [
+              "course",
+              "symptom"
+            ],
+            "partial": []
+          }
+        ],
+        "illness_history": [
+          {
+            "text": "Со вчерашнего дня общее самочувствие хуже.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Со вчерашнего утра мне в целом хуже"
+              }
+            ],
+            "complete": [],
+            "partial": [
+              "course"
+            ]
+          }
+        ],
+        "life_history": []
+      },
+      "gaps": []
+    },
+    "expected_complaints": [
+      {
+        "text": "Со вчерашнего утра мне в целом хуже, и сейчас очень болит правое ухо.",
+        "evidence": [
+          {
+            "segment_id": "s2",
+            "quote": "Со вчерашнего утра мне в целом хуже, и сейчас очень болит правое ухо."
+          }
+        ],
+        "complete": [
+          "course",
+          "symptom"
+        ],
+        "partial": []
+      }
+    ]
+  },
+  {
+    "id": "m04",
+    "focus": "Цитата та же, текст анамнеза потерял «снова»",
+    "source": {
+      "id": "m04",
+      "synthetic": true,
+      "text_revision": 1,
+      "timing_origin": "synthetic_order_not_audio",
+      "segments": [
+        {
+          "id": "s1",
+          "role": "doctor",
+          "text": "Что вас беспокоит?",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": "s2",
+          "role": "patient",
+          "text": "Сегодня в целом снова хуже, и сейчас очень болит правое ухо.",
+          "start": 1,
+          "end": 2
+        }
+      ]
+    },
+    "gold": {
+      "facts": [
+        {
+          "id": "course",
+          "meaning": "Сегодня в целом снова хуже",
+          "required_sections": [
+            "illness_history"
+          ],
+          "allowed_sections": [
+            "illness_history"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        },
+        {
+          "id": "symptom",
+          "meaning": "сейчас очень болит правое ухо",
+          "required_sections": [
+            "complaints"
+          ],
+          "allowed_sections": [
+            "complaints"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        }
+      ]
+    },
+    "baseline": {
+      "sections": {
+        "complaints": [
+          {
+            "text": "Сегодня в целом снова хуже, и сейчас очень болит правое ухо.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сегодня в целом снова хуже, и сейчас очень болит правое ухо."
+              }
+            ],
+            "complete": [
+              "course",
+              "symptom"
+            ],
+            "partial": []
+          }
+        ],
+        "illness_history": [
+          {
+            "text": "Сегодня общее самочувствие хуже.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сегодня в целом снова хуже"
+              }
+            ],
+            "complete": [],
+            "partial": [
+              "course"
+            ]
+          }
+        ],
+        "life_history": []
+      },
+      "gaps": []
+    },
+    "expected_complaints": [
+      {
+        "text": "Сегодня в целом снова хуже, и сейчас очень болит правое ухо.",
+        "evidence": [
+          {
+            "segment_id": "s2",
+            "quote": "Сегодня в целом снова хуже, и сейчас очень болит правое ухо."
+          }
+        ],
+        "complete": [
+          "course",
+          "symptom"
+        ],
+        "partial": []
+      }
+    ]
+  },
+  {
+    "id": "m05",
+    "focus": "Условие текущего симптома",
+    "source": {
+      "id": "m05",
+      "synthetic": true,
+      "text_revision": 1,
+      "timing_origin": "synthetic_order_not_audio",
+      "segments": [
+        {
+          "id": "s1",
+          "role": "doctor",
+          "text": "Что вас беспокоит?",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": "s2",
+          "role": "patient",
+          "text": "Со вчерашнего утра мне в целом хуже, и сейчас тошнит, если наклоняюсь.",
+          "start": 1,
+          "end": 2
+        }
+      ]
+    },
+    "gold": {
+      "facts": [
+        {
+          "id": "course",
+          "meaning": "Со вчерашнего утра мне в целом хуже",
+          "required_sections": [
+            "illness_history"
+          ],
+          "allowed_sections": [
+            "illness_history"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        },
+        {
+          "id": "symptom",
+          "meaning": "сейчас тошнит, если наклоняюсь",
+          "required_sections": [
+            "complaints"
+          ],
+          "allowed_sections": [
+            "complaints"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        }
+      ]
+    },
+    "baseline": {
+      "sections": {
+        "complaints": [
+          {
+            "text": "Со вчерашнего утра мне в целом хуже, и сейчас тошнит, если наклоняюсь.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Со вчерашнего утра мне в целом хуже, и сейчас тошнит, если наклоняюсь."
+              }
+            ],
+            "complete": [
+              "course",
+              "symptom"
+            ],
+            "partial": []
+          }
+        ],
+        "illness_history": [
+          {
+            "text": "Со вчерашнего утра общее самочувствие хуже.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Со вчерашнего утра мне в целом хуже"
+              }
+            ],
+            "complete": [
+              "course"
+            ],
+            "partial": []
+          }
+        ],
+        "life_history": []
+      },
+      "gaps": []
+    },
+    "expected_complaints": [
+      {
+        "text": "Со вчерашнего утра мне в целом хуже, и сейчас тошнит, если наклоняюсь.",
+        "evidence": [
+          {
+            "segment_id": "s2",
+            "quote": "Со вчерашнего утра мне в целом хуже, и сейчас тошнит, если наклоняюсь."
+          }
+        ],
+        "complete": [
+          "course",
+          "symptom"
+        ],
+        "partial": []
+      }
+    ]
+  },
+  {
+    "id": "m06",
+    "focus": "Неуверенность в описании общего ухудшения",
+    "source": {
+      "id": "m06",
+      "synthetic": true,
+      "text_revision": 1,
+      "timing_origin": "synthetic_order_not_audio",
+      "segments": [
+        {
+          "id": "s1",
+          "role": "doctor",
+          "text": "Что вас беспокоит?",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": "s2",
+          "role": "patient",
+          "text": "Кажется, сегодня мне в целом хуже, и сейчас очень болит правое ухо.",
+          "start": 1,
+          "end": 2
+        }
+      ]
+    },
+    "gold": {
+      "facts": [
+        {
+          "id": "course",
+          "meaning": "Кажется, сегодня мне в целом хуже",
+          "required_sections": [
+            "illness_history"
+          ],
+          "allowed_sections": [
+            "illness_history"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        },
+        {
+          "id": "symptom",
+          "meaning": "сейчас очень болит правое ухо",
+          "required_sections": [
+            "complaints"
+          ],
+          "allowed_sections": [
+            "complaints"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        }
+      ]
+    },
+    "baseline": {
+      "sections": {
+        "complaints": [
+          {
+            "text": "Кажется, сегодня мне в целом хуже, и сейчас очень болит правое ухо.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Кажется, сегодня мне в целом хуже, и сейчас очень болит правое ухо."
+              }
+            ],
+            "complete": [
+              "course",
+              "symptom"
+            ],
+            "partial": []
+          }
+        ],
+        "illness_history": [
+          {
+            "text": "Кажется, сегодня общее самочувствие хуже.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Кажется, сегодня мне в целом хуже"
+              }
+            ],
+            "complete": [
+              "course"
+            ],
+            "partial": []
+          }
+        ],
+        "life_history": []
+      },
+      "gaps": []
+    },
+    "expected_complaints": [
+      {
+        "text": "Кажется, сегодня мне в целом хуже, и сейчас очень болит правое ухо.",
+        "evidence": [
+          {
+            "segment_id": "s2",
+            "quote": "Кажется, сегодня мне в целом хуже, и сейчас очень болит правое ухо."
+          }
+        ],
+        "complete": [
+          "course",
+          "symptom"
+        ],
+        "partial": []
+      }
+    ]
+  },
+  {
+    "id": "m07",
+    "focus": "Цитата из ответа о другом дне",
+    "source": {
+      "id": "m07",
+      "synthetic": true,
+      "text_revision": 1,
+      "timing_origin": "synthetic_order_not_audio",
+      "segments": [
+        {
+          "id": "s1",
+          "role": "doctor",
+          "text": "Что вас беспокоит?",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": "s2",
+          "role": "patient",
+          "text": "С утра в целом снова хуже, и сейчас очень болит правое ухо.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "s3",
+          "role": "doctor",
+          "text": "Что было вчера?",
+          "start": 2,
+          "end": 3
+        },
+        {
+          "id": "s4",
+          "role": "patient",
+          "text": "С утра в целом снова хуже.",
+          "start": 3,
+          "end": 4
+        }
+      ]
+    },
+    "gold": {
+      "facts": [
+        {
+          "id": "course",
+          "meaning": "С утра в целом снова хуже",
+          "required_sections": [
+            "illness_history"
+          ],
+          "allowed_sections": [
+            "illness_history"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        },
+        {
+          "id": "symptom",
+          "meaning": "сейчас очень болит правое ухо",
+          "required_sections": [
+            "complaints"
+          ],
+          "allowed_sections": [
+            "complaints"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        },
+        {
+          "id": "earlier",
+          "meaning": "Вчера с утра общее самочувствие снова было хуже.",
+          "required_sections": [
+            "illness_history"
+          ],
+          "allowed_sections": [
+            "illness_history"
+          ],
+          "source_segment_ids": [
+            "s4"
+          ]
+        }
+      ]
+    },
+    "baseline": {
+      "sections": {
+        "complaints": [
+          {
+            "text": "С утра в целом снова хуже, и сейчас очень болит правое ухо.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "С утра в целом снова хуже, и сейчас очень болит правое ухо."
+              }
+            ],
+            "complete": [
+              "course",
+              "symptom"
+            ],
+            "partial": []
+          }
+        ],
+        "illness_history": [
+          {
+            "text": "Вчера с утра общее самочувствие снова хуже.",
+            "evidence": [
+              {
+                "segment_id": "s4",
+                "quote": "С утра в целом снова хуже"
+              }
+            ],
+            "complete": [
+              "earlier"
+            ],
+            "partial": []
+          }
+        ],
+        "life_history": []
+      },
+      "gaps": []
+    },
+    "expected_complaints": [
+      {
+        "text": "С утра в целом снова хуже, и сейчас очень болит правое ухо.",
+        "evidence": [
+          {
+            "segment_id": "s2",
+            "quote": "С утра в целом снова хуже, и сейчас очень болит правое ухо."
+          }
+        ],
+        "complete": [
+          "course",
+          "symptom"
+        ],
+        "partial": []
+      }
+    ]
+  },
+  {
+    "id": "m08",
+    "focus": "Условие самого ухудшения",
+    "source": {
+      "id": "m08",
+      "synthetic": true,
+      "text_revision": 1,
+      "timing_origin": "synthetic_order_not_audio",
+      "segments": [
+        {
+          "id": "s1",
+          "role": "doctor",
+          "text": "Что вас беспокоит?",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": "s2",
+          "role": "patient",
+          "text": "Сегодня мне в целом хуже, когда долго стою, и сейчас очень болит правое ухо.",
+          "start": 1,
+          "end": 2
+        }
+      ]
+    },
+    "gold": {
+      "facts": [
+        {
+          "id": "course",
+          "meaning": "Сегодня мне в целом хуже, когда долго стою",
+          "required_sections": [
+            "illness_history"
+          ],
+          "allowed_sections": [
+            "illness_history"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        },
+        {
+          "id": "symptom",
+          "meaning": "сейчас очень болит правое ухо",
+          "required_sections": [
+            "complaints"
+          ],
+          "allowed_sections": [
+            "complaints"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        }
+      ]
+    },
+    "baseline": {
+      "sections": {
+        "complaints": [
+          {
+            "text": "Сегодня мне в целом хуже, когда долго стою, и сейчас очень болит правое ухо.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сегодня мне в целом хуже, когда долго стою, и сейчас очень болит правое ухо."
+              }
+            ],
+            "complete": [
+              "course",
+              "symptom"
+            ],
+            "partial": []
+          }
+        ],
+        "illness_history": [
+          {
+            "text": "Сегодня общее самочувствие хуже, когда долго стою.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сегодня мне в целом хуже, когда долго стою"
+              }
+            ],
+            "complete": [
+              "course"
+            ],
+            "partial": []
+          }
+        ],
+        "life_history": []
+      },
+      "gaps": []
+    },
+    "expected_complaints": [
+      {
+        "text": "Сегодня мне в целом хуже, когда долго стою, и сейчас очень болит правое ухо.",
+        "evidence": [
+          {
+            "segment_id": "s2",
+            "quote": "Сегодня мне в целом хуже, когда долго стою, и сейчас очень болит правое ухо."
+          }
+        ],
+        "complete": [
+          "course",
+          "symptom"
+        ],
+        "partial": []
+      }
+    ]
+  }
+]
