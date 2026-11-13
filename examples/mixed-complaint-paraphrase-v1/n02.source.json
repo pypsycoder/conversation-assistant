@@ -1,0 +1,22 @@
+{
+  "id": "n02",
+  "synthetic": true,
+  "text_revision": 1,
+  "timing_origin": "synthetic_order_not_audio",
+  "segments": [
+    {
+      "id": "s1",
+      "role": "doctor",
+      "text": "Что вас беспокоит сейчас?",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "s2",
+      "role": "patient",
+      "text": "С вечера мне в целом снова хуже, и сейчас сильно звенит в ушах.",
+      "start": 1,
+      "end": 2
+    }
+  ]
+}
