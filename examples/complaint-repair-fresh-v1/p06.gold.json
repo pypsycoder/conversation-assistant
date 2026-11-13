@@ -1,0 +1,48 @@
+{
+  "id": "p06",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "tremor_with_cup",
+      "meaning": "Сегодня дрожат руки, особенно заметно, когда держит чашку.",
+      "required_sections": [
+        "complaints"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "tremor_course",
+      "meaning": "Сегодня руки дрожат сильнее, чем вчера.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "father_history_unknown",
+      "meaning": "Пациент не знает, были ли у отца психические заболевания.",
+      "required_sections": [
+        "life_history"
+      ],
+      "allowed_sections": [
+        "life_history"
+      ],
+      "source_segment_ids": [
+        "s4"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "p04",
+  "synthetic": true,
+  "text_revision": 1,
+  "timing_origin": "synthetic_order_not_audio",
+  "segments": [
+    {
+      "id": "s1",
+      "role": "doctor",
+      "text": "Как вы себя чувствовали во вторник?",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "s2",
+      "role": "patient",
+      "text": "К вечеру мне в целом стало хуже.",
+      "start": 1,
+      "end": 2
+    },
+    {
+      "id": "s3",
+      "role": "doctor",
+      "text": "Как вы себя чувствуете сегодня?",
+      "start": 2,
+      "end": 3
+    },
+    {
+      "id": "s4",
+      "role": "patient",
+      "text": "С утра мне в целом хуже. Сейчас звенит в ушах.",
+      "start": 3,
+      "end": 4
+    }
+  ]
+}
