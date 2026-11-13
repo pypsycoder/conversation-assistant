@@ -1,0 +1,33 @@
+{
+  "id": "g01",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "weekend_relief",
+      "meaning": "В выходные самочувствие было лучше.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "overall_worse",
+      "meaning": "Со вчерашнего утра общее самочувствие снова хуже.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "id": "g02",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "worse_since_night",
+      "meaning": "Общее самочувствие хуже с ночи.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "strong_dizziness",
+      "meaning": "Сейчас сильно кружится голова.",
+      "required_sections": [
+        "complaints"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "right_ear_pain_yesterday",
+      "meaning": "Вчера болело правое ухо.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "no_right_ear_pain_now",
+      "meaning": "Сейчас правое ухо не болит.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    }
+  ]
+}

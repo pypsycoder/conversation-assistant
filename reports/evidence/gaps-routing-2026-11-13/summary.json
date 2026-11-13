@@ -1,0 +1,182 @@
+{
+  "protocol_commit": "e3f0491",
+  "pairs": 3,
+  "expected_facts_per_arm": 8,
+  "model_revision": "GigaChat-3-Ultra:32.9.16.9",
+  "cost_rub": null,
+  "decision": "reject_current_candidate",
+  "arms": {
+    "control": {
+      "calls": 3,
+      "tokens": 6140,
+      "runner_seconds": 22.578999999999724,
+      "api_seconds": 15.778554800001075,
+      "valid_provenance": 3,
+      "cases": [
+        {
+          "id": "g01",
+          "seconds": 3.8428799000012077,
+          "usage": {
+            "prompt_tokens": 1619,
+            "completion_tokens": 384,
+            "total_tokens": 2003,
+            "precached_prompt_tokens": 0
+          },
+          "model": "GigaChat-3-Ultra:32.9.16.9"
+        },
+        {
+          "id": "g02",
+          "seconds": 8.685912500000995,
+          "usage": {
+            "prompt_tokens": 1629,
+            "completion_tokens": 503,
+            "total_tokens": 2132,
+            "precached_prompt_tokens": 0
+          },
+          "model": "GigaChat-3-Ultra:32.9.16.9"
+        },
+        {
+          "id": "g03",
+          "seconds": 3.249762399998872,
+          "usage": {
+            "prompt_tokens": 1685,
+            "completion_tokens": 320,
+            "total_tokens": 2005,
+            "precached_prompt_tokens": 0
+          },
+          "model": "GigaChat-3-Ultra:32.9.16.9"
+        }
+      ],
+      "metrics": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "output_rows": 8,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 1,
+        "covered_placements": 8,
+        "required_placements": 8,
+        "correct_placements": 8,
+        "predicted_placements": 10,
+        "gap_rows": 4,
+        "gaps_with_errors": 1,
+        "gap_evidence_errors": 1,
+        "gap_topic_errors": 0,
+        "gap_status_errors": 0,
+        "placeholder_rows": 0
+      },
+      "sections": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "allowed": 1,
+          "disallowed": 2,
+          "rows": 2
+        },
+        "illness_history": {
+          "required": 5,
+          "covered": 5,
+          "allowed": 5,
+          "disallowed": 0,
+          "rows": 4
+        },
+        "life_history": {
+          "required": 2,
+          "covered": 2,
+          "allowed": 2,
+          "disallowed": 0,
+          "rows": 2
+        }
+      }
+    },
+    "candidate": {
+      "calls": 3,
+      "tokens": 3234,
+      "runner_seconds": 20.811999999999898,
+      "api_seconds": 14.379414300001372,
+      "valid_provenance": 3,
+      "cases": [
+        {
+          "id": "g01",
+          "seconds": 4.706570199999987,
+          "usage": {
+            "prompt_tokens": 655,
+            "completion_tokens": 380,
+            "total_tokens": 1035,
+            "precached_prompt_tokens": 0
+          },
+          "model": "GigaChat-3-Ultra:32.9.16.9"
+        },
+        {
+          "id": "g02",
+          "seconds": 4.599343700001555,
+          "usage": {
+            "prompt_tokens": 665,
+            "completion_tokens": 483,
+            "total_tokens": 1148,
+            "precached_prompt_tokens": 0
+          },
+          "model": "GigaChat-3-Ultra:32.9.16.9"
+        },
+        {
+          "id": "g03",
+          "seconds": 5.07350039999983,
+          "usage": {
+            "prompt_tokens": 721,
+            "completion_tokens": 330,
+            "total_tokens": 1051,
+            "precached_prompt_tokens": 0
+          },
+          "model": "GigaChat-3-Ultra:32.9.16.9"
+        }
+      ],
+      "metrics": {
+        "tp": 7,
+        "fp": 1,
+        "fn": 1,
+        "output_rows": 8,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 1,
+        "covered_placements": 7,
+        "required_placements": 8,
+        "correct_placements": 7,
+        "predicted_placements": 7,
+        "gap_rows": 1,
+        "gaps_with_errors": 1,
+        "gap_evidence_errors": 1,
+        "gap_topic_errors": 1,
+        "gap_status_errors": 0,
+        "placeholder_rows": 0
+      },
+      "sections": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "allowed": 1,
+          "disallowed": 0,
+          "rows": 1
+        },
+        "illness_history": {
+          "required": 5,
+          "covered": 4,
+          "allowed": 4,
+          "disallowed": 0,
+          "rows": 5
+        },
+        "life_history": {
+          "required": 2,
+          "covered": 2,
+          "allowed": 2,
+          "disallowed": 0,
+          "rows": 2
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "g03",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "dispatcher",
+      "meaning": "Работает диспетчером.",
+      "required_sections": [
+        "life_history"
+      ],
+      "allowed_sections": [
+        "life_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "father_history_unknown",
+      "meaning": "Пациент не знает, были ли у отца психические заболевания.",
+      "required_sections": [
+        "life_history"
+      ],
+      "allowed_sections": [
+        "life_history"
+      ],
+      "source_segment_ids": [
+        "s4"
+      ]
+    }
+  ]
+}

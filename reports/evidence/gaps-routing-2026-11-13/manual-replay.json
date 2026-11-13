@@ -1,0 +1,121 @@
+{
+  "purpose": "Manually chosen edits on existing control responses; no model calls or automated editor",
+  "cases": {
+    "g01": {
+      "original_complaint": {
+        "text": "Со вчерашнего утра в целом снова хуже.",
+        "evidence": [
+          {
+            "segment_id": "s2",
+            "quote": "со вчерашнего утра в целом снова хуже."
+          }
+        ]
+      },
+      "revised_complaint": null,
+      "before": {
+        "gold_facts": 2,
+        "output_rows": 3,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "required_placements": 2,
+        "covered_placements": 2,
+        "correct_placements": 2,
+        "predicted_placements": 3,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0,
+        "reviewer": "Codex",
+        "physician_reviewed": false
+      },
+      "after": {
+        "gold_facts": 2,
+        "output_rows": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "required_placements": 2,
+        "covered_placements": 2,
+        "correct_placements": 2,
+        "predicted_placements": 2,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0,
+        "reviewer": "Codex",
+        "physician_reviewed": false
+      }
+    },
+    "g02": {
+      "original_complaint": {
+        "text": "С ночи мне в целом хуже, и сейчас сильно кружится голова.",
+        "evidence": [
+          {
+            "segment_id": "s2",
+            "quote": "С ночи мне в целом хуже, и сейчас сильно кружится голова."
+          }
+        ]
+      },
+      "revised_complaint": {
+        "text": "Сейчас сильно кружится голова.",
+        "evidence": [
+          {
+            "segment_id": "s2",
+            "quote": "сейчас сильно кружится голова."
+          }
+        ]
+      },
+      "before": {
+        "gold_facts": 4,
+        "output_rows": 3,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "required_placements": 4,
+        "covered_placements": 4,
+        "correct_placements": 4,
+        "predicted_placements": 5,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0,
+        "reviewer": "Codex",
+        "physician_reviewed": false
+      },
+      "after": {
+        "gold_facts": 4,
+        "output_rows": 3,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "required_placements": 4,
+        "covered_placements": 4,
+        "correct_placements": 4,
+        "predicted_placements": 4,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0,
+        "reviewer": "Codex",
+        "physician_reviewed": false
+      }
+    }
+  }
+}
