@@ -1,0 +1,22 @@
+{
+  "id": "g01",
+  "synthetic": true,
+  "text_revision": 1,
+  "timing_origin": "synthetic_order_not_audio",
+  "segments": [
+    {
+      "id": "s1",
+      "role": "doctor",
+      "text": "Как менялось самочувствие?",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "s2",
+      "role": "patient",
+      "text": "В выходные было полегче, а со вчерашнего утра в целом снова хуже.",
+      "start": 1,
+      "end": 2
+    }
+  ]
+}
