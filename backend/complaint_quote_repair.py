@@ -12,6 +12,12 @@ TIME = r"(?:сегодня|вчера|с (?:утра|ночи|вечера)|со
 GENERAL_COURSE = re.compile(
     rf"(?P<time>{TIME}) (?:мне )?в целом (?P<again>снова )?хуже", re.IGNORECASE
 )
+DAY = r"(?:сегодня|вчера|позавчера)"
+TIME_OF_DAY = r"(?:после (?:завтрака|обеда|ужина)|к (?:утру|вечеру|ночи))"
+LITERAL_WORSENING = re.compile(
+    rf"(?:(?:{DAY} )?{TIME_OF_DAY}|{TIME}|позавчера) (?:мне )?(?:(?:снова|опять) )?"
+    r"(?:стало хуже в целом|стало в целом хуже|в целом стало хуже)"
+)
 CURRENT_SYMPTOM = re.compile(
     r"сейчас (?:у меня |меня )?(?:сильно |очень )?"
     r"(?:кружится голова|тошнит|звенит в ушах|дрожат руки|"
@@ -29,8 +35,8 @@ def sentence_text(text):
     return text.strip().removesuffix(".").casefold()
 
 
-def complete_quote(quote, text):
-    """Accept a whole sentence or the final clause after an explicit earlier improvement."""
+def complete_quote(quote, text, *, allow_after_improvement=True):
+    """Accept a whole sentence and optionally a clause after explicit earlier improvement."""
     matches = list(re.finditer(re.escape(quote), text))
     if len(matches) != 1:
         return False
@@ -39,7 +45,7 @@ def complete_quote(quote, text):
     after = text[match.end():]
     if before and not before.endswith((".", "!", "?")):
         previous_clause = re.split(r"[.!?]", before)[-1].strip()
-        if EARLIER_IMPROVEMENT.fullmatch(previous_clause) is None:
+        if not allow_after_improvement or EARLIER_IMPROVEMENT.fullmatch(previous_clause) is None:
             return False
     if quote.endswith("."):
         return not after or after[0].isspace()
@@ -70,8 +76,18 @@ def complaint_patch(row, segments, history):
     citation = row["evidence"][0]
     quote = citation["quote"]
     segment = segments[citation["segment_id"]]
-    if (segment["role"] != "patient" or sentence_text(row["text"]) != sentence_text(quote)
-            or not complete_quote(quote, segment["text"])):
+    normalized_quote = sentence_text(quote)
+    if segment["role"] != "patient" or sentence_text(row["text"]) != normalized_quote:
+        return None
+
+    if LITERAL_WORSENING.fullmatch(normalized_quote):
+        if complete_quote(quote, segment["text"], allow_after_improvement=False):
+            for index, history_row in enumerate(history):
+                if history_row == row:
+                    return index, None
+        return None
+
+    if not complete_quote(quote, segment["text"]):
         return None
     clauses = CLAUSE_SEPARATOR.split(quote, maxsplit=1)
     clause = clauses[0].removesuffix(".")

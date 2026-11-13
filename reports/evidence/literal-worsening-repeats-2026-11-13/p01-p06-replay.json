@@ -1,0 +1,87 @@
+{
+  "api_calls": 0,
+  "tokens": 0,
+  "previous_version": "e0410c5",
+  "case_count": 6,
+  "additional_changes": [
+    {
+      "id": "p05",
+      "old_metrics": {
+        "gold_facts": 2,
+        "output_rows": 4,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "required_placements": 2,
+        "covered_placements": 2,
+        "correct_placements": 3,
+        "predicted_placements": 4,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0,
+        "reviewer": "Codex",
+        "physician_reviewed": false
+      },
+      "new_metrics": {
+        "gold_facts": 2,
+        "output_rows": 3,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "required_placements": 2,
+        "covered_placements": 2,
+        "correct_placements": 3,
+        "predicted_placements": 3,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0,
+        "reviewer": "Codex",
+        "physician_reviewed": false
+      },
+      "remaining_complaints": [
+        {
+          "text": "Сейчас дрожат руки.",
+          "evidence": [
+            {
+              "segment_id": "s2",
+              "quote": "Сейчас дрожат руки."
+            }
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "complaint_index": 0,
+          "illness_history_index": 0,
+          "original": {
+            "text": "Сегодня после обеда мне опять стало хуже в целом.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сегодня после обеда мне опять стало хуже в целом."
+              }
+            ]
+          },
+          "replacement": null
+        }
+      ]
+    }
+  ],
+  "preserved_cases": [
+    "p01",
+    "p02",
+    "p03",
+    "p04",
+    "p06"
+  ]
+}

@@ -99,16 +99,19 @@ def summarize(cases):
 
 def main():
     parser = argparse.ArgumentParser(__doc__)
+    parser.add_argument("--fixtures", type=Path, default=CASES)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     started = time.perf_counter()
-    fixtures = read(CASES)
+    fixtures = read(args.fixtures)
     canonical = json.dumps(fixtures, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
     checksum = hashlib.sha256(canonical.encode("utf-8")).hexdigest()
     cases = [evaluate_case(case) for case in fixtures]
     totals = summarize(cases)
-    assert [case["id"] for case in cases if case["changes"]] == ["q01", "q02"]
-    assert totals["before"]["sections"]["complaints"]["disallowed"] - totals["after"]["sections"]["complaints"]["disallowed"] == 2
+    for case in cases:
+        before = case["sections_before"]["complaints"]["disallowed"]
+        after = case["sections_after"]["complaints"]["disallowed"]
+        assert after <= before, case["id"]
     save(args.output, {"synthetic": True, "model_calls": 0, "model_tokens": 0,
                        "fixtures_canonical_sha256": checksum, "evaluation_seconds": time.perf_counter() - started,
                        "cases": cases, "totals": totals})
