@@ -52,13 +52,15 @@ def complete_quote(quote, text, *, allow_after_improvement=True):
     return not after or (after.startswith(".") and (len(after) == 1 or after[1].isspace()))
 
 
-def history_match(clause, match, segment, history):
+def history_match(clause, match, segment, history, *, mixed=False):
     """Require the same utterance and preserve all recognized temporal modifiers."""
     if len(re.findall(re.escape(clause), segment["text"], flags=re.IGNORECASE)) != 1:
         return None
     time = match["time"]
     again = match["again"] or ""
     allowed = {sentence_text(clause), f"{time} общее самочувствие {again}ухудшилось"}
+    if mixed:
+        allowed.add(f"{time} общее самочувствие {again}хуже")
     if not again:
         allowed.add(f"{time} общее ухудшение состояния")
     for index, row in enumerate(history):
@@ -105,7 +107,7 @@ def complaint_patch(row, segments, history):
             "evidence": [{"segment_id": segment["id"], "quote": symptom}],
         }
 
-    history_index = history_match(clause, course, segment, history)
+    history_index = history_match(clause, course, segment, history, mixed=replacement is not None)
     if history_index is None:
         return None
     return history_index, replacement
