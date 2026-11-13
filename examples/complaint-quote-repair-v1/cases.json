@@ -1,0 +1,1096 @@
+[
+  {
+    "id": "q01",
+    "focus": "Отдельный повтор с сохранёнными временем и словом «снова»",
+    "source": {
+      "id": "q01",
+      "synthetic": true,
+      "text_revision": 1,
+      "timing_origin": "synthetic_order_not_audio",
+      "segments": [
+        {
+          "id": "s1",
+          "role": "doctor",
+          "text": "Как менялось самочувствие?",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": "s2",
+          "role": "patient",
+          "text": "Со вчерашнего утра мне в целом снова хуже. Сейчас меня тошнит.",
+          "start": 1,
+          "end": 2
+        }
+      ]
+    },
+    "gold": {
+      "facts": [
+        {
+          "id": "course",
+          "meaning": "Со вчерашнего утра мне в целом снова хуже.",
+          "required_sections": [
+            "illness_history"
+          ],
+          "allowed_sections": [
+            "illness_history"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        },
+        {
+          "id": "nausea",
+          "meaning": "Сейчас меня тошнит.",
+          "required_sections": [
+            "complaints"
+          ],
+          "allowed_sections": [
+            "complaints"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        }
+      ]
+    },
+    "baseline": {
+      "sections": {
+        "complaints": [
+          {
+            "text": "Со вчерашнего утра мне в целом снова хуже.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Со вчерашнего утра мне в целом снова хуже."
+              }
+            ],
+            "complete": [
+              "course"
+            ],
+            "partial": []
+          },
+          {
+            "text": "Сейчас меня тошнит.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сейчас меня тошнит."
+              }
+            ],
+            "complete": [
+              "nausea"
+            ],
+            "partial": []
+          }
+        ],
+        "illness_history": [
+          {
+            "text": "Со вчерашнего утра общее самочувствие снова ухудшилось.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Со вчерашнего утра мне в целом снова хуже"
+              }
+            ],
+            "complete": [
+              "course"
+            ],
+            "partial": []
+          }
+        ],
+        "life_history": []
+      },
+      "gaps": []
+    },
+    "expected_complaints": [
+      {
+        "text": "Сейчас меня тошнит.",
+        "evidence": [
+          {
+            "segment_id": "s2",
+            "quote": "Сейчас меня тошнит."
+          }
+        ],
+        "complete": [
+          "nausea"
+        ],
+        "partial": []
+      }
+    ]
+  },
+  {
+    "id": "q02",
+    "focus": "Смешанная строка, текущий симптом и отрицание в анамнезе",
+    "source": {
+      "id": "q02",
+      "synthetic": true,
+      "text_revision": 1,
+      "timing_origin": "synthetic_order_not_audio",
+      "segments": [
+        {
+          "id": "s1",
+          "role": "doctor",
+          "text": "Что беспокоит сейчас?",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": "s2",
+          "role": "patient",
+          "text": "С ночи в целом хуже, и сейчас сильно кружится голова. Вчера немели пальцы, сейчас они не немеют.",
+          "start": 1,
+          "end": 2
+        }
+      ]
+    },
+    "gold": {
+      "facts": [
+        {
+          "id": "course",
+          "meaning": "Общее ухудшение с ночи.",
+          "required_sections": [
+            "illness_history"
+          ],
+          "allowed_sections": [
+            "illness_history"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        },
+        {
+          "id": "dizziness",
+          "meaning": "Сильное головокружение сейчас.",
+          "required_sections": [
+            "complaints"
+          ],
+          "allowed_sections": [
+            "complaints"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        },
+        {
+          "id": "past_numbness",
+          "meaning": "Вчера немели пальцы.",
+          "required_sections": [
+            "illness_history"
+          ],
+          "allowed_sections": [
+            "illness_history"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        },
+        {
+          "id": "no_numbness",
+          "meaning": "Сейчас пальцы не немеют.",
+          "required_sections": [
+            "illness_history"
+          ],
+          "allowed_sections": [
+            "illness_history"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        }
+      ]
+    },
+    "baseline": {
+      "sections": {
+        "complaints": [
+          {
+            "text": "С ночи в целом хуже, и сейчас сильно кружится голова.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "С ночи в целом хуже, и сейчас сильно кружится голова."
+              }
+            ],
+            "complete": [
+              "course",
+              "dizziness"
+            ],
+            "partial": []
+          }
+        ],
+        "illness_history": [
+          {
+            "text": "С ночи общее ухудшение состояния.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "С ночи в целом хуже"
+              }
+            ],
+            "complete": [
+              "course"
+            ],
+            "partial": []
+          },
+          {
+            "text": "Вчера немели пальцы, сейчас они не немеют.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Вчера немели пальцы, сейчас они не немеют."
+              }
+            ],
+            "complete": [
+              "past_numbness",
+              "no_numbness"
+            ],
+            "partial": []
+          }
+        ],
+        "life_history": []
+      },
+      "gaps": []
+    },
+    "expected_complaints": [
+      {
+        "text": "Сейчас сильно кружится голова.",
+        "evidence": [
+          {
+            "segment_id": "s2",
+            "quote": "сейчас сильно кружится голова."
+          }
+        ],
+        "complete": [
+          "dizziness"
+        ],
+        "partial": []
+      }
+    ]
+  },
+  {
+    "id": "q03",
+    "focus": "Похожая динамика в другом периоде",
+    "source": {
+      "id": "q03",
+      "synthetic": true,
+      "text_revision": 1,
+      "timing_origin": "synthetic_order_not_audio",
+      "segments": [
+        {
+          "id": "s1",
+          "role": "doctor",
+          "text": "Как менялось самочувствие?",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": "s2",
+          "role": "patient",
+          "text": "Сегодня мне в целом хуже. Вчера мне в целом хуже было только вечером.",
+          "start": 1,
+          "end": 2
+        }
+      ]
+    },
+    "gold": {
+      "facts": [
+        {
+          "id": "today",
+          "meaning": "Сегодня мне в целом хуже.",
+          "required_sections": [
+            "illness_history"
+          ],
+          "allowed_sections": [
+            "illness_history"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        },
+        {
+          "id": "yesterday",
+          "meaning": "Вчера ухудшение было только вечером.",
+          "required_sections": [
+            "illness_history"
+          ],
+          "allowed_sections": [
+            "illness_history"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        }
+      ]
+    },
+    "baseline": {
+      "sections": {
+        "complaints": [
+          {
+            "text": "Сегодня мне в целом хуже.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сегодня мне в целом хуже."
+              }
+            ],
+            "complete": [
+              "today"
+            ],
+            "partial": []
+          }
+        ],
+        "illness_history": [
+          {
+            "text": "Вчера мне в целом хуже было только вечером.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Вчера мне в целом хуже было только вечером."
+              }
+            ],
+            "complete": [
+              "yesterday"
+            ],
+            "partial": []
+          }
+        ],
+        "life_history": []
+      },
+      "gaps": []
+    },
+    "expected_complaints": [
+      {
+        "text": "Сегодня мне в целом хуже.",
+        "evidence": [
+          {
+            "segment_id": "s2",
+            "quote": "Сегодня мне в целом хуже."
+          }
+        ],
+        "complete": [
+          "today"
+        ],
+        "partial": []
+      }
+    ]
+  },
+  {
+    "id": "q04",
+    "focus": "Динамика есть только в смешанной жалобе",
+    "source": {
+      "id": "q04",
+      "synthetic": true,
+      "text_revision": 1,
+      "timing_origin": "synthetic_order_not_audio",
+      "segments": [
+        {
+          "id": "s1",
+          "role": "doctor",
+          "text": "Что беспокоит сейчас?",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": "s2",
+          "role": "patient",
+          "text": "С утра в целом хуже, и сейчас болит горло.",
+          "start": 1,
+          "end": 2
+        }
+      ]
+    },
+    "gold": {
+      "facts": [
+        {
+          "id": "course",
+          "meaning": "С утра общее ухудшение.",
+          "required_sections": [
+            "illness_history"
+          ],
+          "allowed_sections": [
+            "illness_history"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        },
+        {
+          "id": "throat",
+          "meaning": "Сейчас болит горло.",
+          "required_sections": [
+            "complaints"
+          ],
+          "allowed_sections": [
+            "complaints"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        }
+      ]
+    },
+    "baseline": {
+      "sections": {
+        "complaints": [
+          {
+            "text": "С утра в целом хуже, и сейчас болит горло.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "С утра в целом хуже, и сейчас болит горло."
+              }
+            ],
+            "complete": [
+              "course",
+              "throat"
+            ],
+            "partial": []
+          }
+        ],
+        "illness_history": [],
+        "life_history": []
+      },
+      "gaps": []
+    },
+    "expected_complaints": [
+      {
+        "text": "С утра в целом хуже, и сейчас болит горло.",
+        "evidence": [
+          {
+            "segment_id": "s2",
+            "quote": "С утра в целом хуже, и сейчас болит горло."
+          }
+        ],
+        "complete": [
+          "course",
+          "throat"
+        ],
+        "partial": []
+      }
+    ]
+  },
+  {
+    "id": "q05",
+    "focus": "Цитата та же, в тексте анамнеза утрачено «снова»",
+    "source": {
+      "id": "q05",
+      "synthetic": true,
+      "text_revision": 1,
+      "timing_origin": "synthetic_order_not_audio",
+      "segments": [
+        {
+          "id": "s1",
+          "role": "doctor",
+          "text": "Как вы себя чувствуете?",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": "s2",
+          "role": "patient",
+          "text": "Сегодня в целом снова хуже.",
+          "start": 1,
+          "end": 2
+        }
+      ]
+    },
+    "gold": {
+      "facts": [
+        {
+          "id": "recurrence",
+          "meaning": "Сегодня в целом снова хуже.",
+          "required_sections": [
+            "illness_history"
+          ],
+          "allowed_sections": [
+            "illness_history"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        }
+      ]
+    },
+    "baseline": {
+      "sections": {
+        "complaints": [
+          {
+            "text": "Сегодня в целом снова хуже.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сегодня в целом снова хуже."
+              }
+            ],
+            "complete": [
+              "recurrence"
+            ],
+            "partial": []
+          }
+        ],
+        "illness_history": [
+          {
+            "text": "Сегодня общее самочувствие ухудшилось.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сегодня в целом снова хуже."
+              }
+            ],
+            "complete": [],
+            "partial": [
+              "recurrence"
+            ]
+          }
+        ],
+        "life_history": []
+      },
+      "gaps": []
+    },
+    "expected_complaints": [
+      {
+        "text": "Сегодня в целом снова хуже.",
+        "evidence": [
+          {
+            "segment_id": "s2",
+            "quote": "Сегодня в целом снова хуже."
+          }
+        ],
+        "complete": [
+          "recurrence"
+        ],
+        "partial": []
+      }
+    ]
+  },
+  {
+    "id": "q06",
+    "focus": "Дословное совпадение цитат из двух реплик",
+    "source": {
+      "id": "q06",
+      "synthetic": true,
+      "text_revision": 1,
+      "timing_origin": "synthetic_order_not_audio",
+      "segments": [
+        {
+          "id": "s1",
+          "role": "doctor",
+          "text": "Как вы себя чувствовали во вторник?",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": "s2",
+          "role": "patient",
+          "text": "С утра мне в целом хуже.",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "s3",
+          "role": "doctor",
+          "text": "Как вы себя чувствуете сегодня?",
+          "start": 2,
+          "end": 3
+        },
+        {
+          "id": "s4",
+          "role": "patient",
+          "text": "С утра мне в целом хуже.",
+          "start": 3,
+          "end": 4
+        }
+      ]
+    },
+    "gold": {
+      "facts": [
+        {
+          "id": "tuesday",
+          "meaning": "Во вторник с утра в целом хуже.",
+          "required_sections": [
+            "illness_history"
+          ],
+          "allowed_sections": [
+            "illness_history"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        },
+        {
+          "id": "today",
+          "meaning": "Сегодня с утра в целом хуже.",
+          "required_sections": [
+            "illness_history"
+          ],
+          "allowed_sections": [
+            "illness_history"
+          ],
+          "source_segment_ids": [
+            "s4"
+          ]
+        }
+      ]
+    },
+    "baseline": {
+      "sections": {
+        "complaints": [
+          {
+            "text": "С утра мне в целом хуже.",
+            "evidence": [
+              {
+                "segment_id": "s4",
+                "quote": "С утра мне в целом хуже."
+              }
+            ],
+            "complete": [
+              "today"
+            ],
+            "partial": []
+          }
+        ],
+        "illness_history": [
+          {
+            "text": "С утра мне в целом хуже.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "С утра мне в целом хуже."
+              }
+            ],
+            "complete": [
+              "tuesday"
+            ],
+            "partial": []
+          }
+        ],
+        "life_history": []
+      },
+      "gaps": []
+    },
+    "expected_complaints": [
+      {
+        "text": "С утра мне в целом хуже.",
+        "evidence": [
+          {
+            "segment_id": "s4",
+            "quote": "С утра мне в целом хуже."
+          }
+        ],
+        "complete": [
+          "today"
+        ],
+        "partial": []
+      }
+    ]
+  },
+  {
+    "id": "q07",
+    "focus": "Динамика названного симптома и значимое отрицание",
+    "source": {
+      "id": "q07",
+      "synthetic": true,
+      "text_revision": 1,
+      "timing_origin": "synthetic_order_not_audio",
+      "segments": [
+        {
+          "id": "s1",
+          "role": "doctor",
+          "text": "Что вас беспокоит?",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": "s2",
+          "role": "patient",
+          "text": "Сегодня сильнее болит левое ухо. Правое ухо не болит.",
+          "start": 1,
+          "end": 2
+        }
+      ]
+    },
+    "gold": {
+      "facts": [
+        {
+          "id": "ear",
+          "meaning": "Левое ухо сегодня болит сильнее.",
+          "required_sections": [
+            "complaints"
+          ],
+          "allowed_sections": [
+            "complaints",
+            "illness_history"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        },
+        {
+          "id": "no_right_ear",
+          "meaning": "Правое ухо не болит.",
+          "required_sections": [
+            "illness_history"
+          ],
+          "allowed_sections": [
+            "illness_history"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        }
+      ]
+    },
+    "baseline": {
+      "sections": {
+        "complaints": [
+          {
+            "text": "Сегодня сильнее болит левое ухо.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сегодня сильнее болит левое ухо."
+              }
+            ],
+            "complete": [
+              "ear"
+            ],
+            "partial": []
+          }
+        ],
+        "illness_history": [
+          {
+            "text": "Сегодня сильнее болит левое ухо.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сегодня сильнее болит левое ухо."
+              }
+            ],
+            "complete": [
+              "ear"
+            ],
+            "partial": []
+          },
+          {
+            "text": "Правое ухо не болит.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Правое ухо не болит."
+              }
+            ],
+            "complete": [
+              "no_right_ear"
+            ],
+            "partial": []
+          }
+        ],
+        "life_history": []
+      },
+      "gaps": []
+    },
+    "expected_complaints": [
+      {
+        "text": "Сегодня сильнее болит левое ухо.",
+        "evidence": [
+          {
+            "segment_id": "s2",
+            "quote": "Сегодня сильнее болит левое ухо."
+          }
+        ],
+        "complete": [
+          "ear"
+        ],
+        "partial": []
+      }
+    ]
+  },
+  {
+    "id": "q08",
+    "focus": "Короткий ответ о родственнике с подтверждённым контекстом",
+    "source": {
+      "id": "q08",
+      "synthetic": true,
+      "text_revision": 1,
+      "timing_origin": "synthetic_order_not_audio",
+      "segments": [
+        {
+          "id": "s1",
+          "role": "doctor",
+          "text": "Что вам известно о психических заболеваниях у отца?",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": "s2",
+          "role": "patient",
+          "text": "Не знаю, были ли у него такие заболевания.",
+          "start": 1,
+          "end": 2
+        }
+      ]
+    },
+    "gold": {
+      "facts": [
+        {
+          "id": "father",
+          "meaning": "Не знает, были ли у отца психические заболевания.",
+          "required_sections": [
+            "life_history"
+          ],
+          "allowed_sections": [
+            "life_history"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        }
+      ]
+    },
+    "baseline": {
+      "sections": {
+        "complaints": [],
+        "illness_history": [],
+        "life_history": [
+          {
+            "text": "Не знает, были ли у отца психические заболевания.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Не знаю, были ли у него такие заболевания."
+              },
+              {
+                "segment_id": "s1",
+                "quote": "Что вам известно о психических заболеваниях у отца?"
+              }
+            ],
+            "complete": [
+              "father"
+            ],
+            "partial": []
+          }
+        ]
+      },
+      "gaps": [
+        {
+          "topic": "Психические заболевания отца",
+          "status": "patient_does_not_know",
+          "evidence": [
+            {
+              "segment_id": "s2",
+              "quote": "Не знаю, были ли у него такие заболевания."
+            },
+            {
+              "segment_id": "s1",
+              "quote": "Что вам известно о психических заболеваниях у отца?"
+            }
+          ]
+        }
+      ]
+    },
+    "expected_complaints": []
+  },
+  {
+    "id": "q09",
+    "focus": "Условие в смешанной строке вне поддерживаемой формы",
+    "source": {
+      "id": "q09",
+      "synthetic": true,
+      "text_revision": 1,
+      "timing_origin": "synthetic_order_not_audio",
+      "segments": [
+        {
+          "id": "s1",
+          "role": "doctor",
+          "text": "Что беспокоит сейчас?",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": "s2",
+          "role": "patient",
+          "text": "С ночи в целом хуже, и сейчас сильно кружится голова, если резко встаю.",
+          "start": 1,
+          "end": 2
+        }
+      ]
+    },
+    "gold": {
+      "facts": [
+        {
+          "id": "course",
+          "meaning": "Общее ухудшение с ночи.",
+          "required_sections": [
+            "illness_history"
+          ],
+          "allowed_sections": [
+            "illness_history"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        },
+        {
+          "id": "conditional_dizziness",
+          "meaning": "Сейчас сильно кружится голова, если резко встаёт.",
+          "required_sections": [
+            "complaints"
+          ],
+          "allowed_sections": [
+            "complaints"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        }
+      ]
+    },
+    "baseline": {
+      "sections": {
+        "complaints": [
+          {
+            "text": "С ночи в целом хуже, и сейчас сильно кружится голова, если резко встаю.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "С ночи в целом хуже, и сейчас сильно кружится голова, если резко встаю."
+              }
+            ],
+            "complete": [
+              "course",
+              "conditional_dizziness"
+            ],
+            "partial": []
+          }
+        ],
+        "illness_history": [
+          {
+            "text": "С ночи общее ухудшение состояния.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "С ночи в целом хуже"
+              }
+            ],
+            "complete": [
+              "course"
+            ],
+            "partial": []
+          }
+        ],
+        "life_history": []
+      },
+      "gaps": []
+    },
+    "expected_complaints": [
+      {
+        "text": "С ночи в целом хуже, и сейчас сильно кружится голова, если резко встаю.",
+        "evidence": [
+          {
+            "segment_id": "s2",
+            "quote": "С ночи в целом хуже, и сейчас сильно кружится голова, если резко встаю."
+          }
+        ],
+        "complete": [
+          "course",
+          "conditional_dizziness"
+        ],
+        "partial": []
+      }
+    ]
+  },
+  {
+    "id": "q10",
+    "focus": "Жалоба пересказана, хотя анамнез цитирует тот же источник",
+    "source": {
+      "id": "q10",
+      "synthetic": true,
+      "text_revision": 1,
+      "timing_origin": "synthetic_order_not_audio",
+      "segments": [
+        {
+          "id": "s1",
+          "role": "doctor",
+          "text": "Как менялось самочувствие?",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": "s2",
+          "role": "patient",
+          "text": "Сегодня мне в целом снова хуже.",
+          "start": 1,
+          "end": 2
+        }
+      ]
+    },
+    "gold": {
+      "facts": [
+        {
+          "id": "course",
+          "meaning": "Сегодня мне в целом снова хуже.",
+          "required_sections": [
+            "illness_history"
+          ],
+          "allowed_sections": [
+            "illness_history"
+          ],
+          "source_segment_ids": [
+            "s2"
+          ]
+        }
+      ]
+    },
+    "baseline": {
+      "sections": {
+        "complaints": [
+          {
+            "text": "Сообщает, что сегодня самочувствие опять ухудшилось.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сегодня мне в целом снова хуже."
+              }
+            ],
+            "complete": [
+              "course"
+            ],
+            "partial": []
+          }
+        ],
+        "illness_history": [
+          {
+            "text": "Сегодня общее самочувствие снова ухудшилось.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сегодня мне в целом снова хуже."
+              }
+            ],
+            "complete": [
+              "course"
+            ],
+            "partial": []
+          }
+        ],
+        "life_history": []
+      },
+      "gaps": []
+    },
+    "expected_complaints": [
+      {
+        "text": "Сообщает, что сегодня самочувствие опять ухудшилось.",
+        "evidence": [
+          {
+            "segment_id": "s2",
+            "quote": "Сегодня мне в целом снова хуже."
+          }
+        ],
+        "complete": [
+          "course"
+        ],
+        "partial": []
+      }
+    ]
+  }
+]
