@@ -24,3 +24,5 @@
 & '.\.venv\Scripts\python.exe' -m backend.complaint_quote_repair --source SOURCE.json --result DIRECT.json --output EDITED.json
 & '.\.venv\Scripts\python.exe' scripts/evaluate_complaint_quote_repair.py --output OFFLINE-SUMMARY.json
 ```
+
+[Черновой PR №10](https://github.com/pypsycoder/conversation-assistant/pull/10)
