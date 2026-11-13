@@ -1,0 +1,22 @@
+{
+  "id": "p02",
+  "synthetic": true,
+  "text_revision": 1,
+  "timing_origin": "synthetic_order_not_audio",
+  "segments": [
+    {
+      "id": "s1",
+      "role": "doctor",
+      "text": "Что вас сейчас беспокоит?",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "s2",
+      "role": "patient",
+      "text": "С вечера мне в целом хуже, и сейчас очень болит левое ухо. Раньше ухо не болело.",
+      "start": 1,
+      "end": 2
+    }
+  ]
+}

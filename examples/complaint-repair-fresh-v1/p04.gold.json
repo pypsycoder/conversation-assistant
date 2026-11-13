@@ -1,0 +1,47 @@
+{
+  "id": "p04",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "tuesday_evening",
+      "meaning": "Во вторник к вечеру общее самочувствие ухудшилось.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "today_morning",
+      "meaning": "Сегодня с утра общее самочувствие хуже.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s4"
+      ]
+    },
+    {
+      "id": "ringing_now",
+      "meaning": "Сейчас звенит в ушах.",
+      "required_sections": [
+        "complaints"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s4"
+      ]
+    }
+  ]
+}

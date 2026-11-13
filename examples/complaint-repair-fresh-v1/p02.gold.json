@@ -1,0 +1,47 @@
+{
+  "id": "p02",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "overall_worse_evening",
+      "meaning": "С вечера общее самочувствие хуже.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "ear_pain_now",
+      "meaning": "Сейчас сильная боль в левом ухе.",
+      "required_sections": [
+        "complaints"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "no_ear_pain_before",
+      "meaning": "Раньше ухо не болело.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    }
+  ]
+}
