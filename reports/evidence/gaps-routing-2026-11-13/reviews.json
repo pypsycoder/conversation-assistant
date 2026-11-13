@@ -1,0 +1,476 @@
+{
+  "control": {
+    "g01": {
+      "review": {
+        "reviewer": "Codex",
+        "physician_reviewed": false,
+        "blinded": false,
+        "response_sha256": "501cb60c031620fb4314f7d69a444a8430647bb75c53bb5f5d006d2ee450f35e",
+        "gold_sha256": "cbe27b1e2a7c0867472d8e3f414a662d2655825cbc1c01b070c1fdfba43967cb",
+        "source_canonical_sha256": "05489f434d96287474aec2702c93906946d77a614a3d6946d40bd34b7ff86793",
+        "gold_canonical_sha256": "aab8658440d6e7dabdca1ce297df605aba1ec88abb94fc8170d16680637776d7",
+        "model_output_canonical_sha256": "618317ef3b010963aa2379f4d4d03a3f3f787588cbbb20a357117e9bccd74cdf",
+        "sections_and_gaps_canonical_sha256": "618317ef3b010963aa2379f4d4d03a3f3f787588cbbb20a357117e9bccd74cdf",
+        "rows": [
+          {
+            "row_id": "complaints:0",
+            "text": "Со вчерашнего утра в целом снова хуже.",
+            "complete_fact_ids": [
+              "overall_worse"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Сохранено повторное общее ухудшение со вчерашнего утра. По R2 общее ухудшение относится к анамнезу заболевания."
+          },
+          {
+            "row_id": "illness_history:0",
+            "text": "В выходные было полегче.",
+            "complete_fact_ids": [
+              "weekend_relief"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Сохранено улучшение в выходные."
+          },
+          {
+            "row_id": "illness_history:1",
+            "text": "Со вчерашнего утра в целом снова хуже.",
+            "complete_fact_ids": [
+              "overall_worse"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Сохранено повторное общее ухудшение со вчерашнего утра."
+          }
+        ],
+        "gaps": []
+      },
+      "metrics": {
+        "gold_facts": 2,
+        "output_rows": 3,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "required_placements": 2,
+        "covered_placements": 2,
+        "correct_placements": 2,
+        "predicted_placements": 3,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0,
+        "reviewer": "Codex",
+        "physician_reviewed": false
+      }
+    },
+    "g02": {
+      "review": {
+        "reviewer": "Codex",
+        "physician_reviewed": false,
+        "blinded": false,
+        "response_sha256": "4e5518440ada87407ffb7e3b3de78e685b803fac8d89540180e3dd9b2f38576f",
+        "gold_sha256": "daa6c5a35c19f29e04d73a4b96edd58b068a3e0fe8d472e32569e5fb2577b411",
+        "source_canonical_sha256": "b943844c5c6cddb817d3f29227b398f10f6f127ba04445ea62cc3408cff467e2",
+        "gold_canonical_sha256": "ed39571ab3a2652c45d484a446d11e45b1a347b9a6a1929b4d328eb56070f0ec",
+        "model_output_canonical_sha256": "3589342cfb373f222f98651e2cd905d24a1b0582d7b8fddeaffad32bb5316664",
+        "sections_and_gaps_canonical_sha256": "3589342cfb373f222f98651e2cd905d24a1b0582d7b8fddeaffad32bb5316664",
+        "rows": [
+          {
+            "row_id": "complaints:0",
+            "text": "С ночи мне в целом хуже, и сейчас сильно кружится голова.",
+            "complete_fact_ids": [
+              "worse_since_night",
+              "strong_dizziness"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Сохранено общее ухудшение с ночи. Сохранено сильное головокружение в текущий момент. По R2 общее ухудшение относится к анамнезу заболевания."
+          },
+          {
+            "row_id": "illness_history:0",
+            "text": "Вчера болело правое ухо, сейчас оно не болит.",
+            "complete_fact_ids": [
+              "right_ear_pain_yesterday",
+              "no_right_ear_pain_now"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Сохранены боль в правом ухе и время «вчера». Сохранено текущее отсутствие боли в правом ухе. Местоимение разрешается по той же реплике s2."
+          },
+          {
+            "row_id": "illness_history:1",
+            "text": "С ночи общее ухудшение состояния.",
+            "complete_fact_ids": [
+              "worse_since_night"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Сохранено общее ухудшение с ночи."
+          }
+        ],
+        "gaps": [
+          {
+            "index": 0,
+            "status_correct": true,
+            "topic_specific": true,
+            "evidence_complete": true,
+            "reason": "Частота и измерения не обсуждались. Сила и текущий момент переданы в жалобах."
+          },
+          {
+            "index": 1,
+            "status_correct": true,
+            "topic_specific": true,
+            "evidence_complete": true,
+            "reason": "Перечисленные сопутствующие симптомы не обсуждались."
+          },
+          {
+            "index": 2,
+            "status_correct": true,
+            "topic_specific": true,
+            "evidence_complete": true,
+            "reason": "Биографических сведений нет."
+          }
+        ]
+      },
+      "metrics": {
+        "gold_facts": 4,
+        "output_rows": 3,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "required_placements": 4,
+        "covered_placements": 4,
+        "correct_placements": 4,
+        "predicted_placements": 5,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0,
+        "reviewer": "Codex",
+        "physician_reviewed": false
+      }
+    },
+    "g03": {
+      "review": {
+        "reviewer": "Codex",
+        "physician_reviewed": false,
+        "blinded": false,
+        "response_sha256": "0efe8ab5dcadcee5f77b339b65f8aa66fd619d165898ab3f495c9a2db214ce5c",
+        "gold_sha256": "55a63c4672729ee59b788efca5ce78ecb577d176360c04eb3226564b5dcd1bec",
+        "source_canonical_sha256": "9cd5424c2a74ab839e48a70d46c12127c0fd79ffedc080b1b3368539c4b8094e",
+        "gold_canonical_sha256": "f8a1354b978f1398b876dae025e422bbf164b98117b63621360293a5d09baf15",
+        "model_output_canonical_sha256": "8d97cb7c2288c3296cbe2dd3838c3a9a21754527f756bb900ed05d60f5ca2d27",
+        "sections_and_gaps_canonical_sha256": "8d97cb7c2288c3296cbe2dd3838c3a9a21754527f756bb900ed05d60f5ca2d27",
+        "rows": [
+          {
+            "row_id": "life_history:0",
+            "text": "Работает диспетчером.",
+            "complete_fact_ids": [
+              "dispatcher"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Сохранена профессия диспетчера."
+          },
+          {
+            "row_id": "life_history:1",
+            "text": "Не знает, были ли у отца психические заболевания.",
+            "complete_fact_ids": [
+              "father_history_unknown"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 1,
+            "reason": "Сохранена неизвестность психических заболеваний отца. Тема восстанавливается только с вопросом s3, отсутствующим в цитатах."
+          }
+        ],
+        "gaps": [
+          {
+            "index": 0,
+            "status_correct": true,
+            "topic_specific": true,
+            "evidence_complete": false,
+            "reason": "Отец и предмет вопроса указаны в теме. Цитата ответа дана без уточняющего вопроса s3."
+          }
+        ]
+      },
+      "metrics": {
+        "gold_facts": 2,
+        "output_rows": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "required_placements": 2,
+        "covered_placements": 2,
+        "correct_placements": 2,
+        "predicted_placements": 2,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 1,
+        "reviewer": "Codex",
+        "physician_reviewed": false
+      }
+    }
+  },
+  "candidate": {
+    "g01": {
+      "review": {
+        "reviewer": "Codex",
+        "physician_reviewed": false,
+        "blinded": false,
+        "response_sha256": "99c3c1d0b36f873551fdb38cf03d24471d0674bf35eb9e1171354ee84aa5ab88",
+        "gold_sha256": "cbe27b1e2a7c0867472d8e3f414a662d2655825cbc1c01b070c1fdfba43967cb",
+        "source_canonical_sha256": "05489f434d96287474aec2702c93906946d77a614a3d6946d40bd34b7ff86793",
+        "gold_canonical_sha256": "aab8658440d6e7dabdca1ce297df605aba1ec88abb94fc8170d16680637776d7",
+        "model_output_canonical_sha256": "553fe58910e09dc23ffad4475009479e64acac0f7031293196803af5e6a135a2",
+        "sections_and_gaps_canonical_sha256": "0672fff1ddda6fe65c6c912ba14958e3f857bbd9261fa3170b87fbe5351b5fed",
+        "rows": [
+          {
+            "row_id": "illness_history:0",
+            "text": "В выходные общее самочувствие было лучше.",
+            "complete_fact_ids": [
+              "weekend_relief"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Сохранено улучшение в выходные."
+          },
+          {
+            "row_id": "illness_history:1",
+            "text": "Со вчерашнего утра общее самочувствие ухудшилось.",
+            "complete_fact_ids": [],
+            "partial_fact_ids": [
+              "overall_worse"
+            ],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Сохранено общее ухудшение со вчерашнего утра. В text потеряно «снова». Слово осталось только в evidence."
+          }
+        ],
+        "gaps": []
+      },
+      "metrics": {
+        "gold_facts": 2,
+        "output_rows": 2,
+        "tp": 1,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1": 0.5,
+        "required_placements": 2,
+        "covered_placements": 1,
+        "correct_placements": 1,
+        "predicted_placements": 1,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0,
+        "reviewer": "Codex",
+        "physician_reviewed": false
+      }
+    },
+    "g02": {
+      "review": {
+        "reviewer": "Codex",
+        "physician_reviewed": false,
+        "blinded": false,
+        "response_sha256": "aef13e649c5224a58b21945afbb7f7c5a3426b0fa7cbb9d42a7521828dcca170",
+        "gold_sha256": "daa6c5a35c19f29e04d73a4b96edd58b068a3e0fe8d472e32569e5fb2577b411",
+        "source_canonical_sha256": "b943844c5c6cddb817d3f29227b398f10f6f127ba04445ea62cc3408cff467e2",
+        "gold_canonical_sha256": "ed39571ab3a2652c45d484a446d11e45b1a347b9a6a1929b4d328eb56070f0ec",
+        "model_output_canonical_sha256": "55077db2537a199106af5068e8c3059b07aced3e7a3c1bd4a4567df37c80433c",
+        "sections_and_gaps_canonical_sha256": "2d2ccf29fa50a760d6ff1c7652a36ce16ff5b274c509fa566dd87b7b3d7c839c",
+        "rows": [
+          {
+            "row_id": "complaints:0",
+            "text": "Сейчас у пациента сильно кружится голова.",
+            "complete_fact_ids": [
+              "strong_dizziness"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Сохранено сильное головокружение в текущий момент."
+          },
+          {
+            "row_id": "illness_history:0",
+            "text": "С ночи общее самочувствие ухудшилось.",
+            "complete_fact_ids": [
+              "worse_since_night"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Сохранено общее ухудшение с ночи."
+          },
+          {
+            "row_id": "illness_history:1",
+            "text": "Вчера у пациента болело правое ухо.",
+            "complete_fact_ids": [
+              "right_ear_pain_yesterday"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Сохранены боль в правом ухе и время «вчера»."
+          },
+          {
+            "row_id": "illness_history:2",
+            "text": "Сейчас правое ухо не болит.",
+            "complete_fact_ids": [
+              "no_right_ear_pain_now"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Сохранено текущее отсутствие боли в правом ухе. Местоимение разрешается по той же реплике s2."
+          }
+        ],
+        "gaps": []
+      },
+      "metrics": {
+        "gold_facts": 4,
+        "output_rows": 4,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "required_placements": 4,
+        "covered_placements": 4,
+        "correct_placements": 4,
+        "predicted_placements": 4,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0,
+        "reviewer": "Codex",
+        "physician_reviewed": false
+      }
+    },
+    "g03": {
+      "review": {
+        "reviewer": "Codex",
+        "physician_reviewed": false,
+        "blinded": false,
+        "response_sha256": "2a1ef82529c8f026e06251d089d561a2cd939626e45de0a9bbc0f149021b4bc6",
+        "gold_sha256": "55a63c4672729ee59b788efca5ce78ecb577d176360c04eb3226564b5dcd1bec",
+        "source_canonical_sha256": "9cd5424c2a74ab839e48a70d46c12127c0fd79ffedc080b1b3368539c4b8094e",
+        "gold_canonical_sha256": "f8a1354b978f1398b876dae025e422bbf164b98117b63621360293a5d09baf15",
+        "model_output_canonical_sha256": "70e6b2bb02584924d97f65490599664a876f8908d74940138645a82323b10eec",
+        "sections_and_gaps_canonical_sha256": "44ba4acfc48ad7da38ca620b1ba9aba293765adb94494aac0ccb60cdfa8a14a6",
+        "rows": [
+          {
+            "row_id": "life_history:0",
+            "text": "Пациент работает диспетчером.",
+            "complete_fact_ids": [
+              "dispatcher"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Сохранена профессия диспетчера."
+          },
+          {
+            "row_id": "life_history:1",
+            "text": "Пациент не знает, были ли у отца психические заболевания.",
+            "complete_fact_ids": [
+              "father_history_unknown"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 1,
+            "reason": "Сохранена неизвестность психических заболеваний отца. Тема восстанавливается только с вопросом s3, отсутствующим в цитатах."
+          }
+        ],
+        "gaps": [
+          {
+            "index": 0,
+            "status_correct": true,
+            "topic_specific": false,
+            "evidence_complete": false,
+            "reason": "Тема обобщена до семейного анамнеза, отец не указан. Цитата ответа дана без уточняющего вопроса s3."
+          }
+        ]
+      },
+      "metrics": {
+        "gold_facts": 2,
+        "output_rows": 2,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "required_placements": 2,
+        "covered_placements": 2,
+        "correct_placements": 2,
+        "predicted_placements": 2,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 1,
+        "reviewer": "Codex",
+        "physician_reviewed": false
+      }
+    }
+  }
+}

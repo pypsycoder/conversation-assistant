@@ -1,0 +1,491 @@
+{
+  "control": {
+    "g01": {
+      "model_output": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Со вчерашнего утра в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "со вчерашнего утра в целом снова хуже."
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "В выходные было полегче.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "В выходные было полегче"
+                }
+              ]
+            },
+            {
+              "text": "Со вчерашнего утра в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "со вчерашнего утра в целом снова хуже."
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "sections_and_gaps": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Со вчерашнего утра в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "со вчерашнего утра в целом снова хуже."
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "В выходные было полегче.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "В выходные было полегче"
+                }
+              ]
+            },
+            {
+              "text": "Со вчерашнего утра в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "со вчерашнего утра в целом снова хуже."
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      }
+    },
+    "g02": {
+      "model_output": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "С ночи мне в целом хуже, и сейчас сильно кружится голова.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С ночи мне в целом хуже, и сейчас сильно кружится голова."
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Вчера болело правое ухо, сейчас оно не болит.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Вчера болело правое ухо, сейчас оно не болит."
+                }
+              ]
+            },
+            {
+              "text": "С ночи общее ухудшение состояния.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С ночи мне в целом хуже"
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": [
+          {
+            "topic": "измерения и частота головокружения",
+            "status": "not_discussed",
+            "evidence": []
+          },
+          {
+            "topic": "сопутствующие симптомы (тошнота, рвота, снижение слуха, выделения из уха, температура)",
+            "status": "not_discussed",
+            "evidence": []
+          },
+          {
+            "topic": "анамнез жизни (возраст, профессии, семейный и соматический анамнез, употребление веществ)",
+            "status": "not_discussed",
+            "evidence": []
+          }
+        ]
+      },
+      "sections_and_gaps": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "С ночи мне в целом хуже, и сейчас сильно кружится голова.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С ночи мне в целом хуже, и сейчас сильно кружится голова."
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Вчера болело правое ухо, сейчас оно не болит.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Вчера болело правое ухо, сейчас оно не болит."
+                }
+              ]
+            },
+            {
+              "text": "С ночи общее ухудшение состояния.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С ночи мне в целом хуже"
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": [
+          {
+            "topic": "измерения и частота головокружения",
+            "status": "not_discussed",
+            "evidence": []
+          },
+          {
+            "topic": "сопутствующие симптомы (тошнота, рвота, снижение слуха, выделения из уха, температура)",
+            "status": "not_discussed",
+            "evidence": []
+          },
+          {
+            "topic": "анамнез жизни (возраст, профессии, семейный и соматический анамнез, употребление веществ)",
+            "status": "not_discussed",
+            "evidence": []
+          }
+        ]
+      }
+    },
+    "g03": {
+      "model_output": {
+        "sections": {
+          "complaints": [],
+          "illness_history": [],
+          "life_history": [
+            {
+              "text": "Работает диспетчером.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Я диспетчер."
+                }
+              ]
+            },
+            {
+              "text": "Не знает, были ли у отца психические заболевания.",
+              "evidence": [
+                {
+                  "segment_id": "s4",
+                  "quote": "Я не знаю, были ли у него такие болезни."
+                }
+              ]
+            }
+          ]
+        },
+        "gaps": [
+          {
+            "topic": "Психические заболевания у отца",
+            "status": "patient_does_not_know",
+            "evidence": [
+              {
+                "segment_id": "s4",
+                "quote": "Я не знаю, были ли у него такие болезни."
+              }
+            ]
+          }
+        ]
+      },
+      "sections_and_gaps": {
+        "sections": {
+          "complaints": [],
+          "illness_history": [],
+          "life_history": [
+            {
+              "text": "Работает диспетчером.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Я диспетчер."
+                }
+              ]
+            },
+            {
+              "text": "Не знает, были ли у отца психические заболевания.",
+              "evidence": [
+                {
+                  "segment_id": "s4",
+                  "quote": "Я не знаю, были ли у него такие болезни."
+                }
+              ]
+            }
+          ]
+        },
+        "gaps": [
+          {
+            "topic": "Психические заболевания у отца",
+            "status": "patient_does_not_know",
+            "evidence": [
+              {
+                "segment_id": "s4",
+                "quote": "Я не знаю, были ли у него такие болезни."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "candidate": {
+    "g01": {
+      "model_output": {
+        "assertions": [
+          {
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "В выходные было полегче"
+              }
+            ],
+            "text": "В выходные общее самочувствие было лучше.",
+            "kind": "general_course"
+          },
+          {
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "со вчерашнего утра в целом снова хуже"
+              }
+            ],
+            "text": "Со вчерашнего утра общее самочувствие ухудшилось.",
+            "kind": "general_course"
+          }
+        ],
+        "gaps": []
+      },
+      "sections_and_gaps": {
+        "sections": {
+          "complaints": [],
+          "illness_history": [
+            {
+              "text": "В выходные общее самочувствие было лучше.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "В выходные было полегче"
+                }
+              ]
+            },
+            {
+              "text": "Со вчерашнего утра общее самочувствие ухудшилось.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "со вчерашнего утра в целом снова хуже"
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      }
+    },
+    "g02": {
+      "model_output": {
+        "assertions": [
+          {
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "С ночи мне в целом хуже"
+              }
+            ],
+            "text": "С ночи общее самочувствие ухудшилось.",
+            "kind": "general_course"
+          },
+          {
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "сейчас сильно кружится голова"
+              }
+            ],
+            "text": "Сейчас у пациента сильно кружится голова.",
+            "kind": "current_difficulty"
+          },
+          {
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Вчера болело правое ухо"
+              }
+            ],
+            "text": "Вчера у пациента болело правое ухо.",
+            "kind": "symptom_course"
+          },
+          {
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "сейчас оно не болит"
+              }
+            ],
+            "text": "Сейчас правое ухо не болит.",
+            "kind": "symptom_course"
+          }
+        ],
+        "gaps": []
+      },
+      "sections_and_gaps": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас у пациента сильно кружится голова.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "сейчас сильно кружится голова"
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "С ночи общее самочувствие ухудшилось.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С ночи мне в целом хуже"
+                }
+              ]
+            },
+            {
+              "text": "Вчера у пациента болело правое ухо.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Вчера болело правое ухо"
+                }
+              ]
+            },
+            {
+              "text": "Сейчас правое ухо не болит.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "сейчас оно не болит"
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      }
+    },
+    "g03": {
+      "model_output": {
+        "assertions": [
+          {
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Я диспетчер."
+              }
+            ],
+            "text": "Пациент работает диспетчером.",
+            "kind": "biography"
+          },
+          {
+            "evidence": [
+              {
+                "segment_id": "s4",
+                "quote": "Я не знаю, были ли у него такие болезни."
+              }
+            ],
+            "text": "Пациент не знает, были ли у отца психические заболевания.",
+            "kind": "biography"
+          }
+        ],
+        "gaps": [
+          {
+            "topic": "Семейный анамнез психических заболеваний",
+            "status": "patient_does_not_know",
+            "evidence": [
+              {
+                "segment_id": "s4",
+                "quote": "Я не знаю, были ли у него такие болезни."
+              }
+            ]
+          }
+        ]
+      },
+      "sections_and_gaps": {
+        "sections": {
+          "complaints": [],
+          "illness_history": [],
+          "life_history": [
+            {
+              "text": "Пациент работает диспетчером.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Я диспетчер."
+                }
+              ]
+            },
+            {
+              "text": "Пациент не знает, были ли у отца психические заболевания.",
+              "evidence": [
+                {
+                  "segment_id": "s4",
+                  "quote": "Я не знаю, были ли у него такие болезни."
+                }
+              ]
+            }
+          ]
+        },
+        "gaps": [
+          {
+            "topic": "Семейный анамнез психических заболеваний",
+            "status": "patient_does_not_know",
+            "evidence": [
+              {
+                "segment_id": "s4",
+                "quote": "Я не знаю, были ли у него такие болезни."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
