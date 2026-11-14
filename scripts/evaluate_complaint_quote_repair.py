@@ -40,7 +40,7 @@ def materialize(sections, gaps):
                 "partial_fact_ids": row["partial"],
                 "unsupported_atoms": 0,
                 "polarity_errors": 0,
-                "temporal_errors": 0,
+                "temporal_errors": row.get("temporal_errors", 0),
                 "source_errors": 0,
             })
     return result, review
