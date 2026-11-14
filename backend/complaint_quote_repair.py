@@ -61,6 +61,7 @@ def history_match(clause, match, segment, history, *, mixed=False):
     allowed = {sentence_text(clause), f"{time} общее самочувствие {again}ухудшилось"}
     if mixed:
         allowed.add(f"{time} общее самочувствие {again}хуже")
+        allowed.add(f"{time} {again}стало хуже в целом")
     if not again:
         allowed.add(f"{time} общее ухудшение состояния")
     for index, row in enumerate(history):
