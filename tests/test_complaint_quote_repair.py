@@ -24,3 +24,20 @@ class ComplaintQuoteRepairTests(unittest.TestCase):
             with self.subTest(text=text):
                 source = {"synthetic": True, "segments": [{"id": "s2", "role": "patient", "text": text}]}
                 self.assertEqual(repair_complaints(result, source), (result, []))
+
+    def test_state_at_a_time_is_not_replaced_by_a_change_at_that_time(self):
+        quote = "Вчера мне в целом хуже, и сейчас болит горло."
+        source = {"synthetic": True, "segments": [{
+            "id": "s2",
+            "role": "patient",
+            "text": f"Позавчера мне стало хуже. {quote} С позавчера хуже не становилось.",
+        }]}
+        original = {"sections": {
+            "complaints": [{"text": quote, "evidence": [{"segment_id": "s2", "quote": quote}]}],
+            "illness_history": [{
+                "text": "Вчера стало хуже в целом.",
+                "evidence": [{"segment_id": "s2", "quote": "Вчера мне в целом хуже"}],
+            }],
+            "life_history": [],
+        }, "gaps": []}
+        self.assertEqual(repair_complaints(original, source), (original, []))
