@@ -1,0 +1,47 @@
+{
+  "id": "b06",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "course",
+      "meaning": "С утра общее самочувствие хуже.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "ring",
+      "meaning": "Сейчас сильно звенит в ушах.",
+      "required_sections": [
+        "complaints"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "work",
+      "meaning": "Работает переводчиком.",
+      "required_sections": [
+        "life_history"
+      ],
+      "allowed_sections": [
+        "life_history"
+      ],
+      "source_segment_ids": [
+        "s4"
+      ]
+    }
+  ]
+}

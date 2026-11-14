@@ -1,0 +1,47 @@
+{
+  "id": "b02",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "course",
+      "meaning": "Со вчерашнего вечера общее самочувствие хуже.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "throat",
+      "meaning": "Сейчас сильно болит горло.",
+      "required_sections": [
+        "complaints"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "no_past_pain",
+      "meaning": "До этого горло не болело.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    }
+  ]
+}
