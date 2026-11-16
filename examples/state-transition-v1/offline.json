@@ -1,0 +1,341 @@
+[
+  {
+    "id": "o01",
+    "source": {
+      "id": "o01",
+      "synthetic": true,
+      "text_revision": 1,
+      "timing_origin": "synthetic_order_not_audio",
+      "segments": [
+        {
+          "id": "s1",
+          "role": "doctor",
+          "text": "Как менялось самочувствие?",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": "s2",
+          "role": "patient",
+          "text": "Позавчера мне стало хуже. Вчера мне в целом хуже, и сейчас сильно болит горло. С позавчера дальше не ухудшалось.",
+          "start": 1,
+          "end": 2
+        }
+      ]
+    },
+    "result": {
+      "sections": {
+        "complaints": [
+          {
+            "text": "Вчера мне в целом хуже, и сейчас сильно болит горло.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Вчера мне в целом хуже, и сейчас сильно болит горло."
+              }
+            ]
+          }
+        ],
+        "illness_history": [
+          {
+            "text": "Вчера общее самочувствие ухудшилось.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Вчера мне в целом хуже"
+              }
+            ]
+          }
+        ],
+        "life_history": []
+      },
+      "gaps": []
+    },
+    "expected_current_edit": true,
+    "review": "Состояние в указанный день превращено в событие в этот день."
+  },
+  {
+    "id": "o02",
+    "source": {
+      "id": "o02",
+      "synthetic": true,
+      "text_revision": 1,
+      "timing_origin": "synthetic_order_not_audio",
+      "segments": [
+        {
+          "id": "s1",
+          "role": "doctor",
+          "text": "Как менялось самочувствие?",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": "s2",
+          "role": "patient",
+          "text": "С вечера мне в целом хуже, и сейчас сильно болит горло. Когда стало хуже, сказать не могу.",
+          "start": 1,
+          "end": 2
+        }
+      ]
+    },
+    "result": {
+      "sections": {
+        "complaints": [
+          {
+            "text": "С вечера мне в целом хуже, и сейчас сильно болит горло.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "С вечера мне в целом хуже, и сейчас сильно болит горло."
+              }
+            ]
+          }
+        ],
+        "illness_history": [
+          {
+            "text": "С вечера общее ухудшение состояния.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "С вечера мне в целом хуже"
+              }
+            ]
+          }
+        ],
+        "life_history": []
+      },
+      "gaps": []
+    },
+    "expected_current_edit": true,
+    "review": "Имя «ухудшение» двусмысленно. Оно может обозначать состояние или начало ухудшения."
+  },
+  {
+    "id": "o03",
+    "source": {
+      "id": "o03",
+      "synthetic": true,
+      "text_revision": 1,
+      "timing_origin": "synthetic_order_not_audio",
+      "segments": [
+        {
+          "id": "s1",
+          "role": "doctor",
+          "text": "Как менялось самочувствие?",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": "s2",
+          "role": "patient",
+          "text": "Сегодня мне в целом хуже, и сейчас сильно болит горло.",
+          "start": 1,
+          "end": 2
+        }
+      ]
+    },
+    "result": {
+      "sections": {
+        "complaints": [
+          {
+            "text": "Сегодня мне в целом хуже, и сейчас сильно болит горло.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сегодня мне в целом хуже, и сейчас сильно болит горло."
+              }
+            ]
+          }
+        ],
+        "illness_history": [
+          {
+            "text": "Сегодня общее самочувствие хуже.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сегодня мне в целом хуже"
+              }
+            ]
+          }
+        ],
+        "life_history": []
+      },
+      "gaps": []
+    },
+    "expected_current_edit": true,
+    "review": "Новый переход не утверждается. Состояние и день сохранены."
+  },
+  {
+    "id": "o04",
+    "source": {
+      "id": "o04",
+      "synthetic": true,
+      "text_revision": 1,
+      "timing_origin": "synthetic_order_not_audio",
+      "segments": [
+        {
+          "id": "s1",
+          "role": "doctor",
+          "text": "Как менялось самочувствие?",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": "s2",
+          "role": "patient",
+          "text": "Сегодня мне в целом снова хуже, и сейчас сильно болит горло.",
+          "start": 1,
+          "end": 2
+        }
+      ]
+    },
+    "result": {
+      "sections": {
+        "complaints": [
+          {
+            "text": "Сегодня мне в целом снова хуже, и сейчас сильно болит горло.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сегодня мне в целом снова хуже, и сейчас сильно болит горло."
+              }
+            ]
+          }
+        ],
+        "illness_history": [
+          {
+            "text": "Сегодня общее самочувствие хуже.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сегодня мне в целом снова хуже"
+              }
+            ]
+          }
+        ],
+        "life_history": []
+      },
+      "gaps": []
+    },
+    "expected_current_edit": false,
+    "review": "Потеряно «снова», повтор не подтверждён."
+  },
+  {
+    "id": "o05",
+    "source": {
+      "id": "o05",
+      "synthetic": true,
+      "text_revision": 1,
+      "timing_origin": "synthetic_order_not_audio",
+      "segments": [
+        {
+          "id": "s1",
+          "role": "doctor",
+          "text": "Как менялось самочувствие?",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": "s2",
+          "role": "patient",
+          "text": "С ночи мне в целом хуже, и сейчас сильно болит горло. Не знаю, когда началось ухудшение.",
+          "start": 1,
+          "end": 2
+        }
+      ]
+    },
+    "result": {
+      "sections": {
+        "complaints": [
+          {
+            "text": "С ночи мне в целом хуже, и сейчас сильно болит горло.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "С ночи мне в целом хуже, и сейчас сильно болит горло."
+              }
+            ]
+          }
+        ],
+        "illness_history": [
+          {
+            "text": "С ночи общее самочувствие ухудшилось.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "С ночи мне в целом хуже"
+              }
+            ]
+          }
+        ],
+        "life_history": []
+      },
+      "gaps": []
+    },
+    "expected_current_edit": true,
+    "review": "Период состояния принят за начало, хотя точное начало прямо неизвестно."
+  },
+  {
+    "id": "o06",
+    "source": {
+      "id": "o06",
+      "synthetic": true,
+      "text_revision": 1,
+      "timing_origin": "synthetic_order_not_audio",
+      "segments": [
+        {
+          "id": "s1",
+          "role": "doctor",
+          "text": "Как менялось самочувствие?",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": "s2",
+          "role": "patient",
+          "text": "Сегодня после обеда мне снова стало хуже в целом. Сейчас сильно болит горло.",
+          "start": 1,
+          "end": 2
+        }
+      ]
+    },
+    "result": {
+      "sections": {
+        "complaints": [
+          {
+            "text": "Сегодня после обеда мне снова стало хуже в целом.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сегодня после обеда мне снова стало хуже в целом."
+              }
+            ]
+          },
+          {
+            "text": "Сейчас сильно болит горло.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сейчас сильно болит горло."
+              }
+            ]
+          }
+        ],
+        "illness_history": [
+          {
+            "text": "Сегодня после обеда мне снова стало хуже в целом.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сегодня после обеда мне снова стало хуже в целом."
+              }
+            ]
+          }
+        ],
+        "life_history": []
+      },
+      "gaps": []
+    },
+    "expected_current_edit": true,
+    "review": "Дословно сохранены переход, время и повторяемость."
+  }
+]

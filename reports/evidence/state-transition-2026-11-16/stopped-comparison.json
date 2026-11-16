@@ -1,0 +1,359 @@
+{
+  "protocol_commit": "2ae5712",
+  "model_revision": "GigaChat-3-Ultra:32.9.16.9",
+  "planned_pairs": 3,
+  "completed_pairs": 0,
+  "control_calls": 2,
+  "candidate_calls": 0,
+  "tokens": 4053,
+  "api_seconds": 12.361341599999946,
+  "runner_seconds": 15.140999999999963,
+  "decision": "comparison_stopped_on_non_verbatim_quote",
+  "cases": [
+    {
+      "id": "k01",
+      "accepted_by_runner": true,
+      "gold_canonical_sha256": "70e025cc9dfb72b7b90f7e057f2a1659cfb2ce5f83ad1b68a00f4cb618570d26",
+      "source_canonical_sha256": "fa74ddb329510edda39c4527020d505f6f5d67719a1a06819be0d575aac68736",
+      "result": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сильно болит горло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "В понедельник стало хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "В понедельник мне стало хуже."
+                }
+              ]
+            },
+            {
+              "text": "Во вторник самочувствие было так же плохо, как в понедельник.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Во вторник мне в целом было так же плохо, как в понедельник."
+                }
+              ]
+            },
+            {
+              "text": "Во вторник нового ухудшения не было.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Во вторник нового ухудшения не было."
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": [
+          {
+            "topic": "Динамика боли в горле по дням",
+            "status": "not_discussed",
+            "evidence": []
+          }
+        ]
+      },
+      "review": {
+        "reviewer": "Codex",
+        "blinded": false,
+        "physician_reviewed": false,
+        "result_canonical_sha256": "2327185f7761e3bb42ccb82668c095233a87cf8655816707371849886a4ba5cb",
+        "rows": [
+          {
+            "row_id": "complaints:0",
+            "text": "Сильно болит горло.",
+            "complete_fact_ids": [
+              "throat"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "temporal_errors": 0,
+            "polarity_errors": 0,
+            "source_errors": 0,
+            "reason": "Сохранена сильная боль в горле сейчас. Время следует из раздела и цитаты."
+          },
+          {
+            "row_id": "illness_history:0",
+            "text": "В понедельник стало хуже.",
+            "complete_fact_ids": [
+              "monday_transition"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "temporal_errors": 0,
+            "polarity_errors": 0,
+            "source_errors": 0,
+            "reason": "Переход к худшему состоянию в понедельник."
+          },
+          {
+            "row_id": "illness_history:1",
+            "text": "Во вторник самочувствие было так же плохо, как в понедельник.",
+            "complete_fact_ids": [
+              "tuesday_state"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "temporal_errors": 0,
+            "polarity_errors": 0,
+            "source_errors": 0,
+            "reason": "Состояние во вторник такое же, как в понедельник."
+          },
+          {
+            "row_id": "illness_history:2",
+            "text": "Во вторник нового ухудшения не было.",
+            "complete_fact_ids": [
+              "no_tuesday_transition"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "temporal_errors": 0,
+            "polarity_errors": 0,
+            "source_errors": 0,
+            "reason": "Новое ухудшение во вторник отрицается."
+          }
+        ],
+        "gaps": [
+          {
+            "index": 0,
+            "correct": true,
+            "reason": "Динамика боли в горле по дням не обсуждалась."
+          }
+        ]
+      },
+      "metrics": {
+        "gold_facts": 4,
+        "output_rows": 4,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "required_placements": 4,
+        "covered_placements": 4,
+        "correct_placements": 4,
+        "predicted_placements": 4,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0,
+        "reviewer": "Codex",
+        "physician_reviewed": false
+      },
+      "sections": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 0
+        },
+        "illness_history": {
+          "required": 3,
+          "covered": 3,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      },
+      "provenance_errors": [],
+      "usage": {
+        "prompt_tokens": 1635,
+        "completion_tokens": 379,
+        "total_tokens": 2014,
+        "precached_prompt_tokens": 0
+      },
+      "api_seconds": 6.233827499999961
+    },
+    {
+      "id": "k02",
+      "accepted_by_runner": false,
+      "gold_canonical_sha256": "f48e2a3563faaf5ff68de7a6b9a011087177386170c8746c91a050b559ef3d81",
+      "source_canonical_sha256": "9451c26c42e7206f9c0b347cd28f7f13404ab24fcad57fc5868d136bfe370fb4",
+      "result": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "С ночи мне в целом хуже. Сейчас сильно кружится голова.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С ночи мне в целом хуже. Сейчас сильно кружится голова."
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Ухудшение самочувствия с ночи.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С ночи мне в целом хуже."
+                }
+              ]
+            },
+            {
+              "text": "Не помнит, когда именно началось ухудшение.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Не помню, когда именно началось ухудшение."
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": [
+          {
+            "topic": "точное время начала ухудшения",
+            "status": "patient_does_not_know",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Не помню, когда именно началось ухудшение."
+              }
+            ]
+          },
+          {
+            "topic": "динамика до ночи (как было накануне)",
+            "status": "not_discussed",
+            "evidence": []
+          }
+        ]
+      },
+      "review": {
+        "reviewer": "Codex",
+        "blinded": false,
+        "physician_reviewed": false,
+        "result_canonical_sha256": "feb60d4ee9f0ed561acae6920cc1de4f70ae5c46eebf567305b4dd3ee36fec2f",
+        "rows": [
+          {
+            "row_id": "complaints:0",
+            "text": "С ночи мне в целом хуже. Сейчас сильно кружится голова.",
+            "complete_fact_ids": [
+              "overnight_state",
+              "dizziness"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "temporal_errors": 0,
+            "polarity_errors": 0,
+            "source_errors": 1,
+            "reason": "Оба смысла есть в исходной реплике, общее ухудшение лишнее в жалобах. Цитата склеивает начало и конец реплики, пропуская предложение о неизвестном начале."
+          },
+          {
+            "row_id": "illness_history:0",
+            "text": "Ухудшение самочувствия с ночи.",
+            "complete_fact_ids": [
+              "overnight_state"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "temporal_errors": 0,
+            "polarity_errors": 0,
+            "source_errors": 0,
+            "reason": "Состояние с ночи отражено. Соседняя строка сохраняет неизвестность начала, поэтому начало не датируется однозначно."
+          },
+          {
+            "row_id": "illness_history:1",
+            "text": "Не помнит, когда именно началось ухудшение.",
+            "complete_fact_ids": [
+              "onset_unknown"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "temporal_errors": 0,
+            "polarity_errors": 0,
+            "source_errors": 0,
+            "reason": "Неизвестность точного начала сохранена."
+          }
+        ],
+        "gaps": [
+          {
+            "index": 0,
+            "correct": true,
+            "reason": "Неизвестность точного начала подтверждена дословно."
+          },
+          {
+            "index": 1,
+            "correct": true,
+            "reason": "Состояние накануне не описано."
+          }
+        ]
+      },
+      "metrics": {
+        "gold_facts": 3,
+        "output_rows": 3,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "required_placements": 3,
+        "covered_placements": 3,
+        "correct_placements": 3,
+        "predicted_placements": 4,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 1,
+        "reviewer": "Codex",
+        "physician_reviewed": false
+      },
+      "sections": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 1
+        },
+        "illness_history": {
+          "required": 2,
+          "covered": 2,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      },
+      "provenance_errors": [
+        {
+          "path": "sections.complaints.0",
+          "message": "unknown segment or non-verbatim quote"
+        },
+        {
+          "path": "sections.complaints.0",
+          "message": "no patient support"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 1623,
+        "completion_tokens": 416,
+        "total_tokens": 2039,
+        "precached_prompt_tokens": 0
+      },
+      "api_seconds": 6.127514099999985
+    }
+  ]
+}

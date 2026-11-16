@@ -1,0 +1,47 @@
+{
+  "id": "k03",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "saturday_transition",
+      "meaning": "В субботу после обеда снова стало хуже.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "evening_state",
+      "meaning": "К вечеру было всё так же плохо.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "tremor",
+      "meaning": "Сейчас дрожат руки.",
+      "required_sections": [
+        "complaints"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    }
+  ]
+}

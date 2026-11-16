@@ -1,0 +1,108 @@
+{
+  "exploratory": true,
+  "model_calls": 0,
+  "strategy": "Retain literal and state-preserving history matches",
+  "new_audit": [
+    {
+      "id": "o01",
+      "before_edits": 1,
+      "strict_edits": 0
+    },
+    {
+      "id": "o02",
+      "before_edits": 1,
+      "strict_edits": 0
+    },
+    {
+      "id": "o03",
+      "before_edits": 1,
+      "strict_edits": 1
+    },
+    {
+      "id": "o04",
+      "before_edits": 0,
+      "strict_edits": 0
+    },
+    {
+      "id": "o05",
+      "before_edits": 1,
+      "strict_edits": 0
+    },
+    {
+      "id": "o06",
+      "before_edits": 1,
+      "strict_edits": 1
+    }
+  ],
+  "prior_diagnostics": [
+    {
+      "fixtures": "examples/complaint-quote-repair-v1/cases.json",
+      "sample": 10,
+      "current_edits": 2,
+      "strict_edits": 0,
+      "lost_edits": [
+        {
+          "id": "q01",
+          "existing_edits": [
+            {
+              "complaint_index": 0,
+              "illness_history_index": 0,
+              "original": {
+                "text": "Со вчерашнего утра мне в целом снова хуже.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Со вчерашнего утра мне в целом снова хуже."
+                  }
+                ]
+              },
+              "replacement": null
+            }
+          ]
+        },
+        {
+          "id": "q02",
+          "existing_edits": [
+            {
+              "complaint_index": 0,
+              "illness_history_index": 0,
+              "original": {
+                "text": "С ночи в целом хуже, и сейчас сильно кружится голова.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "С ночи в целом хуже, и сейчас сильно кружится голова."
+                  }
+                ]
+              },
+              "replacement": {
+                "text": "Сейчас сильно кружится голова.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "сейчас сильно кружится голова."
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fixtures": "examples/literal-worsening-repeats-v1/cases.json",
+      "sample": 12,
+      "current_edits": 3,
+      "strict_edits": 3,
+      "lost_edits": []
+    },
+    {
+      "fixtures": "examples/mixed-complaint-paraphrase-v1/offline.json",
+      "sample": 8,
+      "current_edits": 2,
+      "strict_edits": 2,
+      "lost_edits": []
+    }
+  ],
+  "elapsed_seconds": 0.024698899999975765
+}
