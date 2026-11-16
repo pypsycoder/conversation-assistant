@@ -1,0 +1,46 @@
+{
+  "reviewer": "Codex",
+  "physician_reviewed": false,
+  "api_calls": 0,
+  "cases": [
+    {
+      "id": "q01",
+      "source_canonical_sha256": "5e581cffb7bffda4947a89a4074d628345a2a2aee260242b6c71ebf059405647",
+      "history_row": {
+        "text": "Со вчерашнего утра общее самочувствие снова ухудшилось.",
+        "evidence": [
+          {
+            "segment_id": "s2",
+            "quote": "Со вчерашнего утра мне в целом снова хуже"
+          }
+        ],
+        "complete": [
+          "course"
+        ],
+        "partial": []
+      },
+      "judgment": "unsupported_transition",
+      "reason": "«Со вчерашнего утра мне в целом снова хуже» описывает период состояния. «Снова ухудшилось» добавляет повторный переход и привязывает его к началу периода. Отдельного сообщения о переходе нет."
+    },
+    {
+      "id": "q02",
+      "source_canonical_sha256": "9ec5ec9f7dc76071ef73d82b328c8eb2a5ff4a2cd3f9f96cc9baf7833633b112",
+      "history_row": {
+        "text": "С ночи общее ухудшение состояния.",
+        "evidence": [
+          {
+            "segment_id": "s2",
+            "quote": "С ночи в целом хуже"
+          }
+        ],
+        "complete": [
+          "course"
+        ],
+        "partial": []
+      },
+      "judgment": "ambiguous_nominalization",
+      "reason": "«С ночи общее ухудшение состояния» может описывать состояние или переход. Цитата достаточна для состояния с ночи. Начало перехода остаётся неподтверждённым."
+    }
+  ],
+  "decision": "Treat both expressions as insufficient to replace the state without additional support. Keep frozen historical scores as originally reported."
+}

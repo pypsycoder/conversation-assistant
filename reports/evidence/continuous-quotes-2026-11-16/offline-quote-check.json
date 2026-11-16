@@ -1,0 +1,113 @@
+{
+  "cases": [
+    {
+      "id": "j01",
+      "split_result": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас шумит в левом ухе и сильно болит правое ухо.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас шумит в левом ухе."
+                },
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас ещё сильно болит правое ухо."
+                }
+              ]
+            }
+          ],
+          "illness_history": [],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "joined_result": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас шумит в левом ухе и сильно болит правое ухо.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас шумит в левом ухе. Сейчас ещё сильно болит правое ухо."
+                }
+              ]
+            }
+          ],
+          "illness_history": [],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "joined_errors": [
+        {
+          "path": "sections.complaints.0",
+          "message": "unknown segment or non-verbatim quote"
+        },
+        {
+          "path": "sections.complaints.0",
+          "message": "no patient support"
+        }
+      ],
+      "scope": "Only one constructed row checked for literal validity, not dialogue completeness."
+    },
+    {
+      "id": "j02",
+      "split_result": {
+        "sections": {
+          "complaints": [],
+          "illness_history": [
+            {
+              "text": "В воскресенье вечером принял таблетку, через час боль стала слабее.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "В воскресенье вечером принял таблетку."
+                },
+                {
+                  "segment_id": "s2",
+                  "quote": "Через час боль стала слабее."
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "joined_result": {
+        "sections": {
+          "complaints": [],
+          "illness_history": [
+            {
+              "text": "В воскресенье вечером принял таблетку, через час боль стала слабее.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "В воскресенье вечером принял таблетку. Через час боль стала слабее."
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "joined_errors": [
+        {
+          "path": "sections.illness_history.0",
+          "message": "unknown segment or non-verbatim quote"
+        },
+        {
+          "path": "sections.illness_history.0",
+          "message": "no patient support"
+        }
+      ],
+      "scope": "Only one constructed row checked for literal validity, not dialogue completeness."
+    }
+  ],
+  "api_calls": 0
+}

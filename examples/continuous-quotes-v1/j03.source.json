@@ -1,0 +1,22 @@
+{
+  "id": "j03",
+  "synthetic": true,
+  "text_revision": 1,
+  "timing_origin": "synthetic_order_not_audio",
+  "segments": [
+    {
+      "id": "s1",
+      "role": "doctor",
+      "text": "Как менялась боль в животе?",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "s2",
+      "role": "patient",
+      "text": "Утром живот болел сильно, к обеду боль стихла. Вечером боль не вернулась.",
+      "start": 1,
+      "end": 2
+    }
+  ]
+}
