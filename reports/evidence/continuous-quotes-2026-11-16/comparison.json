@@ -1,0 +1,977 @@
+{
+  "protocol_commit": "5f1de7f",
+  "model_revision": "GigaChat-3-Ultra:32.9.16.9",
+  "pairs": 3,
+  "decision": "candidate_rejected_no_literal_gain_and_semantic_regression",
+  "arms": {
+    "control": {
+      "cases": [
+        {
+          "id": "j01",
+          "source_canonical_sha256": "e015d7c487c4621768bc7b903d4b3e085b014e0ddc930701365d8bb807849045",
+          "gold_canonical_sha256": "177abbe88fa531a249bbf1771d1536607adc487d967de96f4d1b26f793fd4552",
+          "result": {
+            "sections": {
+              "complaints": [
+                {
+                  "text": "Шум в левом ухе.",
+                  "evidence": [
+                    {
+                      "segment_id": "s2",
+                      "quote": "Сейчас шумит в левом ухе."
+                    }
+                  ]
+                },
+                {
+                  "text": "Сильная боль в правом ухе.",
+                  "evidence": [
+                    {
+                      "segment_id": "s2",
+                      "quote": "Сейчас ещё сильно болит правое ухо."
+                    }
+                  ]
+                }
+              ],
+              "illness_history": [
+                {
+                  "text": "В настоящее время нет головокружения.",
+                  "evidence": [
+                    {
+                      "segment_id": "s2",
+                      "quote": "Голова сейчас не кружится."
+                    }
+                  ]
+                }
+              ],
+              "life_history": []
+            },
+            "gaps": []
+          },
+          "review": {
+            "reviewer": "Codex",
+            "physician_reviewed": false,
+            "blinded": false,
+            "result_canonical_sha256": "61bdb133f168bc61ced1369201011c3423a1cbde998f023561fbe7133add9027",
+            "rows": [
+              {
+                "row_id": "complaints:0",
+                "text": "Шум в левом ухе.",
+                "complete_fact_ids": [
+                  "noise"
+                ],
+                "partial_fact_ids": [],
+                "unsupported_atoms": 0,
+                "temporal_errors": 0,
+                "source_errors": 0,
+                "polarity_errors": 0,
+                "reason": "Текущий шум слева подтверждён."
+              },
+              {
+                "row_id": "complaints:1",
+                "text": "Сильная боль в правом ухе.",
+                "complete_fact_ids": [
+                  "ear"
+                ],
+                "partial_fact_ids": [],
+                "unsupported_atoms": 0,
+                "temporal_errors": 0,
+                "source_errors": 0,
+                "polarity_errors": 0,
+                "reason": "Текущая сильная боль справа подтверждена."
+              },
+              {
+                "row_id": "illness_history:0",
+                "text": "В настоящее время нет головокружения.",
+                "complete_fact_ids": [
+                  "no_dizziness"
+                ],
+                "partial_fact_ids": [],
+                "unsupported_atoms": 0,
+                "temporal_errors": 0,
+                "source_errors": 0,
+                "polarity_errors": 0,
+                "reason": "Сохранено отрицание текущего головокружения."
+              }
+            ],
+            "gaps": []
+          },
+          "metrics": {
+            "gold_facts": 3,
+            "output_rows": 3,
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "required_placements": 3,
+            "covered_placements": 3,
+            "correct_placements": 3,
+            "predicted_placements": 3,
+            "unsupported_atoms": 0,
+            "duplicate_placements": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reviewer": "Codex",
+            "physician_reviewed": false
+          },
+          "sections": {
+            "complaints": {
+              "required": 2,
+              "covered": 2,
+              "disallowed": 0
+            },
+            "illness_history": {
+              "required": 1,
+              "covered": 1,
+              "disallowed": 0
+            },
+            "life_history": {
+              "required": 0,
+              "covered": 0,
+              "disallowed": 0
+            }
+          },
+          "usage": {
+            "prompt_tokens": 1626,
+            "completion_tokens": 459,
+            "total_tokens": 2085,
+            "precached_prompt_tokens": 0
+          },
+          "api_seconds": 4.155145400000038
+        },
+        {
+          "id": "j02",
+          "source_canonical_sha256": "03c4b9853ddee9e9dcdefd73bbf63f94011bf0b95b3b98417cfb49c2f4275b44",
+          "gold_canonical_sha256": "99549c27d1a57a4fc76739f45d7ea8bb7817a583924676cd9ae3e6f5c6d3ce33",
+          "result": {
+            "sections": {
+              "complaints": [
+                {
+                  "text": "Боль, которая стала слабее через час после приёма таблетки",
+                  "evidence": [
+                    {
+                      "segment_id": "s2",
+                      "quote": "Через час боль стала слабее."
+                    }
+                  ]
+                }
+              ],
+              "illness_history": [
+                {
+                  "text": "В воскресенье вечером принял таблетку, дозировку не помнит.",
+                  "evidence": [
+                    {
+                      "segment_id": "s2",
+                      "quote": "В воскресенье вечером принял таблетку. Дозировку не помню."
+                    }
+                  ]
+                },
+                {
+                  "text": "Через час после приёма боль стала слабее.",
+                  "evidence": [
+                    {
+                      "segment_id": "s2",
+                      "quote": "Через час боль стала слабее."
+                    }
+                  ]
+                }
+              ],
+              "life_history": []
+            },
+            "gaps": [
+              {
+                "topic": "дозировка принятого препарата",
+                "status": "patient_does_not_know",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Дозировку не помню."
+                  }
+                ]
+              },
+              {
+                "topic": "название препарата",
+                "status": "not_discussed",
+                "evidence": []
+              }
+            ]
+          },
+          "review": {
+            "reviewer": "Codex",
+            "physician_reviewed": false,
+            "blinded": false,
+            "result_canonical_sha256": "72e4a6df46bf9ec0813c8b21d7e87435a0a6cd1c1d8d3ba3840ed4025a63eff6",
+            "rows": [
+              {
+                "row_id": "complaints:0",
+                "text": "Боль, которая стала слабее через час после приёма таблетки",
+                "complete_fact_ids": [
+                  "later_relief"
+                ],
+                "partial_fact_ids": [],
+                "unsupported_atoms": 0,
+                "temporal_errors": 0,
+                "source_errors": 1,
+                "polarity_errors": 0,
+                "reason": "Временная связь сохранена, причинность не добавлена. Это динамика, текущая боль не установлена. Цитата про час без предшествующего приёма не даёт полной опоры."
+              },
+              {
+                "row_id": "illness_history:0",
+                "text": "В воскресенье вечером принял таблетку, дозировку не помнит.",
+                "complete_fact_ids": [
+                  "dose_time",
+                  "dose_unknown"
+                ],
+                "partial_fact_ids": [],
+                "unsupported_atoms": 0,
+                "temporal_errors": 0,
+                "source_errors": 0,
+                "polarity_errors": 0,
+                "reason": "Сохранены день, вечерний приём таблетки и явно неизвестная дозировка."
+              },
+              {
+                "row_id": "illness_history:1",
+                "text": "Через час после приёма боль стала слабее.",
+                "complete_fact_ids": [
+                  "later_relief"
+                ],
+                "partial_fact_ids": [],
+                "unsupported_atoms": 0,
+                "temporal_errors": 0,
+                "source_errors": 1,
+                "polarity_errors": 0,
+                "reason": "Сохранено, что боль стала слабее через час после приёма. Для полной смысловой опоры нужно также процитировать приём."
+              }
+            ],
+            "gaps": [
+              {
+                "index": 0,
+                "errors": 0,
+                "reason": "Неизвестная дозировка подтверждена."
+              },
+              {
+                "index": 1,
+                "errors": 0,
+                "reason": "Название не обсуждалось."
+              }
+            ]
+          },
+          "metrics": {
+            "gold_facts": 3,
+            "output_rows": 3,
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "required_placements": 3,
+            "covered_placements": 3,
+            "correct_placements": 3,
+            "predicted_placements": 4,
+            "unsupported_atoms": 0,
+            "duplicate_placements": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 2,
+            "reviewer": "Codex",
+            "physician_reviewed": false
+          },
+          "sections": {
+            "complaints": {
+              "required": 0,
+              "covered": 0,
+              "disallowed": 1
+            },
+            "illness_history": {
+              "required": 3,
+              "covered": 3,
+              "disallowed": 0
+            },
+            "life_history": {
+              "required": 0,
+              "covered": 0,
+              "disallowed": 0
+            }
+          },
+          "usage": {
+            "prompt_tokens": 1625,
+            "completion_tokens": 677,
+            "total_tokens": 2302,
+            "precached_prompt_tokens": 0
+          },
+          "api_seconds": 11.329617299998063
+        },
+        {
+          "id": "j03",
+          "source_canonical_sha256": "cb379c13ecdc9aee585485cdf29cae020648d666e500c7b5b2b23d53affe5502",
+          "gold_canonical_sha256": "69ea3e1abaf39e00a6cce5fa90174190198efe81cd032767798140e3d9cf5cb8",
+          "result": {
+            "sections": {
+              "complaints": [
+                {
+                  "text": "Боль в животе: утром сильная, к обеду стихла, вечером не вернулась.",
+                  "evidence": [
+                    {
+                      "segment_id": "s2",
+                      "quote": "Утром живот болел сильно, к обеду боль стихла. Вечером боль не вернулась."
+                    }
+                  ]
+                }
+              ],
+              "illness_history": [
+                {
+                  "text": "Утром боль в животе была сильной, к обеду стихла, вечером не вернулась.",
+                  "evidence": [
+                    {
+                      "segment_id": "s2",
+                      "quote": "Утром живот болел сильно, к обеду боль стихла. Вечером боль не вернулась."
+                    }
+                  ]
+                }
+              ],
+              "life_history": []
+            },
+            "gaps": []
+          },
+          "review": {
+            "reviewer": "Codex",
+            "physician_reviewed": false,
+            "blinded": false,
+            "result_canonical_sha256": "df2933cc35fdd206143c2f849ae810ebb4f1898e68ed44b837ebb23985416664",
+            "rows": [
+              {
+                "row_id": "complaints:0",
+                "text": "Боль в животе: утром сильная, к обеду стихла, вечером не вернулась.",
+                "complete_fact_ids": [
+                  "morning",
+                  "noon",
+                  "no_recurrence"
+                ],
+                "partial_fact_ids": [],
+                "unsupported_atoms": 0,
+                "temporal_errors": 0,
+                "source_errors": 0,
+                "polarity_errors": 0,
+                "reason": "Вся динамика сохранена и подтверждена, размещена в жалобах без текущего симптома."
+              },
+              {
+                "row_id": "illness_history:0",
+                "text": "Утром боль в животе была сильной, к обеду стихла, вечером не вернулась.",
+                "complete_fact_ids": [
+                  "morning",
+                  "noon",
+                  "no_recurrence"
+                ],
+                "partial_fact_ids": [],
+                "unsupported_atoms": 0,
+                "temporal_errors": 0,
+                "source_errors": 0,
+                "polarity_errors": 0,
+                "reason": "Сохранены сильная боль утром, ослабление к обеду и отсутствие возврата вечером."
+              }
+            ],
+            "gaps": []
+          },
+          "metrics": {
+            "gold_facts": 3,
+            "output_rows": 2,
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "required_placements": 3,
+            "covered_placements": 3,
+            "correct_placements": 3,
+            "predicted_placements": 6,
+            "unsupported_atoms": 0,
+            "duplicate_placements": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reviewer": "Codex",
+            "physician_reviewed": false
+          },
+          "sections": {
+            "complaints": {
+              "required": 0,
+              "covered": 0,
+              "disallowed": 3
+            },
+            "illness_history": {
+              "required": 3,
+              "covered": 3,
+              "disallowed": 0
+            },
+            "life_history": {
+              "required": 0,
+              "covered": 0,
+              "disallowed": 0
+            }
+          },
+          "usage": {
+            "prompt_tokens": 1624,
+            "completion_tokens": 352,
+            "total_tokens": 1976,
+            "precached_prompt_tokens": 0
+          },
+          "api_seconds": 3.861328200000571
+        }
+      ],
+      "totals": {
+        "tp": 9,
+        "fp": 0,
+        "fn": 0,
+        "required_placements": 9,
+        "covered_placements": 9,
+        "correct_placements": 9,
+        "predicted_placements": 13,
+        "unsupported_atoms": 0,
+        "temporal_errors": 0,
+        "source_errors": 2,
+        "polarity_errors": 0,
+        "duplicate_placements": 0,
+        "sections": {
+          "complaints": {
+            "required": 2,
+            "covered": 2,
+            "disallowed": 4
+          },
+          "illness_history": {
+            "required": 7,
+            "covered": 7,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        },
+        "quote_items": 9,
+        "non_verbatim_quote_items": 0,
+        "multiple_quotes_same_segment_rows": 0,
+        "metadata_rows": 0,
+        "gap_errors": 0
+      },
+      "calls": 3,
+      "tokens": 6363,
+      "api_seconds": 19.34609089999867,
+      "runner_seconds": 26.156000000002678
+    },
+    "candidate": {
+      "cases": [
+        {
+          "id": "j01",
+          "source_canonical_sha256": "e015d7c487c4621768bc7b903d4b3e085b014e0ddc930701365d8bb807849045",
+          "gold_canonical_sha256": "177abbe88fa531a249bbf1771d1536607adc487d967de96f4d1b26f793fd4552",
+          "result": {
+            "sections": {
+              "complaints": [
+                {
+                  "text": "Шум в левом ухе.",
+                  "evidence": [
+                    {
+                      "segment_id": "s2",
+                      "quote": "Сейчас шумит в левом ухе."
+                    }
+                  ]
+                },
+                {
+                  "text": "Сильная боль в правом ухе.",
+                  "evidence": [
+                    {
+                      "segment_id": "s2",
+                      "quote": "Сейчас ещё сильно болит правое ухо."
+                    }
+                  ]
+                },
+                {
+                  "text": "Головокружения нет.",
+                  "evidence": [
+                    {
+                      "segment_id": "s2",
+                      "quote": "Голова сейчас не кружится."
+                    }
+                  ]
+                }
+              ],
+              "illness_history": [
+                {
+                  "text": "Текущее состояние: шум в левом ухе, сильная боль в правом ухе, головокружения нет.",
+                  "evidence": [
+                    {
+                      "segment_id": "s2",
+                      "quote": "Сейчас шумит в левом ухе. Голова сейчас не кружится. Сейчас ещё сильно болит правое ухо."
+                    }
+                  ]
+                }
+              ],
+              "life_history": [
+                {
+                  "text": "Возраст, семейное положение, профессия, стаж, дети, жильё, поддержка, семейный психиатрический анамнез, соматический анамнез/операции/травмы, алкоголь/никотин/другие вещества/кофеин не обсуждались.",
+                  "evidence": [
+                    {
+                      "segment_id": "s1",
+                      "quote": "Что вас сейчас беспокоит?"
+                    },
+                    {
+                      "segment_id": "s2",
+                      "quote": "Сейчас шумит в левом ухе. Голова сейчас не кружится. Сейчас ещё сильно болит правое ухо."
+                    }
+                  ]
+                }
+              ]
+            },
+            "gaps": [
+              {
+                "topic": "Возраст, семейное положение, профессия, стаж, дети, жильё, поддержка, семейный психиатрический анамнез, соматический анамнез/операции/травмы, алкоголь/никотин/другие вещества/кофеин",
+                "status": "not_discussed",
+                "evidence": []
+              }
+            ]
+          },
+          "review": {
+            "reviewer": "Codex",
+            "physician_reviewed": false,
+            "blinded": false,
+            "result_canonical_sha256": "3c506474858a14292d40e28a54f13ed75ad7ed96bfcacb45c74f7d0156cc3d17",
+            "rows": [
+              {
+                "row_id": "complaints:0",
+                "text": "Шум в левом ухе.",
+                "complete_fact_ids": [
+                  "noise"
+                ],
+                "partial_fact_ids": [],
+                "unsupported_atoms": 0,
+                "temporal_errors": 0,
+                "source_errors": 0,
+                "polarity_errors": 0,
+                "reason": "Текущий шум слева подтверждён."
+              },
+              {
+                "row_id": "complaints:1",
+                "text": "Сильная боль в правом ухе.",
+                "complete_fact_ids": [
+                  "ear"
+                ],
+                "partial_fact_ids": [],
+                "unsupported_atoms": 0,
+                "temporal_errors": 0,
+                "source_errors": 0,
+                "polarity_errors": 0,
+                "reason": "Текущая сильная боль справа подтверждена."
+              },
+              {
+                "row_id": "complaints:2",
+                "text": "Головокружения нет.",
+                "complete_fact_ids": [
+                  "no_dizziness"
+                ],
+                "partial_fact_ids": [],
+                "unsupported_atoms": 0,
+                "temporal_errors": 0,
+                "source_errors": 0,
+                "polarity_errors": 0,
+                "reason": "Отрицание сохранено, лишнее размещение в жалобах."
+              },
+              {
+                "row_id": "illness_history:0",
+                "text": "Текущее состояние: шум в левом ухе, сильная боль в правом ухе, головокружения нет.",
+                "complete_fact_ids": [
+                  "noise",
+                  "ear",
+                  "no_dizziness"
+                ],
+                "partial_fact_ids": [],
+                "unsupported_atoms": 0,
+                "temporal_errors": 0,
+                "source_errors": 0,
+                "polarity_errors": 0,
+                "reason": "Все три смысла подтверждены полной непрерывной цитатой. Дополнительные размещения текущих симптомов допустимы."
+              },
+              {
+                "row_id": "life_history:0",
+                "text": "Возраст, семейное положение, профессия, стаж, дети, жильё, поддержка, семейный психиатрический анамнез, соматический анамнез/операции/травмы, алкоголь/никотин/другие вещества/кофеин не обсуждались.",
+                "complete_fact_ids": [],
+                "partial_fact_ids": [],
+                "unsupported_atoms": 0,
+                "temporal_errors": 0,
+                "source_errors": 0,
+                "polarity_errors": 0,
+                "reason": "Служебный заполнитель о не обсуждавшихся темах. Клинических сведений о пациенте нет.",
+                "nonclinical_metadata": true
+              }
+            ],
+            "gaps": [
+              {
+                "index": 0,
+                "errors": 0,
+                "reason": "Темы анамнеза жизни не обсуждались. Служебная строка в разделе оценена отдельно."
+              }
+            ]
+          },
+          "metrics": {
+            "gold_facts": 3,
+            "output_rows": 5,
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "required_placements": 3,
+            "covered_placements": 3,
+            "correct_placements": 5,
+            "predicted_placements": 6,
+            "unsupported_atoms": 0,
+            "duplicate_placements": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reviewer": "Codex",
+            "physician_reviewed": false
+          },
+          "sections": {
+            "complaints": {
+              "required": 2,
+              "covered": 2,
+              "disallowed": 1
+            },
+            "illness_history": {
+              "required": 1,
+              "covered": 1,
+              "disallowed": 0
+            },
+            "life_history": {
+              "required": 0,
+              "covered": 0,
+              "disallowed": 0
+            }
+          },
+          "usage": {
+            "prompt_tokens": 1732,
+            "completion_tokens": 1040,
+            "total_tokens": 2772,
+            "precached_prompt_tokens": 0
+          },
+          "api_seconds": 10.73679660000198
+        },
+        {
+          "id": "j02",
+          "source_canonical_sha256": "03c4b9853ddee9e9dcdefd73bbf63f94011bf0b95b3b98417cfb49c2f4275b44",
+          "gold_canonical_sha256": "99549c27d1a57a4fc76739f45d7ea8bb7817a583924676cd9ae3e6f5c6d3ce33",
+          "result": {
+            "sections": {
+              "complaints": [
+                {
+                  "text": "Боль стала слабее через час после приёма таблетки.",
+                  "evidence": [
+                    {
+                      "segment_id": "s2",
+                      "quote": "Через час боль стала слабее."
+                    }
+                  ]
+                }
+              ],
+              "illness_history": [
+                {
+                  "text": "В воскресенье вечером принял таблетку; дозировку не помнит.",
+                  "evidence": [
+                    {
+                      "segment_id": "s2",
+                      "quote": "В воскресенье вечером принял таблетку. Дозировку не помню."
+                    }
+                  ]
+                },
+                {
+                  "text": "Через час после приёма боль стала слабее.",
+                  "evidence": [
+                    {
+                      "segment_id": "s2",
+                      "quote": "Через час боль стала слабее."
+                    }
+                  ]
+                }
+              ],
+              "life_history": []
+            },
+            "gaps": [
+              {
+                "topic": "дозировка препарата",
+                "status": "patient_does_not_know",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Дозировку не помню."
+                  }
+                ]
+              }
+            ]
+          },
+          "review": {
+            "reviewer": "Codex",
+            "physician_reviewed": false,
+            "blinded": false,
+            "result_canonical_sha256": "eeb5babf05b91059283b022ba0a692b7363370a4cc4e4f3920e8f09c3689bd54",
+            "rows": [
+              {
+                "row_id": "complaints:0",
+                "text": "Боль стала слабее через час после приёма таблетки.",
+                "complete_fact_ids": [
+                  "later_relief"
+                ],
+                "partial_fact_ids": [],
+                "unsupported_atoms": 0,
+                "temporal_errors": 0,
+                "source_errors": 1,
+                "polarity_errors": 0,
+                "reason": "Временная связь сохранена, причинность не добавлена. Это динамика, текущая боль не установлена. Цитата про час без предшествующего приёма не даёт полной опоры."
+              },
+              {
+                "row_id": "illness_history:0",
+                "text": "В воскресенье вечером принял таблетку; дозировку не помнит.",
+                "complete_fact_ids": [
+                  "dose_time",
+                  "dose_unknown"
+                ],
+                "partial_fact_ids": [],
+                "unsupported_atoms": 0,
+                "temporal_errors": 0,
+                "source_errors": 0,
+                "polarity_errors": 0,
+                "reason": "Сохранены время приёма и неизвестность дозировки. Оба предложения цитируются дословно подряд."
+              },
+              {
+                "row_id": "illness_history:1",
+                "text": "Через час после приёма боль стала слабее.",
+                "complete_fact_ids": [
+                  "later_relief"
+                ],
+                "partial_fact_ids": [],
+                "unsupported_atoms": 0,
+                "temporal_errors": 0,
+                "source_errors": 1,
+                "polarity_errors": 0,
+                "reason": "Сохранено, что боль стала слабее через час после приёма. Для полной смысловой опоры нужно также процитировать приём."
+              }
+            ],
+            "gaps": [
+              {
+                "index": 0,
+                "errors": 0,
+                "reason": "Неизвестная дозировка подтверждена."
+              }
+            ]
+          },
+          "metrics": {
+            "gold_facts": 3,
+            "output_rows": 3,
+            "tp": 3,
+            "fp": 0,
+            "fn": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "required_placements": 3,
+            "covered_placements": 3,
+            "correct_placements": 3,
+            "predicted_placements": 4,
+            "unsupported_atoms": 0,
+            "duplicate_placements": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 2,
+            "reviewer": "Codex",
+            "physician_reviewed": false
+          },
+          "sections": {
+            "complaints": {
+              "required": 0,
+              "covered": 0,
+              "disallowed": 1
+            },
+            "illness_history": {
+              "required": 3,
+              "covered": 3,
+              "disallowed": 0
+            },
+            "life_history": {
+              "required": 0,
+              "covered": 0,
+              "disallowed": 0
+            }
+          },
+          "usage": {
+            "prompt_tokens": 1731,
+            "completion_tokens": 359,
+            "total_tokens": 2090,
+            "precached_prompt_tokens": 0
+          },
+          "api_seconds": 5.0786397000047145
+        },
+        {
+          "id": "j03",
+          "source_canonical_sha256": "cb379c13ecdc9aee585485cdf29cae020648d666e500c7b5b2b23d53affe5502",
+          "gold_canonical_sha256": "69ea3e1abaf39e00a6cce5fa90174190198efe81cd032767798140e3d9cf5cb8",
+          "result": {
+            "sections": {
+              "complaints": [
+                {
+                  "text": "Утром сильная боль в животе, к обеду стихла, вечером не вернулась.",
+                  "evidence": [
+                    {
+                      "segment_id": "s2",
+                      "quote": "Утром живот болел сильно, к обеду боль стихла. Вечером боль не вернулась."
+                    }
+                  ]
+                }
+              ],
+              "illness_history": [
+                {
+                  "text": "Боль в животе началась утром, была сильной, к обеду уменьшилась и к вечеру полностью прошла.",
+                  "evidence": [
+                    {
+                      "segment_id": "s2",
+                      "quote": "Утром живот болел сильно, к обеду боль стихла. Вечером боль не вернулась."
+                    }
+                  ]
+                }
+              ],
+              "life_history": []
+            },
+            "gaps": []
+          },
+          "review": {
+            "reviewer": "Codex",
+            "physician_reviewed": false,
+            "blinded": false,
+            "result_canonical_sha256": "46b3c9a5b8575acbbbe7ef3009d8003a2d2cd0a438d0f74cde91d70e5eefe889",
+            "rows": [
+              {
+                "row_id": "complaints:0",
+                "text": "Утром сильная боль в животе, к обеду стихла, вечером не вернулась.",
+                "complete_fact_ids": [
+                  "morning",
+                  "noon",
+                  "no_recurrence"
+                ],
+                "partial_fact_ids": [],
+                "unsupported_atoms": 0,
+                "temporal_errors": 0,
+                "source_errors": 0,
+                "polarity_errors": 0,
+                "reason": "Сохранена динамика прошедшей боли, размещение лишнее."
+              },
+              {
+                "row_id": "illness_history:0",
+                "text": "Боль в животе началась утром, была сильной, к обеду уменьшилась и к вечеру полностью прошла.",
+                "complete_fact_ids": [
+                  "morning",
+                  "noon"
+                ],
+                "partial_fact_ids": [],
+                "unsupported_atoms": 1,
+                "temporal_errors": 1,
+                "source_errors": 1,
+                "polarity_errors": 0,
+                "reason": "Сила боли утром и ослабление к обеду сохранены. «Началась утром» не следует из реплики. «К вечеру полностью прошла» не передаёт прямо отсутствие повторной боли вечером."
+              }
+            ],
+            "gaps": []
+          },
+          "metrics": {
+            "gold_facts": 3,
+            "output_rows": 2,
+            "tp": 3,
+            "fp": 1,
+            "fn": 0,
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571428571428571,
+            "required_placements": 3,
+            "covered_placements": 2,
+            "correct_placements": 2,
+            "predicted_placements": 5,
+            "unsupported_atoms": 1,
+            "duplicate_placements": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 1,
+            "source_errors": 1,
+            "reviewer": "Codex",
+            "physician_reviewed": false
+          },
+          "sections": {
+            "complaints": {
+              "required": 0,
+              "covered": 0,
+              "disallowed": 3
+            },
+            "illness_history": {
+              "required": 3,
+              "covered": 2,
+              "disallowed": 0
+            },
+            "life_history": {
+              "required": 0,
+              "covered": 0,
+              "disallowed": 0
+            }
+          },
+          "usage": {
+            "prompt_tokens": 1730,
+            "completion_tokens": 353,
+            "total_tokens": 2083,
+            "precached_prompt_tokens": 0
+          },
+          "api_seconds": 3.90363680000155
+        }
+      ],
+      "totals": {
+        "tp": 9,
+        "fp": 1,
+        "fn": 0,
+        "required_placements": 9,
+        "covered_placements": 8,
+        "correct_placements": 10,
+        "predicted_placements": 15,
+        "unsupported_atoms": 1,
+        "temporal_errors": 1,
+        "source_errors": 3,
+        "polarity_errors": 0,
+        "duplicate_placements": 0,
+        "sections": {
+          "complaints": {
+            "required": 2,
+            "covered": 2,
+            "disallowed": 5
+          },
+          "illness_history": {
+            "required": 7,
+            "covered": 6,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        },
+        "quote_items": 12,
+        "non_verbatim_quote_items": 0,
+        "multiple_quotes_same_segment_rows": 0,
+        "metadata_rows": 1,
+        "gap_errors": 0
+      },
+      "calls": 3,
+      "tokens": 6945,
+      "api_seconds": 19.719073100008245,
+      "runner_seconds": 26.625
+    }
+  }
+}
