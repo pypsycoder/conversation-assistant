@@ -1,0 +1,46 @@
+{
+  "id": "j02",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "dose_time",
+      "meaning": "В воскресенье вечером принял одну таблетку.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "dose_unknown",
+      "meaning": "Дозировку не помнит.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "later_relief",
+      "meaning": "Через час боль стала слабее. Доказанную причинность не приписывать.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    }
+  ]
+}

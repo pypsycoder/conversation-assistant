@@ -1,0 +1,48 @@
+{
+  "id": "j01",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "noise",
+      "meaning": "Сейчас шумит в левом ухе.",
+      "required_sections": [
+        "complaints"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "no_dizziness",
+      "meaning": "Сейчас головокружения нет.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "ear",
+      "meaning": "Сейчас сильно болит правое ухо.",
+      "required_sections": [
+        "complaints"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    }
+  ]
+}
