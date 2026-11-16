@@ -1,0 +1,60 @@
+{
+  "id": "k01",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "monday_transition",
+      "meaning": "В понедельник стало хуже.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "tuesday_state",
+      "meaning": "Во вторник было так же плохо, как в понедельник.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "no_tuesday_transition",
+      "meaning": "Во вторник нового ухудшения не было.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "throat",
+      "meaning": "Сейчас сильно болит горло.",
+      "required_sections": [
+        "complaints"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    }
+  ]
+}
