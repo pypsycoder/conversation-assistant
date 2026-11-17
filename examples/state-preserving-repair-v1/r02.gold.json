@@ -1,0 +1,47 @@
+{
+  "id": "r02",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "state",
+      "meaning": "С ночи в целом хуже.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "pain",
+      "meaning": "Сейчас очень болит живот.",
+      "required_sections": [
+        "complaints"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "unknown",
+      "meaning": "Не знает точного начала ухудшения.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    }
+  ]
+}

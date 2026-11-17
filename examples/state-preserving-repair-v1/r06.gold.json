@@ -1,0 +1,47 @@
+{
+  "id": "r06",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "state",
+      "meaning": "С утра в целом хуже.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "throat",
+      "meaning": "Сейчас очень болит горло.",
+      "required_sections": [
+        "complaints"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "work",
+      "meaning": "Работает архивистом.",
+      "required_sections": [
+        "life_history"
+      ],
+      "allowed_sections": [
+        "life_history"
+      ],
+      "source_segment_ids": [
+        "s4"
+      ]
+    }
+  ]
+}
