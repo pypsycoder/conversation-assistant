@@ -1,0 +1,23 @@
+{
+  "cases": [
+    {
+      "fixture_file": "examples/complaint-quote-repair-v1/cases.json",
+      "count": 10,
+      "changed_cases": [
+        "q01",
+        "q02"
+      ]
+    },
+    {
+      "fixture_file": "examples/literal-worsening-repeats-v1/cases.json",
+      "count": 12,
+      "changed_cases": []
+    },
+    {
+      "fixture_file": "examples/mixed-complaint-paraphrase-v1/offline.json",
+      "count": 8,
+      "changed_cases": []
+    }
+  ],
+  "reason": "q01 and q02 abstentions follow the separate review in PR 16."
+}
