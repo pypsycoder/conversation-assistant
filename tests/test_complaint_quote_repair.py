@@ -43,10 +43,11 @@ class ComplaintQuoteRepairTests(unittest.TestCase):
         self.assertEqual(repair_complaints(original, source), (original, []))
 
     def test_state_is_retained_when_history_describes_a_transition(self):
-        quote = "Сегодня мне в целом снова хуже, и сейчас сильно болит горло."
-        course = "Сегодня мне в целом снова хуже"
-        for text in ("Сегодня общее самочувствие снова ухудшилось.",
-                     "Сегодня общее ухудшение состояния."):
+        for course, text in (
+            ("Сегодня мне в целом снова хуже", "Сегодня общее самочувствие снова ухудшилось."),
+            ("С вечера мне в целом хуже", "С вечера общее ухудшение состояния."),
+        ):
+            quote = f"{course}, и сейчас сильно болит горло."
             with self.subTest(text=text):
                 source = {"synthetic": True, "segments": [
                     {"id": "s2", "role": "patient", "text": quote},

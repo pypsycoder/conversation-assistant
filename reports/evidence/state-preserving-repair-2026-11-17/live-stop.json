@@ -1,0 +1,11 @@
+{
+  "output_directory": "2026-11-17T195822-state-preserving-fresh",
+  "status": "stopped",
+  "error_type": "SafeAPIError",
+  "calls": 0,
+  "tokens": 0,
+  "pairs": 0,
+  "runner_seconds": 21.35899999999674,
+  "stage": "Before model list and before any generation attempt.",
+  "exact_provider_failure": "Not persisted by runner. No API retry performed."
+}
