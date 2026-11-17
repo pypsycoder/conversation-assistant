@@ -58,11 +58,9 @@ def history_match(clause, match, segment, history, *, mixed=False):
         return None
     time = match["time"]
     again = match["again"] or ""
-    allowed = {sentence_text(clause), f"{time} общее самочувствие {again}ухудшилось"}
+    allowed = {sentence_text(clause)}
     if mixed:
         allowed.add(f"{time} общее самочувствие {again}хуже")
-    if not again:
-        allowed.add(f"{time} общее ухудшение состояния")
     for index, row in enumerate(history):
         if len(row["evidence"]) != 1 or sentence_text(row["text"]) not in allowed:
             continue

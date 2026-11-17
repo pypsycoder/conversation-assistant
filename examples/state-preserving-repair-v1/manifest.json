@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "synthetic": true,
+  "gold_status": "agent_authored_requires_physician_review",
+  "cases": [
+    {
+      "id": "r01",
+      "split": "diagnostic",
+      "source": "r01.source.json",
+      "gold": "r01.gold.json"
+    },
+    {
+      "id": "r02",
+      "split": "diagnostic",
+      "source": "r02.source.json",
+      "gold": "r02.gold.json"
+    },
+    {
+      "id": "r03",
+      "split": "diagnostic",
+      "source": "r03.source.json",
+      "gold": "r03.gold.json"
+    },
+    {
+      "id": "r04",
+      "split": "diagnostic",
+      "source": "r04.source.json",
+      "gold": "r04.gold.json"
+    },
+    {
+      "id": "r05",
+      "split": "diagnostic",
+      "source": "r05.source.json",
+      "gold": "r05.gold.json"
+    },
+    {
+      "id": "r06",
+      "split": "diagnostic",
+      "source": "r06.source.json",
+      "gold": "r06.gold.json"
+    }
+  ]
+}

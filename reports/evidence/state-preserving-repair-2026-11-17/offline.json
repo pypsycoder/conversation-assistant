@@ -1,0 +1,819 @@
+{
+  "synthetic": true,
+  "model_calls": 0,
+  "model_tokens": 0,
+  "fixtures_canonical_sha256": "bac7b9585b139d2150fef9b9d0c0ecc6f86ef4ab39cfdc584d788eacbc24ef73",
+  "evaluation_seconds": 0.01361590001033619,
+  "cases": [
+    {
+      "id": "s01",
+      "focus": "Состояние и неподтверждённый переход при явном отрицании нового ухудшения",
+      "changes": [],
+      "before": {
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "unsupported_atoms": 1,
+        "covered_placements": 3,
+        "required_placements": 4,
+        "correct_placements": 3,
+        "predicted_placements": 4,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 1,
+        "source_errors": 1
+      },
+      "after": {
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "unsupported_atoms": 1,
+        "covered_placements": 3,
+        "required_placements": 4,
+        "correct_placements": 3,
+        "predicted_placements": 4,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 1,
+        "source_errors": 1
+      },
+      "sections_before": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 1
+        },
+        "illness_history": {
+          "required": 3,
+          "covered": 2,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      },
+      "sections_after": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 1
+        },
+        "illness_history": {
+          "required": 3,
+          "covered": 2,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      }
+    },
+    {
+      "id": "s02",
+      "focus": "Состояние с ночной границей при неизвестном начале",
+      "changes": [],
+      "before": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 0,
+        "unsupported_atoms": 1,
+        "covered_placements": 1,
+        "required_placements": 2,
+        "correct_placements": 1,
+        "predicted_placements": 2,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 1,
+        "source_errors": 1
+      },
+      "after": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 0,
+        "unsupported_atoms": 1,
+        "covered_placements": 1,
+        "required_placements": 2,
+        "correct_placements": 1,
+        "predicted_placements": 2,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 1,
+        "source_errors": 1
+      },
+      "sections_before": {
+        "complaints": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 1
+        },
+        "illness_history": {
+          "required": 2,
+          "covered": 1,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      },
+      "sections_after": {
+        "complaints": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 1
+        },
+        "illness_history": {
+          "required": 2,
+          "covered": 1,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      }
+    },
+    {
+      "id": "s03",
+      "focus": "Неоднозначная именная формулировка в анамнезе",
+      "changes": [],
+      "before": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "unsupported_atoms": 0,
+        "covered_placements": 1,
+        "required_placements": 2,
+        "correct_placements": 1,
+        "predicted_placements": 2,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0
+      },
+      "after": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "unsupported_atoms": 0,
+        "covered_placements": 1,
+        "required_placements": 2,
+        "correct_placements": 1,
+        "predicted_placements": 2,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0
+      },
+      "sections_before": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 1
+        },
+        "illness_history": {
+          "required": 1,
+          "covered": 0,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      },
+      "sections_after": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 1
+        },
+        "illness_history": {
+          "required": 1,
+          "covered": 0,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      }
+    },
+    {
+      "id": "s04",
+      "focus": "Пересказ состояния сохраняет «сегодня» и «снова»",
+      "changes": [
+        {
+          "complaint_index": 0,
+          "illness_history_index": 0,
+          "original": {
+            "text": "Сегодня в целом снова хуже, и сейчас сильно тошнит.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сегодня в целом снова хуже, и сейчас сильно тошнит."
+              }
+            ]
+          },
+          "replacement": {
+            "text": "Сейчас сильно тошнит.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "сейчас сильно тошнит."
+              }
+            ]
+          }
+        }
+      ],
+      "before": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "unsupported_atoms": 0,
+        "covered_placements": 2,
+        "required_placements": 2,
+        "correct_placements": 2,
+        "predicted_placements": 3,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0
+      },
+      "after": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "unsupported_atoms": 0,
+        "covered_placements": 2,
+        "required_placements": 2,
+        "correct_placements": 2,
+        "predicted_placements": 2,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0
+      },
+      "sections_before": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 1
+        },
+        "illness_history": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      },
+      "sections_after": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 0
+        },
+        "illness_history": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      }
+    },
+    {
+      "id": "s05",
+      "focus": "Дословное состояние в отдельной строке",
+      "changes": [
+        {
+          "complaint_index": 0,
+          "illness_history_index": 0,
+          "original": {
+            "text": "С вечера мне в целом хуже.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "С вечера мне в целом хуже."
+              }
+            ]
+          },
+          "replacement": null
+        }
+      ],
+      "before": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "unsupported_atoms": 0,
+        "covered_placements": 2,
+        "required_placements": 2,
+        "correct_placements": 2,
+        "predicted_placements": 3,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0
+      },
+      "after": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "unsupported_atoms": 0,
+        "covered_placements": 2,
+        "required_placements": 2,
+        "correct_placements": 2,
+        "predicted_placements": 2,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0
+      },
+      "sections_before": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 1
+        },
+        "illness_history": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      },
+      "sections_after": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 0
+        },
+        "illness_history": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      }
+    },
+    {
+      "id": "s06",
+      "focus": "Дословный повтор перехода с временем и повторяемостью",
+      "changes": [
+        {
+          "complaint_index": 0,
+          "illness_history_index": 0,
+          "original": {
+            "text": "Сегодня после ужина мне опять стало хуже в целом.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сегодня после ужина мне опять стало хуже в целом."
+              }
+            ]
+          },
+          "replacement": null
+        }
+      ],
+      "before": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "unsupported_atoms": 0,
+        "covered_placements": 2,
+        "required_placements": 2,
+        "correct_placements": 2,
+        "predicted_placements": 3,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0
+      },
+      "after": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "unsupported_atoms": 0,
+        "covered_placements": 2,
+        "required_placements": 2,
+        "correct_placements": 2,
+        "predicted_placements": 2,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0
+      },
+      "sections_before": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 1
+        },
+        "illness_history": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      },
+      "sections_after": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 0
+        },
+        "illness_history": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      }
+    },
+    {
+      "id": "s07",
+      "focus": "Отдельный подтверждённый переход не заменяет строку о состоянии",
+      "changes": [],
+      "before": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "unsupported_atoms": 0,
+        "covered_placements": 2,
+        "required_placements": 3,
+        "correct_placements": 2,
+        "predicted_placements": 3,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0
+      },
+      "after": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "unsupported_atoms": 0,
+        "covered_placements": 2,
+        "required_placements": 3,
+        "correct_placements": 2,
+        "predicted_placements": 3,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0
+      },
+      "sections_before": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 1
+        },
+        "illness_history": {
+          "required": 2,
+          "covered": 1,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      },
+      "sections_after": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 1
+        },
+        "illness_history": {
+          "required": 2,
+          "covered": 1,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      }
+    },
+    {
+      "id": "s08",
+      "focus": "Состояние сохранено, переход подтверждён другой строкой",
+      "changes": [
+        {
+          "complaint_index": 0,
+          "illness_history_index": 1,
+          "original": {
+            "text": "С утра в целом хуже, и сейчас болит горло.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "С утра в целом хуже, и сейчас болит горло."
+              }
+            ]
+          },
+          "replacement": {
+            "text": "Сейчас болит горло.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "сейчас болит горло."
+              }
+            ]
+          }
+        }
+      ],
+      "before": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "unsupported_atoms": 0,
+        "covered_placements": 3,
+        "required_placements": 3,
+        "correct_placements": 3,
+        "predicted_placements": 4,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0
+      },
+      "after": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "unsupported_atoms": 0,
+        "covered_placements": 3,
+        "required_placements": 3,
+        "correct_placements": 3,
+        "predicted_placements": 3,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0
+      },
+      "sections_before": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 1
+        },
+        "illness_history": {
+          "required": 2,
+          "covered": 2,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      },
+      "sections_after": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 0
+        },
+        "illness_history": {
+          "required": 2,
+          "covered": 2,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      }
+    },
+    {
+      "id": "s09",
+      "focus": "Условный симптом сохраняется целиком",
+      "changes": [],
+      "before": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "unsupported_atoms": 0,
+        "covered_placements": 2,
+        "required_placements": 2,
+        "correct_placements": 2,
+        "predicted_placements": 3,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0
+      },
+      "after": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "unsupported_atoms": 0,
+        "covered_placements": 2,
+        "required_placements": 2,
+        "correct_placements": 2,
+        "predicted_placements": 3,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0
+      },
+      "sections_before": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 1
+        },
+        "illness_history": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      },
+      "sections_after": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 1
+        },
+        "illness_history": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      }
+    },
+    {
+      "id": "s10",
+      "focus": "Те же слова из другой реплики",
+      "changes": [],
+      "before": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "unsupported_atoms": 0,
+        "covered_placements": 2,
+        "required_placements": 3,
+        "correct_placements": 2,
+        "predicted_placements": 3,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0
+      },
+      "after": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "unsupported_atoms": 0,
+        "covered_placements": 2,
+        "required_placements": 3,
+        "correct_placements": 2,
+        "predicted_placements": 3,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0
+      },
+      "sections_before": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 1
+        },
+        "illness_history": {
+          "required": 2,
+          "covered": 1,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      },
+      "sections_after": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 1
+        },
+        "illness_history": {
+          "required": 2,
+          "covered": 1,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      }
+    }
+  ],
+  "totals": {
+    "before": {
+      "tp": 25,
+      "fp": 2,
+      "fn": 0,
+      "unsupported_atoms": 2,
+      "covered_placements": 20,
+      "required_placements": 25,
+      "correct_placements": 20,
+      "predicted_placements": 30,
+      "duplicate_placements": 0,
+      "polarity_errors": 0,
+      "temporal_errors": 2,
+      "source_errors": 2,
+      "sections": {
+        "complaints": {
+          "required": 9,
+          "covered": 9,
+          "disallowed": 10
+        },
+        "illness_history": {
+          "required": 16,
+          "covered": 11,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      }
+    },
+    "after": {
+      "tp": 25,
+      "fp": 2,
+      "fn": 0,
+      "unsupported_atoms": 2,
+      "covered_placements": 20,
+      "required_placements": 25,
+      "correct_placements": 20,
+      "predicted_placements": 26,
+      "duplicate_placements": 0,
+      "polarity_errors": 0,
+      "temporal_errors": 2,
+      "source_errors": 2,
+      "sections": {
+        "complaints": {
+          "required": 9,
+          "covered": 9,
+          "disallowed": 6
+        },
+        "illness_history": {
+          "required": 16,
+          "covered": 11,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      }
+    }
+  }
+}

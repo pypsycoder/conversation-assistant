@@ -41,3 +41,40 @@ class ComplaintQuoteRepairTests(unittest.TestCase):
             "life_history": [],
         }, "gaps": []}
         self.assertEqual(repair_complaints(original, source), (original, []))
+
+    def test_state_is_retained_when_history_describes_a_transition(self):
+        for course, text in (
+            ("Сегодня мне в целом снова хуже", "Сегодня общее самочувствие снова ухудшилось."),
+            ("С вечера мне в целом хуже", "С вечера общее ухудшение состояния."),
+        ):
+            quote = f"{course}, и сейчас сильно болит горло."
+            with self.subTest(text=text):
+                source = {"synthetic": True, "segments": [
+                    {"id": "s2", "role": "patient", "text": quote},
+                ]}
+                result = {"sections": {
+                    "complaints": [{"text": quote, "evidence": [{"segment_id": "s2", "quote": quote}]}],
+                    "illness_history": [{"text": text, "evidence": [{"segment_id": "s2", "quote": course}]}],
+                    "life_history": [],
+                }, "gaps": []}
+                self.assertEqual(repair_complaints(result, source), (result, []))
+
+    def test_state_paraphrase_keeps_time_recurrence_and_current_symptom(self):
+        quote = "С вечера мне в целом снова хуже, и сейчас очень болит левое ухо."
+        source = {"synthetic": True, "segments": [
+            {"id": "s2", "role": "patient", "text": quote},
+        ]}
+        history = {"text": "С вечера общее самочувствие снова хуже.",
+                   "evidence": [{"segment_id": "s2", "quote": "С вечера мне в целом снова хуже"}]}
+        result = {"sections": {
+            "complaints": [{"text": quote, "evidence": [{"segment_id": "s2", "quote": quote}]}],
+            "illness_history": [history], "life_history": [],
+        }, "gaps": []}
+        edited, changes = repair_complaints(result, source)
+        self.assertEqual(edited["sections"]["complaints"], [{
+            "text": "Сейчас очень болит левое ухо.",
+            "evidence": [{"segment_id": "s2", "quote": "сейчас очень болит левое ухо."}],
+        }])
+        self.assertEqual(edited["sections"]["illness_history"], [history])
+        self.assertEqual(len(changes), 1)
+        self.assertEqual(repair_complaints(edited, source), (edited, []))

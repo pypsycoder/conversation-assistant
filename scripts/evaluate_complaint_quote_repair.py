@@ -15,7 +15,7 @@ from backend.complaint_quote_repair import repair_complaints
 from backend.nightly_research import SECTIONS, read, save, score
 from backend.three_sections import provenance_errors
 
-CASES = ROOT / "examples/complaint-quote-repair-v1/cases.json"
+CASES = ROOT / "examples/state-preserving-repair-v1/offline.json"
 METRICS = (
     "tp", "fp", "fn", "unsupported_atoms", "covered_placements",
     "required_placements", "correct_placements", "predicted_placements",
@@ -38,10 +38,10 @@ def materialize(sections, gaps):
                 "row_id": f"{section}:{index}",
                 "complete_fact_ids": row["complete"],
                 "partial_fact_ids": row["partial"],
-                "unsupported_atoms": 0,
+                "unsupported_atoms": row.get("unsupported_atoms", 0),
                 "polarity_errors": 0,
                 "temporal_errors": row.get("temporal_errors", 0),
-                "source_errors": 0,
+                "source_errors": row.get("source_errors", 0),
             })
     return result, review
 

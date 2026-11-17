@@ -1,0 +1,60 @@
+{
+  "id": "r01",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "prior",
+      "meaning": "В понедельник стало хуже.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "state",
+      "meaning": "Сегодня в целом хуже.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "no_new",
+      "meaning": "После понедельника дальнейшего ухудшения не было.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "ear",
+      "meaning": "Сейчас болит правое ухо.",
+      "required_sections": [
+        "complaints"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    }
+  ]
+}

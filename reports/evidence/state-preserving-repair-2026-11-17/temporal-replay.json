@@ -1,0 +1,41 @@
+{
+  "source_experiment": "state-transition-2026-11-16",
+  "cases": [
+    {
+      "id": "o01",
+      "previous_changes": 1,
+      "current_changes": 0
+    },
+    {
+      "id": "o02",
+      "previous_changes": 1,
+      "current_changes": 0
+    },
+    {
+      "id": "o03",
+      "previous_changes": 1,
+      "current_changes": 1
+    },
+    {
+      "id": "o04",
+      "previous_changes": 0,
+      "current_changes": 0
+    },
+    {
+      "id": "o05",
+      "previous_changes": 1,
+      "current_changes": 0
+    },
+    {
+      "id": "o06",
+      "previous_changes": 1,
+      "current_changes": 1
+    }
+  ],
+  "api_calls": 0,
+  "confirmed_loss_cases_blocked": [
+    "o01",
+    "o05"
+  ],
+  "ambiguous_case_retained": "o02"
+}
