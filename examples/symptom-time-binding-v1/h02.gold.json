@@ -1,0 +1,47 @@
+{
+  "id": "h02",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "general_course",
+      "meaning": "С вечера общее самочувствие хуже.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "nausea_onset_unknown",
+      "meaning": "Пациент не знает, когда началась тошнота.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "nausea",
+      "meaning": "Сейчас сильно тошнит при наклоне.",
+      "required_sections": [
+        "complaints"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    }
+  ]
+}

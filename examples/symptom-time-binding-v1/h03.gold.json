@@ -1,0 +1,47 @@
+{
+  "id": "h03",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "general_transition",
+      "meaning": "Сегодня утром общее самочувствие снова ухудшилось.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "tremor_onset",
+      "meaning": "Дрожь рук началась в понедельник.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "tremor",
+      "meaning": "Сейчас руки сильно дрожат.",
+      "required_sections": [
+        "complaints"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    }
+  ]
+}

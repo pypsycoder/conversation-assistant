@@ -1,0 +1,22 @@
+{
+  "id": "h03",
+  "synthetic": true,
+  "text_revision": 1,
+  "timing_origin": "synthetic_order_not_audio",
+  "segments": [
+    {
+      "id": "s1",
+      "role": "doctor",
+      "text": "Как менялось самочувствие?",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "s2",
+      "role": "patient",
+      "text": "Сегодня утром мне опять стало хуже в целом. Дрожь рук началась в понедельник. Сейчас руки сильно дрожат.",
+      "start": 1,
+      "end": 2
+    }
+  ]
+}
