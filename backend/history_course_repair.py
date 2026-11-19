@@ -6,20 +6,26 @@ from collections import Counter
 from pathlib import Path
 
 from backend.complaint_quote_repair import (
-    TIME, GENERAL_COURSE, LITERAL_WORSENING, CURRENT_SYMPTOM,
+    TIME, DAY, TIME_OF_DAY, GENERAL_COURSE, LITERAL_WORSENING, CURRENT_SYMPTOM, EARLIER_IMPROVEMENT,
     CLAUSE_SEPARATOR, complete_quote, sentence_text, repair_complaints,
 )
 from backend.nightly_research import read, save
 from backend.three_sections import provenance_errors
 
 # Whole general-course rows only; no symptom, treatment, condition or uncertainty.
+COURSE_TIME = rf"(?:(?:{DAY} )?{TIME_OF_DAY}|{TIME}|позавчера)"
+CONDITIONAL_CURRENT = re.compile(
+    CURRENT_SYMPTOM.pattern.removesuffix(r"\.?") + r", если (?:встаю|наклоняюсь)\.?",
+    re.IGNORECASE,
+)
 GENERAL_ROWS = [
     GENERAL_COURSE,
     LITERAL_WORSENING,
     re.compile(rf"{TIME} (?:общее )?(?:самочувствие|состояние) "
                r"(?:(?:снова|опять) )?(?:хуже|ухудшилось)", re.IGNORECASE),
     re.compile(rf"{TIME} общее ухудшение(?: состояния)?", re.IGNORECASE),
-    re.compile(rf"ухудшение началось {TIME}", re.IGNORECASE),
+    re.compile(rf"ухудшение началось {COURSE_TIME}", re.IGNORECASE),
+    re.compile(rf"{COURSE_TIME} (?:мне )?(?:(?:снова|опять) )?стало хуже", re.IGNORECASE),
 ]
 
 
@@ -46,11 +52,14 @@ def source_candidates(source):
                     continue
                 complete = complete_quote(quote, text, allow_after_improvement=kind == "state")
                 if not complete and kind == "state" and not quote.endswith("."):
-                    # A separated current symptom is permitted, but conditions are not.
+                    # A condition is allowed only after an explicit coordinator and current symptom.
                     tail = text[match.end():]
                     sep = CLAUSE_SEPARATOR.match(tail)
                     suffix = re.split(r"(?<=[.!?])\s+", tail[sep.end():], maxsplit=1)[0] if sep else ""
-                    complete = bool(sep and CURRENT_SYMPTOM.fullmatch(suffix)
+                    plain = bool(sep and CURRENT_SYMPTOM.fullmatch(suffix))
+                    conditional = bool(re.match(r", (?:а|и) ", tail, re.IGNORECASE)
+                                       and CONDITIONAL_CURRENT.fullmatch(suffix))
+                    complete = bool((plain or conditional)
                                     and complete_quote(quote, text[:match.end()]))
                 if not complete:
                     continue
@@ -67,6 +76,25 @@ def overlaps(candidate, evidence, source_index):
     return any(m.start() < candidate["end"] and candidate["start"] < m.end()
                for m in re.finditer(re.escape(evidence["quote"]), text))
 
+
+
+def exact_course_evidence(candidate, evidence, source_index):
+    """Allow only the original course or its preceding contrast after explicit improvement."""
+    if evidence["segment_id"] != candidate["segment_id"]:
+        return False
+    quote = evidence["quote"].removesuffix(".")
+    course = candidate["quote"].removesuffix(".")
+    if quote == course:
+        return True
+    if quote[:2].casefold() != "а " or quote[2:] != course:
+        return False
+    text = source_index[candidate["segment_id"]]["text"]
+    start = candidate["start"] - 2
+    if start < 0 or text[start:start + len(quote)] != quote:
+        return False
+    before = text[:start].rstrip()
+    earlier = re.split(r"[.!?]", before + " а")[-1].strip()
+    return EARLIER_IMPROVEMENT.fullmatch(earlier) is not None
 
 def repair_history_course(result, source):
     """Replace a whole bounded course row or insert a missing literal course."""
@@ -93,8 +121,7 @@ def repair_history_course(result, source):
             i = touched[0]
             row = history[i]
             exact = (len(row["evidence"]) == 1
-                     and row["evidence"][0]["segment_id"] == candidate["segment_id"]
-                     and row["evidence"][0]["quote"].removesuffix(".") == candidate["quote"].removesuffix("."))
+                     and exact_course_evidence(candidate, row["evidence"][0], index))
             if sentence_text(row["text"]) == sentence_text(canonical["text"]) and exact:
                 continue
             if not exact or not only_course(row["text"]):

@@ -1,0 +1,73 @@
+{
+  "id": "x06",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "improvement",
+      "meaning": "Вчера было легче.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "course",
+      "meaning": "С ночи снова плохое состояние после облегчения вчера.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "symptom",
+      "meaning": "Сейчас сильно дрожат руки.",
+      "required_sections": [
+        "complaints"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "symptom_onset",
+      "meaning": "Дрожь рук началась в четверг днём.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s4"
+      ]
+    },
+    {
+      "id": "father_unknown",
+      "meaning": "Пациент не знает, были ли у отца психические заболевания.",
+      "required_sections": [
+        "life_history"
+      ],
+      "allowed_sections": [
+        "life_history"
+      ],
+      "source_segment_ids": [
+        "s6"
+      ]
+    }
+  ]
+}
