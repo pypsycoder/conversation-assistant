@@ -107,3 +107,10 @@ class HistoryCourseRepairTests(unittest.TestCase):
         original=result([{"text":"С утра мне не хуже.","evidence":[{"segment_id":"s4","quote":"С утра мне не хуже."}]}])
         self.assertEqual(repair_history_course(original,src)[0],original)
         self.assertFalse(repair_history_course(original,src)[1])
+
+    def test_retraction_with_period_does_not_reintroduce_old_course(self):
+        src=source("С утра мне в целом снова хуже.")
+        src["segments"].append({"id":"s4","role":"patient","text":"Нет. С утра мне не хуже."})
+        original=result([{"text":"С утра мне не хуже.","evidence":[{"segment_id":"s4","quote":"С утра мне не хуже."}]}])
+        self.assertEqual(repair_history_course(original,src)[0],original)
+        self.assertFalse(repair_history_course(original,src)[1])

@@ -30,7 +30,7 @@ def only_course(text):
 def source_candidates(source):
     candidates = []
     # A later correction can retract an earlier quote without repeating its grammar.
-    correction = re.compile(r"\b(?:нет,|ошибся|ошиблась|уточню|поправлю|вернее|то есть|"
+    correction = re.compile(r"\b(?:нет\b|ошибся|ошиблась|уточню|поправлю|вернее|то есть|"
                             r"неправильно сказал|неправильно сказала)", re.IGNORECASE)
     if any(correction.search(s["text"]) for s in source["segments"] if s["role"] == "patient"):
         return candidates
