@@ -1,0 +1,60 @@
+{
+  "id": "z04",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "transition",
+      "meaning": "Общее ухудшение произошло в субботу.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "course",
+      "meaning": "С ночи общее самочувствие хуже; нового ухудшения с ночи не утверждается.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "no_further_worsening",
+      "meaning": "Сегодня дальнейшего усиления ухудшения не было.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "symptom",
+      "meaning": "Сейчас сильно болит правое ухо; начало боли не сообщено.",
+      "required_sections": [
+        "complaints"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    }
+  ]
+}

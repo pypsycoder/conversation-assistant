@@ -1,0 +1,75 @@
+{
+  "id": "z06",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "improvement",
+      "meaning": "Вчера пациенту было легче.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "course",
+      "meaning": "Сегодня общее самочувствие снова хуже после облегчения вчера; это не обязательно момент начала нового ухудшения.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "symptom",
+      "meaning": "Сейчас сильно дрожат руки.",
+      "required_sections": [
+        "complaints"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "symptom_onset",
+      "meaning": "Дрожь рук началась во вторник вечером.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "id": "father_unknown",
+      "meaning": "Пациент не знает, были ли у отца психические заболевания; обязательно в анамнезе жизни.",
+      "required_sections": [
+        "life_history"
+      ],
+      "allowed_sections": [
+        "life_history"
+      ],
+      "source_segment_ids": [
+        "s5",
+        "s6"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "z02",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "course",
+      "meaning": "Со вчерашнего вечера общее самочувствие снова хуже.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "symptom",
+      "meaning": "Сейчас сильно тошнит.",
+      "required_sections": [
+        "complaints"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "unknown_onset",
+      "meaning": "Пациент не знает, когда началась тошнота; неизвестность относится именно к её началу.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s3",
+        "s4"
+      ]
+    }
+  ]
+}
