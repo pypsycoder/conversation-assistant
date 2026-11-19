@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "synthetic": true,
+  "gold_status": "agent_authored_requires_physician_review",
+  "cases": [
+    {
+      "id": "x02",
+      "split": "diagnostic",
+      "source": "../history-boundaries-v2/x02.source.json",
+      "gold": "../history-boundaries-v2/x02.gold.json"
+    },
+    {
+      "id": "x03",
+      "split": "diagnostic",
+      "source": "../history-boundaries-v2/x03.source.json",
+      "gold": "../history-boundaries-v2/x03.gold.json"
+    },
+    {
+      "id": "x04",
+      "split": "diagnostic",
+      "source": "../history-boundaries-v2/x04.source.json",
+      "gold": "../history-boundaries-v2/x04.gold.json"
+    },
+    {
+      "id": "x05",
+      "split": "diagnostic",
+      "source": "../history-boundaries-v2/x05.source.json",
+      "gold": "../history-boundaries-v2/x05.gold.json"
+    },
+    {
+      "id": "x06",
+      "split": "diagnostic",
+      "source": "../history-boundaries-v2/x06.source.json",
+      "gold": "../history-boundaries-v2/x06.gold.json"
+    }
+  ]
+}
