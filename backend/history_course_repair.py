@@ -29,8 +29,14 @@ GENERAL_ROWS = [
 ]
 
 
-def only_course(text):
-    return any(pattern.fullmatch(sentence_text(text)) for pattern in GENERAL_ROWS)
+SHORT_NOMINAL_ROW = re.compile(rf"{TIME} ухудшение(?: состояния)?", re.IGNORECASE)
+
+
+def only_course(text, *, allow_short_nominal=False):
+    normalized = sentence_text(text)
+    return any(pattern.fullmatch(normalized) for pattern in GENERAL_ROWS) or bool(
+        allow_short_nominal and SHORT_NOMINAL_ROW.fullmatch(normalized)
+    )
 
 
 def source_candidates(source):
@@ -124,7 +130,7 @@ def repair_history_course(result, source):
                      and exact_course_evidence(candidate, row["evidence"][0], index))
             if sentence_text(row["text"]) == sentence_text(canonical["text"]) and exact:
                 continue
-            if not exact or not only_course(row["text"]):
+            if not exact or not only_course(row["text"], allow_short_nominal=True):
                 reason = "mixed_or_unrecognized_history_row"
             else:
                 changes.append(dict(action="replace", history_index=i, original=copy.deepcopy(row), replacement=canonical))
