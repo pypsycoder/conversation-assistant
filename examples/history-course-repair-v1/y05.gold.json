@@ -1,0 +1,60 @@
+{
+  "id": "y05",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "transition",
+      "meaning": "В среду утром произошло ухудшение.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "course",
+      "meaning": "Сегодня снова хуже; состояние и переход различаются.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "negative",
+      "meaning": "Сегодня сильнее не стало.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "symptom",
+      "meaning": "Сейчас сильно тошнит.",
+      "required_sections": [
+        "complaints"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    }
+  ]
+}

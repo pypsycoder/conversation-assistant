@@ -1,0 +1,36 @@
+{
+  "id": "y02",
+  "synthetic": true,
+  "text_revision": 1,
+  "timing_origin": "synthetic_order_not_audio",
+  "segments": [
+    {
+      "id": "s1",
+      "role": "doctor",
+      "text": "Что вас сейчас беспокоит?",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "s2",
+      "role": "patient",
+      "text": "Сегодня мне в целом снова хуже, а сейчас очень болит левое ухо.",
+      "start": 1,
+      "end": 2
+    },
+    {
+      "id": "s3",
+      "role": "doctor",
+      "text": "Когда началась боль в ухе?",
+      "start": 2,
+      "end": 3
+    },
+    {
+      "id": "s4",
+      "role": "patient",
+      "text": "Не знаю, когда началась боль в левом ухе.",
+      "start": 3,
+      "end": 4
+    }
+  ]
+}
