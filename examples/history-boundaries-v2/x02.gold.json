@@ -1,0 +1,34 @@
+{
+  "id": "x02",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "transition",
+      "meaning": "Сегодня после обеда снова произошло ухудшение.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "symptom",
+      "meaning": "Сейчас очень звенит в ушах; начало не сообщалось.",
+      "required_sections": [
+        "complaints"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    }
+  ]
+}

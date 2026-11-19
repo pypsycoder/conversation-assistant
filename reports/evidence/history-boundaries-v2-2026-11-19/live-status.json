@@ -1,0 +1,72 @@
+{
+  "protocol_commit": "2895f65",
+  "control_commit": "017195b",
+  "code_sha256": "05adc6911478e1165abcdb1b06d43cb76a45fc5d9c7e9a79fc97911032ba1787",
+  "control_code_sha256": "cb296727d79bbc35f6c62d81b85b7150f15ff4faa15eeee5d34221e4b3066ecb",
+  "complaint_code_sha256": "355629f828816b68607f0947ac5d3b83bb747607f81cfa737d6fb0c3821c4ca8",
+  "fresh_status": "stopped_on_first_attempt_without_response",
+  "error_type": "TimeoutError",
+  "attempts": 1,
+  "received_responses": 0,
+  "completed_comparison_pairs": 0,
+  "sample_size_planned": 6,
+  "attempted_case_ids": [
+    "x01"
+  ],
+  "never_dispatched_case_ids": [
+    "x02",
+    "x03",
+    "x04",
+    "x05",
+    "x06"
+  ],
+  "model_alias": "GigaChat-3-Ultra",
+  "expected_model_revision": "GigaChat-3-Ultra:32.9.16.9",
+  "returned_model_revision": null,
+  "access_check": {
+    "status": "available",
+    "selected_model": "GigaChat-3-Ultra",
+    "tls_verification": true,
+    "seconds": 1.0541026999708265,
+    "generation_calls": 0
+  },
+  "budget": {
+    "cycle_start_utc": "2026-11-19T11:10:26Z",
+    "deadline_utc": "2026-11-19T11:40:26+00:00",
+    "max_calls": 6,
+    "max_tokens": 100000,
+    "max_seconds": 1369,
+    "previous_unknown_attempts": [
+      "data/nightly/2026-11-18T200206-symptom-time-candidate/iteration-01/h02/attempt.json"
+    ],
+    "output": "data/nightly/2026-11-19T1117-history-boundaries-live",
+    "protocol_commit": "2895f65",
+    "control_commit": "017195b",
+    "history_code_sha256": "05adc6911478e1165abcdb1b06d43cb76a45fc5d9c7e9a79fc97911032ba1787",
+    "control_code_sha256": "cb296727d79bbc35f6c62d81b85b7150f15ff4faa15eeee5d34221e4b3066ecb",
+    "complaint_code_sha256": "355629f828816b68607f0947ac5d3b83bb747607f81cfa737d6fb0c3821c4ca8"
+  },
+  "runner_seconds": 154.48399999999674,
+  "saved_receipt_tokens": 0,
+  "total_tokens": null,
+  "cost_rub": null,
+  "spending_note": "No generation receipt; zero saved usage does not mean zero spend",
+  "pending_attempt_path": "data/nightly/2026-11-19T1117-history-boundaries-live/iteration-01/x01/attempt.json",
+  "attempt_sha256": "3f9d5639058acf0b60760ac223451b9d5bec0137e42da5d9b906475709d806b0",
+  "source_sha256": "19071b758258d64cceb97bbcb42299aafc99e4fbf2398a19e5e8e417e8e2ae45",
+  "previous_unknown_attempts": [
+    "data/nightly/2026-11-18T200206-symptom-time-candidate/iteration-01/h02/attempt.json"
+  ],
+  "total_unresolved_attempts": 2,
+  "retries": 0,
+  "api_stopped_after_failure": true,
+  "verification": {
+    "clean_git_archive_tests": 85,
+    "new_offline_cases_reproduced": 12,
+    "prior_offline_cases_unchanged": 12,
+    "development_cli_scores_reproduced": 12,
+    "required_fact_id_sets_preserved": true,
+    "code_and_inputs_unchanged_after_freeze": true
+  },
+  "decision": "Target Y omissions and temporal error fixed offline; independent fresh efficacy remains unverified"
+}
