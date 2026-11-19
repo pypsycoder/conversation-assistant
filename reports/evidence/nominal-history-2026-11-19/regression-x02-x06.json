@@ -1,0 +1,1663 @@
+{
+  "sample_size": 5,
+  "role": "development replay, not independent fresh validation",
+  "control_commit": "2895f65",
+  "totals": {
+    "control": {
+      "tp": 15,
+      "fp": 0,
+      "fn": 0,
+      "covered_placements": 13,
+      "required_placements": 15,
+      "temporal_errors": 0,
+      "source_errors": 0,
+      "duplicate_placements": 0
+    },
+    "candidate": {
+      "tp": 15,
+      "fp": 0,
+      "fn": 0,
+      "covered_placements": 15,
+      "required_placements": 15,
+      "temporal_errors": 0,
+      "source_errors": 0,
+      "duplicate_placements": 0
+    }
+  },
+  "cli_scores_reproduced": 10,
+  "cases": [
+    {
+      "id": "x02",
+      "raw_response_sha256": "9021fcb452ca578f25f2a12339dc23ef4db0bd06dcb9bd9d54c34db0aea05079",
+      "history_changes": [],
+      "complaint_changes": [],
+      "abstentions": [],
+      "control": {
+        "result": {
+          "sections": {
+            "complaints": [
+              {
+                "text": "Сегодня после обеда мне снова стало хуже в целом. Сейчас очень звенит в ушах.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Сегодня после обеда мне снова стало хуже в целом. Сейчас очень звенит в ушах."
+                  }
+                ]
+              }
+            ],
+            "illness_history": [
+              {
+                "text": "Сегодня после обеда мне снова стало хуже в целом.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Сегодня после обеда мне снова стало хуже в целом."
+                  }
+                ]
+              },
+              {
+                "text": "Сейчас очень звенит в ушах.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Сейчас очень звенит в ушах."
+                  }
+                ]
+              }
+            ],
+            "life_history": []
+          },
+          "gaps": []
+        },
+        "review": {
+          "reviewer": "Codex; independent from GigaChat; manual nonblind assessment",
+          "physician_reviewed": false,
+          "rows": [
+            {
+              "row_id": "complaints:0",
+              "complete_fact_ids": [
+                "transition",
+                "symptom"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Переход сегодня после обеда с «снова» и сильный текущий звон полностью переданы. Общая динамика лишняя в жалобах, симптом сохранён."
+            },
+            {
+              "row_id": "illness_history:0",
+              "complete_fact_ids": [
+                "transition"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Дословный переход: сегодня после обеда и «снова» сохранены."
+            },
+            {
+              "row_id": "illness_history:1",
+              "complete_fact_ids": [
+                "symptom"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Текущий очень сильный звон в ушах сохранён; его начало не датировано."
+            }
+          ],
+          "response_sha256": "d542ff76872573115abc024021a70b4c68a9a3a6f9443af13fa9fc833f4968f5",
+          "gold_sha256": "35005f44f02847be8aa7a55abf249f3299ee56b2f857aa1275956cc9c80f0b66"
+        },
+        "metrics": {
+          "gold_facts": 2,
+          "output_rows": 3,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 2,
+          "covered_placements": 2,
+          "correct_placements": 3,
+          "predicted_placements": 4,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex; independent from GigaChat; manual nonblind assessment",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      },
+      "candidate": {
+        "result": {
+          "sections": {
+            "complaints": [
+              {
+                "text": "Сегодня после обеда мне снова стало хуже в целом. Сейчас очень звенит в ушах.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Сегодня после обеда мне снова стало хуже в целом. Сейчас очень звенит в ушах."
+                  }
+                ]
+              }
+            ],
+            "illness_history": [
+              {
+                "text": "Сегодня после обеда мне снова стало хуже в целом.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Сегодня после обеда мне снова стало хуже в целом."
+                  }
+                ]
+              },
+              {
+                "text": "Сейчас очень звенит в ушах.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Сейчас очень звенит в ушах."
+                  }
+                ]
+              }
+            ],
+            "life_history": []
+          },
+          "gaps": []
+        },
+        "review": {
+          "reviewer": "Codex; independent from GigaChat; manual nonblind assessment",
+          "physician_reviewed": false,
+          "rows": [
+            {
+              "row_id": "complaints:0",
+              "complete_fact_ids": [
+                "transition",
+                "symptom"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Переход сегодня после обеда с «снова» и сильный текущий звон полностью переданы. Общая динамика лишняя в жалобах, симптом сохранён."
+            },
+            {
+              "row_id": "illness_history:0",
+              "complete_fact_ids": [
+                "transition"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Дословный переход: сегодня после обеда и «снова» сохранены."
+            },
+            {
+              "row_id": "illness_history:1",
+              "complete_fact_ids": [
+                "symptom"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Текущий очень сильный звон в ушах сохранён; его начало не датировано."
+            }
+          ],
+          "response_sha256": "288c227a8f82316677b213d9a4043b01565ff8773dc2c00c9f4d1d69622a4494",
+          "gold_sha256": "35005f44f02847be8aa7a55abf249f3299ee56b2f857aa1275956cc9c80f0b66"
+        },
+        "metrics": {
+          "gold_facts": 2,
+          "output_rows": 3,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 2,
+          "covered_placements": 2,
+          "correct_placements": 3,
+          "predicted_placements": 4,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex; independent from GigaChat; manual nonblind assessment",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "x03",
+      "raw_response_sha256": "51d3527c997010fb458f7a683728d1691d1762d3712a3a04a308e4a1ee3dc323",
+      "history_changes": [],
+      "complaint_changes": [],
+      "abstentions": [],
+      "control": {
+        "result": {
+          "sections": {
+            "complaints": [
+              {
+                "text": "Со вчерашнего утра мне в целом снова хуже.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Со вчерашнего утра мне в целом снова хуже"
+                  }
+                ]
+              },
+              {
+                "text": "Сильно кружится голова, если наклоняюсь.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "сейчас сильно кружится голова, если наклоняюсь"
+                  }
+                ]
+              }
+            ],
+            "illness_history": [
+              {
+                "text": "Со вчерашнего утра мне в целом снова хуже.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Со вчерашнего утра мне в целом снова хуже"
+                  }
+                ]
+              },
+              {
+                "text": "Сейчас при наклоне сильно кружится голова.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "сейчас сильно кружится голова, если наклоняюсь"
+                  }
+                ]
+              }
+            ],
+            "life_history": []
+          },
+          "gaps": []
+        },
+        "review": {
+          "reviewer": "Codex; independent from GigaChat; manual nonblind assessment",
+          "physician_reviewed": false,
+          "rows": [
+            {
+              "row_id": "complaints:0",
+              "complete_fact_ids": [
+                "course"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Период со вчерашнего утра, состояние и «снова» сохранены. Динамика лишняя в жалобах."
+            },
+            {
+              "row_id": "complaints:1",
+              "complete_fact_ids": [
+                "symptom"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Текущее сильное головокружение при наклоне сохранено."
+            },
+            {
+              "row_id": "illness_history:0",
+              "complete_fact_ids": [
+                "course"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Дословное состояние со вчерашнего утра и «снова» сохранены, неподтверждённое начало не добавлено."
+            },
+            {
+              "row_id": "illness_history:1",
+              "complete_fact_ids": [
+                "symptom"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Текущее сильное головокружение при наклоне сохранено, начало не приравнено вчерашнему утру."
+            }
+          ],
+          "response_sha256": "a409da34a33ce002ceca69321ca51fe8ef3b9dac5667f64237af15c2abb8915f",
+          "gold_sha256": "28092dfac5f9eb2effddd7b21897f46c1315bbe5e0aa8b22ff0fadc918a962f8"
+        },
+        "metrics": {
+          "gold_facts": 2,
+          "output_rows": 4,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 2,
+          "covered_placements": 2,
+          "correct_placements": 3,
+          "predicted_placements": 4,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex; independent from GigaChat; manual nonblind assessment",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      },
+      "candidate": {
+        "result": {
+          "sections": {
+            "complaints": [
+              {
+                "text": "Со вчерашнего утра мне в целом снова хуже.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Со вчерашнего утра мне в целом снова хуже"
+                  }
+                ]
+              },
+              {
+                "text": "Сильно кружится голова, если наклоняюсь.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "сейчас сильно кружится голова, если наклоняюсь"
+                  }
+                ]
+              }
+            ],
+            "illness_history": [
+              {
+                "text": "Со вчерашнего утра мне в целом снова хуже.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Со вчерашнего утра мне в целом снова хуже"
+                  }
+                ]
+              },
+              {
+                "text": "Сейчас при наклоне сильно кружится голова.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "сейчас сильно кружится голова, если наклоняюсь"
+                  }
+                ]
+              }
+            ],
+            "life_history": []
+          },
+          "gaps": []
+        },
+        "review": {
+          "reviewer": "Codex; independent from GigaChat; manual nonblind assessment",
+          "physician_reviewed": false,
+          "rows": [
+            {
+              "row_id": "complaints:0",
+              "complete_fact_ids": [
+                "course"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Период со вчерашнего утра, состояние и «снова» сохранены. Динамика лишняя в жалобах."
+            },
+            {
+              "row_id": "complaints:1",
+              "complete_fact_ids": [
+                "symptom"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Текущее сильное головокружение при наклоне сохранено."
+            },
+            {
+              "row_id": "illness_history:0",
+              "complete_fact_ids": [
+                "course"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Дословное состояние со вчерашнего утра и «снова» сохранены, неподтверждённое начало не добавлено."
+            },
+            {
+              "row_id": "illness_history:1",
+              "complete_fact_ids": [
+                "symptom"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Текущее сильное головокружение при наклоне сохранено, начало не приравнено вчерашнему утру."
+            }
+          ],
+          "response_sha256": "a0682e58991915fa2ae3d21eb6b3bd81a414e3440a0da9c61f3306c513507241",
+          "gold_sha256": "28092dfac5f9eb2effddd7b21897f46c1315bbe5e0aa8b22ff0fadc918a962f8"
+        },
+        "metrics": {
+          "gold_facts": 2,
+          "output_rows": 4,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 2,
+          "covered_placements": 2,
+          "correct_placements": 3,
+          "predicted_placements": 4,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex; independent from GigaChat; manual nonblind assessment",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "x04",
+      "raw_response_sha256": "187fec932a7919c0abc044d4da057405ef5cce6857f1b8cb0be907dccfef12f0",
+      "history_changes": [],
+      "complaint_changes": [],
+      "abstentions": [],
+      "control": {
+        "result": {
+          "sections": {
+            "complaints": [
+              {
+                "text": "С утра мне в целом снова хуже, если встаю.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "С утра мне в целом снова хуже, если встаю."
+                  }
+                ]
+              },
+              {
+                "text": "Сейчас сильно тошнит.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Сейчас сильно тошнит."
+                  }
+                ]
+              }
+            ],
+            "illness_history": [
+              {
+                "text": "С утра мне в целом снова хуже, если встаю.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "С утра мне в целом снова хуже, если встаю."
+                  }
+                ]
+              },
+              {
+                "text": "Сейчас сильно тошнит.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Сейчас сильно тошнит."
+                  }
+                ]
+              }
+            ],
+            "life_history": []
+          },
+          "gaps": []
+        },
+        "review": {
+          "reviewer": "Codex; independent from GigaChat; manual nonblind assessment",
+          "physician_reviewed": false,
+          "rows": [
+            {
+              "row_id": "complaints:0",
+              "complete_fact_ids": [
+                "course"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "С утра снова хуже именно при вставании. Условие общей фразы сохранено. Динамика лишняя в жалобах."
+            },
+            {
+              "row_id": "complaints:1",
+              "complete_fact_ids": [
+                "symptom"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Сильная тошнота сейчас сохранена."
+            },
+            {
+              "row_id": "illness_history:0",
+              "complete_fact_ids": [
+                "course"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Дословное условное общее состояние: период, «снова» и вставание сохранены."
+            },
+            {
+              "row_id": "illness_history:1",
+              "complete_fact_ids": [
+                "symptom"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Сильная тошнота сейчас сохранена; дополнительных временных связей нет."
+            }
+          ],
+          "response_sha256": "8ebf3b5bafb3db3c95845a0e362666a934fd1f6385347b8ab4fac2e73996614b",
+          "gold_sha256": "af28eca0b7b0b83553f12920384a0506fc5050bed18324f361cd87f2588520da"
+        },
+        "metrics": {
+          "gold_facts": 2,
+          "output_rows": 4,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 2,
+          "covered_placements": 2,
+          "correct_placements": 3,
+          "predicted_placements": 4,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex; independent from GigaChat; manual nonblind assessment",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      },
+      "candidate": {
+        "result": {
+          "sections": {
+            "complaints": [
+              {
+                "text": "С утра мне в целом снова хуже, если встаю.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "С утра мне в целом снова хуже, если встаю."
+                  }
+                ]
+              },
+              {
+                "text": "Сейчас сильно тошнит.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Сейчас сильно тошнит."
+                  }
+                ]
+              }
+            ],
+            "illness_history": [
+              {
+                "text": "С утра мне в целом снова хуже, если встаю.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "С утра мне в целом снова хуже, если встаю."
+                  }
+                ]
+              },
+              {
+                "text": "Сейчас сильно тошнит.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Сейчас сильно тошнит."
+                  }
+                ]
+              }
+            ],
+            "life_history": []
+          },
+          "gaps": []
+        },
+        "review": {
+          "reviewer": "Codex; independent from GigaChat; manual nonblind assessment",
+          "physician_reviewed": false,
+          "rows": [
+            {
+              "row_id": "complaints:0",
+              "complete_fact_ids": [
+                "course"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "С утра снова хуже именно при вставании. Условие общей фразы сохранено. Динамика лишняя в жалобах."
+            },
+            {
+              "row_id": "complaints:1",
+              "complete_fact_ids": [
+                "symptom"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Сильная тошнота сейчас сохранена."
+            },
+            {
+              "row_id": "illness_history:0",
+              "complete_fact_ids": [
+                "course"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Дословное условное общее состояние: период, «снова» и вставание сохранены."
+            },
+            {
+              "row_id": "illness_history:1",
+              "complete_fact_ids": [
+                "symptom"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Сильная тошнота сейчас сохранена; дополнительных временных связей нет."
+            }
+          ],
+          "response_sha256": "38c7cbd5199736035fb47e9e8cf880781f66c6a697aae4f4ae9573a39e14530d",
+          "gold_sha256": "af28eca0b7b0b83553f12920384a0506fc5050bed18324f361cd87f2588520da"
+        },
+        "metrics": {
+          "gold_facts": 2,
+          "output_rows": 4,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 2,
+          "covered_placements": 2,
+          "correct_placements": 3,
+          "predicted_placements": 4,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex; independent from GigaChat; manual nonblind assessment",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "x05",
+      "raw_response_sha256": "4867493849a99affb737f6acee3a5dac332b7ed1d1b93b19ac49528eae5daf2d",
+      "history_changes": [
+        {
+          "action": "replace",
+          "history_index": 1,
+          "original": {
+            "text": "Со вчерашнего вечера ухудшение.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "со вчерашнего вечера мне в целом снова хуже"
+              }
+            ]
+          },
+          "replacement": {
+            "text": "Со вчерашнего вечера мне в целом снова хуже.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "со вчерашнего вечера мне в целом снова хуже."
+              }
+            ]
+          }
+        }
+      ],
+      "complaint_changes": [],
+      "abstentions": [],
+      "control": {
+        "result": {
+          "sections": {
+            "complaints": [
+              {
+                "text": "Сейчас очень болит горло.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Сейчас очень болит горло."
+                  }
+                ]
+              },
+              {
+                "text": "Со вчерашнего вечера в целом снова хуже.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "со вчерашнего вечера мне в целом снова хуже"
+                  }
+                ]
+              }
+            ],
+            "illness_history": [
+              {
+                "text": "В выходные было полегче.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "В выходные мне было полегче"
+                  }
+                ]
+              },
+              {
+                "text": "Со вчерашнего вечера ухудшение.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "со вчерашнего вечера мне в целом снова хуже"
+                  }
+                ]
+              },
+              {
+                "text": "Не знает, когда началась боль в горле.",
+                "evidence": [
+                  {
+                    "segment_id": "s4",
+                    "quote": "Не знаю, когда началась боль в горле."
+                  }
+                ]
+              }
+            ],
+            "life_history": []
+          },
+          "gaps": [
+            {
+              "topic": "Время начала боли в горле",
+              "status": "patient_does_not_know",
+              "evidence": [
+                {
+                  "segment_id": "s4",
+                  "quote": "Не знаю, когда началась боль в горле."
+                }
+              ]
+            }
+          ]
+        },
+        "review": {
+          "reviewer": "Codex; independent from GigaChat; manual nonblind assessment",
+          "physician_reviewed": false,
+          "rows": [
+            {
+              "row_id": "complaints:0",
+              "complete_fact_ids": [
+                "symptom"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Текущая очень сильная боль в горле сохранена."
+            },
+            {
+              "row_id": "complaints:1",
+              "complete_fact_ids": [
+                "course"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Со вчерашнего вечера снова хуже как состояние. Динамика лишняя в жалобах."
+            },
+            {
+              "row_id": "illness_history:0",
+              "complete_fact_ids": [
+                "improvement"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Облегчение в выходные сохранено."
+            },
+            {
+              "row_id": "illness_history:1",
+              "complete_fact_ids": [],
+              "partial_fact_ids": [
+                "course"
+              ],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Период со вчерашнего вечера сохранён, «снова» потеряно. Номинальное «ухудшение» неоднозначно; отдельное уверенное начало не начисляется."
+            },
+            {
+              "row_id": "illness_history:2",
+              "complete_fact_ids": [
+                "unknown_onset"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Неизвестно именно начало боли в горле, а не общего состояния."
+            }
+          ],
+          "response_sha256": "1e1b62d5039660cbbdfe5e08b86fd80a0b7f70f4c3f6d4c67366d700b65fe2b5",
+          "gold_sha256": "03c5c9ffe3ed404fc9c6a27daf32dee89e8b079a86dd24b8727c9a75bbe7442d"
+        },
+        "metrics": {
+          "gold_facts": 4,
+          "output_rows": 5,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 4,
+          "covered_placements": 3,
+          "correct_placements": 3,
+          "predicted_placements": 4,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex; independent from GigaChat; manual nonblind assessment",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 3,
+            "covered": 2,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      },
+      "candidate": {
+        "result": {
+          "sections": {
+            "complaints": [
+              {
+                "text": "Сейчас очень болит горло.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Сейчас очень болит горло."
+                  }
+                ]
+              },
+              {
+                "text": "Со вчерашнего вечера в целом снова хуже.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "со вчерашнего вечера мне в целом снова хуже"
+                  }
+                ]
+              }
+            ],
+            "illness_history": [
+              {
+                "text": "В выходные было полегче.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "В выходные мне было полегче"
+                  }
+                ]
+              },
+              {
+                "text": "Со вчерашнего вечера мне в целом снова хуже.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "со вчерашнего вечера мне в целом снова хуже."
+                  }
+                ]
+              },
+              {
+                "text": "Не знает, когда началась боль в горле.",
+                "evidence": [
+                  {
+                    "segment_id": "s4",
+                    "quote": "Не знаю, когда началась боль в горле."
+                  }
+                ]
+              }
+            ],
+            "life_history": []
+          },
+          "gaps": [
+            {
+              "topic": "Время начала боли в горле",
+              "status": "patient_does_not_know",
+              "evidence": [
+                {
+                  "segment_id": "s4",
+                  "quote": "Не знаю, когда началась боль в горле."
+                }
+              ]
+            }
+          ]
+        },
+        "review": {
+          "reviewer": "Codex; independent from GigaChat; manual nonblind assessment",
+          "physician_reviewed": false,
+          "rows": [
+            {
+              "row_id": "complaints:0",
+              "complete_fact_ids": [
+                "symptom"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Текущая очень сильная боль в горле сохранена."
+            },
+            {
+              "row_id": "complaints:1",
+              "complete_fact_ids": [
+                "course"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Со вчерашнего вечера снова хуже как состояние. Динамика лишняя в жалобах."
+            },
+            {
+              "row_id": "illness_history:0",
+              "complete_fact_ids": [
+                "improvement"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Облегчение в выходные сохранено."
+            },
+            {
+              "row_id": "illness_history:1",
+              "complete_fact_ids": [
+                "course"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Точная исходная общая фраза сохраняет период состояния и «снова», без начала нового события."
+            },
+            {
+              "row_id": "illness_history:2",
+              "complete_fact_ids": [
+                "unknown_onset"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Неизвестно именно начало боли в горле, а не общего состояния."
+            }
+          ],
+          "response_sha256": "161a75ffc836f566a5d6e44dd8682045ef45e2493c9cc05c6d966940b3240d3c",
+          "gold_sha256": "03c5c9ffe3ed404fc9c6a27daf32dee89e8b079a86dd24b8727c9a75bbe7442d"
+        },
+        "metrics": {
+          "gold_facts": 4,
+          "output_rows": 5,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 4,
+          "covered_placements": 4,
+          "correct_placements": 4,
+          "predicted_placements": 5,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex; independent from GigaChat; manual nonblind assessment",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 3,
+            "covered": 3,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "x06",
+      "raw_response_sha256": "f5910a750501a8ad9762ddc589f4b281d0d343bedde5fc82cabd77bd19fc2404",
+      "history_changes": [
+        {
+          "action": "replace",
+          "history_index": 2,
+          "original": {
+            "text": "С ночи ухудшение состояния.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "с ночи мне в целом снова хуже."
+              }
+            ]
+          },
+          "replacement": {
+            "text": "С ночи мне в целом снова хуже.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "с ночи мне в целом снова хуже."
+              }
+            ]
+          }
+        }
+      ],
+      "complaint_changes": [],
+      "abstentions": [],
+      "control": {
+        "result": {
+          "sections": {
+            "complaints": [
+              {
+                "text": "С ночи в целом снова хуже.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "с ночи мне в целом снова хуже."
+                  }
+                ]
+              },
+              {
+                "text": "Сильно дрожат руки.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Сейчас сильно дрожат руки."
+                  }
+                ]
+              }
+            ],
+            "illness_history": [
+              {
+                "text": "Дрожь рук началась в четверг днём.",
+                "evidence": [
+                  {
+                    "segment_id": "s4",
+                    "quote": "В четверг днём."
+                  }
+                ]
+              },
+              {
+                "text": "Вчера было легче.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Вчера мне было легче"
+                  }
+                ]
+              },
+              {
+                "text": "С ночи ухудшение состояния.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "с ночи мне в целом снова хуже."
+                  }
+                ]
+              }
+            ],
+            "life_history": [
+              {
+                "text": "Неизвестно, были ли у отца психические заболевания.",
+                "evidence": [
+                  {
+                    "segment_id": "s6",
+                    "quote": "Не знаю, были ли у отца психические заболевания."
+                  }
+                ]
+              }
+            ]
+          },
+          "gaps": [
+            {
+              "topic": "Психические заболевания у отца",
+              "status": "patient_does_not_know",
+              "evidence": [
+                {
+                  "segment_id": "s6",
+                  "quote": "Не знаю, были ли у отца психические заболевания."
+                }
+              ]
+            }
+          ]
+        },
+        "review": {
+          "reviewer": "Codex; independent from GigaChat; manual nonblind assessment",
+          "physician_reviewed": false,
+          "rows": [
+            {
+              "row_id": "complaints:0",
+              "complete_fact_ids": [
+                "course"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "С ночи снова хуже как состояние. Динамика лишняя в жалобах."
+            },
+            {
+              "row_id": "complaints:1",
+              "complete_fact_ids": [
+                "symptom"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Сильная дрожь рук сохранена как текущая жалоба."
+            },
+            {
+              "row_id": "illness_history:0",
+              "complete_fact_ids": [
+                "symptom_onset"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Дрожь рук началась в четверг днём. Непосредственный вопрос врача однозначно задаёт предмет краткого ответа."
+            },
+            {
+              "row_id": "illness_history:1",
+              "complete_fact_ids": [
+                "improvement"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Вчерашнее облегчение сохранено."
+            },
+            {
+              "row_id": "illness_history:2",
+              "complete_fact_ids": [],
+              "partial_fact_ids": [
+                "course"
+              ],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "С ночи передано, «снова» опущено. Номинальное ухудшение состояния неоднозначно; явного нового момента начала нет."
+            },
+            {
+              "row_id": "life_history:0",
+              "complete_fact_ids": [
+                "father_unknown"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Неизвестность наличия психических заболеваний у отца сохранена в обязательном анамнезе жизни."
+            }
+          ],
+          "response_sha256": "3b574c089aeabc0b94ae0d16c3e5768fcbc1b192166424fce23903134e912fd8",
+          "gold_sha256": "749fa78e08b91a1e1357cfc386d996b54407fa349a3e08b867b1c45032d149c9"
+        },
+        "metrics": {
+          "gold_facts": 5,
+          "output_rows": 6,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 5,
+          "covered_placements": 4,
+          "correct_placements": 4,
+          "predicted_placements": 5,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex; independent from GigaChat; manual nonblind assessment",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 3,
+            "covered": 2,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0
+          }
+        }
+      },
+      "candidate": {
+        "result": {
+          "sections": {
+            "complaints": [
+              {
+                "text": "С ночи в целом снова хуже.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "с ночи мне в целом снова хуже."
+                  }
+                ]
+              },
+              {
+                "text": "Сильно дрожат руки.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Сейчас сильно дрожат руки."
+                  }
+                ]
+              }
+            ],
+            "illness_history": [
+              {
+                "text": "Дрожь рук началась в четверг днём.",
+                "evidence": [
+                  {
+                    "segment_id": "s4",
+                    "quote": "В четверг днём."
+                  }
+                ]
+              },
+              {
+                "text": "Вчера было легче.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Вчера мне было легче"
+                  }
+                ]
+              },
+              {
+                "text": "С ночи мне в целом снова хуже.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "с ночи мне в целом снова хуже."
+                  }
+                ]
+              }
+            ],
+            "life_history": [
+              {
+                "text": "Неизвестно, были ли у отца психические заболевания.",
+                "evidence": [
+                  {
+                    "segment_id": "s6",
+                    "quote": "Не знаю, были ли у отца психические заболевания."
+                  }
+                ]
+              }
+            ]
+          },
+          "gaps": [
+            {
+              "topic": "Психические заболевания у отца",
+              "status": "patient_does_not_know",
+              "evidence": [
+                {
+                  "segment_id": "s6",
+                  "quote": "Не знаю, были ли у отца психические заболевания."
+                }
+              ]
+            }
+          ]
+        },
+        "review": {
+          "reviewer": "Codex; independent from GigaChat; manual nonblind assessment",
+          "physician_reviewed": false,
+          "rows": [
+            {
+              "row_id": "complaints:0",
+              "complete_fact_ids": [
+                "course"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "С ночи снова хуже как состояние. Динамика лишняя в жалобах."
+            },
+            {
+              "row_id": "complaints:1",
+              "complete_fact_ids": [
+                "symptom"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Сильная дрожь рук сохранена как текущая жалоба."
+            },
+            {
+              "row_id": "illness_history:0",
+              "complete_fact_ids": [
+                "symptom_onset"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Дрожь рук началась в четверг днём. Непосредственный вопрос врача однозначно задаёт предмет краткого ответа."
+            },
+            {
+              "row_id": "illness_history:1",
+              "complete_fact_ids": [
+                "improvement"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Вчерашнее облегчение сохранено."
+            },
+            {
+              "row_id": "illness_history:2",
+              "complete_fact_ids": [
+                "course"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Точная исходная общая фраза сохраняет период состояния и «снова», без начала нового события."
+            },
+            {
+              "row_id": "life_history:0",
+              "complete_fact_ids": [
+                "father_unknown"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Неизвестность наличия психических заболеваний у отца сохранена в обязательном анамнезе жизни."
+            }
+          ],
+          "response_sha256": "f264295d54dec70932e1322e8f7e2e13ae856f7cbf0e5923f6e8cdc063c5f664",
+          "gold_sha256": "749fa78e08b91a1e1357cfc386d996b54407fa349a3e08b867b1c45032d149c9"
+        },
+        "metrics": {
+          "gold_facts": 5,
+          "output_rows": 6,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 5,
+          "covered_placements": 5,
+          "correct_placements": 5,
+          "predicted_placements": 6,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex; independent from GigaChat; manual nonblind assessment",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 3,
+            "covered": 3,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0
+          }
+        }
+      }
+    }
+  ]
+}
