@@ -1,0 +1,1698 @@
+{
+  "sample_size": 6,
+  "role": "development replay, not independent fresh validation",
+  "totals": {
+    "control": {
+      "tp": 18,
+      "fp": 3,
+      "fn": 0,
+      "covered_placements": 13,
+      "required_placements": 18,
+      "temporal_errors": 2,
+      "source_errors": 3
+    },
+    "candidate": {
+      "tp": 18,
+      "fp": 2,
+      "fn": 0,
+      "covered_placements": 17,
+      "required_placements": 18,
+      "temporal_errors": 1,
+      "source_errors": 2
+    }
+  },
+  "cases": [
+    {
+      "id": "z01",
+      "history_changes": [
+        {
+          "action": "replace",
+          "history_index": 0,
+          "original": {
+            "text": "С утра состояние ухудшилось.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "С утра мне в целом снова хуже."
+              }
+            ]
+          },
+          "replacement": {
+            "text": "С утра мне в целом снова хуже.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "С утра мне в целом снова хуже."
+              }
+            ]
+          }
+        }
+      ],
+      "complaint_changes": [
+        {
+          "complaint_index": 0,
+          "illness_history_index": 0,
+          "original": {
+            "text": "С утра мне в целом снова хуже.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "С утра мне в целом снова хуже."
+              }
+            ]
+          },
+          "replacement": null
+        }
+      ],
+      "abstentions": [],
+      "control_metrics": {
+        "gold_facts": 2,
+        "output_rows": 4,
+        "tp": 2,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8,
+        "required_placements": 2,
+        "covered_placements": 1,
+        "correct_placements": 1,
+        "predicted_placements": 2,
+        "unsupported_atoms": 1,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 1,
+        "source_errors": 1,
+        "reviewer": "Codex; manual semantic assessment; nonblind",
+        "physician_reviewed": false
+      },
+      "candidate_metrics": {
+        "gold_facts": 2,
+        "output_rows": 3,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "required_placements": 2,
+        "covered_placements": 2,
+        "correct_placements": 2,
+        "predicted_placements": 2,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0,
+        "reviewer": "Codex; manual semantic assessment; nonblind",
+        "physician_reviewed": false
+      },
+      "control_sections": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 1,
+          "partial_disallowed": 0
+        },
+        "illness_history": {
+          "required": 1,
+          "covered": 0,
+          "disallowed": 0,
+          "partial_disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0,
+          "partial_disallowed": 0
+        }
+      },
+      "candidate_sections": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 0
+        },
+        "illness_history": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      },
+      "candidate_result": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно болит живот.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит живот."
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "С утра мне в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С утра мне в целом снова хуже."
+                }
+              ]
+            },
+            {
+              "text": "Появилась сильная боль в животе.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит живот."
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "candidate_review": {
+        "reviewer": "Codex; manual semantic assessment; nonblind",
+        "physician_reviewed": false,
+        "rows": [
+          {
+            "row_id": "complaints:0",
+            "complete_fact_ids": [
+              "symptom"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Текущая сильная боль в животе сохранена."
+          },
+          {
+            "row_id": "illness_history:0",
+            "complete_fact_ids": [
+              "course"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Дословное состояние из исходной реплики: период и повторяемость сохранены, новое начало не добавлено."
+          },
+          {
+            "row_id": "illness_history:1",
+            "complete_fact_ids": [],
+            "partial_fact_ids": [
+              "symptom"
+            ],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Сильная боль сохранена, но «появилась» не передаёт явно текущее состояние. Конкретный момент начала не назван, отдельная датированная связь не начисляется."
+          }
+        ],
+        "response_sha256": "5b8572a27aa4c581b0662fb95ff0cf5ae22293d691e09c7b71f7f43a4ebf693e",
+        "gold_sha256": "a3f43f59434494da6cb624f7bb7af09c84b8ac1be992467680b422695adc0b00"
+      },
+      "gold_sha256": "a3f43f59434494da6cb624f7bb7af09c84b8ac1be992467680b422695adc0b00",
+      "raw_response_sha256": "b97f3486c088983b7f21a1a5d80efb43522a76560329f25f29c46989b23b1516",
+      "control_review": {
+        "reviewer": "Codex; manual semantic assessment; nonblind",
+        "physician_reviewed": false,
+        "rows": [
+          {
+            "row_id": "complaints:0",
+            "complete_fact_ids": [
+              "course"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Время состояния с утра и повторяемость «снова» полностью сохранены. R2: лишнее в жалобах."
+          },
+          {
+            "row_id": "complaints:1",
+            "complete_fact_ids": [
+              "symptom"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Текущая сильная боль в животе сохранена."
+          },
+          {
+            "row_id": "illness_history:0",
+            "complete_fact_ids": [],
+            "partial_fact_ids": [
+              "course"
+            ],
+            "unsupported_atoms": 1,
+            "polarity_errors": 0,
+            "temporal_errors": 1,
+            "source_errors": 1,
+            "reason": "«Ухудшилось с утра» задаёт переход вместо состояния; потеряно «снова». Время начала ухудшения не сообщено."
+          },
+          {
+            "row_id": "illness_history:1",
+            "complete_fact_ids": [],
+            "partial_fact_ids": [
+              "symptom"
+            ],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Сильная боль сохранена, но «появилась» не передаёт явно текущее состояние. Конкретный момент начала не назван, отдельная датированная связь не начисляется."
+          }
+        ],
+        "response_sha256": "a219eb9b8e1d50739d47adab1114369f10c406c3c2546bab6fdb50daa5799764",
+        "gold_sha256": "a3f43f59434494da6cb624f7bb7af09c84b8ac1be992467680b422695adc0b00"
+      }
+    },
+    {
+      "id": "z02",
+      "history_changes": [
+        {
+          "action": "replace",
+          "history_index": 0,
+          "original": {
+            "text": "Со вчерашнего вечера общее ухудшение.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Со вчерашнего вечера мне в целом снова хуже"
+              }
+            ]
+          },
+          "replacement": {
+            "text": "Со вчерашнего вечера мне в целом снова хуже.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Со вчерашнего вечера мне в целом снова хуже"
+              }
+            ]
+          }
+        }
+      ],
+      "complaint_changes": [],
+      "abstentions": [],
+      "control_metrics": {
+        "gold_facts": 3,
+        "output_rows": 4,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "required_placements": 3,
+        "covered_placements": 2,
+        "correct_placements": 2,
+        "predicted_placements": 3,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0,
+        "reviewer": "Codex; manual semantic assessment; nonblind",
+        "physician_reviewed": false
+      },
+      "candidate_metrics": {
+        "gold_facts": 3,
+        "output_rows": 4,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "required_placements": 3,
+        "covered_placements": 3,
+        "correct_placements": 3,
+        "predicted_placements": 4,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0,
+        "reviewer": "Codex; manual semantic assessment; nonblind",
+        "physician_reviewed": false
+      },
+      "control_sections": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 1,
+          "partial_disallowed": 0
+        },
+        "illness_history": {
+          "required": 2,
+          "covered": 1,
+          "disallowed": 0,
+          "partial_disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0,
+          "partial_disallowed": 0
+        }
+      },
+      "candidate_sections": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 1
+        },
+        "illness_history": {
+          "required": 2,
+          "covered": 2,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      },
+      "candidate_result": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Со вчерашнего вечера мне в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Со вчерашнего вечера мне в целом снова хуже"
+                }
+              ]
+            },
+            {
+              "text": "Сейчас сильно тошнит.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "сейчас сильно тошнит"
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Со вчерашнего вечера мне в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Со вчерашнего вечера мне в целом снова хуже"
+                }
+              ]
+            },
+            {
+              "text": "Тошнота присутствует сейчас, время начала неизвестно.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "сейчас сильно тошнит"
+                },
+                {
+                  "segment_id": "s4",
+                  "quote": "Не знаю, когда началась тошнота."
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": [
+          {
+            "topic": "Время начала тошноты",
+            "status": "patient_does_not_know",
+            "evidence": [
+              {
+                "segment_id": "s4",
+                "quote": "Не знаю, когда началась тошнота."
+              }
+            ]
+          }
+        ]
+      },
+      "candidate_review": {
+        "reviewer": "Codex; manual semantic assessment; nonblind",
+        "physician_reviewed": false,
+        "rows": [
+          {
+            "row_id": "complaints:0",
+            "complete_fact_ids": [
+              "course"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Со вчерашнего вечера, состояние и «снова» сохранены. R2: лишнее в жалобах."
+          },
+          {
+            "row_id": "complaints:1",
+            "complete_fact_ids": [
+              "symptom"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Текущая сильная тошнота сохранена."
+          },
+          {
+            "row_id": "illness_history:0",
+            "complete_fact_ids": [
+              "course"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Дословное состояние из исходной реплики: период и повторяемость сохранены, новое начало не добавлено."
+          },
+          {
+            "row_id": "illness_history:1",
+            "complete_fact_ids": [
+              "unknown_onset"
+            ],
+            "partial_fact_ids": [
+              "symptom"
+            ],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Неизвестность начала именно тошноты и наличие её сейчас сохранены. Сила тошноты в тексте этой строки опущена."
+          }
+        ],
+        "response_sha256": "253183d711dfe5be5edd30f6b8b43032c6a8518171d3c5847fe6c8dac59594bd",
+        "gold_sha256": "1db013a1b4b955ffc6e2bd289aaf82ce225ad612e04ab535dd3495e7836b0e3f"
+      },
+      "gold_sha256": "1db013a1b4b955ffc6e2bd289aaf82ce225ad612e04ab535dd3495e7836b0e3f",
+      "raw_response_sha256": "38d4001880098f4a689c0d2eefc0b54559cefb59e9c487bb9e7c961ba791dd7d",
+      "control_review": {
+        "reviewer": "Codex; manual semantic assessment; nonblind",
+        "physician_reviewed": false,
+        "rows": [
+          {
+            "row_id": "complaints:0",
+            "complete_fact_ids": [
+              "course"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Со вчерашнего вечера, состояние и «снова» сохранены. R2: лишнее в жалобах."
+          },
+          {
+            "row_id": "complaints:1",
+            "complete_fact_ids": [
+              "symptom"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Текущая сильная тошнота сохранена."
+          },
+          {
+            "row_id": "illness_history:0",
+            "complete_fact_ids": [],
+            "partial_fact_ids": [
+              "course"
+            ],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Потеряно «снова». Номинальное «общее ухудшение» неоднозначно между состоянием и событием; отдельное уверенное начало не утверждается."
+          },
+          {
+            "row_id": "illness_history:1",
+            "complete_fact_ids": [
+              "unknown_onset"
+            ],
+            "partial_fact_ids": [
+              "symptom"
+            ],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Неизвестность начала именно тошноты и наличие её сейчас сохранены. Сила тошноты в тексте этой строки опущена."
+          }
+        ],
+        "response_sha256": "5d097ecf32b4d00b210fc71106a8463e6957b272e7f6c685a2325c3ea8cb71ac",
+        "gold_sha256": "1db013a1b4b955ffc6e2bd289aaf82ce225ad612e04ab535dd3495e7836b0e3f"
+      }
+    },
+    {
+      "id": "z03",
+      "history_changes": [],
+      "complaint_changes": [],
+      "abstentions": [],
+      "control_metrics": {
+        "gold_facts": 2,
+        "output_rows": 3,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "required_placements": 2,
+        "covered_placements": 2,
+        "correct_placements": 3,
+        "predicted_placements": 3,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0,
+        "reviewer": "Codex; manual semantic assessment; nonblind",
+        "physician_reviewed": false
+      },
+      "candidate_metrics": {
+        "gold_facts": 2,
+        "output_rows": 3,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "required_placements": 2,
+        "covered_placements": 2,
+        "correct_placements": 3,
+        "predicted_placements": 3,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0,
+        "reviewer": "Codex; manual semantic assessment; nonblind",
+        "physician_reviewed": false
+      },
+      "control_sections": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 0,
+          "partial_disallowed": 0
+        },
+        "illness_history": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 0,
+          "partial_disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0,
+          "partial_disallowed": 0
+        }
+      },
+      "candidate_sections": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 0
+        },
+        "illness_history": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      },
+      "candidate_result": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно звенит в ушах.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно звенит в ушах."
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Вчера после ужина мне опять стало хуже в целом.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Вчера после ужина мне опять стало хуже в целом."
+                }
+              ]
+            },
+            {
+              "text": "Сейчас сильно звенит в ушах.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно звенит в ушах."
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "candidate_review": {
+        "reviewer": "Codex; manual semantic assessment; nonblind",
+        "physician_reviewed": false,
+        "rows": [
+          {
+            "row_id": "complaints:0",
+            "complete_fact_ids": [
+              "symptom"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Текущий сильный звон в ушах сохранён."
+          },
+          {
+            "row_id": "illness_history:0",
+            "complete_fact_ids": [
+              "transition"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Дословно сохранены вчера, после ужина и повторяемость «опять»."
+          },
+          {
+            "row_id": "illness_history:1",
+            "complete_fact_ids": [
+              "symptom"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Текущий сильный звон в ушах сохранён; дополнительное размещение разрешено."
+          }
+        ],
+        "response_sha256": "8729ecfebd98109cd52c3b9c35c9a57f16c945a04ae97cbbea658137aba07fbe",
+        "gold_sha256": "81fcf8afece88867be1f23086e8b5165b36117f6b94322af7de391e38341fbec"
+      },
+      "gold_sha256": "81fcf8afece88867be1f23086e8b5165b36117f6b94322af7de391e38341fbec",
+      "raw_response_sha256": "0919870e1d5d3620c3f168c28271521e8842903e6e25c52d32d3c47766613b75",
+      "control_review": {
+        "reviewer": "Codex; manual semantic assessment; nonblind",
+        "physician_reviewed": false,
+        "rows": [
+          {
+            "row_id": "complaints:0",
+            "complete_fact_ids": [
+              "symptom"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Текущий сильный звон в ушах сохранён."
+          },
+          {
+            "row_id": "illness_history:0",
+            "complete_fact_ids": [
+              "transition"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Дословно сохранены вчера, после ужина и повторяемость «опять»."
+          },
+          {
+            "row_id": "illness_history:1",
+            "complete_fact_ids": [
+              "symptom"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Текущий сильный звон в ушах сохранён; дополнительное размещение разрешено."
+          }
+        ],
+        "response_sha256": "8729ecfebd98109cd52c3b9c35c9a57f16c945a04ae97cbbea658137aba07fbe",
+        "gold_sha256": "81fcf8afece88867be1f23086e8b5165b36117f6b94322af7de391e38341fbec"
+      }
+    },
+    {
+      "id": "z04",
+      "history_changes": [
+        {
+          "action": "replace",
+          "history_index": 1,
+          "original": {
+            "text": "С ночи общее ухудшение состояния.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "С ночи мне в целом хуже."
+              }
+            ]
+          },
+          "replacement": {
+            "text": "С ночи мне в целом хуже.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "С ночи мне в целом хуже."
+              }
+            ]
+          }
+        }
+      ],
+      "complaint_changes": [],
+      "abstentions": [],
+      "control_metrics": {
+        "gold_facts": 4,
+        "output_rows": 8,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "required_placements": 4,
+        "covered_placements": 3,
+        "correct_placements": 4,
+        "predicted_placements": 7,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0,
+        "reviewer": "Codex; manual semantic assessment; nonblind",
+        "physician_reviewed": false
+      },
+      "candidate_metrics": {
+        "gold_facts": 4,
+        "output_rows": 8,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "required_placements": 4,
+        "covered_placements": 4,
+        "correct_placements": 5,
+        "predicted_placements": 8,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0,
+        "reviewer": "Codex; manual semantic assessment; nonblind",
+        "physician_reviewed": false
+      },
+      "control_sections": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 3,
+          "partial_disallowed": 0
+        },
+        "illness_history": {
+          "required": 3,
+          "covered": 2,
+          "disallowed": 0,
+          "partial_disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0,
+          "partial_disallowed": 0
+        }
+      },
+      "candidate_sections": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 3
+        },
+        "illness_history": {
+          "required": 3,
+          "covered": 3,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      },
+      "candidate_result": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сильно болит правое ухо.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит правое ухо."
+                }
+              ]
+            },
+            {
+              "text": "В целом хуже с ночи.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С ночи мне в целом хуже."
+                }
+              ]
+            },
+            {
+              "text": "Хуже стало в субботу.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Хуже стало в субботу."
+                }
+              ]
+            },
+            {
+              "text": "Сегодня сильнее не стало.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сегодня сильнее не стало."
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Ухудшение началось в субботу.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Хуже стало в субботу."
+                }
+              ]
+            },
+            {
+              "text": "С ночи мне в целом хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С ночи мне в целом хуже."
+                }
+              ]
+            },
+            {
+              "text": "На сегодня интенсивность не увеличилась.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сегодня сильнее не стало."
+                }
+              ]
+            },
+            {
+              "text": "В настоящее время сильная боль в правом ухе.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит правое ухо."
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "candidate_review": {
+        "reviewer": "Codex; manual semantic assessment; nonblind",
+        "physician_reviewed": false,
+        "rows": [
+          {
+            "row_id": "complaints:0",
+            "complete_fact_ids": [
+              "symptom"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Сила и правое ухо сохранены; жалоба дана как текущая."
+          },
+          {
+            "row_id": "complaints:1",
+            "complete_fact_ids": [
+              "course"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Состояние с ночи сохранено без утверждения нового перехода. R2: лишнее в жалобах."
+          },
+          {
+            "row_id": "complaints:2",
+            "complete_fact_ids": [
+              "transition"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Переход в субботу сохранён. Историческая динамика лишняя в жалобах."
+          },
+          {
+            "row_id": "complaints:3",
+            "complete_fact_ids": [
+              "no_further_worsening"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Отрицание дальнейшего усиления сегодня сохранено. Динамика лишняя в жалобах."
+          },
+          {
+            "row_id": "illness_history:0",
+            "complete_fact_ids": [
+              "transition"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Источник прямо задаёт переход в субботу; время передано."
+          },
+          {
+            "row_id": "illness_history:1",
+            "complete_fact_ids": [
+              "course"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Дословное состояние из исходной реплики: период и повторяемость сохранены, новое начало не добавлено."
+          },
+          {
+            "row_id": "illness_history:2",
+            "complete_fact_ids": [
+              "no_further_worsening"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Отсутствие усиления на сегодня сохранено."
+          },
+          {
+            "row_id": "illness_history:3",
+            "complete_fact_ids": [
+              "symptom"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Текущая сильная боль справа сохранена; дополнительное размещение разрешено."
+          }
+        ],
+        "response_sha256": "3825723f7b250cdda38d1826113c55bc7a833d53e3d0fba5589efab90a348369",
+        "gold_sha256": "fc08795594a966df265395f0c2889bb8120d8d4e13a9568d02a53ec741b4e768"
+      },
+      "gold_sha256": "fc08795594a966df265395f0c2889bb8120d8d4e13a9568d02a53ec741b4e768",
+      "raw_response_sha256": "853981b4b0a28b67f9424b6c0f4a7a14adef9508d54931a427d48f9e2e018775",
+      "control_review": {
+        "reviewer": "Codex; manual semantic assessment; nonblind",
+        "physician_reviewed": false,
+        "rows": [
+          {
+            "row_id": "complaints:0",
+            "complete_fact_ids": [
+              "symptom"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Сила и правое ухо сохранены; жалоба дана как текущая."
+          },
+          {
+            "row_id": "complaints:1",
+            "complete_fact_ids": [
+              "course"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Состояние с ночи сохранено без утверждения нового перехода. R2: лишнее в жалобах."
+          },
+          {
+            "row_id": "complaints:2",
+            "complete_fact_ids": [
+              "transition"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Переход в субботу сохранён. Историческая динамика лишняя в жалобах."
+          },
+          {
+            "row_id": "complaints:3",
+            "complete_fact_ids": [
+              "no_further_worsening"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Отрицание дальнейшего усиления сегодня сохранено. Динамика лишняя в жалобах."
+          },
+          {
+            "row_id": "illness_history:0",
+            "complete_fact_ids": [
+              "transition"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Источник прямо задаёт переход в субботу; время передано."
+          },
+          {
+            "row_id": "illness_history:1",
+            "complete_fact_ids": [],
+            "partial_fact_ids": [
+              "course"
+            ],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "«С ночи общее ухудшение состояния» неоднозначно между плохим состоянием и новым ухудшением. По заранее принятой строгой рубрике полное совпадение не подтверждается."
+          },
+          {
+            "row_id": "illness_history:2",
+            "complete_fact_ids": [
+              "no_further_worsening"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Отсутствие усиления на сегодня сохранено."
+          },
+          {
+            "row_id": "illness_history:3",
+            "complete_fact_ids": [
+              "symptom"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Текущая сильная боль справа сохранена; дополнительное размещение разрешено."
+          }
+        ],
+        "response_sha256": "dccd200344fd538eadb2e45719c0832c903009c0e740594d38a3233728f0614c",
+        "gold_sha256": "fc08795594a966df265395f0c2889bb8120d8d4e13a9568d02a53ec741b4e768"
+      }
+    },
+    {
+      "id": "z05",
+      "history_changes": [],
+      "complaint_changes": [],
+      "abstentions": [],
+      "control_metrics": {
+        "gold_facts": 2,
+        "output_rows": 2,
+        "tp": 2,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "required_placements": 2,
+        "covered_placements": 1,
+        "correct_placements": 1,
+        "predicted_placements": 2,
+        "unsupported_atoms": 2,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 1,
+        "source_errors": 2,
+        "reviewer": "Codex; manual semantic assessment; nonblind",
+        "physician_reviewed": false
+      },
+      "candidate_metrics": {
+        "gold_facts": 2,
+        "output_rows": 2,
+        "tp": 2,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "required_placements": 2,
+        "covered_placements": 1,
+        "correct_placements": 1,
+        "predicted_placements": 2,
+        "unsupported_atoms": 2,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 1,
+        "source_errors": 2,
+        "reviewer": "Codex; manual semantic assessment; nonblind",
+        "physician_reviewed": false
+      },
+      "control_sections": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 1,
+          "partial_disallowed": 0
+        },
+        "illness_history": {
+          "required": 1,
+          "covered": 0,
+          "disallowed": 0,
+          "partial_disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0,
+          "partial_disallowed": 0
+        }
+      },
+      "candidate_sections": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 1
+        },
+        "illness_history": {
+          "required": 1,
+          "covered": 0,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 0,
+          "covered": 0,
+          "disallowed": 0
+        }
+      },
+      "candidate_result": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "С вечера мне в целом снова хуже, а сейчас сильно кружится голова при повороте вправо.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С вечера мне в целом снова хуже, а сейчас сильно кружится голова при повороте вправо."
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Ухудшение началось с вечера, сейчас выраженное головокружение при повороте головы вправо.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С вечера мне в целом снова хуже, а сейчас сильно кружится голова при повороте вправо."
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "candidate_review": {
+        "reviewer": "Codex; manual semantic assessment; nonblind",
+        "physician_reviewed": false,
+        "rows": [
+          {
+            "row_id": "complaints:0",
+            "complete_fact_ids": [
+              "course",
+              "symptom"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "С вечера, «снова», сила головокружения, текущее время и условие поворота вправо сохранены. Общая динамика лишняя в смешанной жалобе."
+          },
+          {
+            "row_id": "illness_history:0",
+            "complete_fact_ids": [],
+            "partial_fact_ids": [
+              "course",
+              "symptom"
+            ],
+            "unsupported_atoms": 2,
+            "polarity_errors": 0,
+            "temporal_errors": 1,
+            "source_errors": 2,
+            "reason": "«Ухудшение началось с вечера» заменяет период состояния началом события и теряет «снова» (один неподдержанный атом). Добавлено «головы» к повороту вправо, хотя пациент не уточнил часть тела (второй атом). Текущее выраженное головокружение и направление сохранены частично."
+          }
+        ],
+        "response_sha256": "81ef089e2eaba4fa15d5882bdd9923a92538188eb63512a8e87ee3736c5cb38e",
+        "gold_sha256": "41790bd0a97f5836112ffa0a1a92f1a69066c406b2bfff9137bb2145764385c2"
+      },
+      "gold_sha256": "41790bd0a97f5836112ffa0a1a92f1a69066c406b2bfff9137bb2145764385c2",
+      "raw_response_sha256": "840e9c11f21606fd241d742b000bab5012d7e26a0415e33fac3b64fabdc65b76",
+      "control_review": {
+        "reviewer": "Codex; manual semantic assessment; nonblind",
+        "physician_reviewed": false,
+        "rows": [
+          {
+            "row_id": "complaints:0",
+            "complete_fact_ids": [
+              "course",
+              "symptom"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "С вечера, «снова», сила головокружения, текущее время и условие поворота вправо сохранены. Общая динамика лишняя в смешанной жалобе."
+          },
+          {
+            "row_id": "illness_history:0",
+            "complete_fact_ids": [],
+            "partial_fact_ids": [
+              "course",
+              "symptom"
+            ],
+            "unsupported_atoms": 2,
+            "polarity_errors": 0,
+            "temporal_errors": 1,
+            "source_errors": 2,
+            "reason": "«Ухудшение началось с вечера» заменяет период состояния началом события и теряет «снова» (один неподдержанный атом). Добавлено «головы» к повороту вправо, хотя пациент не уточнил часть тела (второй атом). Текущее выраженное головокружение и направление сохранены частично."
+          }
+        ],
+        "response_sha256": "81ef089e2eaba4fa15d5882bdd9923a92538188eb63512a8e87ee3736c5cb38e",
+        "gold_sha256": "41790bd0a97f5836112ffa0a1a92f1a69066c406b2bfff9137bb2145764385c2"
+      }
+    },
+    {
+      "id": "z06",
+      "history_changes": [
+        {
+          "action": "insert",
+          "history_index": 2,
+          "original": null,
+          "replacement": {
+            "text": "Сегодня мне в целом снова хуже.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "сегодня мне в целом снова хуже."
+              }
+            ]
+          }
+        }
+      ],
+      "complaint_changes": [],
+      "abstentions": [],
+      "control_metrics": {
+        "gold_facts": 5,
+        "output_rows": 5,
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "required_placements": 5,
+        "covered_placements": 4,
+        "correct_placements": 4,
+        "predicted_placements": 5,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0,
+        "reviewer": "Codex; manual semantic assessment; nonblind",
+        "physician_reviewed": false
+      },
+      "candidate_metrics": {
+        "gold_facts": 5,
+        "output_rows": 6,
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "required_placements": 5,
+        "covered_placements": 5,
+        "correct_placements": 5,
+        "predicted_placements": 6,
+        "unsupported_atoms": 0,
+        "duplicate_placements": 0,
+        "polarity_errors": 0,
+        "temporal_errors": 0,
+        "source_errors": 0,
+        "reviewer": "Codex; manual semantic assessment; nonblind",
+        "physician_reviewed": false
+      },
+      "control_sections": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 1,
+          "partial_disallowed": 0
+        },
+        "illness_history": {
+          "required": 3,
+          "covered": 2,
+          "disallowed": 0,
+          "partial_disallowed": 0
+        },
+        "life_history": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 0,
+          "partial_disallowed": 0
+        }
+      },
+      "candidate_sections": {
+        "complaints": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 1
+        },
+        "illness_history": {
+          "required": 3,
+          "covered": 3,
+          "disallowed": 0
+        },
+        "life_history": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 0
+        }
+      },
+      "candidate_result": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сегодня мне в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "а сегодня мне в целом снова хуже"
+                }
+              ]
+            },
+            {
+              "text": "Сильно дрожат руки.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно дрожат руки"
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Вчера было легче.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Вчера мне было легче"
+                }
+              ]
+            },
+            {
+              "text": "Дрожь рук началась во вторник вечером.",
+              "evidence": [
+                {
+                  "segment_id": "s4",
+                  "quote": "Во вторник вечером"
+                }
+              ]
+            },
+            {
+              "text": "Сегодня мне в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "сегодня мне в целом снова хуже."
+                }
+              ]
+            }
+          ],
+          "life_history": [
+            {
+              "text": "Неизвестно, были ли у отца психические заболевания.",
+              "evidence": [
+                {
+                  "segment_id": "s6",
+                  "quote": "Не знаю, были ли у отца психические заболевания"
+                }
+              ]
+            }
+          ]
+        },
+        "gaps": [
+          {
+            "topic": "Психические заболевания у отца",
+            "status": "patient_does_not_know",
+            "evidence": [
+              {
+                "segment_id": "s6",
+                "quote": "Не знаю, были ли у отца психические заболевания"
+              }
+            ]
+          }
+        ]
+      },
+      "candidate_review": {
+        "reviewer": "Codex; manual semantic assessment; nonblind",
+        "physician_reviewed": false,
+        "rows": [
+          {
+            "row_id": "complaints:0",
+            "complete_fact_ids": [
+              "course"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Сегодняшнее состояние и «снова» сохранены. R2: лишнее в жалобах. В анамнезе такого смысла нет."
+          },
+          {
+            "row_id": "complaints:1",
+            "complete_fact_ids": [
+              "symptom"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Сильная дрожь рук сохранена как текущая жалоба."
+          },
+          {
+            "row_id": "illness_history:0",
+            "complete_fact_ids": [
+              "improvement"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Вчерашнее облегчение сохранено. Дальнейшее повторное плохое состояние сегодня в анамнез не попало."
+          },
+          {
+            "row_id": "illness_history:1",
+            "complete_fact_ids": [
+              "symptom_onset"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Вторник вечером сохранён. Ближайший вопрос врача однозначно относится к началу дрожи рук."
+          },
+          {
+            "row_id": "life_history:0",
+            "complete_fact_ids": [
+              "father_unknown"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Неизвестно наличие психических заболеваний именно у отца. R3 выполнено в анамнезе жизни."
+          },
+          {
+            "row_id": "illness_history:2",
+            "complete_fact_ids": [
+              "course"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Пропущенное повторное состояние добавлено дословно, время симптома не меняется."
+          }
+        ],
+        "response_sha256": "b698d3f3bde780405d6616e16979ca15058134e21acea32020df707d581e9add",
+        "gold_sha256": "b77c0374193de8e31a97454971dfde6a133483896afe99c5e56c7adfec9cbfaf"
+      },
+      "gold_sha256": "b77c0374193de8e31a97454971dfde6a133483896afe99c5e56c7adfec9cbfaf",
+      "raw_response_sha256": "66ea21f91b348be3f684718b8ee285bc4399fcbb4e7244ed0ea074c50394d764",
+      "control_review": {
+        "reviewer": "Codex; manual semantic assessment; nonblind",
+        "physician_reviewed": false,
+        "rows": [
+          {
+            "row_id": "complaints:0",
+            "complete_fact_ids": [
+              "course"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Сегодняшнее состояние и «снова» сохранены. R2: лишнее в жалобах. В анамнезе такого смысла нет."
+          },
+          {
+            "row_id": "complaints:1",
+            "complete_fact_ids": [
+              "symptom"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Сильная дрожь рук сохранена как текущая жалоба."
+          },
+          {
+            "row_id": "illness_history:0",
+            "complete_fact_ids": [
+              "improvement"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Вчерашнее облегчение сохранено. Дальнейшее повторное плохое состояние сегодня в анамнез не попало."
+          },
+          {
+            "row_id": "illness_history:1",
+            "complete_fact_ids": [
+              "symptom_onset"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Вторник вечером сохранён. Ближайший вопрос врача однозначно относится к началу дрожи рук."
+          },
+          {
+            "row_id": "life_history:0",
+            "complete_fact_ids": [
+              "father_unknown"
+            ],
+            "partial_fact_ids": [],
+            "unsupported_atoms": 0,
+            "polarity_errors": 0,
+            "temporal_errors": 0,
+            "source_errors": 0,
+            "reason": "Неизвестно наличие психических заболеваний именно у отца. R3 выполнено в анамнезе жизни."
+          }
+        ],
+        "response_sha256": "e86e75461db8e1897a794a902ed3340348459b60c8f769e92c7a1da50ba8aa6a",
+        "gold_sha256": "b77c0374193de8e31a97454971dfde6a133483896afe99c5e56c7adfec9cbfaf"
+      }
+    }
+  ],
+  "source_evidence": "reports/evidence/latest-repair-live-2026-11-19/comparison.json",
+  "cli_scores_reproduced": 12
+}
