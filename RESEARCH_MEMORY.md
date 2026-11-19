@@ -430,3 +430,5 @@ TP12/FP1/FN0 в обеих версиях, размещения 10/12→11/12, �
 Старые h02/x01 не повторялись, новых unknown нет. Код после API не менялся.
 Отчёт только в Git, доставки в обычный ChatGPT-проект нет.
 [Отчёт](reports/2026-11-19.md)
+
+[Черновой PR №24](https://github.com/pypsycoder/conversation-assistant/pull/24)
