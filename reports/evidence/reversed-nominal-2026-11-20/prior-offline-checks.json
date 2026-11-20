@@ -1,0 +1,20 @@
+{
+  "cases_unchanged": 36,
+  "checks": [
+    {
+      "fixtures": "examples/history-course-repair-v1/offline.json",
+      "cases": 12,
+      "unchanged": true
+    },
+    {
+      "fixtures": "examples/history-boundaries-v2/offline.json",
+      "cases": 12,
+      "unchanged": true
+    },
+    {
+      "fixtures": "examples/nominal-history-v1/offline.json",
+      "cases": 12,
+      "unchanged": true
+    }
+  ]
+}

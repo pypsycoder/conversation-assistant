@@ -1,0 +1,2719 @@
+{
+  "synthetic": true,
+  "control_commit": "8fd5bb2",
+  "reviewer": "Codex; manual nonblind synthetic expectations; no physician",
+  "cases": [
+    {
+      "id": "b01",
+      "focus": "Обратный порядок и последующее безопасное удаление буквального повтора жалобы.",
+      "source": {
+        "id": "b01",
+        "synthetic": true,
+        "text_revision": 1,
+        "timing_origin": "synthetic_order_not_audio",
+        "segments": [
+          {
+            "id": "s1",
+            "role": "doctor",
+            "text": "Что вас сейчас беспокоит?",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "id": "s2",
+            "role": "patient",
+            "text": "С вечера мне в целом снова хуже. Сейчас очень болит левое ухо.",
+            "start": 1,
+            "end": 2
+          }
+        ]
+      },
+      "gold": {
+        "id": "b01",
+        "synthetic": true,
+        "physician_approved": false,
+        "facts": [
+          {
+            "id": "course",
+            "meaning": "С вечера снова плохое состояние.",
+            "required_sections": [
+              "illness_history"
+            ],
+            "allowed_sections": [
+              "illness_history"
+            ],
+            "source_segment_ids": [
+              "s2"
+            ]
+          },
+          {
+            "id": "symptom",
+            "meaning": "Сейчас очень болит левое ухо.",
+            "required_sections": [
+              "complaints"
+            ],
+            "allowed_sections": [
+              "complaints",
+              "illness_history"
+            ],
+            "source_segment_ids": [
+              "s2"
+            ]
+          }
+        ]
+      },
+      "direct": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "С вечера мне в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С вечера мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            },
+            {
+              "text": "Сейчас очень болит левое ухо.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас очень болит левое ухо."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Ухудшение состояния с вечера.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С вечера мне в целом снова хуже."
+                }
+              ],
+              "complete": [],
+              "partial": [
+                "course"
+              ],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "control": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "С вечера мне в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С вечера мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            },
+            {
+              "text": "Сейчас очень болит левое ухо.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас очень болит левое ухо."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Ухудшение состояния с вечера.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С вечера мне в целом снова хуже."
+                }
+              ],
+              "complete": [],
+              "partial": [
+                "course"
+              ],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "expected": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас очень болит левое ухо.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас очень болит левое ухо."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "С вечера мне в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С вечера мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      }
+    },
+    {
+      "id": "b02",
+      "focus": "Точный источник исправляет ошибочный период общей строки, симптом не датируется им.",
+      "source": {
+        "id": "b02",
+        "synthetic": true,
+        "text_revision": 1,
+        "timing_origin": "synthetic_order_not_audio",
+        "segments": [
+          {
+            "id": "s1",
+            "role": "doctor",
+            "text": "Что вас сейчас беспокоит?",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "id": "s2",
+            "role": "patient",
+            "text": "С ночи мне в целом снова хуже. Сейчас сильно болит горло.",
+            "start": 1,
+            "end": 2
+          }
+        ]
+      },
+      "gold": {
+        "id": "b02",
+        "synthetic": true,
+        "physician_approved": false,
+        "facts": [
+          {
+            "id": "course",
+            "meaning": "С ночи снова плохое состояние; утро не сообщалось.",
+            "required_sections": [
+              "illness_history"
+            ],
+            "allowed_sections": [
+              "illness_history"
+            ],
+            "source_segment_ids": [
+              "s2"
+            ]
+          },
+          {
+            "id": "symptom",
+            "meaning": "Сейчас сильно болит горло.",
+            "required_sections": [
+              "complaints"
+            ],
+            "allowed_sections": [
+              "complaints",
+              "illness_history"
+            ],
+            "source_segment_ids": [
+              "s2"
+            ]
+          }
+        ]
+      },
+      "direct": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "С ночи в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С ночи мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            },
+            {
+              "text": "Сейчас сильно болит горло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Ухудшение с утра.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С ночи мне в целом снова хуже."
+                }
+              ],
+              "complete": [],
+              "partial": [
+                "course"
+              ],
+              "unsupported_atoms": 1,
+              "temporal_errors": 1,
+              "source_errors": 1
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "control": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "С ночи в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С ночи мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            },
+            {
+              "text": "Сейчас сильно болит горло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Ухудшение с утра.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С ночи мне в целом снова хуже."
+                }
+              ],
+              "complete": [],
+              "partial": [
+                "course"
+              ],
+              "unsupported_atoms": 1,
+              "temporal_errors": 1,
+              "source_errors": 1
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "expected": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "С ночи в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С ночи мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            },
+            {
+              "text": "Сейчас сильно болит горло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "С ночи мне в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С ночи мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      }
+    },
+    {
+      "id": "b03",
+      "focus": "Облегчение, ведущий союз и независимая дата симптома.",
+      "source": {
+        "id": "b03",
+        "synthetic": true,
+        "text_revision": 1,
+        "timing_origin": "synthetic_order_not_audio",
+        "segments": [
+          {
+            "id": "s1",
+            "role": "doctor",
+            "text": "Что вас сейчас беспокоит?",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "id": "s2",
+            "role": "patient",
+            "text": "Вчера мне было полегче, а со вчерашнего утра мне в целом снова хуже. Тошнота началась в понедельник вечером. Сейчас сильно тошнит.",
+            "start": 1,
+            "end": 2
+          }
+        ]
+      },
+      "gold": {
+        "id": "b03",
+        "synthetic": true,
+        "physician_approved": false,
+        "facts": [
+          {
+            "id": "improvement",
+            "meaning": "Вчера было полегче.",
+            "required_sections": [
+              "illness_history"
+            ],
+            "allowed_sections": [
+              "illness_history"
+            ],
+            "source_segment_ids": [
+              "s2"
+            ]
+          },
+          {
+            "id": "course",
+            "meaning": "Со вчерашнего утра снова плохое состояние.",
+            "required_sections": [
+              "illness_history"
+            ],
+            "allowed_sections": [
+              "illness_history"
+            ],
+            "source_segment_ids": [
+              "s2"
+            ]
+          },
+          {
+            "id": "onset",
+            "meaning": "Тошнота началась в понедельник вечером.",
+            "required_sections": [
+              "illness_history"
+            ],
+            "allowed_sections": [
+              "illness_history"
+            ],
+            "source_segment_ids": [
+              "s2"
+            ]
+          },
+          {
+            "id": "symptom",
+            "meaning": "Сейчас сильно тошнит.",
+            "required_sections": [
+              "complaints"
+            ],
+            "allowed_sections": [
+              "complaints",
+              "illness_history"
+            ],
+            "source_segment_ids": [
+              "s2"
+            ]
+          }
+        ]
+      },
+      "direct": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Со вчерашнего утра в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "со вчерашнего утра мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            },
+            {
+              "text": "Сейчас сильно тошнит.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно тошнит."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Вчера мне было полегче.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Вчера мне было полегче"
+                }
+              ],
+              "complete": [
+                "improvement"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            },
+            {
+              "text": "Ухудшение состояния со вчерашнего утра.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "а со вчерашнего утра мне в целом снова хуже"
+                }
+              ],
+              "complete": [],
+              "partial": [
+                "course"
+              ],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            },
+            {
+              "text": "Тошнота началась в понедельник вечером.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Тошнота началась в понедельник вечером."
+                }
+              ],
+              "complete": [
+                "onset"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "control": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Со вчерашнего утра в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "со вчерашнего утра мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            },
+            {
+              "text": "Сейчас сильно тошнит.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно тошнит."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Вчера мне было полегче.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Вчера мне было полегче"
+                }
+              ],
+              "complete": [
+                "improvement"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            },
+            {
+              "text": "Ухудшение состояния со вчерашнего утра.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "а со вчерашнего утра мне в целом снова хуже"
+                }
+              ],
+              "complete": [],
+              "partial": [
+                "course"
+              ],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            },
+            {
+              "text": "Тошнота началась в понедельник вечером.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Тошнота началась в понедельник вечером."
+                }
+              ],
+              "complete": [
+                "onset"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "expected": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Со вчерашнего утра в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "со вчерашнего утра мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            },
+            {
+              "text": "Сейчас сильно тошнит.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно тошнит."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Вчера мне было полегче.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Вчера мне было полегче"
+                }
+              ],
+              "complete": [
+                "improvement"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            },
+            {
+              "text": "Со вчерашнего утра мне в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "со вчерашнего утра мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            },
+            {
+              "text": "Тошнота началась в понедельник вечером.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Тошнота началась в понедельник вечером."
+                }
+              ],
+              "complete": [
+                "onset"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      }
+    },
+    {
+      "id": "b04",
+      "focus": "Условие конкретного симптома остаётся, восстанавливается только общая динамика.",
+      "source": {
+        "id": "b04",
+        "synthetic": true,
+        "text_revision": 1,
+        "timing_origin": "synthetic_order_not_audio",
+        "segments": [
+          {
+            "id": "s1",
+            "role": "doctor",
+            "text": "Что вас сейчас беспокоит?",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "id": "s2",
+            "role": "patient",
+            "text": "Сегодня мне в целом снова хуже, а сейчас сильно кружится голова, если встаю.",
+            "start": 1,
+            "end": 2
+          }
+        ]
+      },
+      "gold": {
+        "id": "b04",
+        "synthetic": true,
+        "physician_approved": false,
+        "facts": [
+          {
+            "id": "course",
+            "meaning": "Сегодня снова плохое состояние.",
+            "required_sections": [
+              "illness_history"
+            ],
+            "allowed_sections": [
+              "illness_history"
+            ],
+            "source_segment_ids": [
+              "s2"
+            ]
+          },
+          {
+            "id": "symptom",
+            "meaning": "Сейчас сильно кружится голова при вставании.",
+            "required_sections": [
+              "complaints"
+            ],
+            "allowed_sections": [
+              "complaints",
+              "illness_history"
+            ],
+            "source_segment_ids": [
+              "s2"
+            ]
+          }
+        ]
+      },
+      "direct": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сегодня мне в целом снова хуже, а сейчас сильно кружится голова, если встаю.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сегодня мне в целом снова хуже, а сейчас сильно кружится голова, если встаю."
+                }
+              ],
+              "complete": [
+                "course",
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Общее ухудшение сегодня.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сегодня мне в целом снова хуже"
+                }
+              ],
+              "complete": [],
+              "partial": [
+                "course"
+              ],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            },
+            {
+              "text": "Сейчас сильно кружится голова при вставании.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "сейчас сильно кружится голова, если встаю."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "control": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сегодня мне в целом снова хуже, а сейчас сильно кружится голова, если встаю.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сегодня мне в целом снова хуже, а сейчас сильно кружится голова, если встаю."
+                }
+              ],
+              "complete": [
+                "course",
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Общее ухудшение сегодня.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сегодня мне в целом снова хуже"
+                }
+              ],
+              "complete": [],
+              "partial": [
+                "course"
+              ],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            },
+            {
+              "text": "Сейчас сильно кружится голова при вставании.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "сейчас сильно кружится голова, если встаю."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "expected": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сегодня мне в целом снова хуже, а сейчас сильно кружится голова, если встаю.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сегодня мне в целом снова хуже, а сейчас сильно кружится голова, если встаю."
+                }
+              ],
+              "complete": [
+                "course",
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Сегодня мне в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сегодня мне в целом снова хуже"
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            },
+            {
+              "text": "Сейчас сильно кружится голова при вставании.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "сейчас сильно кружится голова, если встаю."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      }
+    },
+    {
+      "id": "b05",
+      "focus": "Широкая цитата с двумя фактами не обрезается.",
+      "source": {
+        "id": "b05",
+        "synthetic": true,
+        "text_revision": 1,
+        "timing_origin": "synthetic_order_not_audio",
+        "segments": [
+          {
+            "id": "s1",
+            "role": "doctor",
+            "text": "Что вас сейчас беспокоит?",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "id": "s2",
+            "role": "patient",
+            "text": "Позавчера мне было легче, а с утра мне в целом снова хуже.",
+            "start": 1,
+            "end": 2
+          }
+        ]
+      },
+      "gold": {
+        "id": "b05",
+        "synthetic": true,
+        "physician_approved": false,
+        "facts": [
+          {
+            "id": "improvement",
+            "meaning": "Позавчера было легче.",
+            "required_sections": [
+              "illness_history"
+            ],
+            "allowed_sections": [
+              "illness_history"
+            ],
+            "source_segment_ids": [
+              "s2"
+            ]
+          },
+          {
+            "id": "course",
+            "meaning": "С утра снова плохое состояние.",
+            "required_sections": [
+              "illness_history"
+            ],
+            "allowed_sections": [
+              "illness_history"
+            ],
+            "source_segment_ids": [
+              "s2"
+            ]
+          }
+        ]
+      },
+      "direct": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "С утра в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "с утра мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Позавчера было легче, ухудшение с утра.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Позавчера мне было легче, а с утра мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "improvement"
+              ],
+              "partial": [
+                "course"
+              ],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "control": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "С утра в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "с утра мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Позавчера было легче, ухудшение с утра.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Позавчера мне было легче, а с утра мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "improvement"
+              ],
+              "partial": [
+                "course"
+              ],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "expected": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "С утра в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "с утра мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Позавчера было легче, ухудшение с утра.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Позавчера мне было легче, а с утра мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "improvement"
+              ],
+              "partial": [
+                "course"
+              ],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      }
+    },
+    {
+      "id": "b06",
+      "focus": "Не легализовать безусловную строку при условном источнике.",
+      "source": {
+        "id": "b06",
+        "synthetic": true,
+        "text_revision": 1,
+        "timing_origin": "synthetic_order_not_audio",
+        "segments": [
+          {
+            "id": "s1",
+            "role": "doctor",
+            "text": "Что вас сейчас беспокоит?",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "id": "s2",
+            "role": "patient",
+            "text": "С утра мне в целом снова хуже, если наклоняюсь. Сейчас сильно болит живот.",
+            "start": 1,
+            "end": 2
+          }
+        ]
+      },
+      "gold": {
+        "id": "b06",
+        "synthetic": true,
+        "physician_approved": false,
+        "facts": [
+          {
+            "id": "course",
+            "meaning": "С утра снова хуже при наклоне; условие относится к общему самочувствию.",
+            "required_sections": [
+              "illness_history"
+            ],
+            "allowed_sections": [
+              "illness_history"
+            ],
+            "source_segment_ids": [
+              "s2"
+            ]
+          },
+          {
+            "id": "symptom",
+            "meaning": "Сейчас сильно болит живот.",
+            "required_sections": [
+              "complaints"
+            ],
+            "allowed_sections": [
+              "complaints",
+              "illness_history"
+            ],
+            "source_segment_ids": [
+              "s2"
+            ]
+          }
+        ]
+      },
+      "direct": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "С утра мне в целом снова хуже, если наклоняюсь.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С утра мне в целом снова хуже, если наклоняюсь."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            },
+            {
+              "text": "Сейчас сильно болит живот.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит живот."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Ухудшение состояния с утра.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С утра мне в целом снова хуже"
+                }
+              ],
+              "complete": [],
+              "partial": [
+                "course"
+              ],
+              "unsupported_atoms": 1,
+              "temporal_errors": 0,
+              "source_errors": 1
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "control": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "С утра мне в целом снова хуже, если наклоняюсь.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С утра мне в целом снова хуже, если наклоняюсь."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            },
+            {
+              "text": "Сейчас сильно болит живот.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит живот."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Ухудшение состояния с утра.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С утра мне в целом снова хуже"
+                }
+              ],
+              "complete": [],
+              "partial": [
+                "course"
+              ],
+              "unsupported_atoms": 1,
+              "temporal_errors": 0,
+              "source_errors": 1
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "expected": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "С утра мне в целом снова хуже, если наклоняюсь.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С утра мне в целом снова хуже, если наклоняюсь."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            },
+            {
+              "text": "Сейчас сильно болит живот.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит живот."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Ухудшение состояния с утра.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С утра мне в целом снова хуже"
+                }
+              ],
+              "complete": [],
+              "partial": [
+                "course"
+              ],
+              "unsupported_atoms": 1,
+              "temporal_errors": 0,
+              "source_errors": 1
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      }
+    },
+    {
+      "id": "b07",
+      "focus": "Не отбрасывать неопределённость источника и строки.",
+      "source": {
+        "id": "b07",
+        "synthetic": true,
+        "text_revision": 1,
+        "timing_origin": "synthetic_order_not_audio",
+        "segments": [
+          {
+            "id": "s1",
+            "role": "doctor",
+            "text": "Что вас сейчас беспокоит?",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "id": "s2",
+            "role": "patient",
+            "text": "Кажется, с вечера мне в целом снова хуже.",
+            "start": 1,
+            "end": 2
+          }
+        ]
+      },
+      "gold": {
+        "id": "b07",
+        "synthetic": true,
+        "physician_approved": false,
+        "facts": [
+          {
+            "id": "course",
+            "meaning": "Кажется, с вечера снова хуже, неуверенность обязательна.",
+            "required_sections": [
+              "illness_history"
+            ],
+            "allowed_sections": [
+              "illness_history"
+            ],
+            "source_segment_ids": [
+              "s2"
+            ]
+          }
+        ]
+      },
+      "direct": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Кажется, с вечера мне в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Кажется, с вечера мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Возможно ухудшение состояния с вечера.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Кажется, с вечера мне в целом снова хуже."
+                }
+              ],
+              "complete": [],
+              "partial": [
+                "course"
+              ],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "control": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Кажется, с вечера мне в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Кажется, с вечера мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Возможно ухудшение состояния с вечера.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Кажется, с вечера мне в целом снова хуже."
+                }
+              ],
+              "complete": [],
+              "partial": [
+                "course"
+              ],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "expected": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Кажется, с вечера мне в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Кажется, с вечера мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Возможно ухудшение состояния с вечера.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Кажется, с вечера мне в целом снова хуже."
+                }
+              ],
+              "complete": [],
+              "partial": [
+                "course"
+              ],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      }
+    },
+    {
+      "id": "b08",
+      "focus": "Конкретный предмет нельзя заменять общим; исходная ошибка цитирования остаётся отдельной.",
+      "source": {
+        "id": "b08",
+        "synthetic": true,
+        "text_revision": 1,
+        "timing_origin": "synthetic_order_not_audio",
+        "segments": [
+          {
+            "id": "s1",
+            "role": "doctor",
+            "text": "Что вас сейчас беспокоит?",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "id": "s2",
+            "role": "patient",
+            "text": "С утра мне в целом снова хуже. С утра ухудшилась память.",
+            "start": 1,
+            "end": 2
+          }
+        ]
+      },
+      "gold": {
+        "id": "b08",
+        "synthetic": true,
+        "physician_approved": false,
+        "facts": [
+          {
+            "id": "course",
+            "meaning": "С утра снова плохое состояние.",
+            "required_sections": [
+              "illness_history"
+            ],
+            "allowed_sections": [
+              "illness_history"
+            ],
+            "source_segment_ids": [
+              "s2"
+            ]
+          },
+          {
+            "id": "memory",
+            "meaning": "С утра ухудшилась память.",
+            "required_sections": [
+              "illness_history"
+            ],
+            "allowed_sections": [
+              "illness_history"
+            ],
+            "source_segment_ids": [
+              "s2"
+            ]
+          }
+        ]
+      },
+      "direct": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "С утра мне в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С утра мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Ухудшение памяти с утра.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С утра мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "memory"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 1
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "control": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "С утра мне в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С утра мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Ухудшение памяти с утра.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С утра мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "memory"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 1
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "expected": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "С утра мне в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С утра мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Ухудшение памяти с утра.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С утра мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "memory"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 1
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      }
+    },
+    {
+      "id": "b09",
+      "focus": "Лечение в смешанном анамнезе не перезаписывать.",
+      "source": {
+        "id": "b09",
+        "synthetic": true,
+        "text_revision": 1,
+        "timing_origin": "synthetic_order_not_audio",
+        "segments": [
+          {
+            "id": "s1",
+            "role": "doctor",
+            "text": "Что вас сейчас беспокоит?",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "id": "s2",
+            "role": "patient",
+            "text": "С ночи мне в целом снова хуже. Лекарство не помогло.",
+            "start": 1,
+            "end": 2
+          }
+        ]
+      },
+      "gold": {
+        "id": "b09",
+        "synthetic": true,
+        "physician_approved": false,
+        "facts": [
+          {
+            "id": "course",
+            "meaning": "С ночи снова плохое состояние.",
+            "required_sections": [
+              "illness_history"
+            ],
+            "allowed_sections": [
+              "illness_history"
+            ],
+            "source_segment_ids": [
+              "s2"
+            ]
+          },
+          {
+            "id": "treatment",
+            "meaning": "Лекарство не помогло.",
+            "required_sections": [
+              "illness_history"
+            ],
+            "allowed_sections": [
+              "illness_history"
+            ],
+            "source_segment_ids": [
+              "s2"
+            ]
+          }
+        ]
+      },
+      "direct": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "С ночи мне в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С ночи мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Ухудшение с ночи, лекарство не помогло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С ночи мне в целом снова хуже. Лекарство не помогло."
+                }
+              ],
+              "complete": [
+                "treatment"
+              ],
+              "partial": [
+                "course"
+              ],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "control": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "С ночи мне в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С ночи мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Ухудшение с ночи, лекарство не помогло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С ночи мне в целом снова хуже. Лекарство не помогло."
+                }
+              ],
+              "complete": [
+                "treatment"
+              ],
+              "partial": [
+                "course"
+              ],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "expected": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "С ночи мне в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С ночи мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Ухудшение с ночи, лекарство не помогло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "С ночи мне в целом снова хуже. Лекарство не помогло."
+                }
+              ],
+              "complete": [
+                "treatment"
+              ],
+              "partial": [
+                "course"
+              ],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      }
+    },
+    {
+      "id": "b10",
+      "focus": "Несколько цитат не сводить к одной.",
+      "source": {
+        "id": "b10",
+        "synthetic": true,
+        "text_revision": 1,
+        "timing_origin": "synthetic_order_not_audio",
+        "segments": [
+          {
+            "id": "s1",
+            "role": "doctor",
+            "text": "Что вас сейчас беспокоит?",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "id": "s2",
+            "role": "patient",
+            "text": "Со вчерашнего вечера мне в целом снова хуже. Сейчас сильно дрожат руки.",
+            "start": 1,
+            "end": 2
+          }
+        ]
+      },
+      "gold": {
+        "id": "b10",
+        "synthetic": true,
+        "physician_approved": false,
+        "facts": [
+          {
+            "id": "course",
+            "meaning": "Со вчерашнего вечера снова плохое состояние.",
+            "required_sections": [
+              "illness_history"
+            ],
+            "allowed_sections": [
+              "illness_history"
+            ],
+            "source_segment_ids": [
+              "s2"
+            ]
+          },
+          {
+            "id": "symptom",
+            "meaning": "Сейчас сильно дрожат руки.",
+            "required_sections": [
+              "complaints"
+            ],
+            "allowed_sections": [
+              "complaints",
+              "illness_history"
+            ],
+            "source_segment_ids": [
+              "s2"
+            ]
+          }
+        ]
+      },
+      "direct": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Со вчерашнего вечера мне в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Со вчерашнего вечера мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            },
+            {
+              "text": "Сейчас сильно дрожат руки.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно дрожат руки."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Ухудшение со вчерашнего вечера.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Со вчерашнего вечера мне в целом снова хуже."
+                },
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно дрожат руки."
+                }
+              ],
+              "complete": [],
+              "partial": [
+                "course"
+              ],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "control": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Со вчерашнего вечера мне в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Со вчерашнего вечера мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            },
+            {
+              "text": "Сейчас сильно дрожат руки.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно дрожат руки."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Ухудшение со вчерашнего вечера.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Со вчерашнего вечера мне в целом снова хуже."
+                },
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно дрожат руки."
+                }
+              ],
+              "complete": [],
+              "partial": [
+                "course"
+              ],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "expected": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Со вчерашнего вечера мне в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Со вчерашнего вечера мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            },
+            {
+              "text": "Сейчас сильно дрожат руки.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно дрожат руки."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Ухудшение со вчерашнего вечера.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Со вчерашнего вечера мне в целом снова хуже."
+                },
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно дрожат руки."
+                }
+              ],
+              "complete": [],
+              "partial": [
+                "course"
+              ],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      }
+    },
+    {
+      "id": "b11",
+      "focus": "Отмена запрещает возврат первоначального положительного утверждения.",
+      "source": {
+        "id": "b11",
+        "synthetic": true,
+        "text_revision": 1,
+        "timing_origin": "synthetic_order_not_audio",
+        "segments": [
+          {
+            "id": "s1",
+            "role": "doctor",
+            "text": "Что вас сейчас беспокоит?",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "id": "s2",
+            "role": "patient",
+            "text": "С вечера мне в целом снова хуже.",
+            "start": 1,
+            "end": 2
+          },
+          {
+            "id": "s3",
+            "role": "doctor",
+            "text": "Уточните вечернее самочувствие.",
+            "start": 2,
+            "end": 3
+          },
+          {
+            "id": "s4",
+            "role": "patient",
+            "text": "Нет. С вечера мне не хуже. Сейчас сильно тошнит.",
+            "start": 3,
+            "end": 4
+          }
+        ]
+      },
+      "gold": {
+        "id": "b11",
+        "synthetic": true,
+        "physician_approved": false,
+        "facts": [
+          {
+            "id": "corrected",
+            "meaning": "Позднее исправление: с вечера не хуже, прежнее утверждение отменено.",
+            "required_sections": [
+              "illness_history"
+            ],
+            "allowed_sections": [
+              "illness_history"
+            ],
+            "source_segment_ids": [
+              "s4"
+            ]
+          },
+          {
+            "id": "symptom",
+            "meaning": "Сейчас сильно тошнит.",
+            "required_sections": [
+              "complaints"
+            ],
+            "allowed_sections": [
+              "complaints",
+              "illness_history"
+            ],
+            "source_segment_ids": [
+              "s4"
+            ]
+          }
+        ]
+      },
+      "direct": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно тошнит.",
+              "evidence": [
+                {
+                  "segment_id": "s4",
+                  "quote": "Сейчас сильно тошнит."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "С вечера мне не хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s4",
+                  "quote": "С вечера мне не хуже."
+                }
+              ],
+              "complete": [
+                "corrected"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "control": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно тошнит.",
+              "evidence": [
+                {
+                  "segment_id": "s4",
+                  "quote": "Сейчас сильно тошнит."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "С вечера мне не хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s4",
+                  "quote": "С вечера мне не хуже."
+                }
+              ],
+              "complete": [
+                "corrected"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "expected": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно тошнит.",
+              "evidence": [
+                {
+                  "segment_id": "s4",
+                  "quote": "Сейчас сильно тошнит."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "С вечера мне не хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s4",
+                  "quote": "С вечера мне не хуже."
+                }
+              ],
+              "complete": [
+                "corrected"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      }
+    },
+    {
+      "id": "b12",
+      "focus": "Повторные сведения не объединяются автоматически.",
+      "source": {
+        "id": "b12",
+        "synthetic": true,
+        "text_revision": 1,
+        "timing_origin": "synthetic_order_not_audio",
+        "segments": [
+          {
+            "id": "s1",
+            "role": "doctor",
+            "text": "Что вас сейчас беспокоит?",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "id": "s2",
+            "role": "patient",
+            "text": "Сегодня мне в целом хуже.",
+            "start": 1,
+            "end": 2
+          },
+          {
+            "id": "s3",
+            "role": "doctor",
+            "text": "Каково сегодняшнее общее самочувствие?",
+            "start": 2,
+            "end": 3
+          },
+          {
+            "id": "s4",
+            "role": "patient",
+            "text": "Сегодня мне в целом снова хуже. Сейчас сильно болит правое ухо.",
+            "start": 3,
+            "end": 4
+          }
+        ]
+      },
+      "gold": {
+        "id": "b12",
+        "synthetic": true,
+        "physician_approved": false,
+        "facts": [
+          {
+            "id": "course",
+            "meaning": "Позднее уточнение: сегодня снова плохое состояние.",
+            "required_sections": [
+              "illness_history"
+            ],
+            "allowed_sections": [
+              "illness_history"
+            ],
+            "source_segment_ids": [
+              "s4"
+            ]
+          },
+          {
+            "id": "symptom",
+            "meaning": "Сейчас сильно болит правое ухо.",
+            "required_sections": [
+              "complaints"
+            ],
+            "allowed_sections": [
+              "complaints",
+              "illness_history"
+            ],
+            "source_segment_ids": [
+              "s4"
+            ]
+          }
+        ]
+      },
+      "direct": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сегодня мне в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s4",
+                  "quote": "Сегодня мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            },
+            {
+              "text": "Сейчас сильно болит правое ухо.",
+              "evidence": [
+                {
+                  "segment_id": "s4",
+                  "quote": "Сейчас сильно болит правое ухо."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Ухудшение сегодня.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сегодня мне в целом хуже."
+                }
+              ],
+              "complete": [],
+              "partial": [
+                "course"
+              ],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "control": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сегодня мне в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s4",
+                  "quote": "Сегодня мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            },
+            {
+              "text": "Сейчас сильно болит правое ухо.",
+              "evidence": [
+                {
+                  "segment_id": "s4",
+                  "quote": "Сейчас сильно болит правое ухо."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Ухудшение сегодня.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сегодня мне в целом хуже."
+                }
+              ],
+              "complete": [],
+              "partial": [
+                "course"
+              ],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "expected": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сегодня мне в целом снова хуже.",
+              "evidence": [
+                {
+                  "segment_id": "s4",
+                  "quote": "Сегодня мне в целом снова хуже."
+                }
+              ],
+              "complete": [
+                "course"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            },
+            {
+              "text": "Сейчас сильно болит правое ухо.",
+              "evidence": [
+                {
+                  "segment_id": "s4",
+                  "quote": "Сейчас сильно болит правое ухо."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Ухудшение сегодня.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сегодня мне в целом хуже."
+                }
+              ],
+              "complete": [],
+              "partial": [
+                "course"
+              ],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      }
+    }
+  ]
+}

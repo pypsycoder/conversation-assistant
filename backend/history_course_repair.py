@@ -30,12 +30,13 @@ GENERAL_ROWS = [
 
 
 SHORT_NOMINAL_ROW = re.compile(rf"{TIME} ухудшение(?: состояния)?", re.IGNORECASE)
+REVERSED_NOMINAL_ROW = re.compile(rf"(?:общее )?ухудшение(?: состояния)? {TIME}", re.IGNORECASE)
 
 
 def only_course(text, *, allow_short_nominal=False):
     normalized = sentence_text(text)
     return any(pattern.fullmatch(normalized) for pattern in GENERAL_ROWS) or bool(
-        allow_short_nominal and SHORT_NOMINAL_ROW.fullmatch(normalized)
+        allow_short_nominal and (SHORT_NOMINAL_ROW.fullmatch(normalized) or REVERSED_NOMINAL_ROW.fullmatch(normalized))
     )
 
 
