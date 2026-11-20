@@ -460,3 +460,5 @@ awaiting_physician_review. Следующий контроль — 8fd5bb2; но
 Старые h02/x01 не повторялись, новых unknown нет. Код после API не менялся.
 Отчёт только в Git, доставки в обычный ChatGPT-проект нет.
 [Отчёт](reports/2026-11-20.md)
+
+[Черновой PR №25](https://github.com/pypsycoder/conversation-assistant/pull/25)
