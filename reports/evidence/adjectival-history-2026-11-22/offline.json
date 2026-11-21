@@ -1,0 +1,1239 @@
+{
+  "sample_size": 12,
+  "totals": {
+    "control": {
+      "tp": 24,
+      "fp": 3,
+      "fn": 0,
+      "gold_facts": 24,
+      "covered_placements": 13,
+      "required_placements": 24,
+      "unsupported_atoms": 3,
+      "temporal_errors": 1,
+      "source_errors": 4,
+      "polarity_errors": 0,
+      "duplicate_placements": 0
+    },
+    "candidate": {
+      "tp": 24,
+      "fp": 2,
+      "fn": 0,
+      "gold_facts": 24,
+      "covered_placements": 17,
+      "required_placements": 24,
+      "unsupported_atoms": 2,
+      "temporal_errors": 0,
+      "source_errors": 3,
+      "polarity_errors": 0,
+      "duplicate_placements": 0
+    }
+  },
+  "cases": [
+    {
+      "id": "d01",
+      "focus": "Прилагательное не заменяет период и «снова», буквальный повтор жалобы можно убрать после восстановления истории.",
+      "changes": [
+        {
+          "action": "replace",
+          "history_index": 0,
+          "original": {
+            "text": "Утреннее ухудшение состояния.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "С утра мне в целом снова хуже."
+              }
+            ]
+          },
+          "replacement": {
+            "text": "С утра мне в целом снова хуже.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "С утра мне в целом снова хуже."
+              }
+            ]
+          }
+        }
+      ],
+      "complaint_changes": [
+        {
+          "complaint_index": 0,
+          "illness_history_index": 0,
+          "original": {
+            "text": "С утра мне в целом снова хуже.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "С утра мне в целом снова хуже."
+              }
+            ]
+          },
+          "replacement": null
+        }
+      ],
+      "abstentions": [],
+      "control": {
+        "metrics": {
+          "gold_facts": 2,
+          "output_rows": 3,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 2,
+          "covered_placements": 1,
+          "correct_placements": 1,
+          "predicted_placements": 2,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 1,
+            "covered": 0,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      },
+      "candidate": {
+        "metrics": {
+          "gold_facts": 2,
+          "output_rows": 2,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 2,
+          "covered_placements": 2,
+          "correct_placements": 2,
+          "predicted_placements": 2,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0
+          },
+          "illness_history": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "d02",
+      "focus": "Достоверный источник заменяет ошибочное время общей строки, без новой даты симптома.",
+      "changes": [
+        {
+          "action": "replace",
+          "history_index": 0,
+          "original": {
+            "text": "Утреннее общее ухудшение.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "С вечера мне в целом снова хуже."
+              }
+            ]
+          },
+          "replacement": {
+            "text": "С вечера мне в целом снова хуже.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "С вечера мне в целом снова хуже."
+              }
+            ]
+          }
+        }
+      ],
+      "complaint_changes": [],
+      "abstentions": [],
+      "control": {
+        "metrics": {
+          "gold_facts": 2,
+          "output_rows": 3,
+          "tp": 2,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8,
+          "required_placements": 2,
+          "covered_placements": 1,
+          "correct_placements": 1,
+          "predicted_placements": 2,
+          "unsupported_atoms": 1,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 1,
+          "source_errors": 1,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 1,
+            "covered": 0,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      },
+      "candidate": {
+        "metrics": {
+          "gold_facts": 2,
+          "output_rows": 3,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 2,
+          "covered_placements": 2,
+          "correct_placements": 2,
+          "predicted_placements": 3,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "d03",
+      "focus": "Отдельная дата симптома и прежнее облегчение сохраняются.",
+      "changes": [
+        {
+          "action": "replace",
+          "history_index": 1,
+          "original": {
+            "text": "Ночное ухудшение состояния.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "а с ночи мне в целом снова хуже"
+              }
+            ]
+          },
+          "replacement": {
+            "text": "С ночи мне в целом снова хуже.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "с ночи мне в целом снова хуже."
+              }
+            ]
+          }
+        }
+      ],
+      "complaint_changes": [],
+      "abstentions": [],
+      "control": {
+        "metrics": {
+          "gold_facts": 4,
+          "output_rows": 5,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 4,
+          "covered_placements": 3,
+          "correct_placements": 3,
+          "predicted_placements": 4,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 3,
+            "covered": 2,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      },
+      "candidate": {
+        "metrics": {
+          "gold_facts": 4,
+          "output_rows": 5,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 4,
+          "covered_placements": 4,
+          "correct_placements": 4,
+          "predicted_placements": 5,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 3,
+            "covered": 3,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "d04",
+      "focus": "Условие явного конкретного симптома не удаляется.",
+      "changes": [
+        {
+          "action": "replace",
+          "history_index": 0,
+          "original": {
+            "text": "Вечернее ухудшение.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "С вечера мне в целом снова хуже"
+              }
+            ]
+          },
+          "replacement": {
+            "text": "С вечера мне в целом снова хуже.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "С вечера мне в целом снова хуже"
+              }
+            ]
+          }
+        }
+      ],
+      "complaint_changes": [],
+      "abstentions": [],
+      "control": {
+        "metrics": {
+          "gold_facts": 2,
+          "output_rows": 3,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 2,
+          "covered_placements": 1,
+          "correct_placements": 2,
+          "predicted_placements": 3,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 1,
+            "covered": 0,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      },
+      "candidate": {
+        "metrics": {
+          "gold_facts": 2,
+          "output_rows": 3,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 2,
+          "covered_placements": 2,
+          "correct_placements": 3,
+          "predicted_placements": 4,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "d05",
+      "focus": "Условный источник не превращается в безусловный.",
+      "changes": [],
+      "complaint_changes": [],
+      "abstentions": [],
+      "control": {
+        "metrics": {
+          "gold_facts": 2,
+          "output_rows": 3,
+          "tp": 2,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8,
+          "required_placements": 2,
+          "covered_placements": 1,
+          "correct_placements": 1,
+          "predicted_placements": 2,
+          "unsupported_atoms": 1,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 1,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 1,
+            "covered": 0,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      },
+      "candidate": {
+        "metrics": {
+          "gold_facts": 2,
+          "output_rows": 3,
+          "tp": 2,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8,
+          "required_placements": 2,
+          "covered_placements": 1,
+          "correct_placements": 1,
+          "predicted_placements": 2,
+          "unsupported_atoms": 1,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 1,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 1,
+            "covered": 0,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "d06",
+      "focus": "Не отрезать неуверенность источника и строки.",
+      "changes": [],
+      "complaint_changes": [],
+      "abstentions": [],
+      "control": {
+        "metrics": {
+          "gold_facts": 1,
+          "output_rows": 2,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 1,
+          "covered_placements": 0,
+          "correct_placements": 0,
+          "predicted_placements": 1,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 1,
+            "covered": 0,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      },
+      "candidate": {
+        "metrics": {
+          "gold_facts": 1,
+          "output_rows": 2,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 1,
+          "covered_placements": 0,
+          "correct_placements": 0,
+          "predicted_placements": 1,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 1,
+            "covered": 0,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "d07",
+      "focus": "Конкретный предмет не заменяется общим, исходная ошибка цитаты не маскируется.",
+      "changes": [],
+      "complaint_changes": [],
+      "abstentions": [
+        {
+          "reason": "mixed_or_unrecognized_history_row",
+          "evidence": {
+            "segment_id": "s2",
+            "quote": "С утра мне в целом снова хуже."
+          },
+          "history_indices": [
+            0
+          ]
+        }
+      ],
+      "control": {
+        "metrics": {
+          "gold_facts": 2,
+          "output_rows": 2,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 2,
+          "covered_placements": 1,
+          "correct_placements": 1,
+          "predicted_placements": 2,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 1,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 2,
+            "covered": 1,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      },
+      "candidate": {
+        "metrics": {
+          "gold_facts": 2,
+          "output_rows": 2,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 2,
+          "covered_placements": 1,
+          "correct_placements": 1,
+          "predicted_placements": 2,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 1,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 2,
+            "covered": 1,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "d08",
+      "focus": "Смешанная строка лечения не перезаписывается.",
+      "changes": [],
+      "complaint_changes": [],
+      "abstentions": [
+        {
+          "reason": "mixed_or_unrecognized_history_row",
+          "evidence": {
+            "segment_id": "s2",
+            "quote": "С вечера мне в целом снова хуже."
+          },
+          "history_indices": [
+            0
+          ]
+        }
+      ],
+      "control": {
+        "metrics": {
+          "gold_facts": 2,
+          "output_rows": 2,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 2,
+          "covered_placements": 1,
+          "correct_placements": 1,
+          "predicted_placements": 2,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 2,
+            "covered": 1,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      },
+      "candidate": {
+        "metrics": {
+          "gold_facts": 2,
+          "output_rows": 2,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 2,
+          "covered_placements": 1,
+          "correct_placements": 1,
+          "predicted_placements": 2,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 2,
+            "covered": 1,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "d09",
+      "focus": "Дополнительная выраженность не входит в шаблон, её нельзя молча отбрасывать.",
+      "changes": [],
+      "complaint_changes": [],
+      "abstentions": [
+        {
+          "reason": "mixed_or_unrecognized_history_row",
+          "evidence": {
+            "segment_id": "s2",
+            "quote": "С утра мне в целом снова хуже."
+          },
+          "history_indices": [
+            0
+          ]
+        }
+      ],
+      "control": {
+        "metrics": {
+          "gold_facts": 1,
+          "output_rows": 2,
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666,
+          "required_placements": 1,
+          "covered_placements": 0,
+          "correct_placements": 0,
+          "predicted_placements": 1,
+          "unsupported_atoms": 1,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 1,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 1,
+            "covered": 0,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      },
+      "candidate": {
+        "metrics": {
+          "gold_facts": 1,
+          "output_rows": 2,
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666,
+          "required_placements": 1,
+          "covered_placements": 0,
+          "correct_placements": 0,
+          "predicted_placements": 1,
+          "unsupported_atoms": 1,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 1,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 1,
+            "covered": 0,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "d10",
+      "focus": "Несколько цитат не сводить к одной.",
+      "changes": [],
+      "complaint_changes": [],
+      "abstentions": [
+        {
+          "reason": "mixed_or_unrecognized_history_row",
+          "evidence": {
+            "segment_id": "s2",
+            "quote": "С ночи мне в целом снова хуже."
+          },
+          "history_indices": [
+            0
+          ]
+        }
+      ],
+      "control": {
+        "metrics": {
+          "gold_facts": 2,
+          "output_rows": 3,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 2,
+          "covered_placements": 1,
+          "correct_placements": 1,
+          "predicted_placements": 2,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 1,
+            "covered": 0,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      },
+      "candidate": {
+        "metrics": {
+          "gold_facts": 2,
+          "output_rows": 3,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 2,
+          "covered_placements": 1,
+          "correct_placements": 1,
+          "predicted_placements": 2,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 1,
+            "covered": 0,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "d11",
+      "focus": "Поздняя отмена не игнорируется.",
+      "changes": [],
+      "complaint_changes": [],
+      "abstentions": [],
+      "control": {
+        "metrics": {
+          "gold_facts": 2,
+          "output_rows": 2,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 2,
+          "covered_placements": 2,
+          "correct_placements": 2,
+          "predicted_placements": 2,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0
+          },
+          "illness_history": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      },
+      "candidate": {
+        "metrics": {
+          "gold_facts": 2,
+          "output_rows": 2,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 2,
+          "covered_placements": 2,
+          "correct_placements": 2,
+          "predicted_placements": 2,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0
+          },
+          "illness_history": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "d12",
+      "focus": "Отдельный обратный шаблон исключён из этой гипотезы.",
+      "changes": [],
+      "complaint_changes": [],
+      "abstentions": [
+        {
+          "reason": "mixed_or_unrecognized_history_row",
+          "evidence": {
+            "segment_id": "s2",
+            "quote": "С вечера мне в целом снова хуже."
+          },
+          "history_indices": [
+            0
+          ]
+        }
+      ],
+      "control": {
+        "metrics": {
+          "gold_facts": 2,
+          "output_rows": 3,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 2,
+          "covered_placements": 1,
+          "correct_placements": 1,
+          "predicted_placements": 2,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 1,
+            "covered": 0,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      },
+      "candidate": {
+        "metrics": {
+          "gold_facts": 2,
+          "output_rows": 3,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 2,
+          "covered_placements": 1,
+          "correct_placements": 1,
+          "predicted_placements": 2,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 1
+          },
+          "illness_history": {
+            "required": 1,
+            "covered": 0,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      }
+    }
+  ]
+}
