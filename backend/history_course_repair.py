@@ -31,12 +31,17 @@ GENERAL_ROWS = [
 
 SHORT_NOMINAL_ROW = re.compile(rf"{TIME} ухудшение(?: состояния)?", re.IGNORECASE)
 REVERSED_NOMINAL_ROW = re.compile(rf"(?:общее )?ухудшение(?: состояния)? {TIME}", re.IGNORECASE)
+ADJECTIVAL_NOMINAL_ROW = re.compile(r"(?:утреннее|вечернее|ночное) (?:общее )?ухудшение(?: состояния)?", re.IGNORECASE)
 
 
-def only_course(text, *, allow_short_nominal=False):
+def only_course(text, *, allow_short_nominal=False, allow_reversed_nominal=True, allow_adjectival_nominal=False):
     normalized = sentence_text(text)
     return any(pattern.fullmatch(normalized) for pattern in GENERAL_ROWS) or bool(
-        allow_short_nominal and (SHORT_NOMINAL_ROW.fullmatch(normalized) or REVERSED_NOMINAL_ROW.fullmatch(normalized))
+        allow_short_nominal and (
+            SHORT_NOMINAL_ROW.fullmatch(normalized)
+            or (allow_reversed_nominal and REVERSED_NOMINAL_ROW.fullmatch(normalized))
+            or (allow_adjectival_nominal and ADJECTIVAL_NOMINAL_ROW.fullmatch(normalized))
+        )
     )
 
 
@@ -103,7 +108,7 @@ def exact_course_evidence(candidate, evidence, source_index):
     earlier = re.split(r"[.!?]", before + " а")[-1].strip()
     return EARLIER_IMPROVEMENT.fullmatch(earlier) is not None
 
-def repair_history_course(result, source):
+def repair_history_course(result, source, *, allow_reversed_nominal=True, allow_adjectival_nominal=False):
     """Replace a whole bounded course row or insert a missing literal course."""
     if source.get("synthetic") is not True:
         raise ValueError("Only explicitly synthetic dialogues are supported")
@@ -131,7 +136,10 @@ def repair_history_course(result, source):
                      and exact_course_evidence(candidate, row["evidence"][0], index))
             if sentence_text(row["text"]) == sentence_text(canonical["text"]) and exact:
                 continue
-            if not exact or not only_course(row["text"], allow_short_nominal=True):
+            if not exact or not only_course(
+                row["text"], allow_short_nominal=True, allow_reversed_nominal=allow_reversed_nominal,
+                allow_adjectival_nominal=allow_adjectival_nominal,
+            ):
                 reason = "mixed_or_unrecognized_history_row"
             else:
                 changes.append(dict(action="replace", history_index=i, original=copy.deepcopy(row), replacement=canonical))
@@ -151,14 +159,23 @@ def repair_history_course(result, source):
     return edited, changes, abstentions
 
 
+
+def repair_adjectival_history(result, source):
+    """Isolated candidate: baseline nominal forms plus adjectives, without reversed forms."""
+    return repair_history_course(
+        result, source, allow_reversed_nominal=False, allow_adjectival_nominal=True,
+    )
+
 def main():
     parser = argparse.ArgumentParser(__doc__)
     for name in ("source", "result", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
     parser.add_argument("--complaints", action="store_true", help="Apply existing bounded complaint repair afterwards")
+    parser.add_argument("--adjectival", action="store_true", help="Isolated adjective candidate; excludes reversed forms")
     args = parser.parse_args()
     source = read(args.source)
-    result, changes, abstentions = repair_history_course(read(args.result), source)
+    repair = repair_adjectival_history if args.adjectival else repair_history_course
+    result, changes, abstentions = repair(read(args.result), source)
     complaint_changes = []
     if args.complaints:
         result, complaint_changes = repair_complaints(result, source)

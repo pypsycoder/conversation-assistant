@@ -1,0 +1,30 @@
+{
+  "default_cases_unchanged": 48,
+  "isolated_candidate_prior_cases_unchanged": 36,
+  "checks": [
+    {
+      "fixtures": "examples/history-course-repair-v1/offline.json",
+      "cases": 12,
+      "default_unchanged": true,
+      "isolated_candidate_unchanged": true
+    },
+    {
+      "fixtures": "examples/history-boundaries-v2/offline.json",
+      "cases": 12,
+      "default_unchanged": true,
+      "isolated_candidate_unchanged": true
+    },
+    {
+      "fixtures": "examples/nominal-history-v1/offline.json",
+      "cases": 12,
+      "default_unchanged": true,
+      "isolated_candidate_unchanged": true
+    },
+    {
+      "fixtures": "examples/reversed-nominal-history-v1/offline.json",
+      "cases": 12,
+      "default_unchanged": true,
+      "isolated_candidate_unchanged": false
+    }
+  ]
+}
