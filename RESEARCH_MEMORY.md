@@ -488,3 +488,5 @@ repair_adjectival_history: прилагательные включены, обр
 клинический awaiting_physician_review; режим не подключён в Session, контроль пока
 8fd5bb2. Отчёт только в Git, доставки в обычный ChatGPT-проект нет.
 [Отчёт](reports/2026-11-22.md)
+
+Публикация: [draft PR #26](https://github.com/pypsycoder/conversation-assistant/pull/26), отдельная ветка `research/adjectival-history-2026-11-22`.
