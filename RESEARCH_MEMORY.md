@@ -521,3 +521,5 @@ awaiting_fresh_application + awaiting_physician_review, контроль пок�
 не повторялись, их хеши сохранены; новых unknown нет. Final/validation не брались,
 auto-merge нет. Отчёт только в Git, доставки в обычный ChatGPT-проект не было.
 [Отчёт](reports/2026-11-27.md)
+
+Публикация: [draft PR #27](https://github.com/pypsycoder/conversation-assistant/pull/27), отдельная ветка research/presence-onset-2026-11-27.
