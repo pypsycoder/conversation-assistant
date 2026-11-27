@@ -1,0 +1,60 @@
+{
+  "id": "z04",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "symptom",
+      "meaning": "Сейчас сильно тошнит.",
+      "required_sections": [
+        "complaints"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "recurrence",
+      "meaning": "Тошнота повторяется каждый вечер.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "unknown_onset",
+      "meaning": "Не знает, когда начались эпизоды тошноты.",
+      "required_sections": [
+        "illness_history"
+      ],
+      "allowed_sections": [
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    },
+    {
+      "id": "father_unknown",
+      "meaning": "Не знает, чем болел отец; обязательно анамнез жизни R3.",
+      "required_sections": [
+        "life_history"
+      ],
+      "allowed_sections": [
+        "life_history"
+      ],
+      "source_segment_ids": [
+        "s4"
+      ]
+    }
+  ]
+}

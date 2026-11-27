@@ -1,0 +1,21 @@
+{
+  "id": "z01",
+  "synthetic": true,
+  "physician_approved": false,
+  "facts": [
+    {
+      "id": "symptom",
+      "meaning": "Сейчас сильно болит голова; начала не сообщалось.",
+      "required_sections": [
+        "complaints"
+      ],
+      "allowed_sections": [
+        "complaints",
+        "illness_history"
+      ],
+      "source_segment_ids": [
+        "s2"
+      ]
+    }
+  ]
+}

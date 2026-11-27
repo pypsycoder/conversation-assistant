@@ -1,0 +1,1149 @@
+{
+  "synthetic": true,
+  "rubric_note": "Agent-authored; strict unsupported onset atom; negative cases are boundary preservation, not a comprehensive clinical gold.",
+  "cases": [
+    {
+      "id": "o01",
+      "focus": "remove only unsupported onset now; preserve strong current symptom",
+      "source": {
+        "synthetic": true,
+        "segments": [
+          {
+            "id": "s1",
+            "role": "doctor",
+            "text": "Что вас беспокоит?",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "id": "s2",
+            "role": "patient",
+            "text": "Сейчас сильно болит горло.",
+            "start": 1,
+            "end": 2
+          }
+        ],
+        "text_revision": 1,
+        "timing_origin": "synthetic_order_not_audio"
+      },
+      "gold": {
+        "synthetic": true,
+        "facts": [
+          {
+            "id": "symptom",
+            "meaning": "Сейчас сильно болит горло.",
+            "required_sections": [
+              "complaints"
+            ],
+            "allowed_sections": [
+              "complaints",
+              "illness_history"
+            ],
+            "source_segment_ids": [
+              "s2"
+            ]
+          }
+        ]
+      },
+      "baseline": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно болит горло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Появление сильной боли в горле сейчас.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 1,
+              "temporal_errors": 1,
+              "source_errors": 1
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "expected": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно болит горло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Сейчас сильно болит горло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "evaluation_scope": "semantic_positive"
+    },
+    {
+      "id": "o02",
+      "focus": "remove only unsupported onset now; preserve strong current symptom",
+      "source": {
+        "synthetic": true,
+        "segments": [
+          {
+            "id": "s1",
+            "role": "doctor",
+            "text": "Что вас беспокоит?",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "id": "s2",
+            "role": "patient",
+            "text": "Сейчас сильно болит живот.",
+            "start": 1,
+            "end": 2
+          }
+        ],
+        "text_revision": 1,
+        "timing_origin": "synthetic_order_not_audio"
+      },
+      "gold": {
+        "synthetic": true,
+        "facts": [
+          {
+            "id": "symptom",
+            "meaning": "Сейчас сильно болит живот.",
+            "required_sections": [
+              "complaints"
+            ],
+            "allowed_sections": [
+              "complaints",
+              "illness_history"
+            ],
+            "source_segment_ids": [
+              "s2"
+            ]
+          }
+        ]
+      },
+      "baseline": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно болит живот.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит живот."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Появление сильной боли в животе сейчас.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит живот."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 1,
+              "temporal_errors": 1,
+              "source_errors": 1
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "expected": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно болит живот.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит живот."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Сейчас сильно болит живот.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит живот."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "evaluation_scope": "semantic_positive"
+    },
+    {
+      "id": "o03",
+      "focus": "remove only unsupported onset now; preserve strong current symptom",
+      "source": {
+        "synthetic": true,
+        "segments": [
+          {
+            "id": "s1",
+            "role": "doctor",
+            "text": "Что вас беспокоит?",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "id": "s2",
+            "role": "patient",
+            "text": "Сейчас сильно дрожат руки.",
+            "start": 1,
+            "end": 2
+          }
+        ],
+        "text_revision": 1,
+        "timing_origin": "synthetic_order_not_audio"
+      },
+      "gold": {
+        "synthetic": true,
+        "facts": [
+          {
+            "id": "symptom",
+            "meaning": "Сейчас сильно дрожат руки.",
+            "required_sections": [
+              "complaints"
+            ],
+            "allowed_sections": [
+              "complaints",
+              "illness_history"
+            ],
+            "source_segment_ids": [
+              "s2"
+            ]
+          }
+        ]
+      },
+      "baseline": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно дрожат руки.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно дрожат руки."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Появление сильной дрожи рук сейчас.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно дрожат руки."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 1,
+              "temporal_errors": 1,
+              "source_errors": 1
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "expected": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно дрожат руки.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно дрожат руки."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Сейчас сильно дрожат руки.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно дрожат руки."
+                }
+              ],
+              "complete": [
+                "symptom"
+              ],
+              "partial": [],
+              "unsupported_atoms": 0,
+              "temporal_errors": 0,
+              "source_errors": 0
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "evaluation_scope": "semantic_positive"
+    },
+    {
+      "id": "o04",
+      "focus": "dated real onset remains",
+      "source": {
+        "synthetic": true,
+        "segments": [
+          {
+            "id": "s1",
+            "role": "doctor",
+            "text": "Что вас беспокоит?",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "id": "s2",
+            "role": "patient",
+            "text": "Сейчас сильно болит горло. Боль началась во вторник утром.",
+            "start": 1,
+            "end": 2
+          }
+        ],
+        "text_revision": 1,
+        "timing_origin": "synthetic_order_not_audio"
+      },
+      "baseline": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно болит горло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Появление сильной боли в горле сейчас.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "expected": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно болит горло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Появление сильной боли в горле сейчас.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "evaluation_scope": "boundary_preservation_only"
+    },
+    {
+      "id": "o05",
+      "focus": "real onset now remains",
+      "source": {
+        "synthetic": true,
+        "segments": [
+          {
+            "id": "s1",
+            "role": "doctor",
+            "text": "Что вас беспокоит?",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "id": "s2",
+            "role": "patient",
+            "text": "Только что появилась боль в горле. Сейчас сильно болит горло.",
+            "start": 1,
+            "end": 2
+          }
+        ],
+        "text_revision": 1,
+        "timing_origin": "synthetic_order_not_audio"
+      },
+      "baseline": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно болит горло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Появление сильной боли в горле сейчас.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "expected": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно болит горло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Появление сильной боли в горле сейчас.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "evaluation_scope": "boundary_preservation_only"
+    },
+    {
+      "id": "o06",
+      "focus": "unknown onset remains",
+      "source": {
+        "synthetic": true,
+        "segments": [
+          {
+            "id": "s1",
+            "role": "doctor",
+            "text": "Что вас беспокоит?",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "id": "s2",
+            "role": "patient",
+            "text": "Сейчас сильно болит горло. Не знаю, когда началась боль.",
+            "start": 1,
+            "end": 2
+          }
+        ],
+        "text_revision": 1,
+        "timing_origin": "synthetic_order_not_audio"
+      },
+      "baseline": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно болит горло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Появление сильной боли в горле сейчас.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "expected": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно болит горло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Появление сильной боли в горле сейчас.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "evaluation_scope": "boundary_preservation_only"
+    },
+    {
+      "id": "o07",
+      "focus": "condition in source cannot be detached",
+      "source": {
+        "synthetic": true,
+        "segments": [
+          {
+            "id": "s1",
+            "role": "doctor",
+            "text": "Что вас беспокоит?",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "id": "s2",
+            "role": "patient",
+            "text": "Сейчас сильно болит горло, если глотаю.",
+            "start": 1,
+            "end": 2
+          }
+        ],
+        "text_revision": 1,
+        "timing_origin": "synthetic_order_not_audio"
+      },
+      "baseline": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно болит горло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло"
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Появление сильной боли в горле сейчас.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло"
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "expected": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно болит горло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло"
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Появление сильной боли в горле сейчас.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло"
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "evaluation_scope": "boundary_preservation_only"
+    },
+    {
+      "id": "o08",
+      "focus": "mixed row with independent date is never rewritten",
+      "source": {
+        "synthetic": true,
+        "segments": [
+          {
+            "id": "s1",
+            "role": "doctor",
+            "text": "Что вас беспокоит?",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "id": "s2",
+            "role": "patient",
+            "text": "Сейчас сильно болит горло. Кашель начался вчера.",
+            "start": 1,
+            "end": 2
+          }
+        ],
+        "text_revision": 1,
+        "timing_origin": "synthetic_order_not_audio"
+      },
+      "baseline": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно болит горло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Появление сильной боли в горле сейчас, кашель со вчера.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "expected": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно болит горло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Появление сильной боли в горле сейчас, кашель со вчера.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "evaluation_scope": "boundary_preservation_only"
+    },
+    {
+      "id": "o09",
+      "focus": "later retraction prevents replacement",
+      "source": {
+        "synthetic": true,
+        "segments": [
+          {
+            "id": "s1",
+            "role": "doctor",
+            "text": "Что вас беспокоит?",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "id": "s2",
+            "role": "patient",
+            "text": "Сейчас сильно болит горло. Нет, я ошибся.",
+            "start": 1,
+            "end": 2
+          }
+        ],
+        "text_revision": 1,
+        "timing_origin": "synthetic_order_not_audio"
+      },
+      "baseline": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно болит горло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Появление сильной боли в горле сейчас.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "expected": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно болит горло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Появление сильной боли в горле сейчас.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "evaluation_scope": "boundary_preservation_only"
+    },
+    {
+      "id": "o10",
+      "focus": "wide citation remains",
+      "source": {
+        "synthetic": true,
+        "segments": [
+          {
+            "id": "s1",
+            "role": "doctor",
+            "text": "Что вас беспокоит?",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "id": "s2",
+            "role": "patient",
+            "text": "Сейчас сильно болит горло. Сейчас сильно тошнит.",
+            "start": 1,
+            "end": 2
+          }
+        ],
+        "text_revision": 1,
+        "timing_origin": "synthetic_order_not_audio"
+      },
+      "baseline": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно болит горло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло. Сейчас сильно тошнит."
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Появление сильной боли в горле сейчас.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло. Сейчас сильно тошнит."
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "expected": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно болит горло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло. Сейчас сильно тошнит."
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Появление сильной боли в горле сейчас.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло. Сейчас сильно тошнит."
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "evaluation_scope": "boundary_preservation_only"
+    },
+    {
+      "id": "o11",
+      "focus": "uncertain current presence remains",
+      "source": {
+        "synthetic": true,
+        "segments": [
+          {
+            "id": "s1",
+            "role": "doctor",
+            "text": "Что вас беспокоит?",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "id": "s2",
+            "role": "patient",
+            "text": "Кажется, сейчас сильно болит горло.",
+            "start": 1,
+            "end": 2
+          }
+        ],
+        "text_revision": 1,
+        "timing_origin": "synthetic_order_not_audio"
+      },
+      "baseline": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно болит горло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Появление сильной боли в горле сейчас.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "expected": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно болит горло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Появление сильной боли в горле сейчас.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "evaluation_scope": "boundary_preservation_only"
+    },
+    {
+      "id": "o12",
+      "focus": "existing canonical history prevents a duplicate",
+      "source": {
+        "synthetic": true,
+        "segments": [
+          {
+            "id": "s1",
+            "role": "doctor",
+            "text": "Что вас беспокоит?",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "id": "s2",
+            "role": "patient",
+            "text": "Сейчас сильно болит горло.",
+            "start": 1,
+            "end": 2
+          }
+        ],
+        "text_revision": 1,
+        "timing_origin": "synthetic_order_not_audio"
+      },
+      "baseline": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно болит горло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Появление сильной боли в горле сейчас.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ]
+            },
+            {
+              "text": "Сейчас сильно болит горло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "expected": {
+        "sections": {
+          "complaints": [
+            {
+              "text": "Сейчас сильно болит горло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "illness_history": [
+            {
+              "text": "Появление сильной боли в горле сейчас.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ]
+            },
+            {
+              "text": "Сейчас сильно болит горло.",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Сейчас сильно болит горло."
+                }
+              ]
+            }
+          ],
+          "life_history": []
+        },
+        "gaps": []
+      },
+      "evaluation_scope": "boundary_preservation_only"
+    }
+  ]
+}
