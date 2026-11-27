@@ -1,0 +1,1356 @@
+{
+  "protocol_commit": "d2f431438e7ef6d409272e410d16bfbcd1990fee",
+  "control_commit": "8fd5bb2",
+  "candidate_function": "repair_presence_onset",
+  "reversed_mode_enabled": false,
+  "adjectival_mode_enabled": false,
+  "code_sha256": "ba3b2c2261b086b2ca126e814d93dc2acb789b05f09abd5980fc2d3640a8f2e6",
+  "control_code_sha256": "23275bb801c994219c8d613970d16ce177944781eaa44199ba524ead28b68e97",
+  "baseline_history_code_sha256": "4efb68728f0aa9489e99ecb1fae6a1b76bbb7276f89d6e0e96816591402bf2fd",
+  "complaint_code_sha256": "355629f828816b68607f0947ac5d3b83bb747607f81cfa737d6fb0c3821c4ca8",
+  "sample_size": 4,
+  "gold_criteria": 9,
+  "calls": 4,
+  "tokens": 8228,
+  "api_seconds": 15.715711500000907,
+  "runner_seconds": 24.625,
+  "repair_and_score_seconds": 1.3178532000019914,
+  "cost_rub": null,
+  "model_revision": "GigaChat-3-Ultra:32.9.16.9",
+  "access_check": {
+    "ok": true,
+    "seconds": 0.9220000000059372,
+    "base_url": "https://api.giga.chat/v1",
+    "scope": "GIGACHAT_API_PERS",
+    "available_models": [
+      "GigaChat-2",
+      "GigaChat-2-Max",
+      "GigaChat-2-Pro",
+      "GigaChat-3-Lightning",
+      "GigaChat-3-Pro",
+      "GigaChat-3-Ultra",
+      "Embeddings",
+      "Embeddings-2",
+      "EmbeddingsGigaR",
+      "GigaEmbeddings-3B-2025-09"
+    ],
+    "selected_model": "GigaChat-3-Ultra",
+    "tls_verification": true,
+    "credentials_logged": false
+  },
+  "budget": {
+    "remaining_calls": 6,
+    "planned_calls": 4,
+    "remaining_tokens": 100000,
+    "remaining_seconds": 1172,
+    "protocol_commit": "d2f431438e7ef6d409272e410d16bfbcd1990fee",
+    "control_commit": "8fd5bb2",
+    "control_code_sha256": "23275bb801c994219c8d613970d16ce177944781eaa44199ba524ead28b68e97",
+    "candidate_code_sha256": "ba3b2c2261b086b2ca126e814d93dc2acb789b05f09abd5980fc2d3640a8f2e6",
+    "baseline_history_code_sha256": "4efb68728f0aa9489e99ecb1fae6a1b76bbb7276f89d6e0e96816591402bf2fd",
+    "complaint_code_sha256": "355629f828816b68607f0947ac5d3b83bb747607f81cfa737d6fb0c3821c4ca8",
+    "reversed_enabled": false,
+    "adjectival_enabled": false
+  },
+  "assessment": "manual Codex, nonblind, agent-authored gold, no physician",
+  "experimental_status": "awaiting_fresh_application",
+  "clinical_status": "awaiting_physician_review",
+  "decision": "No target whole onset-now row in 4/4 fresh answers; control and candidate identical; do not promote or repeat just to obtain a positive application.",
+  "target_rows": 0,
+  "changed_cases": 0,
+  "totals": {
+    "control": {
+      "tp": 9,
+      "fp": 1,
+      "fn": 0,
+      "gold_facts": 9,
+      "output_rows": 11,
+      "covered_placements": 8,
+      "required_placements": 9,
+      "correct_placements": 9,
+      "predicted_placements": 11,
+      "unsupported_atoms": 1,
+      "temporal_errors": 1,
+      "source_errors": 1,
+      "polarity_errors": 0,
+      "duplicate_placements": 0,
+      "sections": {
+        "complaints": {
+          "required": 4,
+          "covered": 4,
+          "disallowed": 2,
+          "partial_disallowed": 1
+        },
+        "illness_history": {
+          "required": 4,
+          "covered": 3,
+          "disallowed": 0,
+          "partial_disallowed": 0
+        },
+        "life_history": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 0,
+          "partial_disallowed": 0
+        }
+      },
+      "gap_errors": 1
+    },
+    "candidate": {
+      "tp": 9,
+      "fp": 1,
+      "fn": 0,
+      "gold_facts": 9,
+      "output_rows": 11,
+      "covered_placements": 8,
+      "required_placements": 9,
+      "correct_placements": 9,
+      "predicted_placements": 11,
+      "unsupported_atoms": 1,
+      "temporal_errors": 1,
+      "source_errors": 1,
+      "polarity_errors": 0,
+      "duplicate_placements": 0,
+      "sections": {
+        "complaints": {
+          "required": 4,
+          "covered": 4,
+          "disallowed": 2,
+          "partial_disallowed": 1
+        },
+        "illness_history": {
+          "required": 4,
+          "covered": 3,
+          "disallowed": 0,
+          "partial_disallowed": 0
+        },
+        "life_history": {
+          "required": 1,
+          "covered": 1,
+          "disallowed": 0,
+          "partial_disallowed": 0
+        }
+      },
+      "gap_errors": 1
+    }
+  },
+  "cases": [
+    {
+      "id": "z01",
+      "source_sha256": "1f59bbef7c9585f362b554327c65d88c65fd6f625dd84fe3af0a96dfffb7b4cf",
+      "gold_sha256": "d7d4ce97d1dd66b244828ca8062ad5ed400a45b95d7b3e1b5ed74ed6feefa23f",
+      "raw_response_sha256": "cff57404c55f4fab62e355b2a37b9dc93c7e2f1cfcb575144567ed9fc06e2bae",
+      "usage": {
+        "prompt_tokens": 1607,
+        "completion_tokens": 395,
+        "total_tokens": 2002,
+        "precached_prompt_tokens": 0
+      },
+      "api_seconds": 3.7259726999909617,
+      "history_changes": [],
+      "history_abstentions": [],
+      "candidate_changes": [],
+      "candidate_abstentions": [],
+      "complaint_changes": [],
+      "gap_review": [
+        {
+          "index": 0,
+          "error": false,
+          "reason": "Начало и изменение во времени не сообщались; not_discussed допустим, текущее наличие известно."
+        }
+      ],
+      "control": {
+        "result": {
+          "sections": {
+            "complaints": [
+              {
+                "text": "Сильная головная боль.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Сейчас сильно болит голова."
+                  }
+                ]
+              }
+            ],
+            "illness_history": [
+              {
+                "text": "Текущая головная боль — единственное сообщённое проявление; время начала и динамика не уточнены.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Сейчас сильно болит голова."
+                  }
+                ]
+              }
+            ],
+            "life_history": []
+          },
+          "gaps": [
+            {
+              "topic": "Время начала и динамика головной боли",
+              "status": "not_discussed",
+              "evidence": []
+            }
+          ]
+        },
+        "review": {
+          "reviewer": "Codex; manual nonblind assessment independent from GigaChat",
+          "physician_reviewed": false,
+          "response_sha256": "b4f2214d7813e32044dace075c1b0ff12c7e9bc8f90a3bda9408e9dcdcf18d48",
+          "gold_sha256": "d7d4ce97d1dd66b244828ca8062ad5ed400a45b95d7b3e1b5ed74ed6feefa23f",
+          "rows": [
+            {
+              "row_id": "complaints:0",
+              "complete_fact_ids": [
+                "symptom"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Сильная головная боль передана; текущесть следует из раздела жалоб и контекста."
+            },
+            {
+              "row_id": "illness_history:0",
+              "complete_fact_ids": [],
+              "partial_fact_ids": [
+                "symptom"
+              ],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Текущая головная боль сохранена, сила в этой строке не передана. «Единственное сообщённое» и «не уточнены» ограничены данным диалогом; не означают отсутствия других симптомов. Начало сейчас не выдумано."
+            }
+          ]
+        },
+        "metrics": {
+          "gold_facts": 1,
+          "output_rows": 2,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 1,
+          "covered_placements": 1,
+          "correct_placements": 1,
+          "predicted_placements": 1,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex; manual nonblind assessment independent from GigaChat",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0,
+            "partial_disallowed": 0
+          },
+          "illness_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0,
+            "partial_disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0,
+            "partial_disallowed": 0
+          }
+        }
+      },
+      "candidate": {
+        "result": {
+          "sections": {
+            "complaints": [
+              {
+                "text": "Сильная головная боль.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Сейчас сильно болит голова."
+                  }
+                ]
+              }
+            ],
+            "illness_history": [
+              {
+                "text": "Текущая головная боль — единственное сообщённое проявление; время начала и динамика не уточнены.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Сейчас сильно болит голова."
+                  }
+                ]
+              }
+            ],
+            "life_history": []
+          },
+          "gaps": [
+            {
+              "topic": "Время начала и динамика головной боли",
+              "status": "not_discussed",
+              "evidence": []
+            }
+          ]
+        },
+        "review": {
+          "reviewer": "Codex; manual nonblind assessment independent from GigaChat",
+          "physician_reviewed": false,
+          "response_sha256": "5f70fb2cc9c280030145705ab6d0199c4e710868a7321d8e611b7cbbc3aa6f67",
+          "gold_sha256": "d7d4ce97d1dd66b244828ca8062ad5ed400a45b95d7b3e1b5ed74ed6feefa23f",
+          "rows": [
+            {
+              "row_id": "complaints:0",
+              "complete_fact_ids": [
+                "symptom"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Сильная головная боль передана; текущесть следует из раздела жалоб и контекста."
+            },
+            {
+              "row_id": "illness_history:0",
+              "complete_fact_ids": [],
+              "partial_fact_ids": [
+                "symptom"
+              ],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Текущая головная боль сохранена, сила в этой строке не передана. «Единственное сообщённое» и «не уточнены» ограничены данным диалогом; не означают отсутствия других симптомов. Начало сейчас не выдумано."
+            }
+          ]
+        },
+        "metrics": {
+          "gold_facts": 1,
+          "output_rows": 2,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 1,
+          "covered_placements": 1,
+          "correct_placements": 1,
+          "predicted_placements": 1,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex; manual nonblind assessment independent from GigaChat",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0,
+            "partial_disallowed": 0
+          },
+          "illness_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0,
+            "partial_disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0,
+            "partial_disallowed": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "z02",
+      "source_sha256": "70988a8cfca80fe6c5c444b19f71ba76d08978b06a64b74351b38bdef7b36892",
+      "gold_sha256": "ed02401f48af58ccfe91abdd14ed3b8dcd3c0aabad51e448125e004f7d2fe961",
+      "raw_response_sha256": "9fd2a4c50e5e313e8687de00254dd68b91d1c70606289ec24afe5f21122b4786",
+      "usage": {
+        "prompt_tokens": 1616,
+        "completion_tokens": 465,
+        "total_tokens": 2081,
+        "precached_prompt_tokens": 0
+      },
+      "api_seconds": 3.9462184000003617,
+      "history_changes": [],
+      "history_abstentions": [],
+      "candidate_changes": [],
+      "candidate_abstentions": [],
+      "complaint_changes": [],
+      "gap_review": [],
+      "control": {
+        "result": {
+          "sections": {
+            "complaints": [
+              {
+                "text": "Сильная боль в левом ухе.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Сейчас сильно болит левое ухо."
+                  }
+                ]
+              },
+              {
+                "text": "Боль началась в понедельник вечером.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Боль началась в понедельник вечером."
+                  }
+                ]
+              }
+            ],
+            "illness_history": [
+              {
+                "text": "Боль в левом ухе началась в понедельник вечером.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Боль началась в понедельник вечером."
+                  }
+                ]
+              }
+            ],
+            "life_history": []
+          },
+          "gaps": []
+        },
+        "review": {
+          "reviewer": "Codex; manual nonblind assessment independent from GigaChat",
+          "physician_reviewed": false,
+          "response_sha256": "23410ee206029795f4893bc0b9b5bec3fd73f039c48a67e2054bf100aba503e8",
+          "gold_sha256": "ed02401f48af58ccfe91abdd14ed3b8dcd3c0aabad51e448125e004f7d2fe961",
+          "rows": [
+            {
+              "row_id": "complaints:0",
+              "complete_fact_ids": [
+                "symptom"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Сильная текущая боль именно в левом ухе."
+            },
+            {
+              "row_id": "complaints:1",
+              "complete_fact_ids": [
+                "onset"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Точное начало в понедельник вечером; связь с левым ухом ясна из предыдущего пункта. Размещение в жалобах отдельно помечено по frozen gold."
+            },
+            {
+              "row_id": "illness_history:0",
+              "complete_fact_ids": [
+                "onset"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Понедельник вечером и левое ухо переданы в обязательном анамнезе."
+            }
+          ]
+        },
+        "metrics": {
+          "gold_facts": 2,
+          "output_rows": 3,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 2,
+          "covered_placements": 2,
+          "correct_placements": 2,
+          "predicted_placements": 3,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex; manual nonblind assessment independent from GigaChat",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 1,
+            "partial_disallowed": 0
+          },
+          "illness_history": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0,
+            "partial_disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0,
+            "partial_disallowed": 0
+          }
+        }
+      },
+      "candidate": {
+        "result": {
+          "sections": {
+            "complaints": [
+              {
+                "text": "Сильная боль в левом ухе.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Сейчас сильно болит левое ухо."
+                  }
+                ]
+              },
+              {
+                "text": "Боль началась в понедельник вечером.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Боль началась в понедельник вечером."
+                  }
+                ]
+              }
+            ],
+            "illness_history": [
+              {
+                "text": "Боль в левом ухе началась в понедельник вечером.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Боль началась в понедельник вечером."
+                  }
+                ]
+              }
+            ],
+            "life_history": []
+          },
+          "gaps": []
+        },
+        "review": {
+          "reviewer": "Codex; manual nonblind assessment independent from GigaChat",
+          "physician_reviewed": false,
+          "response_sha256": "a6a5634a3a01b88156a9e855cff7b1f9a7cb79058cd609001e66a4d107ebc4e3",
+          "gold_sha256": "ed02401f48af58ccfe91abdd14ed3b8dcd3c0aabad51e448125e004f7d2fe961",
+          "rows": [
+            {
+              "row_id": "complaints:0",
+              "complete_fact_ids": [
+                "symptom"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Сильная текущая боль именно в левом ухе."
+            },
+            {
+              "row_id": "complaints:1",
+              "complete_fact_ids": [
+                "onset"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Точное начало в понедельник вечером; связь с левым ухом ясна из предыдущего пункта. Размещение в жалобах отдельно помечено по frozen gold."
+            },
+            {
+              "row_id": "illness_history:0",
+              "complete_fact_ids": [
+                "onset"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Понедельник вечером и левое ухо переданы в обязательном анамнезе."
+            }
+          ]
+        },
+        "metrics": {
+          "gold_facts": 2,
+          "output_rows": 3,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 2,
+          "covered_placements": 2,
+          "correct_placements": 2,
+          "predicted_placements": 3,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex; manual nonblind assessment independent from GigaChat",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 1,
+            "partial_disallowed": 0
+          },
+          "illness_history": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0,
+            "partial_disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0,
+            "partial_disallowed": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "z03",
+      "source_sha256": "f2b8127af6d071d4e6bca8fdd49781724b2818b3a8446220f1e42cc920872a07",
+      "gold_sha256": "c83ad2507966f586c58eaa0dc441b89a3d2c91ac8e9bf35b56ad3b9c5d348003",
+      "raw_response_sha256": "48877ae179042976251bc4e63a435102d419324fa751aef966966854326deff9",
+      "usage": {
+        "prompt_tokens": 1615,
+        "completion_tokens": 413,
+        "total_tokens": 2028,
+        "precached_prompt_tokens": 0
+      },
+      "api_seconds": 4.018420600012178,
+      "history_changes": [],
+      "history_abstentions": [],
+      "candidate_changes": [],
+      "candidate_abstentions": [],
+      "complaint_changes": [],
+      "gap_review": [
+        {
+          "index": 0,
+          "error": true,
+          "reason": "Не было отдельного вопроса о продолжительности или динамике. Общий вопрос о беспокоящем получил ответ, поэтому question_without_answer ошибочен; начало только что уже известно."
+        },
+        {
+          "index": 1,
+          "error": false,
+          "reason": "Другие симптомы и обстоятельства не обсуждались; это не отрицание."
+        }
+      ],
+      "control": {
+        "result": {
+          "sections": {
+            "complaints": [
+              {
+                "text": "Впервые задрожали руки, сейчас сильно дрожат руки.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Только что впервые задрожали руки. Сейчас сильно дрожат руки."
+                  }
+                ]
+              }
+            ],
+            "illness_history": [
+              {
+                "text": "Дрожь в руках возникла только что, впервые.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Только что впервые задрожали руки."
+                  }
+                ]
+              },
+              {
+                "text": "В настоящее время дрожь сильная.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Сейчас сильно дрожат руки."
+                  }
+                ]
+              }
+            ],
+            "life_history": []
+          },
+          "gaps": [
+            {
+              "topic": "Продолжительность эпизода и динамика",
+              "status": "question_without_answer",
+              "evidence": [
+                {
+                  "segment_id": "s1",
+                  "quote": "Что вас беспокоит?"
+                }
+              ]
+            },
+            {
+              "topic": "Сопутствующие симптомы и обстоятельства",
+              "status": "not_discussed",
+              "evidence": []
+            }
+          ]
+        },
+        "review": {
+          "reviewer": "Codex; manual nonblind assessment independent from GigaChat",
+          "physician_reviewed": false,
+          "response_sha256": "a48997d90a2a0e4c8d05210b102d471e744948c193bb496493d7113ba71eefc0",
+          "gold_sha256": "c83ad2507966f586c58eaa0dc441b89a3d2c91ac8e9bf35b56ad3b9c5d348003",
+          "rows": [
+            {
+              "row_id": "complaints:0",
+              "complete_fact_ids": [
+                "symptom"
+              ],
+              "partial_fact_ids": [
+                "onset"
+              ],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Руки сильно дрожат сейчас, впервые сохранено; в жалобах нет «только что», поэтому начало частично. Полное начало есть в анамнезе."
+            },
+            {
+              "row_id": "illness_history:0",
+              "complete_fact_ids": [
+                "onset"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Настоящее первое начало только что сохранено полностью."
+            },
+            {
+              "row_id": "illness_history:1",
+              "complete_fact_ids": [
+                "symptom"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Сильная текущая дрожь, руки следуют из контекста и точной цитаты."
+            }
+          ]
+        },
+        "metrics": {
+          "gold_facts": 2,
+          "output_rows": 3,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 2,
+          "covered_placements": 2,
+          "correct_placements": 3,
+          "predicted_placements": 3,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex; manual nonblind assessment independent from GigaChat",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0,
+            "partial_disallowed": 1
+          },
+          "illness_history": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0,
+            "partial_disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0,
+            "partial_disallowed": 0
+          }
+        }
+      },
+      "candidate": {
+        "result": {
+          "sections": {
+            "complaints": [
+              {
+                "text": "Впервые задрожали руки, сейчас сильно дрожат руки.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Только что впервые задрожали руки. Сейчас сильно дрожат руки."
+                  }
+                ]
+              }
+            ],
+            "illness_history": [
+              {
+                "text": "Дрожь в руках возникла только что, впервые.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Только что впервые задрожали руки."
+                  }
+                ]
+              },
+              {
+                "text": "В настоящее время дрожь сильная.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Сейчас сильно дрожат руки."
+                  }
+                ]
+              }
+            ],
+            "life_history": []
+          },
+          "gaps": [
+            {
+              "topic": "Продолжительность эпизода и динамика",
+              "status": "question_without_answer",
+              "evidence": [
+                {
+                  "segment_id": "s1",
+                  "quote": "Что вас беспокоит?"
+                }
+              ]
+            },
+            {
+              "topic": "Сопутствующие симптомы и обстоятельства",
+              "status": "not_discussed",
+              "evidence": []
+            }
+          ]
+        },
+        "review": {
+          "reviewer": "Codex; manual nonblind assessment independent from GigaChat",
+          "physician_reviewed": false,
+          "response_sha256": "38f09c78c35312948fc6f26773b6c490564a04952c7f9c1c983ae52ddd87ecc8",
+          "gold_sha256": "c83ad2507966f586c58eaa0dc441b89a3d2c91ac8e9bf35b56ad3b9c5d348003",
+          "rows": [
+            {
+              "row_id": "complaints:0",
+              "complete_fact_ids": [
+                "symptom"
+              ],
+              "partial_fact_ids": [
+                "onset"
+              ],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Руки сильно дрожат сейчас, впервые сохранено; в жалобах нет «только что», поэтому начало частично. Полное начало есть в анамнезе."
+            },
+            {
+              "row_id": "illness_history:0",
+              "complete_fact_ids": [
+                "onset"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Настоящее первое начало только что сохранено полностью."
+            },
+            {
+              "row_id": "illness_history:1",
+              "complete_fact_ids": [
+                "symptom"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Сильная текущая дрожь, руки следуют из контекста и точной цитаты."
+            }
+          ]
+        },
+        "metrics": {
+          "gold_facts": 2,
+          "output_rows": 3,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 2,
+          "covered_placements": 2,
+          "correct_placements": 3,
+          "predicted_placements": 3,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex; manual nonblind assessment independent from GigaChat",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0,
+            "partial_disallowed": 1
+          },
+          "illness_history": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0,
+            "partial_disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0,
+            "partial_disallowed": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "z04",
+      "source_sha256": "3e133bca8ef23f8c8987172f7a2f2f319f1827b40d2159fa9742bc46212f9ff7",
+      "gold_sha256": "3c1b1e7e107e0dd4afbfd5b9e90f849a2a68c0aac9fc003326a7527682202af0",
+      "raw_response_sha256": "5c4d7d9e1ce30c83e96d52410de55092fc3835aabebc04cfb36f2d17a7c51654",
+      "usage": {
+        "prompt_tokens": 1687,
+        "completion_tokens": 430,
+        "total_tokens": 2117,
+        "precached_prompt_tokens": 0
+      },
+      "api_seconds": 4.025099799997406,
+      "history_changes": [],
+      "history_abstentions": [],
+      "candidate_changes": [],
+      "candidate_abstentions": [],
+      "complaint_changes": [],
+      "gap_review": [
+        {
+          "index": 0,
+          "error": false,
+          "reason": "Пациент прямо не знает начало."
+        },
+        {
+          "index": 1,
+          "error": false,
+          "reason": "Вопрос об отце получил ответ «не знаю»."
+        }
+      ],
+      "control": {
+        "result": {
+          "sections": {
+            "complaints": [
+              {
+                "text": "Сильная тошнота каждый вечер.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Сейчас сильно тошнит. Такое повторяется каждый вечер."
+                  }
+                ]
+              }
+            ],
+            "illness_history": [
+              {
+                "text": "Не знает, когда началось.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Не знаю, когда это началось."
+                  }
+                ]
+              }
+            ],
+            "life_history": [
+              {
+                "text": "Не знает, чем болел отец.",
+                "evidence": [
+                  {
+                    "segment_id": "s4",
+                    "quote": "Не знаю."
+                  }
+                ]
+              }
+            ]
+          },
+          "gaps": [
+            {
+              "topic": "Начало тошноты",
+              "status": "patient_does_not_know",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Не знаю, когда это началось."
+                }
+              ]
+            },
+            {
+              "topic": "Чем болел отец",
+              "status": "patient_does_not_know",
+              "evidence": [
+                {
+                  "segment_id": "s4",
+                  "quote": "Не знаю."
+                }
+              ]
+            }
+          ]
+        },
+        "review": {
+          "reviewer": "Codex; manual nonblind assessment independent from GigaChat",
+          "physician_reviewed": false,
+          "response_sha256": "5428c0c0c256907d69c6bc390ac80d534e5e2e5dac7713380b5f35ef8bf457e9",
+          "gold_sha256": "3c1b1e7e107e0dd4afbfd5b9e90f849a2a68c0aac9fc003326a7527682202af0",
+          "rows": [
+            {
+              "row_id": "complaints:0",
+              "complete_fact_ids": [
+                "symptom",
+                "recurrence"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 1,
+              "polarity_errors": 0,
+              "temporal_errors": 1,
+              "source_errors": 1,
+              "reason": "Сильная текущая тошнота и повторяемость каждый вечер переданы. При строгом чтении «сильная ... каждый вечер» переносит нынешнюю силу на все эпизоды, чего пациент не сообщал: один спорный неподтверждённый атрибут. Частота в жалобах содержательно допустима; frozen gold требует её дополнительно в анамнезе. Нужна врачебная проверка трактовки силы."
+            },
+            {
+              "row_id": "illness_history:0",
+              "complete_fact_ids": [
+                "unknown_onset"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Неизвестное начало нынешних эпизодов сохранено; повторяемости каждый вечер здесь нет."
+            },
+            {
+              "row_id": "life_history:0",
+              "complete_fact_ids": [
+                "father_unknown"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Не знает, чем болел отец. Предыдущий единственный вопрос однозначно задаёт родственника; R3 в жизни соблюдено."
+            }
+          ]
+        },
+        "metrics": {
+          "gold_facts": 4,
+          "output_rows": 3,
+          "tp": 4,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.8888888888888888,
+          "required_placements": 4,
+          "covered_placements": 3,
+          "correct_placements": 3,
+          "predicted_placements": 4,
+          "unsupported_atoms": 1,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 1,
+          "source_errors": 1,
+          "reviewer": "Codex; manual nonblind assessment independent from GigaChat",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 1,
+            "partial_disallowed": 0
+          },
+          "illness_history": {
+            "required": 2,
+            "covered": 1,
+            "disallowed": 0,
+            "partial_disallowed": 0
+          },
+          "life_history": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0,
+            "partial_disallowed": 0
+          }
+        }
+      },
+      "candidate": {
+        "result": {
+          "sections": {
+            "complaints": [
+              {
+                "text": "Сильная тошнота каждый вечер.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Сейчас сильно тошнит. Такое повторяется каждый вечер."
+                  }
+                ]
+              }
+            ],
+            "illness_history": [
+              {
+                "text": "Не знает, когда началось.",
+                "evidence": [
+                  {
+                    "segment_id": "s2",
+                    "quote": "Не знаю, когда это началось."
+                  }
+                ]
+              }
+            ],
+            "life_history": [
+              {
+                "text": "Не знает, чем болел отец.",
+                "evidence": [
+                  {
+                    "segment_id": "s4",
+                    "quote": "Не знаю."
+                  }
+                ]
+              }
+            ]
+          },
+          "gaps": [
+            {
+              "topic": "Начало тошноты",
+              "status": "patient_does_not_know",
+              "evidence": [
+                {
+                  "segment_id": "s2",
+                  "quote": "Не знаю, когда это началось."
+                }
+              ]
+            },
+            {
+              "topic": "Чем болел отец",
+              "status": "patient_does_not_know",
+              "evidence": [
+                {
+                  "segment_id": "s4",
+                  "quote": "Не знаю."
+                }
+              ]
+            }
+          ]
+        },
+        "review": {
+          "reviewer": "Codex; manual nonblind assessment independent from GigaChat",
+          "physician_reviewed": false,
+          "response_sha256": "2388962d7e4ed03f213fe7594702af124dccde85c3b2108c978d579ae8c5e557",
+          "gold_sha256": "3c1b1e7e107e0dd4afbfd5b9e90f849a2a68c0aac9fc003326a7527682202af0",
+          "rows": [
+            {
+              "row_id": "complaints:0",
+              "complete_fact_ids": [
+                "symptom",
+                "recurrence"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 1,
+              "polarity_errors": 0,
+              "temporal_errors": 1,
+              "source_errors": 1,
+              "reason": "Сильная текущая тошнота и повторяемость каждый вечер переданы. При строгом чтении «сильная ... каждый вечер» переносит нынешнюю силу на все эпизоды, чего пациент не сообщал: один спорный неподтверждённый атрибут. Частота в жалобах содержательно допустима; frozen gold требует её дополнительно в анамнезе. Нужна врачебная проверка трактовки силы."
+            },
+            {
+              "row_id": "illness_history:0",
+              "complete_fact_ids": [
+                "unknown_onset"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Неизвестное начало нынешних эпизодов сохранено; повторяемости каждый вечер здесь нет."
+            },
+            {
+              "row_id": "life_history:0",
+              "complete_fact_ids": [
+                "father_unknown"
+              ],
+              "partial_fact_ids": [],
+              "unsupported_atoms": 0,
+              "polarity_errors": 0,
+              "temporal_errors": 0,
+              "source_errors": 0,
+              "reason": "Не знает, чем болел отец. Предыдущий единственный вопрос однозначно задаёт родственника; R3 в жизни соблюдено."
+            }
+          ]
+        },
+        "metrics": {
+          "gold_facts": 4,
+          "output_rows": 3,
+          "tp": 4,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.8888888888888888,
+          "required_placements": 4,
+          "covered_placements": 3,
+          "correct_placements": 3,
+          "predicted_placements": 4,
+          "unsupported_atoms": 1,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 1,
+          "source_errors": 1,
+          "reviewer": "Codex; manual nonblind assessment independent from GigaChat",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 1,
+            "partial_disallowed": 0
+          },
+          "illness_history": {
+            "required": 2,
+            "covered": 1,
+            "disallowed": 0,
+            "partial_disallowed": 0
+          },
+          "life_history": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0,
+            "partial_disallowed": 0
+          }
+        }
+      }
+    }
+  ],
+  "ambiguity_sensitivity": {
+    "z04_strength_scope": "Strict reading counts one unsupported temporal attribute; reading it only as current intensity gives FP0 and time/source0 in BOTH versions. Paired effect remains zero.",
+    "complaint_recurrence": "Frozen allowed_sections restrict recurrence to H; specific symptom frequency may also be valid in C per prompt. Do not treat that label as clinically approved or remove it. Required H coverage is still missing."
+  },
+  "attribute_check": {
+    "current_symptoms_in_complaints": [
+      4,
+      4,
+      4
+    ],
+    "dated_monday_evening_onset": [
+      1,
+      1,
+      1
+    ],
+    "true_first_onset_just_now": [
+      1,
+      1,
+      1
+    ],
+    "recurrence_across_sections": [
+      1,
+      1,
+      1
+    ],
+    "recurrence_in_required_history": [
+      0,
+      0,
+      1
+    ],
+    "unknown_onset": [
+      1,
+      1,
+      1
+    ],
+    "father_unknown_in_life": [
+      1,
+      1,
+      1
+    ],
+    "all_result_objects_identical_before_after": true,
+    "input_objects_unchanged": true,
+    "idempotent": true
+  },
+  "verification": {
+    "clean_git_archive_tests": 112,
+    "offline_semantic_cases": 3,
+    "offline_boundary_cases": 9,
+    "cli_scores": 8,
+    "code_unchanged_after_freeze": true,
+    "frozen_input_hashes_verified": true,
+    "new_unknown_attempts": 0,
+    "published_wrapper_hashes_verified": true,
+    "previous_pending_hashes_unchanged": true
+  },
+  "exported_answer_format": {
+    "keys": [
+      "parsed",
+      "origin",
+      "original_response_sha256"
+    ],
+    "indent": 2,
+    "ensure_ascii": false,
+    "line_endings": "CRLF",
+    "control_origin": "offline presence-onset control",
+    "candidate_origin": "offline presence-onset candidate"
+  },
+  "rubric_status": "needs_review_specific_symptom_frequency_in_complaints",
+  "known_w01": "Unchanged development case: ear ringing outside the five pairs, error remains."
+}

@@ -1,0 +1,15 @@
+{
+  "case": "w01",
+  "development_only": true,
+  "source_sha256": "393542978e8ff3483e976b274e5c5ee7aaf6b89985d6d88d2790422e0767a8ee",
+  "prior_evidence_sha256": "6831a1ccd7466f178b785a8dba08a6544b5119c875cdea22c285479e4525b33a",
+  "control": "8fd5bb2",
+  "changed": false,
+  "abstentions": [
+    {
+      "history_index": 1,
+      "reason": "not_exact_bounded_presence_pair"
+    }
+  ],
+  "limitation": "Ear ringing not among the five frozen symptom pairs; original unsupported onset remains. No fresh benefit claimed."
+}

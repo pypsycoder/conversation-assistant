@@ -1,0 +1,467 @@
+{
+  "semantic_positive_count": 3,
+  "boundary_preservation_count": 9,
+  "totals": {
+    "control": {
+      "tp": 3,
+      "fp": 3,
+      "fn": 0,
+      "gold_facts": 3,
+      "covered_placements": 3,
+      "required_placements": 3,
+      "unsupported_atoms": 3,
+      "temporal_errors": 3,
+      "source_errors": 3,
+      "duplicate_placements": 0,
+      "polarity_errors": 0
+    },
+    "candidate": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "gold_facts": 3,
+      "covered_placements": 3,
+      "required_placements": 3,
+      "unsupported_atoms": 0,
+      "temporal_errors": 0,
+      "source_errors": 0,
+      "duplicate_placements": 0,
+      "polarity_errors": 0
+    }
+  },
+  "cases": [
+    {
+      "id": "o01",
+      "focus": "remove only unsupported onset now; preserve strong current symptom",
+      "scope": "semantic_positive",
+      "changes": [
+        {
+          "action": "replace",
+          "history_index": 0,
+          "original": {
+            "text": "Появление сильной боли в горле сейчас.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сейчас сильно болит горло."
+              }
+            ]
+          },
+          "replacement": {
+            "text": "Сейчас сильно болит горло.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сейчас сильно болит горло."
+              }
+            ]
+          }
+        }
+      ],
+      "abstentions": [],
+      "control": {
+        "metrics": {
+          "gold_facts": 1,
+          "output_rows": 2,
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666,
+          "required_placements": 1,
+          "covered_placements": 1,
+          "correct_placements": 2,
+          "predicted_placements": 2,
+          "unsupported_atoms": 1,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 1,
+          "source_errors": 1,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0
+          },
+          "illness_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      },
+      "candidate": {
+        "metrics": {
+          "gold_facts": 1,
+          "output_rows": 2,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 1,
+          "covered_placements": 1,
+          "correct_placements": 2,
+          "predicted_placements": 2,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0
+          },
+          "illness_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "o02",
+      "focus": "remove only unsupported onset now; preserve strong current symptom",
+      "scope": "semantic_positive",
+      "changes": [
+        {
+          "action": "replace",
+          "history_index": 0,
+          "original": {
+            "text": "Появление сильной боли в животе сейчас.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сейчас сильно болит живот."
+              }
+            ]
+          },
+          "replacement": {
+            "text": "Сейчас сильно болит живот.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сейчас сильно болит живот."
+              }
+            ]
+          }
+        }
+      ],
+      "abstentions": [],
+      "control": {
+        "metrics": {
+          "gold_facts": 1,
+          "output_rows": 2,
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666,
+          "required_placements": 1,
+          "covered_placements": 1,
+          "correct_placements": 2,
+          "predicted_placements": 2,
+          "unsupported_atoms": 1,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 1,
+          "source_errors": 1,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0
+          },
+          "illness_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      },
+      "candidate": {
+        "metrics": {
+          "gold_facts": 1,
+          "output_rows": 2,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 1,
+          "covered_placements": 1,
+          "correct_placements": 2,
+          "predicted_placements": 2,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0
+          },
+          "illness_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "o03",
+      "focus": "remove only unsupported onset now; preserve strong current symptom",
+      "scope": "semantic_positive",
+      "changes": [
+        {
+          "action": "replace",
+          "history_index": 0,
+          "original": {
+            "text": "Появление сильной дрожи рук сейчас.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сейчас сильно дрожат руки."
+              }
+            ]
+          },
+          "replacement": {
+            "text": "Сейчас сильно дрожат руки.",
+            "evidence": [
+              {
+                "segment_id": "s2",
+                "quote": "Сейчас сильно дрожат руки."
+              }
+            ]
+          }
+        }
+      ],
+      "abstentions": [],
+      "control": {
+        "metrics": {
+          "gold_facts": 1,
+          "output_rows": 2,
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666,
+          "required_placements": 1,
+          "covered_placements": 1,
+          "correct_placements": 2,
+          "predicted_placements": 2,
+          "unsupported_atoms": 1,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 1,
+          "source_errors": 1,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0
+          },
+          "illness_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      },
+      "candidate": {
+        "metrics": {
+          "gold_facts": 1,
+          "output_rows": 2,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "required_placements": 1,
+          "covered_placements": 1,
+          "correct_placements": 2,
+          "predicted_placements": 2,
+          "unsupported_atoms": 0,
+          "duplicate_placements": 0,
+          "polarity_errors": 0,
+          "temporal_errors": 0,
+          "source_errors": 0,
+          "reviewer": "Codex",
+          "physician_reviewed": false
+        },
+        "sections": {
+          "complaints": {
+            "required": 1,
+            "covered": 1,
+            "disallowed": 0
+          },
+          "illness_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          },
+          "life_history": {
+            "required": 0,
+            "covered": 0,
+            "disallowed": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "o04",
+      "focus": "dated real onset remains",
+      "scope": "boundary_preservation_only",
+      "changes": [],
+      "abstentions": [
+        {
+          "history_index": 0,
+          "reason": "onset_or_uncertainty_or_correction_in_source"
+        }
+      ]
+    },
+    {
+      "id": "o05",
+      "focus": "real onset now remains",
+      "scope": "boundary_preservation_only",
+      "changes": [],
+      "abstentions": [
+        {
+          "history_index": 0,
+          "reason": "onset_or_uncertainty_or_correction_in_source"
+        }
+      ]
+    },
+    {
+      "id": "o06",
+      "focus": "unknown onset remains",
+      "scope": "boundary_preservation_only",
+      "changes": [],
+      "abstentions": [
+        {
+          "history_index": 0,
+          "reason": "onset_or_uncertainty_or_correction_in_source"
+        }
+      ]
+    },
+    {
+      "id": "o07",
+      "focus": "condition in source cannot be detached",
+      "scope": "boundary_preservation_only",
+      "changes": [],
+      "abstentions": [
+        {
+          "history_index": 0,
+          "reason": "not_exact_bounded_presence_pair"
+        }
+      ]
+    },
+    {
+      "id": "o08",
+      "focus": "mixed row with independent date is never rewritten",
+      "scope": "boundary_preservation_only",
+      "changes": [],
+      "abstentions": []
+    },
+    {
+      "id": "o09",
+      "focus": "later retraction prevents replacement",
+      "scope": "boundary_preservation_only",
+      "changes": [],
+      "abstentions": [
+        {
+          "history_index": 0,
+          "reason": "onset_or_uncertainty_or_correction_in_source"
+        }
+      ]
+    },
+    {
+      "id": "o10",
+      "focus": "wide citation remains",
+      "scope": "boundary_preservation_only",
+      "changes": [],
+      "abstentions": [
+        {
+          "history_index": 0,
+          "reason": "not_exact_bounded_presence_pair"
+        }
+      ]
+    },
+    {
+      "id": "o11",
+      "focus": "uncertain current presence remains",
+      "scope": "boundary_preservation_only",
+      "changes": [],
+      "abstentions": [
+        {
+          "history_index": 0,
+          "reason": "onset_or_uncertainty_or_correction_in_source"
+        }
+      ]
+    },
+    {
+      "id": "o12",
+      "focus": "existing canonical history prevents a duplicate",
+      "scope": "boundary_preservation_only",
+      "changes": [],
+      "abstentions": [
+        {
+          "history_index": 0,
+          "reason": "possible_duplicate"
+        }
+      ]
+    }
+  ]
+}
